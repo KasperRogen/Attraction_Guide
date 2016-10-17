@@ -67,3 +67,9 @@ C:\Users\kaspe\Downloads\GuidR\GuidR\GuidR\GuidR\obj\Debug\GuidR.dll.mdb
 C:\Users\kaspe\Downloads\GuidR\GuidR\GuidR\GuidR\bin\Debug\GuidR.dll.mdb
 C:\Users\kaspe\Downloads\GuidR\GuidR\GuidR\GuidR\obj\Debug\GuidR.dll.mdb
 C:\Users\kaspe\Downloads\GuidR\GuidR\GuidR\GuidR\bin\Debug\GuidR.dll.mdb
+C:\Users\kaspe\Documents\Attraction_Guide\GuidR\GuidR\obj\Debug\GuidR.dll.mdb
+C:\Users\kaspe\Documents\Attraction_Guide\GuidR\GuidR\bin\Debug\GuidR.dll.mdb
+C:\Users\kaspe\Documents\Attraction_Guide\GuidR\GuidR\obj\Debug\GuidR.dll.mdb
+C:\Users\kaspe\Documents\Attraction_Guide\GuidR\GuidR\bin\Debug\GuidR.dll.mdb
+C:\Users\kaspe\Documents\Attraction_Guide\GuidR\GuidR\obj\Debug\GuidR.dll.mdb
+C:\Users\kaspe\Documents\Attraction_Guide\GuidR\GuidR\bin\Debug\GuidR.dll.mdb

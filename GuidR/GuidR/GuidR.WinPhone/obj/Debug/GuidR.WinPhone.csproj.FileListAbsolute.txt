@@ -1,0 +1,72 @@
+c:\users\kasper røgen\documents\visual studio 2015\Projects\GuidR\GuidR\GuidR.WinPhone\bin\Debug\App.xbf
+c:\users\kasper røgen\documents\visual studio 2015\Projects\GuidR\GuidR\GuidR.WinPhone\bin\Debug\MainPage.xbf
+c:\users\kasper røgen\documents\visual studio 2015\Projects\GuidR\GuidR\GuidR.WinPhone\bin\Debug\GuidR.WinPhone.xr.xml
+c:\users\kasper røgen\documents\visual studio 2015\Projects\GuidR\GuidR\GuidR.WinPhone\bin\Debug\GuidR.WinPhone.exe
+c:\users\kasper røgen\documents\visual studio 2015\Projects\GuidR\GuidR\GuidR.WinPhone\bin\Debug\GuidR.WinPhone.pdb
+c:\users\kasper røgen\documents\visual studio 2015\Projects\GuidR\GuidR\GuidR.WinPhone\bin\Debug\resources.pri
+c:\users\kasper røgen\documents\visual studio 2015\Projects\GuidR\GuidR\GuidR.WinPhone\bin\Debug\AppxManifest.xml
+c:\users\kasper røgen\documents\visual studio 2015\Projects\GuidR\GuidR\GuidR.WinPhone\bin\Debug\GuidR.WinPhone.build.appxrecipe
+c:\users\kasper røgen\documents\visual studio 2015\Projects\GuidR\GuidR\GuidR.WinPhone\bin\Debug\GuidR.dll
+c:\users\kasper røgen\documents\visual studio 2015\Projects\GuidR\GuidR\GuidR.WinPhone\bin\Debug\GuidR.pdb
+c:\users\kasper røgen\documents\visual studio 2015\Projects\GuidR\GuidR\GuidR.WinPhone\obj\Debug\GuidR.WinPhone.csprojResolveAssemblyReference.cache
+c:\users\kasper røgen\documents\visual studio 2015\Projects\GuidR\GuidR\GuidR.WinPhone\obj\Debug\App.g.i.cs
+c:\users\kasper røgen\documents\visual studio 2015\Projects\GuidR\GuidR\GuidR.WinPhone\obj\Debug\App.g.cs
+c:\users\kasper røgen\documents\visual studio 2015\Projects\GuidR\GuidR\GuidR.WinPhone\obj\Debug\MainPage.g.i.cs
+c:\users\kasper røgen\documents\visual studio 2015\Projects\GuidR\GuidR\GuidR.WinPhone\obj\Debug\MainPage.g.cs
+c:\users\kasper røgen\documents\visual studio 2015\Projects\GuidR\GuidR\GuidR.WinPhone\obj\Debug\XamlTypeInfo.g.cs
+c:\users\kasper røgen\documents\visual studio 2015\Projects\GuidR\GuidR\GuidR.WinPhone\obj\Debug\App.xaml
+c:\users\kasper røgen\documents\visual studio 2015\Projects\GuidR\GuidR\GuidR.WinPhone\obj\Debug\MainPage.xaml
+c:\users\kasper røgen\documents\visual studio 2015\Projects\GuidR\GuidR\GuidR.WinPhone\obj\Debug\App.xbf
+c:\users\kasper røgen\documents\visual studio 2015\Projects\GuidR\GuidR\GuidR.WinPhone\obj\Debug\MainPage.xbf
+c:\users\kasper røgen\documents\visual studio 2015\Projects\GuidR\GuidR\GuidR.WinPhone\obj\Debug\XamlSaveStateFile.xml
+c:\users\kasper røgen\documents\visual studio 2015\Projects\GuidR\GuidR\GuidR.WinPhone\obj\Debug\GuidR.WinPhone.exe
+c:\users\kasper røgen\documents\visual studio 2015\Projects\GuidR\GuidR\GuidR.WinPhone\obj\Debug\GuidR.WinPhone.pdb
+c:\users\kasper røgen\documents\visual studio 2015\Projects\GuidR\GuidR\GuidR.WinPhone\obj\Debug\GuidR.WinPhone.csproj.GenerateResource.Cache
+c:\users\kasper røgen\documents\visual studio 2015\Projects\GuidR\GuidR\GuidR.WinPhone\obj\Debug\priconfig.xml
+c:\users\kasper røgen\documents\visual studio 2015\Projects\GuidR\GuidR\GuidR.WinPhone\obj\Debug\priconfig.xml.intermediate
+c:\users\kasper røgen\documents\visual studio 2015\Projects\GuidR\GuidR\GuidR.WinPhone\obj\Debug\layout.resfiles
+c:\users\kasper røgen\documents\visual studio 2015\Projects\GuidR\GuidR\GuidR.WinPhone\obj\Debug\layout.resfiles.intermediate
+c:\users\kasper røgen\documents\visual studio 2015\Projects\GuidR\GuidR\GuidR.WinPhone\obj\Debug\resources.resfiles
+c:\users\kasper røgen\documents\visual studio 2015\Projects\GuidR\GuidR\GuidR.WinPhone\obj\Debug\resources.resfiles.intermediate
+c:\users\kasper røgen\documents\visual studio 2015\Projects\GuidR\GuidR\GuidR.WinPhone\obj\Debug\pri.resfiles
+c:\users\kasper røgen\documents\visual studio 2015\Projects\GuidR\GuidR\GuidR.WinPhone\obj\Debug\pri.resfiles.intermediate
+c:\users\kasper røgen\documents\visual studio 2015\Projects\GuidR\GuidR\GuidR.WinPhone\obj\Debug\qualifiers.txt
+c:\users\kasper røgen\documents\visual studio 2015\Projects\GuidR\GuidR\GuidR.WinPhone\obj\Debug\qualifiers.txt.intermediate
+c:\users\kasper røgen\documents\visual studio 2015\Projects\GuidR\GuidR\GuidR.WinPhone\obj\Debug\MultipleQualifiersPerDimensionFound.txt
+c:\users\kasper røgen\documents\visual studio 2015\Projects\GuidR\GuidR\GuidR.WinPhone\obj\Debug\ProjectArchitectures.txt
+C:\Users\kaspe\Downloads\GuidR\GuidR\GuidR\GuidR.WinPhone\bin\Debug\App.xbf
+C:\Users\kaspe\Downloads\GuidR\GuidR\GuidR\GuidR.WinPhone\bin\Debug\MainPage.xbf
+C:\Users\kaspe\Downloads\GuidR\GuidR\GuidR\GuidR.WinPhone\bin\Debug\GuidR.WinPhone.xr.xml
+C:\Users\kaspe\Downloads\GuidR\GuidR\GuidR\GuidR.WinPhone\bin\Debug\GuidR.WinPhone.exe
+C:\Users\kaspe\Downloads\GuidR\GuidR\GuidR\GuidR.WinPhone\bin\Debug\GuidR.WinPhone.pdb
+C:\Users\kaspe\Downloads\GuidR\GuidR\GuidR\GuidR.WinPhone\bin\Debug\resources.pri
+C:\Users\kaspe\Downloads\GuidR\GuidR\GuidR\GuidR.WinPhone\bin\Debug\AppxManifest.xml
+C:\Users\kaspe\Downloads\GuidR\GuidR\GuidR\GuidR.WinPhone\bin\Debug\GuidR.WinPhone.build.appxrecipe
+C:\Users\kaspe\Downloads\GuidR\GuidR\GuidR\GuidR.WinPhone\bin\Debug\GuidR.dll
+C:\Users\kaspe\Downloads\GuidR\GuidR\GuidR\GuidR.WinPhone\bin\Debug\GuidR.pdb
+C:\Users\kaspe\Downloads\GuidR\GuidR\GuidR\GuidR.WinPhone\obj\Debug\GuidR.WinPhone.csprojResolveAssemblyReference.cache
+C:\Users\kaspe\Downloads\GuidR\GuidR\GuidR\GuidR.WinPhone\obj\Debug\App.g.i.cs
+C:\Users\kaspe\Downloads\GuidR\GuidR\GuidR\GuidR.WinPhone\obj\Debug\App.g.cs
+C:\Users\kaspe\Downloads\GuidR\GuidR\GuidR\GuidR.WinPhone\obj\Debug\MainPage.g.i.cs
+C:\Users\kaspe\Downloads\GuidR\GuidR\GuidR\GuidR.WinPhone\obj\Debug\MainPage.g.cs
+C:\Users\kaspe\Downloads\GuidR\GuidR\GuidR\GuidR.WinPhone\obj\Debug\XamlTypeInfo.g.cs
+C:\Users\kaspe\Downloads\GuidR\GuidR\GuidR\GuidR.WinPhone\obj\Debug\App.xaml
+C:\Users\kaspe\Downloads\GuidR\GuidR\GuidR\GuidR.WinPhone\obj\Debug\MainPage.xaml
+C:\Users\kaspe\Downloads\GuidR\GuidR\GuidR\GuidR.WinPhone\obj\Debug\App.xbf
+C:\Users\kaspe\Downloads\GuidR\GuidR\GuidR\GuidR.WinPhone\obj\Debug\MainPage.xbf
+C:\Users\kaspe\Downloads\GuidR\GuidR\GuidR\GuidR.WinPhone\obj\Debug\XamlSaveStateFile.xml
+C:\Users\kaspe\Downloads\GuidR\GuidR\GuidR\GuidR.WinPhone\obj\Debug\GuidR.WinPhone.exe
+C:\Users\kaspe\Downloads\GuidR\GuidR\GuidR\GuidR.WinPhone\obj\Debug\GuidR.WinPhone.pdb
+C:\Users\kaspe\Downloads\GuidR\GuidR\GuidR\GuidR.WinPhone\obj\Debug\GuidR.WinPhone.csproj.GenerateResource.Cache
+C:\Users\kaspe\Downloads\GuidR\GuidR\GuidR\GuidR.WinPhone\obj\Debug\priconfig.xml
+C:\Users\kaspe\Downloads\GuidR\GuidR\GuidR\GuidR.WinPhone\obj\Debug\priconfig.xml.intermediate
+C:\Users\kaspe\Downloads\GuidR\GuidR\GuidR\GuidR.WinPhone\obj\Debug\layout.resfiles
+C:\Users\kaspe\Downloads\GuidR\GuidR\GuidR\GuidR.WinPhone\obj\Debug\layout.resfiles.intermediate
+C:\Users\kaspe\Downloads\GuidR\GuidR\GuidR\GuidR.WinPhone\obj\Debug\resources.resfiles
+C:\Users\kaspe\Downloads\GuidR\GuidR\GuidR\GuidR.WinPhone\obj\Debug\resources.resfiles.intermediate
+C:\Users\kaspe\Downloads\GuidR\GuidR\GuidR\GuidR.WinPhone\obj\Debug\pri.resfiles
+C:\Users\kaspe\Downloads\GuidR\GuidR\GuidR\GuidR.WinPhone\obj\Debug\pri.resfiles.intermediate
+C:\Users\kaspe\Downloads\GuidR\GuidR\GuidR\GuidR.WinPhone\obj\Debug\qualifiers.txt
+C:\Users\kaspe\Downloads\GuidR\GuidR\GuidR\GuidR.WinPhone\obj\Debug\qualifiers.txt.intermediate
+C:\Users\kaspe\Downloads\GuidR\GuidR\GuidR\GuidR.WinPhone\obj\Debug\MultipleQualifiersPerDimensionFound.txt
+C:\Users\kaspe\Downloads\GuidR\GuidR\GuidR\GuidR.WinPhone\obj\Debug\ProjectArchitectures.txt

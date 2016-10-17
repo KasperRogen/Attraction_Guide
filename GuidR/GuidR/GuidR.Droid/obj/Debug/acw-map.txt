@@ -1,0 +1,8 @@
+GuidR.Droid.SplashScreen, GuidR.Droid;md592dad29b48c921d86ac04e6f0466f88a.SplashScreen
+GuidR.Droid.SplashScreen, GuidR.Droid, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;md592dad29b48c921d86ac04e6f0466f88a.SplashScreen
+GuidR.Droid.SplashScreen;md592dad29b48c921d86ac04e6f0466f88a.SplashScreen
+guidr.droid.SplashScreen;md592dad29b48c921d86ac04e6f0466f88a.SplashScreen
+GuidR.Droid.MainActivity, GuidR.Droid;md592dad29b48c921d86ac04e6f0466f88a.MainActivity
+GuidR.Droid.MainActivity, GuidR.Droid, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;md592dad29b48c921d86ac04e6f0466f88a.MainActivity
+GuidR.Droid.MainActivity;md592dad29b48c921d86ac04e6f0466f88a.MainActivity
+guidr.droid.MainActivity;md592dad29b48c921d86ac04e6f0466f88a.MainActivity
