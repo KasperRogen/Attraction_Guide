@@ -15,13 +15,22 @@ namespace GuidR.Droid
 
 		protected override void OnCreate (Bundle bundle)
 		{
+
+
 			base.OnCreate (bundle);
             ActionBar.Hide();
 			// Set our view from the "main" layout resource
 			SetContentView (Resource.Layout.Main);
 
-		}
-	}
+            Button button = FindViewById<Button>(Resource.Id.animalButton);
+
+            button.Click += delegate {
+                StartActivity(typeof(animalActivity));
+            };
+
+
+        }
+    }
 }
 
 

@@ -5,8 +5,9 @@
   <supports-screens android:resizeable="true" android:smallScreens="true" android:normalScreens="true" android:largeScreens="true" />
   <uses-permission android:name="android.permission.INTERNET" />
   <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
-  <application android:label="GuidR.Droid" android:name="android.app.Application" android:allowBackup="true" android:icon="@drawable/logo" android:debuggable="true">
-    <activity android:icon="@drawable/logo" android:label="My Splash Screen" android:noHistory="true" android:theme="@style/Theme.splash" android:name="md592dad29b48c921d86ac04e6f0466f88a.SplashScreen">
+  <application android:label="GuidR.Droid" android:name="android.app.Application" android:allowBackup="true" android:debuggable="true">
+    <activity android:label="Aalborg Zoo" android:name="md592dad29b48c921d86ac04e6f0466f88a.animalActivity" />
+    <activity android:icon="@drawable/logo" android:label="Aalborg Zoo" android:noHistory="true" android:theme="@style/Theme.splash" android:name="md592dad29b48c921d86ac04e6f0466f88a.SplashScreen">
       <intent-filter>
         <action android:name="android.intent.action.MAIN" />
         <category android:name="android.intent.category.LAUNCHER" />

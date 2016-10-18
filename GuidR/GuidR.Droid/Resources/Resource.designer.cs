@@ -51,67 +51,115 @@ namespace GuidR.Droid
 			public const int Animal_button_small = 2130837505;
 			
 			// aapt resource value: 0x7f020002
-			public const int Background = 2130837506;
+			public const int Baboon = 2130837506;
 			
 			// aapt resource value: 0x7f020003
-			public const int Checkin_button_medium = 2130837507;
+			public const int baboonHeader = 2130837507;
 			
 			// aapt resource value: 0x7f020004
-			public const int Checkin_button_small = 2130837508;
+			public const int Background = 2130837508;
 			
 			// aapt resource value: 0x7f020005
-			public const int Facilities_button_medium = 2130837509;
+			public const int Black_kaiman = 2130837509;
 			
 			// aapt resource value: 0x7f020006
-			public const int Facilities_button_small = 2130837510;
+			public const int Brown_bear = 2130837510;
 			
 			// aapt resource value: 0x7f020007
-			public const int Icon = 2130837511;
+			public const int Californian_Sea_Lion = 2130837511;
 			
 			// aapt resource value: 0x7f020008
-			public const int Info_button = 2130837512;
+			public const int Checkin_button_medium = 2130837512;
 			
 			// aapt resource value: 0x7f020009
-			public const int Info_button_medium = 2130837513;
+			public const int Checkin_button_small = 2130837513;
 			
 			// aapt resource value: 0x7f02000a
-			public const int Info_button_small = 2130837514;
+			public const int Elephant = 2130837514;
 			
 			// aapt resource value: 0x7f02000b
-			public const int logo = 2130837515;
+			public const int Emperor_tamarin = 2130837515;
 			
 			// aapt resource value: 0x7f02000c
-			public const int Map_button_medium = 2130837516;
+			public const int Facilities_button_medium = 2130837516;
 			
 			// aapt resource value: 0x7f02000d
-			public const int Map_button_small = 2130837517;
+			public const int Facilities_button_small = 2130837517;
 			
 			// aapt resource value: 0x7f02000e
-			public const int News_button_medium = 2130837518;
+			public const int Giraffe = 2130837518;
 			
 			// aapt resource value: 0x7f02000f
-			public const int News_button_small = 2130837519;
+			public const int Icon = 2130837519;
 			
 			// aapt resource value: 0x7f020010
-			public const int placeholderButton = 2130837520;
+			public const int Info_button = 2130837520;
 			
 			// aapt resource value: 0x7f020011
-			public const int placeholderButtonMedium = 2130837521;
+			public const int Info_button_medium = 2130837521;
 			
 			// aapt resource value: 0x7f020012
-			public const int splashScreen = 2130837522;
+			public const int Info_button_small = 2130837522;
 			
 			// aapt resource value: 0x7f020013
-			public const int SplashScreenBackground = 2130837523;
+			public const int Lemur = 2130837523;
 			
 			// aapt resource value: 0x7f020014
-			public const int SplashScreenImage = 2130837524;
+			public const int Lion = 2130837524;
 			
 			// aapt resource value: 0x7f020015
-			public const int SquareButton = 2130837525;
+			public const int logo = 2130837525;
 			
 			// aapt resource value: 0x7f020016
-			public const int test = 2130837526;
+			public const int Map_button_medium = 2130837526;
+			
+			// aapt resource value: 0x7f020017
+			public const int Map_button_small = 2130837527;
+			
+			// aapt resource value: 0x7f020018
+			public const int Meercat = 2130837528;
+			
+			// aapt resource value: 0x7f020019
+			public const int News_button_medium = 2130837529;
+			
+			// aapt resource value: 0x7f02001a
+			public const int News_button_small = 2130837530;
+			
+			// aapt resource value: 0x7f02001b
+			public const int Penguin = 2130837531;
+			
+			// aapt resource value: 0x7f02001c
+			public const int placeholderButton = 2130837532;
+			
+			// aapt resource value: 0x7f02001d
+			public const int placeholderButtonMedium = 2130837533;
+			
+			// aapt resource value: 0x7f02001e
+			public const int Polar_bear = 2130837534;
+			
+			// aapt resource value: 0x7f02001f
+			public const int Pygmy_Hippo = 2130837535;
+			
+			// aapt resource value: 0x7f020020
+			public const int splashScreen = 2130837536;
+			
+			// aapt resource value: 0x7f020021
+			public const int SplashScreenBackground = 2130837537;
+			
+			// aapt resource value: 0x7f020022
+			public const int SplashScreenImage = 2130837538;
+			
+			// aapt resource value: 0x7f020023
+			public const int SquareButton = 2130837539;
+			
+			// aapt resource value: 0x7f020024
+			public const int test = 2130837540;
+			
+			// aapt resource value: 0x7f020025
+			public const int Tiger = 2130837541;
+			
+			// aapt resource value: 0x7f020026
+			public const int Zebra = 2130837542;
 			
 			static Drawable()
 			{
@@ -126,8 +174,14 @@ namespace GuidR.Droid
 		public partial class Id
 		{
 			
+			// aapt resource value: 0x7f060018
+			public const int animalButton = 2131099672;
+			
 			// aapt resource value: 0x7f060002
-			public const int animalButton = 2131099650;
+			public const int baboonButton = 2131099650;
+			
+			// aapt resource value: 0x7f060003
+			public const int brunbjornButton = 2131099651;
 			
 			// aapt resource value: 0x7f060001
 			public const int buttonPanel1 = 2131099649;
@@ -138,23 +192,77 @@ namespace GuidR.Droid
 			// aapt resource value: 0x7f060007
 			public const int buttonpanel3 = 2131099655;
 			
-			// aapt resource value: 0x7f060009
-			public const int checkinbutton = 2131099657;
+			// aapt resource value: 0x7f06000a
+			public const int buttonpanel4 = 2131099658;
 			
-			// aapt resource value: 0x7f060003
-			public const int facilityButton = 2131099651;
+			// aapt resource value: 0x7f06000d
+			public const int buttonpanel5 = 2131099661;
+			
+			// aapt resource value: 0x7f060010
+			public const int buttonpanel6 = 2131099664;
+			
+			// aapt resource value: 0x7f060013
+			public const int buttonpanel7 = 2131099667;
+			
+			// aapt resource value: 0x7f060016
+			public const int buttonpanel8 = 2131099670;
+			
+			// aapt resource value: 0x7f06001d
+			public const int checkinbutton = 2131099677;
+			
+			// aapt resource value: 0x7f060008
+			public const int elefantbutton = 2131099656;
+			
+			// aapt resource value: 0x7f060019
+			public const int facilityButton = 2131099673;
+			
+			// aapt resource value: 0x7f060006
+			public const int flodhestButton = 2131099654;
+			
+			// aapt resource value: 0x7f060009
+			public const int girafbutton = 2131099657;
 			
 			// aapt resource value: 0x7f060000
 			public const int imageView = 2131099648;
 			
-			// aapt resource value: 0x7f060006
-			public const int infoButton = 2131099654;
+			// aapt resource value: 0x7f06001b
+			public const int infoButton = 2131099675;
+			
+			// aapt resource value: 0x7f06000b
+			public const int isbjornButton = 2131099659;
+			
+			// aapt resource value: 0x7f06000c
+			public const int kaimanButton = 2131099660;
+			
+			// aapt resource value: 0x7f06000e
+			public const int kejserButton = 2131099662;
+			
+			// aapt resource value: 0x7f06000f
+			public const int lemurButton = 2131099663;
+			
+			// aapt resource value: 0x7f060011
+			public const int loveButton = 2131099665;
+			
+			// aapt resource value: 0x7f06001a
+			public const int mapButton = 2131099674;
+			
+			// aapt resource value: 0x7f06001c
+			public const int newsbutton = 2131099676;
+			
+			// aapt resource value: 0x7f060012
+			public const int pingvinButton = 2131099666;
 			
 			// aapt resource value: 0x7f060005
-			public const int mapButton = 2131099653;
+			public const int soloveButton = 2131099653;
 			
-			// aapt resource value: 0x7f060008
-			public const int newsbutton = 2131099656;
+			// aapt resource value: 0x7f060014
+			public const int surikatButton = 2131099668;
+			
+			// aapt resource value: 0x7f060015
+			public const int tigerButton = 2131099669;
+			
+			// aapt resource value: 0x7f060017
+			public const int zebraButton = 2131099671;
 			
 			static Id()
 			{
@@ -170,7 +278,10 @@ namespace GuidR.Droid
 		{
 			
 			// aapt resource value: 0x7f030000
-			public const int Main = 2130903040;
+			public const int Animals = 2130903040;
+			
+			// aapt resource value: 0x7f030001
+			public const int Main = 2130903041;
 			
 			static Layout()
 			{

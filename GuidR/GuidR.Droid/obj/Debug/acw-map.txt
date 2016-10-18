@@ -1,3 +1,7 @@
+GuidR.Droid.animalActivity, GuidR.Droid;md592dad29b48c921d86ac04e6f0466f88a.animalActivity
+GuidR.Droid.animalActivity, GuidR.Droid, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;md592dad29b48c921d86ac04e6f0466f88a.animalActivity
+GuidR.Droid.animalActivity;md592dad29b48c921d86ac04e6f0466f88a.animalActivity
+guidr.droid.animalActivity;md592dad29b48c921d86ac04e6f0466f88a.animalActivity
 GuidR.Droid.SplashScreen, GuidR.Droid;md592dad29b48c921d86ac04e6f0466f88a.SplashScreen
 GuidR.Droid.SplashScreen, GuidR.Droid, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;md592dad29b48c921d86ac04e6f0466f88a.SplashScreen
 GuidR.Droid.SplashScreen;md592dad29b48c921d86ac04e6f0466f88a.SplashScreen
