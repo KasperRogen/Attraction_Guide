@@ -1,2 +1,2 @@
-C:\Users\kaspe\Downloads\GuidR\GuidR\GuidR\GuidR.WinPhone\GuidR.WinPhone.csproj;neutral
-C:\Users\kaspe\Downloads\GuidR\GuidR\GuidR\GuidR\GuidR.csproj;neutral
+C:\Users\kaspe\Documents\Attraction_Guide\GuidR\GuidR.WinPhone\GuidR.WinPhone.csproj;neutral
+C:\Users\kaspe\Documents\Attraction_Guide\GuidR\GuidR\GuidR.csproj;neutral

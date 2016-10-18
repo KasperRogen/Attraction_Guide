@@ -13,11 +13,11 @@ using Android.Views;
 using Android.Widget;
 
 namespace GuidR.Droid {
-    [Activity(Label = "Aalborg Zoo")]
+    [Activity(Label = "Aalborg Zoo", Theme = "@style/NoTitle.splash")]
     public class animalActivity : Activity {
         protected override void OnCreate(Bundle bundle) {
             base.OnCreate(bundle);
-            SetContentView(Resource.Layout.Animals);
+            SetContentView(Resource.Layout.BaboonPage);
         }
 
     }

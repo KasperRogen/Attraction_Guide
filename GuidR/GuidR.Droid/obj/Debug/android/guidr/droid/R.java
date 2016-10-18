@@ -35,24 +35,31 @@ public final class R {
         public static final int logo=0x7f020015;
         public static final int map_button_medium=0x7f020016;
         public static final int map_button_small=0x7f020017;
-        public static final int meercat=0x7f020018;
-        public static final int news_button_medium=0x7f020019;
-        public static final int news_button_small=0x7f02001a;
-        public static final int penguin=0x7f02001b;
-        public static final int placeholderbutton=0x7f02001c;
-        public static final int placeholderbuttonmedium=0x7f02001d;
-        public static final int polar_bear=0x7f02001e;
-        public static final int pygmy_hippo=0x7f02001f;
-        public static final int splashscreen=0x7f020020;
-        public static final int splashscreenbackground=0x7f020021;
-        public static final int splashscreenimage=0x7f020022;
-        public static final int squarebutton=0x7f020023;
-        public static final int test=0x7f020024;
-        public static final int tiger=0x7f020025;
-        public static final int zebra=0x7f020026;
+        public static final int map_pin=0x7f020018;
+        public static final int meercat=0x7f020019;
+        public static final int news_button_medium=0x7f02001a;
+        public static final int news_button_small=0x7f02001b;
+        public static final int penguin=0x7f02001c;
+        public static final int placeholderbutton=0x7f02001d;
+        public static final int placeholderbuttonmedium=0x7f02001e;
+        public static final int polar_bear=0x7f02001f;
+        public static final int pygmy_hippo=0x7f020020;
+        public static final int splashscreen=0x7f020021;
+        public static final int splashscreenbackground=0x7f020022;
+        public static final int splashscreenimage=0x7f020023;
+        public static final int squarebutton=0x7f020024;
+        public static final int test=0x7f020025;
+        public static final int tiger=0x7f020026;
+        public static final int zebra=0x7f020027;
     }
     public static final class id {
-        public static final int animalButton=0x7f060018;
+        public static final int AboutAnimal=0x7f06001b;
+        public static final int FeedingTimePanel=0x7f06001c;
+        public static final int Feedingtime=0x7f06001d;
+        public static final int HeaderImage=0x7f060018;
+        public static final int LatinName=0x7f06001a;
+        public static final int Name=0x7f060019;
+        public static final int animalButton=0x7f06001f;
         public static final int baboonButton=0x7f060002;
         public static final int brunbjornButton=0x7f060003;
         public static final int buttonPanel1=0x7f060001;
@@ -63,20 +70,20 @@ public final class R {
         public static final int buttonpanel6=0x7f060010;
         public static final int buttonpanel7=0x7f060013;
         public static final int buttonpanel8=0x7f060016;
-        public static final int checkinbutton=0x7f06001d;
+        public static final int checkinbutton=0x7f060023;
         public static final int elefantbutton=0x7f060008;
-        public static final int facilityButton=0x7f060019;
+        public static final int facilityButton=0x7f060020;
         public static final int flodhestButton=0x7f060006;
         public static final int girafbutton=0x7f060009;
         public static final int imageView=0x7f060000;
-        public static final int infoButton=0x7f06001b;
+        public static final int infoButton=0x7f060021;
         public static final int isbjornButton=0x7f06000b;
         public static final int kaimanButton=0x7f06000c;
         public static final int kejserButton=0x7f06000e;
         public static final int lemurButton=0x7f06000f;
         public static final int loveButton=0x7f060011;
-        public static final int mapButton=0x7f06001a;
-        public static final int newsbutton=0x7f06001c;
+        public static final int mapButton=0x7f06001e;
+        public static final int newsbutton=0x7f060022;
         public static final int pingvinButton=0x7f060012;
         public static final int soloveButton=0x7f060005;
         public static final int surikatButton=0x7f060014;
@@ -85,13 +92,15 @@ public final class R {
     }
     public static final class layout {
         public static final int animals=0x7f030000;
-        public static final int main=0x7f030001;
+        public static final int baboonpage=0x7f030001;
+        public static final int main=0x7f030002;
     }
     public static final class string {
         public static final int app_name=0x7f040001;
         public static final int hello=0x7f040000;
     }
     public static final class style {
+        public static final int NoTitle_splash=0x7f050001;
         public static final int Theme_splash=0x7f050000;
     }
 }

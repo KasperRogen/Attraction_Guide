@@ -134,7 +134,6 @@ C:\Users\kaspe\Documents\Attraction_Guide\GuidR\GuidR.Droid\obj\Debug\res\drawab
 C:\Users\kaspe\Documents\Attraction_Guide\GuidR\GuidR.Droid\obj\Debug\res\drawable-xhdpi\icon.png
 C:\Users\kaspe\Documents\Attraction_Guide\GuidR\GuidR.Droid\obj\Debug\res\drawable-xxhdpi\icon.png
 C:\Users\kaspe\Documents\Attraction_Guide\GuidR\GuidR.Droid\obj\Debug\res\drawable-xxxhdpi\icon.png
-C:\Users\kaspe\Documents\Attraction_Guide\GuidR\GuidR.Droid\obj\Debug\res\layout-sw480dp\main.xml
 C:\Users\kaspe\Documents\Attraction_Guide\GuidR\GuidR.Droid\obj\Debug\res\drawable-hdpi\logo.png
 C:\Users\kaspe\Documents\Attraction_Guide\GuidR\GuidR.Droid\obj\Debug\res\drawable-hdpi\placeholderbutton.png
 C:\Users\kaspe\Documents\Attraction_Guide\GuidR\GuidR.Droid\obj\Debug\res\drawable-hdpi\placeholderbuttonmedium.png
@@ -199,5 +198,8 @@ C:\Users\kaspe\Documents\Attraction_Guide\GuidR\GuidR.Droid\obj\Debug\res\drawab
 C:\Users\kaspe\Documents\Attraction_Guide\GuidR\GuidR.Droid\obj\Debug\res\drawable-hdpi\zebra.png
 C:\Users\kaspe\Documents\Attraction_Guide\GuidR\GuidR.Droid\obj\Debug\res\drawable-hdpi\tiger.png
 C:\Users\kaspe\Documents\Attraction_Guide\GuidR\GuidR.Droid\obj\Debug\res\drawable-hdpi\pygmy_hippo.png
+C:\Users\kaspe\Documents\Attraction_Guide\GuidR\GuidR.Droid\obj\Debug\res\layout\baboonpage.xml
+C:\Users\kaspe\Documents\Attraction_Guide\GuidR\GuidR.Droid\obj\Debug\res\drawable-hdpi\baboonheader.png
+C:\Users\kaspe\Documents\Attraction_Guide\GuidR\GuidR.Droid\obj\Debug\res\drawable-hdpi\map_pin.png
 C:\Users\kaspe\Documents\Attraction_Guide\GuidR\GuidR.Droid\obj\Debug\GuidR.Droid.dll.mdb
 C:\Users\kaspe\Documents\Attraction_Guide\GuidR\GuidR.Droid\bin\Debug\GuidR.Droid.dll.mdb
