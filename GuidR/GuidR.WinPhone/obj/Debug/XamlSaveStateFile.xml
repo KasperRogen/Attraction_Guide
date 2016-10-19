@@ -1,5 +1,6 @@
 <XamlCompilerSaveState>
   <ReferenceAssemblyList>
-    <ReferenceAssembly PathName="c:\users\kasper\documents\attraction_guide\guidr\guidr\bin\debug\guidr.dll" HashGuid="70be7e60-d6ff-7848-48c0-689d5e684b94" />
+    <LocalAssembly PathName="c:\users\kaspe\documents\attraction_guide\guidr\guidr.winphone\obj\debug\intermediatexaml\guidr.winphone.exe" HashGuid="a6b05674-8e97-dd43-aa33-9d3a68b74c58" />
+    <ReferenceAssembly PathName="c:\users\kaspe\documents\attraction_guide\guidr\guidr\bin\debug\guidr.dll" HashGuid="63631b68-f7e2-dfb9-260a-64b9cfca9fb6" />
   </ReferenceAssemblyList>
 </XamlCompilerSaveState>

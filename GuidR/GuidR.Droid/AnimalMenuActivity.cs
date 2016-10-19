@@ -19,24 +19,39 @@ namespace GuidR.Droid {
             base.OnCreate(bundle);
             SetContentView(Resource.Layout.AnimalMenu);
 
+            List<Button> animalMenuButtons = new List<Button>();
+            
             Button baboonButton = FindViewById<Button>(Resource.Id.baboonButton);
-            Button brownbearButton = FindViewById<Button>(Resource.Id.baboonButton);
-            Button californiansealionButton = FindViewById<Button>(Resource.Id.californian);
-            Button baboonButton = FindViewById<Button>(Resource.Id.baboonButton);
-            Button baboonButton = FindViewById<Button>(Resource.Id.baboonButton);
-            Button baboonButton = FindViewById<Button>(Resource.Id.baboonButton);
-            Button baboonButton = FindViewById<Button>(Resource.Id.baboonButton);
-            Button baboonButton = FindViewById<Button>(Resource.Id.baboonButton);
-            Button baboonButton = FindViewById<Button>(Resource.Id.baboonButton);
-            Button baboonButton = FindViewById<Button>(Resource.Id.baboonButton);
-            Button baboonButton = FindViewById<Button>(Resource.Id.baboonButton);
-            Button baboonButton = FindViewById<Button>(Resource.Id.baboonButton);
-            Button baboonButton = FindViewById<Button>(Resource.Id.baboonButton);
+            Button brownbearButton = FindViewById<Button>(Resource.Id.brownbearButton);
+            Button sealionButton = FindViewById<Button>(Resource.Id.sealionButton);
+            Button hippoButton = FindViewById<Button>(Resource.Id.hippoButton);
+            Button elephantButton = FindViewById<Button>(Resource.Id.elephantButton);
+            Button giraffeButton = FindViewById<Button>(Resource.Id.giraffeButton);
+            Button polarbearButton = FindViewById<Button>(Resource.Id.polarbearButton);
+            Button kaimanButton = FindViewById<Button>(Resource.Id.blackkaimanButton);
+            Button tamarinButton = FindViewById<Button>(Resource.Id.emperorButton);
+            Button lemurButton = FindViewById<Button>(Resource.Id.lemurButton);
+            Button lionButton = FindViewById<Button>(Resource.Id.lionButton);
+            Button penguinButton = FindViewById<Button>(Resource.Id.penguinButton);
+            Button meercatButton = FindViewById<Button>(Resource.Id.meercatButton);
+            Button tigerButton = FindViewById<Button>(Resource.Id.tigerButton);
+            Button zebraButton = FindViewById<Button>(Resource.Id.zebraButton);
 
+            animalMenuButtons.Add(baboonButton);
+            animalMenuButtons.Add(baboonButton);
+            animalMenuButtons.Add(baboonButton);
+            animalMenuButtons.Add(baboonButton);
+            animalMenuButtons.Add(baboonButton);
+            animalMenuButtons.Add(baboonButton);
+            animalMenuButtons.Add(baboonButton);
+            animalMenuButtons.Add(baboonButton);
+            animalMenuButtons.Add(baboonButton);
+            animalMenuButtons.Add(baboonButton);
+            animalMenuButtons.Add(baboonButton);
+            animalMenuButtons.Add(baboonButton);
+            animalMenuButtons.Add(baboonButton);
+            animalMenuButtons.Add(baboonButton);
 
-            button.Click += delegate {
-                StartActivity(typeof(AnimalMenuActivity));
-            };
 
         }
 

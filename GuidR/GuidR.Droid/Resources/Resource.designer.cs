@@ -201,6 +201,9 @@ namespace GuidR.Droid
 			// aapt resource value: 0x7f060002
 			public const int baboonButton = 2131099650;
 			
+			// aapt resource value: 0x7f06000c
+			public const int blackkaimanButton = 2131099660;
+			
 			// aapt resource value: 0x7f060003
 			public const int brownbearButton = 2131099651;
 			
@@ -232,16 +235,19 @@ namespace GuidR.Droid
 			public const int checkinbutton = 2131099683;
 			
 			// aapt resource value: 0x7f060008
-			public const int elefantbutton = 2131099656;
+			public const int elephantButton = 2131099656;
+			
+			// aapt resource value: 0x7f06000e
+			public const int emperorButton = 2131099662;
 			
 			// aapt resource value: 0x7f060020
 			public const int facilityButton = 2131099680;
 			
-			// aapt resource value: 0x7f060006
-			public const int flodhestButton = 2131099654;
-			
 			// aapt resource value: 0x7f060009
-			public const int girafbutton = 2131099657;
+			public const int giraffeButton = 2131099657;
+			
+			// aapt resource value: 0x7f060006
+			public const int hippoButton = 2131099654;
 			
 			// aapt resource value: 0x7f060000
 			public const int imageView = 2131099648;
@@ -249,35 +255,29 @@ namespace GuidR.Droid
 			// aapt resource value: 0x7f060021
 			public const int infoButton = 2131099681;
 			
-			// aapt resource value: 0x7f06000b
-			public const int isbjornButton = 2131099659;
-			
-			// aapt resource value: 0x7f06000c
-			public const int kaimanButton = 2131099660;
-			
-			// aapt resource value: 0x7f06000e
-			public const int kejserButton = 2131099662;
-			
 			// aapt resource value: 0x7f06000f
 			public const int lemurButton = 2131099663;
 			
 			// aapt resource value: 0x7f060011
-			public const int loveButton = 2131099665;
+			public const int lionButton = 2131099665;
 			
 			// aapt resource value: 0x7f06001e
 			public const int mapButton = 2131099678;
+			
+			// aapt resource value: 0x7f060014
+			public const int meercatButton = 2131099668;
 			
 			// aapt resource value: 0x7f060022
 			public const int newsbutton = 2131099682;
 			
 			// aapt resource value: 0x7f060012
-			public const int pingvinButton = 2131099666;
+			public const int penguinButton = 2131099666;
+			
+			// aapt resource value: 0x7f06000b
+			public const int polarbearButton = 2131099659;
 			
 			// aapt resource value: 0x7f060005
-			public const int soloveButton = 2131099653;
-			
-			// aapt resource value: 0x7f060014
-			public const int surikatButton = 2131099668;
+			public const int sealionButton = 2131099653;
 			
 			// aapt resource value: 0x7f060015
 			public const int tigerButton = 2131099669;
