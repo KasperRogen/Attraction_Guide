@@ -6,27 +6,29 @@ namespace GuidR.Droid
 {
     public class Facility : Attraction
     {
-        public Facility (string name, string description, Coordinates location, DateTime open, DateTime close) 
-            : base (name, description, location)
+        public Facility(string name, string description, Coordinates location)
+            : this(name, description, location, null, null)
+        { }
+
+        public Facility(string name, string description, Coordinates location, Time open, Time close)
+            : base(name, description, location)
         {
             this.Open = open;
             this.Close = close;
         }
 
         // The opening hours of the facility
-        public DateTime Open
+        public Time Open
         {
-            get;
-            set;
+            get; set;
         }
 
         // The closed hours of the facility
-        public DateTime Close
+        public Time Close
         {
-            get;
-            set;
+            get; set;
         }
-        
+
         // Is this facility open?
         public bool IsOpened
         {
@@ -37,29 +39,29 @@ namespace GuidR.Droid
                     return true;
 
                 // If current time is between close and open, return true
-                return DateTime.Now > Open && DateTime.Now < Close;
+                return DateTime.Now > Open.TimeOfDay && DateTime.Now < Close.TimeOfDay;
             }
         }
-            
+
         // If closed returns time left
         public string OpensIn
         {
             get
             {
                 if (!IsOpened)
-                    return "Opens in: " + (Open - DateTime.Now).ToString();
+                    return "Opens in: " + (Open.TimeOfDay - DateTime.Now).ToString();
                 else
                     return "IT IS OPEN, FAGGOT!";
             }
         }
 
-        // If Opened returns time until close
+        // If opened returns time until close
         public string ClosesIn
         {
             get
             {
                 if (IsOpened)
-                    return "Closes in: " + (Close - DateTime.Now).ToString();
+                    return "Closes in: " + (Close.TimeOfDay - DateTime.Now).ToString();
                 else
                     return "IS CLOSED, FAGGOT!";
             }

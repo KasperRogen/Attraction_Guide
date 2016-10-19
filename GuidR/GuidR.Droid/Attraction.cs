@@ -7,7 +7,7 @@ namespace GuidR.Droid
     public class Attraction
     {
         // All attractions share a name, a description and a location
-        public Attraction (string name, string description, Coordinates location)
+        public Attraction(string name, string description, Coordinates location)
         {
             this.Name = name;
             this.Description = description;

@@ -1,26 +1,81 @@
-﻿using System;
-
-namespace GuidR.Droid
+﻿namespace App_Time
 {
     public static class AttractionDataBase
     {
-        // Make into properties, or make a list. Something clever!
-        public static Animal baboon;
-        public static Animal bear;
-        public static Animal seaLion;
-        public static Animal hippo;
-        public static Animal elefant;
-        public static Animal giraf;
-        public static Animal iceBear;
-        public static Animal kaiman;
-        public static Animal tamarin;
-        public static Animal lemur;
-        public static Animal lion;
-        public static Animal penguin;
-        public static Animal meercat;
-        public static Animal zebra;
+        public static Animal Baboon
+        {
+            get; set;
+        }
 
-        public static Facility toilet;
+        public static Animal Bear
+        {
+            get; set;
+        }
+
+        public static Animal SeaLion
+        {
+            get; set;
+        }
+
+        public static Animal Hippo
+        {
+            get; set;
+        }
+
+        public static Animal Elephant
+        {
+            get; set;
+        }
+
+        public static Animal Giraffe
+        {
+            get; set;
+        }
+
+        public static Animal PolarBear
+        {
+            get; set;
+        }
+
+        public static Animal Kaiman
+        {
+            get; set;
+        }
+
+        public static Animal Tamarin
+        {
+            get; set;
+        }
+
+        public static Animal Lemur
+        {
+            get; set;
+        }
+
+        public static Animal Lion
+        {
+            get; set;
+        }
+
+        public static Animal Penguin
+        {
+            get; set;
+        }
+
+        public static Animal Meercat
+        {
+            get; set;
+        }
+
+        public static Animal Zebra
+        {
+            get; set;
+        }
+
+        public static Facility Toilet
+        {
+            get; set;
+        }
 
         public static void InitializeAttraction()
         {
@@ -28,67 +83,70 @@ namespace GuidR.Droid
             InitializeFacilities();
         }
 
-        public static void InitializeAnimals ()
+        public static void InitializeAnimals()
         {
             Coordinates baboonCoordinates = new Coordinates(100, 100);
             string baboonDescription = "Beskrivelse";
-            baboon = new Animal("Bavian", baboonDescription, baboonCoordinates, "Papio Hamadryas");
+            Baboon = new Animal("Bavian", baboonDescription, baboonCoordinates, "Papio Hamadryas");
 
             Coordinates bearCoordinates = new Coordinates(100, 100);
             string bearDescription = "Beskrivelse";
-            Time bearFeeding = new Time(13, 45);
-            bear = new Animal("Brunbjørn", bearDescription, bearCoordinates, "Ursus Arctos", bearFeeding);
+            Time bearFeeding = new Time(14, 45);
+            Bear = new Animal("Brunbjørn", bearDescription, bearCoordinates, "Ursus Arctos", bearFeeding);
 
             Coordinates seaLionCoordinates = new Coordinates(100, 100);
             string seaLionDescription = "Beskrivelse";
             Time seaLionFeeding = new Time(11, 30);
-            seaLion = new Animal("Søløve", seaLionDescription, seaLionCoordinates, "Zalophus Californianusu", seaLionFeeding);
+            SeaLion = new Animal("Søløve", seaLionDescription, seaLionCoordinates, "Zalophus Californianusu", seaLionFeeding);
 
             Coordinates hippoCoordinates = new Coordinates(100, 100);
             string hippoDescription = "Beskrivelse";
             Time hippoFeeding = new Time(13);
-            hippo = new Animal("Dværgflodhest", hippoDescription, hippoCoordinates, "Hexaprotodon Liberiensis", hippoFeeding);
+            Hippo = new Animal("Dværgflodhest", hippoDescription, hippoCoordinates, "Hexaprotodon Liberiensis", hippoFeeding);
 
-            Coordinates elefantCoordinates = new Coordinates(100, 100);
-            string elefantDescription = "Beskrivelse";
-            Time elefantFeeding = new Time(13);
-            elefant = new Animal("Elefant", elefantDescription, elefantCoordinates, "Lozodonta Africana", elefantFeeding);
+            Coordinates elephantCoordinates = new Coordinates(100, 100);
+            string elephantDescription = "Beskrivelse";
 
-            Coordinates girafCoordinates = new Coordinates(100, 100);
-            string girafDescription = "Beskrivelse";
-            giraf = new Animal("Giraf", girafDescription, girafCoordinates, "Giraffa Camelopardalis Rotschildi");
+            Time elephantFeeding = new Time(15);
+            Time elephantFeeding2 = new Time(18);
 
-            Coordinates iceBearCoordinates = new Coordinates(100, 100);
-            string iceBearDescription = "Beskrivelse";
-            iceBear = new Animal("Isbjørn", iceBearDescription, iceBearCoordinates, "Ursus Maritimus");
+            Elephant = new Animal("Elefant", elephantDescription, elephantCoordinates, "Lozodonta Africana", elephantFeeding, elephantFeeding2);
+
+            Coordinates giraffeCoordinates = new Coordinates(100, 100);
+            string giraffeDescription = "Beskrivelse";
+            Giraffe = new Animal("Giraf", giraffeDescription, giraffeCoordinates, "Giraffa Camelopardalis Rotschildi");
+
+            Coordinates polarBearCoordinates = new Coordinates(100, 100);
+            string polarBearDescription = "Beskrivelse";
+            PolarBear = new Animal("Isbjørn", polarBearDescription, polarBearCoordinates, "Ursus Maritimus");
 
             Coordinates kaimanCoordinates = new Coordinates(100, 100);
             string kaimanDescription = "Beskrivelse";
-            kaiman = new Animal("Sort Kaiman", kaimanDescription, kaimanCoordinates, "Melanosuchus Niger");
+            Kaiman = new Animal("Sort Kaiman", kaimanDescription, kaimanCoordinates, "Melanosuchus Niger");
 
             Coordinates tamarinCoordinates = new Coordinates(100, 100);
             string tamarinDescription = "Beskrivelse";
-            tamarin = new Animal("Kejsertamarin", tamarinDescription, tamarinCoordinates, "Saguinus Imperator");
+            Tamarin = new Animal("Kejsertamarin", tamarinDescription, tamarinCoordinates, "Saguinus Imperator");
 
             Coordinates lemurCoordinates = new Coordinates(100, 100);
             string lemurDescription = "Beskrivelse";
-            lemur = new Animal("Lemur", lemurDescription, lemurCoordinates, "Lemur Catta");
+            Lemur = new Animal("Lemur", lemurDescription, lemurCoordinates, "Lemur Catta");
 
             Coordinates lionCoordinates = new Coordinates(100, 100);
             string lionDescription = "Beskrivelse";
-            lion = new Animal("Løve", lionDescription, lionCoordinates, "Panthera leo persica");
+            Lion = new Animal("Løve", lionDescription, lionCoordinates, "Panthera leo persica");
 
             Coordinates penquinCoordinates = new Coordinates(100, 100);
             string penquinDescription = "Beskrivelse";
-            penguin = new Animal("Penquin", penquinDescription, penquinCoordinates, "Spheniscus Humboldti");
+            Penguin = new Animal("Penquin", penquinDescription, penquinCoordinates, "Spheniscus Humboldti");
 
             Coordinates meercatCoordinates = new Coordinates(100, 100);
             string meercatDescription = "Beskrivelse";
-            meercat = new Animal("Meercat", meercatDescription, meercatCoordinates, "Suricata Suricatta");
+            Meercat = new Animal("Meercat", meercatDescription, meercatCoordinates, "Suricata Suricatta");
 
             Coordinates zebraCoordinates = new Coordinates(100, 100);
             string zebraDescription = "Beskrivelse";
-            zebra = new Animal("Zebra", zebraDescription, zebraCoordinates, "Equus Grevyi");
+            Zebra = new Animal("Zebra", zebraDescription, zebraCoordinates, "Equus Grevyi");
         }
 
         public static void InitializeFacilities()
@@ -96,7 +154,7 @@ namespace GuidR.Droid
             Coordinates toiletCoordinates = new Coordinates(100, 100);
             string toiletDescription = "sdfsdfsf";
 
-            toilet = new Facility("Toilet - NAVN", toiletDescription, null, DateTime.Now, DateTime.Now);
+            Toilet = new Facility("Toilet - NAVN", toiletDescription, toiletCoordinates);
         }
     }
 }

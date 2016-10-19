@@ -15,9 +15,27 @@ namespace GuidR.Droid
 
 		protected override void OnCreate (Bundle bundle)
 		{
+            /* Properties:
+              Animals:
+              - Name
+              - LatinName
+              - Description
+              - Location
+              - NextFeeding
+              - FeedingTimes
 
+              Facilities:
+              - Name
+              - Description
+              - Location
+              - Open
+              - Close
+              - IsOpened
+              - OpensIn
+              - ClosesIn
+            */
 
-			base.OnCreate (bundle);
+            base.OnCreate (bundle);
             ActionBar.Hide();
 			// Set our view from the "main" layout resource
 			SetContentView (Resource.Layout.Main);

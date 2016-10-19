@@ -1,3 +1,6 @@
+using System;
+using System.Collections.Generic;
+
 // The shared properties between all animals
 
 namespace GuidR.Droid
@@ -6,30 +9,69 @@ namespace GuidR.Droid
     {
         // Lav CTOR'en om til CTOR chaining
 
-        public Animal (string name, string description, Coordinates location, string latinName, Time feedingTime) 
+        public Animal(string name, string description, Coordinates location, string latinName, params Time[] feedingTimes)
             : base(name, description, location)
         {
             this.LatinName = latinName;
-            this.FeedingTime = feedingTime;
+
+            foreach (Time t in feedingTimes)
+                this.FeedingTimes.Add(t);
         }
 
-        public Animal (string name, string description, Coordinates location, string latinName)
+        public Animal(string name, string description, Coordinates location, string latinName, Time feedingTime)
             : base(name, description, location)
         {
             this.LatinName = latinName;
-            this.FeedingTime = null;
+            this.FeedingTimes.Add(feedingTime);
+        }
+
+        public Animal(string name, string description, Coordinates location, string latinName)
+            : base(name, description, location)
+        {
+            this.LatinName = latinName;
+            this.FeedingTimes = null;
         }
 
         public string LatinName
         {
-            get;
-            set;
+            get; set;
         }
 
-        public Time FeedingTime
+        public Time NextFeeding
         {
-            get;
-            set;
+            get
+            {
+                if (FeedingTimes.Count == 1)
+                    return FeedingTimes[0];
+
+                // If the animal is feed more than once a day, get the nearest feeding time
+                else
+                {
+                    Time nearestFeedingTime = FeedingTimes[0];
+
+                    foreach (Time t in FeedingTimes)
+                    {
+                        if (/*t.TimeOfDay > DateTime.Now && */t.TimeOfDay < nearestFeedingTime.TimeOfDay && !t.IsPassed)
+                            nearestFeedingTime = t;
+                    }
+
+                    return nearestFeedingTime;
+                }
+            }
+        }
+
+        private List<Time> _feedingTimes = new List<Time>();
+
+        public List<Time> FeedingTimes
+        {
+            get
+            {
+                return _feedingTimes;
+            }
+            set
+            {
+                _feedingTimes = value;
+            }
         }
     }
 }
