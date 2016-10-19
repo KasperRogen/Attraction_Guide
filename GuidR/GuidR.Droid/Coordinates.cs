@@ -1,4 +1,4 @@
-namespace App_Time
+namespace GuidR.Droid
 {
     public class Coordinates
     {

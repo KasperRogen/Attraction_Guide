@@ -1,6 +1,6 @@
 // The shared properties between all animals
 
-namespace App_Time
+namespace GuidR.Droid
 {
     public class Animal : Attraction
     {

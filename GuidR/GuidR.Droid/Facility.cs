@@ -2,7 +2,7 @@ using System;
 
 // The shared properties between all facilities (toilets, resturants, etc.)
 
-namespace App_Time
+namespace GuidR.Droid
 {
     public class Facility : Attraction
     {

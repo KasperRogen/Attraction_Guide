@@ -25,7 +25,7 @@
                 android:adjustViewBounds="true"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:src="@drawable/baboonHeader"
+                android:src="@drawable/baboonheader"
                 android:id="@+id/HeaderImage" />
 
             <TextView
@@ -44,19 +44,35 @@
                 android:text="Papio Hamadryas"
                 android:textSize="12sp" />
 
-            <TextView
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="180dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical" >
+
+                    <TextView
 
 
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/AboutAnimal"
-                android:textSize="15sp"
-                android:layout_gravity="center_horizontal"
-                android:text="The Baboon primarily lives in open,dry deserts and mountainsides in Arifca.
-Djibouti, Eritrea, Etiopia, Saudi-Arabia, Somalia, Sudan and Yemen.\n\n
-The baboons have a bodylength of up to 75cm and a tail length up to 61cm.\n\n
-The males can be as big as 18kg. and the females 10kg."
-                />
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/AboutAnimal"
+                        android:textSize="15sp"
+                        android:layout_gravity="center_horizontal"
+                        android:text="The Baboon primarily lives in open,dry deserts and mountainsides in Arifca.
+        Djibouti, Eritrea, Etiopia, Saudi-Arabia, Somalia, Sudan and Yemen.\n\n
+        The baboons have a bodylength of up to 75cm and a tail length up to 61cm.\n\n
+        The males can be as big as 18kg. and the females 10kg.
+        Djibouti, Eritrea, Etiopia, Saudi-Arabia, Somalia, Sudan and Yemen.\n\n
+        The baboons have a bodylength of up to 75cm and a tail length up to 61cm.\n\n
+        The males can be as big as 18kg. and the females 10kg.
+        Djibouti, Eritrea, Etiopia, Saudi-Arabia, Somalia, Sudan and Yemen.\n\n
+        The baboons have a bodylength of up to 75cm and a tail length up to 61cm.\n\n
+        The males can be as big as 18kg. and the females 10kg." />
+                </LinearLayout>
+            </ScrollView>
 
 
             <LinearLayout
@@ -107,7 +123,7 @@ The males can be as big as 18kg. and the females 10kg."
                     android:layout_weight="1"
                     android:minHeight="1dp"
                     android:layout_height="80dp"
-                    android:drawableTop="@drawable/Map_pin"
+                    android:drawableTop="@drawable/map_pin"
                     android:background="@null" />
 
             </LinearLayout>

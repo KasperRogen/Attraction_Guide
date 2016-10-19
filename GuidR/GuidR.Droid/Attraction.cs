@@ -2,7 +2,7 @@ using System;
 
 // The shared properties between all attractions (toilets, resturants, Animals.)
 
-namespace App_Time
+namespace GuidR.Droid
 {
     public class Attraction
     {

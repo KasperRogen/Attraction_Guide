@@ -50,6 +50,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Animal.cs" />
+    <Compile Include="AnimalButton.cs" />
     <Compile Include="Attraction.cs" />
     <Compile Include="AttractionDataBase.cs" />
     <Compile Include="Coordinates.cs" />

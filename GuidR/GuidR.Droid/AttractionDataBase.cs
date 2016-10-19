@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace App_Time
+namespace GuidR.Droid
 {
     public static class AttractionDataBase
     {
