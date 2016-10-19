@@ -8,7 +8,7 @@
     <OutputType>Exe</OutputType>
     <RootNamespace>GuidR.iOS</RootNamespace>
     <IPhoneResourcePrefix>Resources</IPhoneResourcePrefix>
-    <AssemblyName>GuidR.iOS</AssemblyName>
+    <AssemblyName>GuidRiOS</AssemblyName>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|iPhoneSimulator' ">
     <DebugSymbols>true</DebugSymbols>

@@ -202,7 +202,7 @@ namespace GuidR.Droid
 			public const int baboonButton = 2131099650;
 			
 			// aapt resource value: 0x7f060003
-			public const int brunbjornButton = 2131099651;
+			public const int brownbearButton = 2131099651;
 			
 			// aapt resource value: 0x7f060001
 			public const int buttonPanel1 = 2131099649;

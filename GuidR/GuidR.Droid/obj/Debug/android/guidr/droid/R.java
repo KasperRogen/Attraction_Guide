@@ -61,7 +61,7 @@ public final class R {
         public static final int Name=0x7f060019;
         public static final int animalButton=0x7f06001f;
         public static final int baboonButton=0x7f060002;
-        public static final int brunbjornButton=0x7f060003;
+        public static final int brownbearButton=0x7f060003;
         public static final int buttonPanel1=0x7f060001;
         public static final int buttonpanel2=0x7f060004;
         public static final int buttonpanel3=0x7f060007;

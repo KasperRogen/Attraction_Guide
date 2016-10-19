@@ -75,7 +75,7 @@
                 android:weightSum="2"
                 android:id="@+id/buttonpanel2">
                 <Button
-                    android:id="@+id/soloveButton"
+                    android:id="@+id/sealionButton"
                     android:layout_marginBottom="20dp"
                     android:layout_width="0dp"
                     android:layout_weight="1"
@@ -83,7 +83,7 @@
                     android:drawableTop="@drawable/Californian_Sea_Lion"
                     android:background="@null" />
                 <Button
-                    android:id="@+id/flodhestButton"
+                    android:id="@+id/hippoButton"
                     android:layout_width="0dp"
                     android:layout_weight="1"
                     android:layout_height="wrap_content"
@@ -104,14 +104,14 @@
                 android:orientation="horizontal"
                 android:weightSum="2">
                 <Button
-                    android:id="@+id/elefantbutton"
+                    android:id="@+id/elephantButton"
                     android:layout_width="0dp"
                     android:layout_weight="1"
                     android:layout_height="wrap_content"
                     android:drawableTop="@drawable/Elephant"
                     android:background="@null" />
                 <Button
-                    android:id="@+id/girafbutton"
+                    android:id="@+id/giraffeButton"
                     android:layout_width="0dp"
                     android:layout_weight="1"
                     android:layout_height="wrap_content"
@@ -131,14 +131,14 @@
                 android:orientation="horizontal"
                 android:weightSum="2">
                 <Button
-                    android:id="@+id/isbjornButton"
+                    android:id="@+id/polarbearButton"
                     android:layout_width="0dp"
                     android:layout_weight="1"
                     android:layout_height="wrap_content"
                     android:drawableTop="@drawable/Polar_bear"
                     android:background="@null" />
                 <Button
-                    android:id="@+id/kaimanButton"
+                    android:id="@+id/blackkaimanButton"
                     android:layout_width="0dp"
                     android:layout_weight="1"
                     android:layout_height="wrap_content"
@@ -158,7 +158,7 @@
                 android:orientation="horizontal"
                 android:weightSum="2">
                 <Button
-                    android:id="@+id/kejserButton"
+                    android:id="@+id/emperorButton"
                     android:layout_width="0dp"
                     android:layout_weight="1"
                     android:layout_height="wrap_content"
@@ -185,14 +185,14 @@
                 android:orientation="horizontal"
                 android:weightSum="2">
                 <Button
-                    android:id="@+id/loveButton"
+                    android:id="@+id/lionButton"
                     android:layout_width="0dp"
                     android:layout_weight="1"
                     android:layout_height="wrap_content"
                     android:drawableTop="@drawable/Lion"
                     android:background="@null" />
                 <Button
-                    android:id="@+id/pingvinButton"
+                    android:id="@+id/penguinButton"
                     android:layout_width="0dp"
                     android:layout_weight="1"
                     android:layout_height="wrap_content"
@@ -212,7 +212,7 @@
                 android:orientation="horizontal"
                 android:weightSum="2">
                 <Button
-                    android:id="@+id/surikatButton"
+                    android:id="@+id/meercatButton"
                     android:layout_width="0dp"
                     android:layout_weight="1"
                     android:layout_height="wrap_content"
