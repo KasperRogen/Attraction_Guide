@@ -6,7 +6,8 @@
   <uses-permission android:name="android.permission.INTERNET" />
   <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
   <application android:label="GuidR.Droid" android:name="android.app.Application" android:allowBackup="true" android:debuggable="true">
-    <activity android:label="Aalborg Zoo" android:theme="@style/NoTitle.splash" android:name="md592dad29b48c921d86ac04e6f0466f88a.animalActivity" />
+    <activity android:label="Aalborg Zoo" android:theme="@style/NoTitle.splash" android:name="md592dad29b48c921d86ac04e6f0466f88a.IndependentAnimalActivity" />
+    <activity android:label="Aalborg Zoo" android:theme="@style/NoTitle.splash" android:name="md592dad29b48c921d86ac04e6f0466f88a.AnimalMenuActivity" />
     <activity android:icon="@drawable/logo" android:label="Aalborg Zoo" android:noHistory="true" android:theme="@style/Theme.splash" android:name="md592dad29b48c921d86ac04e6f0466f88a.SplashScreen">
       <intent-filter>
         <action android:name="android.intent.action.MAIN" />

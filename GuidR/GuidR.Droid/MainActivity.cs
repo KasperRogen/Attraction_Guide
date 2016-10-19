@@ -25,7 +25,7 @@ namespace GuidR.Droid
             Button button = FindViewById<Button>(Resource.Id.animalButton);
 
             button.Click += delegate {
-                StartActivity(typeof(animalActivity));
+                StartActivity(typeof(AnimalMenuActivity));
             };
 
 

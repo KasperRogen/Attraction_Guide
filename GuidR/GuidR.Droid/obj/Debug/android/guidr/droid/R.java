@@ -91,8 +91,8 @@ public final class R {
         public static final int zebraButton=0x7f060017;
     }
     public static final class layout {
-        public static final int animals=0x7f030000;
-        public static final int baboonpage=0x7f030001;
+        public static final int animalmenu=0x7f030000;
+        public static final int animalpage=0x7f030001;
         public static final int main=0x7f030002;
     }
     public static final class string {
