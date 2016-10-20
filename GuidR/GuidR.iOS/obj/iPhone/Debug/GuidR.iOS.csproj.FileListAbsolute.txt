@@ -2,7 +2,6 @@ C:\Users\Kasper\Documents\Attraction_Guide\GuidR\GuidR.iOS\bin\iPhone\Debug\Guid
 C:\Users\Kasper\Documents\Attraction_Guide\GuidR\GuidR.iOS\bin\iPhone\Debug\GuidRiOS.pdb
 C:\Users\Kasper\Documents\Attraction_Guide\GuidR\GuidR.iOS\bin\iPhone\Debug\GuidR.dll
 C:\Users\Kasper\Documents\Attraction_Guide\GuidR\GuidR.iOS\bin\iPhone\Debug\GuidR.pdb
-C:\Users\Kasper\Documents\Attraction_Guide\GuidR\GuidR.iOS\bin\iPhone\Debug\GuidR.dll.mdb
 C:\Users\Kasper\Documents\Attraction_Guide\GuidR\GuidR.iOS\obj\iPhone\Debug\ibtool\_BundleResourceWithLogicalName.items
 C:\Users\Kasper\Documents\Attraction_Guide\GuidR\GuidR.iOS\obj\iPhone\Debug\actool\_PartialAppManifest.items
 C:\Users\Kasper\Documents\Attraction_Guide\GuidR\GuidR.iOS\obj\iPhone\Debug\actool\_BundleResourceWithLogicalName.items
@@ -10,8 +9,6 @@ C:\Users\Kasper\Documents\Attraction_Guide\GuidR\GuidR.iOS\obj\iPhone\Debug\opti
 C:\Users\Kasper\Documents\Attraction_Guide\GuidR\GuidR.iOS\obj\iPhone\Debug\GuidR.iOS.csprojResolveAssemblyReference.cache
 C:\Users\Kasper\Documents\Attraction_Guide\GuidR\GuidR.iOS\obj\iPhone\Debug\GuidRiOS.exe
 C:\Users\Kasper\Documents\Attraction_Guide\GuidR\GuidR.iOS\obj\iPhone\Debug\GuidRiOS.pdb
-C:\Users\Kasper\Documents\Attraction_Guide\GuidR\GuidR.iOS\obj\iPhone\Debug\GuidRiOS.exe.mdb
-C:\Users\Kasper\Documents\Attraction_Guide\GuidR\GuidR.iOS\bin\iPhone\Debug\GuidRiOS.exe.mdb
 C:\Users\kaspe\Documents\Attraction_Guide\GuidR\GuidR.iOS\bin\iPhone\Debug\GuidRiOS.exe
 C:\Users\kaspe\Documents\Attraction_Guide\GuidR\GuidR.iOS\bin\iPhone\Debug\GuidRiOS.pdb
 C:\Users\kaspe\Documents\Attraction_Guide\GuidR\GuidR.iOS\bin\iPhone\Debug\GuidR.dll
@@ -26,3 +23,5 @@ C:\Users\kaspe\Documents\Attraction_Guide\GuidR\GuidR.iOS\obj\iPhone\Debug\GuidR
 C:\Users\kaspe\Documents\Attraction_Guide\GuidR\GuidR.iOS\obj\iPhone\Debug\GuidRiOS.pdb
 C:\Users\kaspe\Documents\Attraction_Guide\GuidR\GuidR.iOS\obj\iPhone\Debug\GuidRiOS.exe.mdb
 C:\Users\kaspe\Documents\Attraction_Guide\GuidR\GuidR.iOS\bin\iPhone\Debug\GuidRiOS.exe.mdb
+C:\Users\Kasper\Documents\Attraction_Guide\GuidR\GuidR.iOS\obj\iPhone\Debug\GuidRiOS.exe.mdb
+C:\Users\Kasper\Documents\Attraction_Guide\GuidR\GuidR.iOS\bin\iPhone\Debug\GuidRiOS.exe.mdb
