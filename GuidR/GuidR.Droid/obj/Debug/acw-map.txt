@@ -1,3 +1,7 @@
+GuidR.Droid.FacilitiesMenuActivity, GuidR.Droid;md592dad29b48c921d86ac04e6f0466f88a.FacilitiesMenuActivity
+GuidR.Droid.FacilitiesMenuActivity, GuidR.Droid, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;md592dad29b48c921d86ac04e6f0466f88a.FacilitiesMenuActivity
+GuidR.Droid.FacilitiesMenuActivity;md592dad29b48c921d86ac04e6f0466f88a.FacilitiesMenuActivity
+guidr.droid.FacilitiesMenuActivity;md592dad29b48c921d86ac04e6f0466f88a.FacilitiesMenuActivity
 GuidR.Droid.IndependentAnimalActivity, GuidR.Droid;md592dad29b48c921d86ac04e6f0466f88a.IndependentAnimalActivity
 GuidR.Droid.IndependentAnimalActivity, GuidR.Droid, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;md592dad29b48c921d86ac04e6f0466f88a.IndependentAnimalActivity
 GuidR.Droid.IndependentAnimalActivity;md592dad29b48c921d86ac04e6f0466f88a.IndependentAnimalActivity

@@ -41,9 +41,15 @@ namespace GuidR.Droid
 			SetContentView (Resource.Layout.Main);
 
             Button button = FindViewById<Button>(Resource.Id.animalButton);
+            Button facilityButton = FindViewById<Button>(Resource.Id.facilityButton);
 
             button.Click += delegate {
                 StartActivity(typeof(AnimalMenuActivity));
+            };
+
+            facilityButton.Click += delegate
+            {
+                StartActivity(typeof(FacilitiesMenuActivity));
             };
 
 

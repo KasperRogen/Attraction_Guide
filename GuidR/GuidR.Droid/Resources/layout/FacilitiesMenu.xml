@@ -45,24 +45,50 @@
           android:paddingTop="5dp"
           android:weightSum="2">
         <Button
-            android:id="@+id/toiletButton"
+            android:id="@+id/toiletButton1"
             android:layout_width="0dp"
             android:layout_weight="1"
             android:layout_height="wrap_content"
             android:drawableTop="@drawable/Toilet" 
             android:background="@null" />
-
         <Button
-            android:id="@+id/restaurantButton"
+            android:id="@+id/toiletButton2"
             android:layout_width="0dp"
             android:layout_weight="1"
             android:layout_height="wrap_content"
-            android:paddingBottom="-5dp"
-            android:drawableTop="@null"
+            android:layout_gravity="center"
+            android:drawableTop="@drawable/Arrow_small"
             android:background="@null" />
       </LinearLayout>
 
-
+      <LinearLayout
+          android:id="@+id/buttonPanel2"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_centerHorizontal="false"
+          android:minHeight="25px"
+          android:minWidth="25px"
+          android:orientation="horizontal"
+          android:layout_marginTop="15dp"
+          android:paddingTop="5dp"
+          android:weightSum="2">
+        <Button
+            android:id="@+id/toiletButton3"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:drawableTop="@drawable/toilet"
+            android:background="@null" />
+        <Button
+            android:id="@+id/toiletButton4"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:drawableTop="@drawable/Arrow_small"
+            android:background="@null" />
+      </LinearLayout>
+      
     </RelativeLayout>
   </ScrollView>
 </LinearLayout>

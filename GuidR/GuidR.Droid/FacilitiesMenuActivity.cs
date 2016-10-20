@@ -20,7 +20,18 @@ namespace GuidR.Droid
             base.OnCreate(bundle);
             SetContentView(Resource.Layout.FacilitiesMenu);
 
+            Button button1 = FindViewById<Button>(Resource.Id.toiletButton1);
+            Button button2 = FindViewById<Button>(Resource.Id.toiletButton2);
 
+            button1.Click += delegate
+            {
+                Console.WriteLine("hej! :3");
+            };
+
+            button2.Click += delegate
+            {
+                Console.WriteLine("HEJ2");
+            };
         }
 
     }
