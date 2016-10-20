@@ -17,7 +17,7 @@ namespace GuidR.Droid {
     public class SplashScreen: Activity {
         protected override void OnCreate(Bundle bundle) {
             base.OnCreate(bundle);
-            Thread.Sleep(4000);
+            AttractionDataBase.InitializeAttraction();
             StartActivity(typeof(MainActivity));
         }
 

@@ -8,10 +8,10 @@ C:\Users\kaspe\Documents\Attraction_Guide\GuidR\GuidR.Droid\obj\Debug\android\as
 C:\Users\kaspe\Documents\Attraction_Guide\GuidR\GuidR.Droid\obj\Debug\android\assets\mscorlib.dll
 C:\Users\kaspe\Documents\Attraction_Guide\GuidR\GuidR.Droid\obj\Debug\android\assets\System.Runtime.dll
 C:\Users\kaspe\Documents\Attraction_Guide\GuidR\GuidR.Droid\obj\Debug\android\assets\System.ComponentModel.Composition.dll
-C:\Users\kaspe\Documents\Attraction_Guide\GuidR\GuidR.Droid\obj\Debug\android\assets\System.Threading.dll
-C:\Users\kaspe\Documents\Attraction_Guide\GuidR\GuidR.Droid\obj\Debug\android\assets\System.Collections.dll
-C:\Users\kaspe\Documents\Attraction_Guide\GuidR\GuidR.Droid\obj\Debug\android\assets\System.Collections.Concurrent.dll
 C:\Users\kaspe\Documents\Attraction_Guide\GuidR\GuidR.Droid\obj\Debug\android\assets\System.Diagnostics.Debug.dll
+C:\Users\kaspe\Documents\Attraction_Guide\GuidR\GuidR.Droid\obj\Debug\android\assets\System.Collections.dll
+C:\Users\kaspe\Documents\Attraction_Guide\GuidR\GuidR.Droid\obj\Debug\android\assets\System.Threading.dll
+C:\Users\kaspe\Documents\Attraction_Guide\GuidR\GuidR.Droid\obj\Debug\android\assets\System.Collections.Concurrent.dll
 C:\Users\kaspe\Documents\Attraction_Guide\GuidR\GuidR.Droid\obj\Debug\android\assets\System.Reflection.dll
 C:\Users\kaspe\Documents\Attraction_Guide\GuidR\GuidR.Droid\obj\Debug\android\assets\System.Linq.dll
 C:\Users\kaspe\Documents\Attraction_Guide\GuidR\GuidR.Droid\obj\Debug\android\assets\System.Runtime.InteropServices.dll

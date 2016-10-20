@@ -1,4 +1,4 @@
-﻿namespace App_Time
+﻿namespace GuidR.Droid
 {
     public static class AttractionDataBase
     {
@@ -68,6 +68,11 @@
         }
 
         public static Animal Zebra
+        {
+            get; set;
+        }
+
+        public static Animal Tiger 
         {
             get; set;
         }
@@ -147,6 +152,10 @@
             Coordinates zebraCoordinates = new Coordinates(100, 100);
             string zebraDescription = "Beskrivelse";
             Zebra = new Animal("Zebra", zebraDescription, zebraCoordinates, "Equus Grevyi");
+
+            Coordinates tigerCoordinates = new Coordinates(100, 100);
+            string tigerDescription = "Beskrivelse";
+            Tiger = new Animal("Tiger", tigerDescription, tigerCoordinates, "Panthea Sigris Sumatrae");
         }
 
         public static void InitializeFacilities()
