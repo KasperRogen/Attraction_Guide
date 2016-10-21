@@ -1,0 +1,11 @@
+/Users/Casper/Attraction_Guide/GuidR/GuidR.iOS/obj/iPhone/Debug/Xamarin.iOS,Version=v1.0.AssemblyAttribute.cs
+/Users/Casper/Attraction_Guide/GuidR/GuidR.iOS/obj/iPhone/Debug/ibtool/_BundleResourceWithLogicalName.items
+/Users/Casper/Attraction_Guide/GuidR/GuidR.iOS/obj/iPhone/Debug/actool/_PartialAppManifest.items
+/Users/Casper/Attraction_Guide/GuidR/GuidR.iOS/obj/iPhone/Debug/actool/_BundleResourceWithLogicalName.items
+/Users/Casper/Attraction_Guide/GuidR/GuidR.iOS/obj/iPhone/Debug/optimized/
+/Users/Casper/Attraction_Guide/GuidR/GuidR.iOS/bin/iPhone/Debug/GuidRiOS.exe.mdb
+/Users/Casper/Attraction_Guide/GuidR/GuidR.iOS/bin/iPhone/Debug/GuidRiOS.exe
+/Users/Casper/Attraction_Guide/GuidR/GuidR.iOS/obj/iPhone/Debug/GuidRiOS.exe
+/Users/Casper/Attraction_Guide/GuidR/GuidR.iOS/obj/iPhone/Debug/GuidRiOS.exe.mdb
+/Users/Casper/Attraction_Guide/GuidR/GuidR.iOS/bin/iPhone/Debug/GuidR.dll
+/Users/Casper/Attraction_Guide/GuidR/GuidR.iOS/bin/iPhone/Debug/GuidR.dll.mdb

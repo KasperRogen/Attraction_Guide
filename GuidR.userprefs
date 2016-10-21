@@ -1,0 +1,14 @@
+﻿<Properties StartupConfiguration="{58A706B6-43C9-4FD2-93C7-77FDFD8A63CF}|Default">
+  <MonoDevelop.Ide.Workbench>
+    <Files>
+      <File FileName="GuidR/GuidR.iOS/Main.cs" Line="1" Column="1" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.ItemProperties.GuidR.iOS PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.4AB5DFDE-D395-4071-8AFB-10767C473E0D" />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|iPhoneSimulator" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.ItemProperties.GuidR.Droid PreferredExecutionTarget="Android.Android_Accelerated_x86" />
+</Properties>
