@@ -1,2 +1,2 @@
-C:\Users\Kasper\Documents\Attraction_Guide\GuidR\GuidR.WinPhone\GuidR.WinPhone.csproj;neutral
-C:\Users\Kasper\Documents\Attraction_Guide\GuidR\GuidR\GuidR.csproj;neutral
+C:\Users\Kasper Røgen\Documents\Attraction_Guide\GuidR\GuidR.WinPhone\GuidR.WinPhone.csproj;neutral
+C:\Users\Kasper Røgen\Documents\Attraction_Guide\GuidR\GuidR\GuidR.csproj;neutral

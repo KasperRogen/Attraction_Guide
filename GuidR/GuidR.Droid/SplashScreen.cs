@@ -17,11 +17,31 @@ namespace GuidR.Droid {
     public class SplashScreen: Activity {
         protected override void OnCreate(Bundle bundle) {
             base.OnCreate(bundle);
+            InitializeHeaderImages();
             AttractionDataBase.InitializeAttraction();
             StartActivity(typeof(MainActivity));
         }
 
-    }
+        void InitializeHeaderImages()
+        {
+            AttractionDataBase.baboonHeader = Resource.Drawable.baboonHeader;
+            AttractionDataBase.brownBearHeader = Resource.Drawable.brownBearHeader;
+            AttractionDataBase.sealionHeader = Resource.Drawable.seaLionHeader;
+            AttractionDataBase.hippoHeader = Resource.Drawable.hippoHeader;
+            AttractionDataBase.elephantHeader = Resource.Drawable.elephantHeader;
+            AttractionDataBase.giraffeHeader = Resource.Drawable.Giraffe;
+            AttractionDataBase.polarBearHeader = Resource.Drawable.polarBearHeader;
+            AttractionDataBase.kaimanHeader = Resource.Drawable.kaimanHeader;
+            AttractionDataBase.tamarinHeader = Resource.Drawable.tamarinHeader;
+            AttractionDataBase.lemurHeader = Resource.Drawable.lemurHeader;
+            AttractionDataBase.lionHeader = Resource.Drawable.lionHeader;
+            AttractionDataBase.penguinHeader = Resource.Drawable.penguinHeader;
+            AttractionDataBase.meercatHeader = Resource.Drawable.meercatHeader;
+            AttractionDataBase.tigerHeader = Resource.Drawable.tigerHeader;
+            AttractionDataBase.zebraHeader = Resource.Drawable.zebraHeader;
+        }
 
+    }
+   
 
 }

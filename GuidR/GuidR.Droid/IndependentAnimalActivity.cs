@@ -15,7 +15,8 @@ namespace GuidR.Droid {
             base.OnCreate(bundle);
 
             SetContentView(Resource.Layout.AnimalPage);
-            FindViewById<TextView>(Resource.Id.Name).Text = Animal.Name;
+            FindViewById<ImageView>(Resource.Id.HeaderImage).SetImageResource(Animal.HeaderImage);
+            FindViewById<TextView>(Resource.Id.Name).Text = Animal.Name + Animal.HeaderImage.ToString();
             FindViewById<TextView>(Resource.Id.LatinName).Text = Animal.LatinName;
             FindViewById<TextView>(Resource.Id.AboutAnimal).Text = Animal.Description;
             FindViewById<TextView>(Resource.Id.Feedingtime).Text = Animal.NextFeeding.ToString();

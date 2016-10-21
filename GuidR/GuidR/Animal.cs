@@ -18,11 +18,12 @@ namespace GuidR.Droid
                 this.FeedingTimes.Add(t);
         }
 
-        public Animal(string name, string description, Coordinates location, string latinName, Time feedingTime, string imgSource)
-    : base(name, description, location) {
+        public Animal(string name, string description, Coordinates location, string latinName, Time feedingTime, int imgSource)
+            : base(name, description, location)
+        {
             this.LatinName = latinName;
             this.FeedingTimes.Add(feedingTime);
-            this._imgSource = imgSource;
+            this._headerImage = imgSource;
         }
 
         public Animal(string name, string description, Coordinates location, string latinName, Time feedingTime)
@@ -67,11 +68,11 @@ namespace GuidR.Droid
             }
         }
 
-        private String _imgSource;
+        private int _headerImage;
 
-        public String MyProperty {
-            get { return _imgSource; }
-            set { _imgSource = value; }
+        public int HeaderImage {
+            get { return _headerImage; }
+            set { _headerImage = value; }
         }
 
 

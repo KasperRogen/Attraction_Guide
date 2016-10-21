@@ -2,6 +2,23 @@
 {
     public static class AttractionDataBase
     {
+        public static int baboonHeader;
+        public static int brownBearHeader;
+        public static int sealionHeader;
+        public static int hippoHeader;
+        public static int elephantHeader;
+        public static int giraffeHeader;
+        public static int polarBearHeader;
+        public static int kaimanHeader;
+        public static int tamarinHeader;
+        public static int lemurHeader;
+        public static int lionHeader;
+        public static int penguinHeader;
+        public static int meercatHeader;
+        public static int tigerHeader;
+        public static int zebraHeader;
+
+
         public static Animal Baboon
         {
             get; set;
@@ -97,17 +114,17 @@
             Coordinates bearCoordinates = new Coordinates(100, 100);
             string bearDescription = "Beskrivelse";
             Time bearFeeding = new Time(14, 45);
-            Bear = new Animal("Brunbjørn", bearDescription, bearCoordinates, "Ursus Arctos", bearFeeding);
+            Bear = new Animal("Brunbjørn", bearDescription, bearCoordinates, "Ursus Arctos", bearFeeding, brownBearHeader);
 
             Coordinates seaLionCoordinates = new Coordinates(100, 100);
             string seaLionDescription = "Beskrivelse";
             Time seaLionFeeding = new Time(11, 30);
-            SeaLion = new Animal("Søløve", seaLionDescription, seaLionCoordinates, "Zalophus Californianusu", seaLionFeeding);
+            SeaLion = new Animal("Søløve", seaLionDescription, seaLionCoordinates, "Zalophus Californianusu", seaLionFeeding, sealionHeader);
 
             Coordinates hippoCoordinates = new Coordinates(100, 100);
             string hippoDescription = "Beskrivelse";
             Time hippoFeeding = new Time(13);
-            Hippo = new Animal("Dværgflodhest", hippoDescription, hippoCoordinates, "Hexaprotodon Liberiensis", hippoFeeding);
+            Hippo = new Animal("Dværgflodhest", hippoDescription, hippoCoordinates, "Hexaprotodon Liberiensis", hippoFeeding, hippoHeader);
 
             Coordinates elephantCoordinates = new Coordinates(100, 100);
             string elephantDescription = "Beskrivelse";
