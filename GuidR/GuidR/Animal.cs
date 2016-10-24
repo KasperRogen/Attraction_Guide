@@ -9,16 +9,16 @@ namespace GuidR.Droid
     {
         // Lav CTOR'en om til CTOR chaining
 
-        public Animal(string name, string description, Coordinates location, string latinName, params Time[] feedingTimes)
+        public Animal(string name, string description, Coordinates location, int imgSource, string latinName, params Time[] feedingTimes)
             : base(name, description, location)
         {
             this.LatinName = latinName;
-
+            this._headerImage = imgSource;
             foreach (Time t in feedingTimes)
                 this.FeedingTimes.Add(t);
         }
 
-        public Animal(string name, string description, Coordinates location, string latinName, Time feedingTime, int imgSource)
+        public Animal(string name, string description, Coordinates location, string latinName, int imgSource, Time feedingTime)
             : base(name, description, location)
         {
             this.LatinName = latinName;
@@ -26,16 +26,18 @@ namespace GuidR.Droid
             this._headerImage = imgSource;
         }
 
-        public Animal(string name, string description, Coordinates location, string latinName, Time feedingTime)
+      /*  public Animal(string name, string description, Coordinates location, string latinName, int imgSource, Time feedingTime)
             : base(name, description, location)
         {
             this.LatinName = latinName;
             this.FeedingTimes.Add(feedingTime);
         }
+        */
 
-        public Animal(string name, string description, Coordinates location, string latinName)
+        public Animal(string name, string description, Coordinates location, string latinName, int imgSource)
             : base(name, description, location)
         {
+            this._headerImage = imgSource;
             this.LatinName = latinName;
             this.FeedingTimes = null;
         }

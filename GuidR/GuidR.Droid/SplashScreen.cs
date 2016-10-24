@@ -19,6 +19,7 @@ namespace GuidR.Droid {
             base.OnCreate(bundle);
             InitializeHeaderImages();
             AttractionDataBase.InitializeAttraction();
+            Console.WriteLine("elefant: " + AttractionDataBase.Elephant.HeaderImage);
             StartActivity(typeof(MainActivity));
         }
 
@@ -29,7 +30,7 @@ namespace GuidR.Droid {
             AttractionDataBase.sealionHeader = Resource.Drawable.seaLionHeader;
             AttractionDataBase.hippoHeader = Resource.Drawable.hippoHeader;
             AttractionDataBase.elephantHeader = Resource.Drawable.elephantHeader;
-            AttractionDataBase.giraffeHeader = Resource.Drawable.Giraffe;
+            AttractionDataBase.giraffeHeader = Resource.Drawable.giraffeHeader;
             AttractionDataBase.polarBearHeader = Resource.Drawable.polarBearHeader;
             AttractionDataBase.kaimanHeader = Resource.Drawable.kaimanHeader;
             AttractionDataBase.tamarinHeader = Resource.Drawable.tamarinHeader;
