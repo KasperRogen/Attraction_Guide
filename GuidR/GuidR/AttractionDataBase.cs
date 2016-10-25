@@ -1,98 +1,22 @@
 ﻿namespace GuidR.Droid
-    {
+{
     public static class AttractionDataBase
     {
-        public static int baboonHeader;
-        public static int brownBearHeader;
-        public static int sealionHeader;
-        public static int hippoHeader;
-        public static int elephantHeader;
-        public static int giraffeHeader;
-        public static int polarBearHeader;
-        public static int kaimanHeader;
-        public static int tamarinHeader;
-        public static int lemurHeader;
-        public static int lionHeader;
-        public static int penguinHeader;
-        public static int meercatHeader;
-        public static int tigerHeader;
-        public static int zebraHeader;
-
-
-        public static Animal Baboon
-        {
-            get; set;
-        }
-
-        public static Animal Bear
-        {
-            get; set;
-        }
-
-        public static Animal SeaLion
-        {
-            get; set;
-        }
-
-        public static Animal Hippo
-        {
-            get; set;
-        }
-
-        public static Animal Elephant
-        {
-            get; set;
-        }
-
-        public static Animal Giraffe
-        {
-            get; set;
-        }
-
-        public static Animal PolarBear
-        {
-            get; set;
-        }
-
-        public static Animal Kaiman
-        {
-            get; set;
-        }
-
-        public static Animal Tamarin
-        {
-            get; set;
-        }
-
-        public static Animal Lemur
-        {
-            get; set;
-        }
-
-        public static Animal Lion
-        {
-            get; set;
-        }
-
-        public static Animal Penguin
-        {
-            get; set;
-        }
-
-        public static Animal Meercat
-        {
-            get; set;
-        }
-
-        public static Animal Zebra
-        {
-            get; set;
-        }
-
-        public static Animal Tiger 
-        {
-            get; set;
-        }
+        public static Animal Baboon { get; set; }
+        public static Animal Bear { get; set; }
+        public static Animal SeaLion { get; set; }
+        public static Animal Hippo { get; set; }
+        public static Animal Elephant { get; set; }
+        public static Animal Giraffe { get; set; }
+        public static Animal PolarBear { get; set; }
+        public static Animal Kaiman { get; set; }
+        public static Animal Tamarin { get; set; }
+        public static Animal Lemur { get; set; }
+        public static Animal Lion { get; set; }
+        public static Animal Penguin { get; set; }
+        public static Animal Meercat { get; set; }
+        public static Animal Zebra { get; set; }
+        public static Animal Tiger { get; set; }
 
         public static Facility Toilet
         {
@@ -101,78 +25,107 @@
 
         public static void InitializeAttraction()
         {
-            InitializeAnimals();
-            InitializeFacilities();
+            
+                InitializeAnimals();
+                InitializeFacilities();
+            
         }
 
         public static void InitializeAnimals()
         {
+            // Ikke godt. Virker ikke på andet end Android, vil fikse snart!
+#if __ANDROID__
             Coordinates baboonCoordinates = new Coordinates(100, 100);
             string baboonDescription = "Beskrivelse";
-            Baboon = new Animal("Bavian", baboonDescription, baboonCoordinates, "Papio Hamadryas", baboonHeader);
+            int baboonImage = Resource.Drawable.baboonHeader;
+            Time baboonFeeding = new Time(24);
+            Baboon = new Animal("Bavian", baboonDescription, baboonCoordinates, "Papio Hamadryas", baboonImage, baboonFeeding);
 
             Coordinates bearCoordinates = new Coordinates(100, 100);
             string bearDescription = "Beskrivelse";
+            int bearImage = Resource.Drawable.baboonHeader;
             Time bearFeeding = new Time(14, 45);
-            Bear = new Animal("Brunbjørn", bearDescription, bearCoordinates, "Ursus Arctos", brownBearHeader, bearFeeding);
+            Bear = new Animal("Brunbjørn", bearDescription, bearCoordinates, "Ursus Arctos", bearImage, bearFeeding);
 
             Coordinates seaLionCoordinates = new Coordinates(100, 100);
             string seaLionDescription = "Beskrivelse";
+            int seaLionImage = Resource.Drawable.baboonHeader;
             Time seaLionFeeding = new Time(11, 30);
-            SeaLion = new Animal("Søløve", seaLionDescription, seaLionCoordinates, "Zalophus Californianusu", sealionHeader, seaLionFeeding);
+            SeaLion = new Animal("Søløve", seaLionDescription, seaLionCoordinates, "Zalophus Californianusu", seaLionImage, seaLionFeeding);
 
             Coordinates hippoCoordinates = new Coordinates(100, 100);
             string hippoDescription = "Beskrivelse";
+            int hippoImage = Resource.Drawable.baboonHeader;
             Time hippoFeeding = new Time(13);
-            Hippo = new Animal("Dværgflodhest", hippoDescription, hippoCoordinates, "Hexaprotodon Liberiensis", hippoHeader, hippoFeeding);
+            Hippo = new Animal("Dværgflodhest", hippoDescription, hippoCoordinates, "Hexaprotodon Liberiensis", hippoImage, hippoFeeding);
 
             Coordinates elephantCoordinates = new Coordinates(100, 100);
             string elephantDescription = "Beskrivelse";
-
+            int elephantImage = Resource.Drawable.baboonHeader;
             Time elephantFeeding = new Time(15);
             Time elephantFeeding2 = new Time(18);
-
-            Elephant = new Animal("Elefant", elephantDescription, elephantCoordinates, elephantHeader, "Lozodonta Africana", elephantFeeding, elephantFeeding2);
+            Elephant = new Animal("Elefant", elephantDescription, elephantCoordinates, "Lozodonta Africana", elephantImage, elephantFeeding, elephantFeeding2);
 
             Coordinates giraffeCoordinates = new Coordinates(100, 100);
             string giraffeDescription = "Beskrivelse";
-            Giraffe = new Animal("Giraf", giraffeDescription, giraffeCoordinates, "Giraffa Camelopardalis Rotschildi", giraffeHeader);
+            int giraffeImage = Resource.Drawable.baboonHeader;
+            Time giraffeFeeding = new Time(24);
+            Giraffe = new Animal("Giraf", giraffeDescription, giraffeCoordinates, "Giraffa Camelopardalis Rotschildi", giraffeImage, giraffeFeeding);
 
             Coordinates polarBearCoordinates = new Coordinates(100, 100);
             string polarBearDescription = "Beskrivelse";
-            PolarBear = new Animal("Isbjørn", polarBearDescription, polarBearCoordinates, "Ursus Maritimus", polarBearHeader);
+            int polarBearImage = Resource.Drawable.baboonHeader;
+            Time polarBearFeeding = new Time(24);
+            PolarBear = new Animal("Isbjørn", polarBearDescription, polarBearCoordinates, "Ursus Maritimus", polarBearImage, polarBearFeeding);
 
             Coordinates kaimanCoordinates = new Coordinates(100, 100);
             string kaimanDescription = "Beskrivelse";
-            Kaiman = new Animal("Sort Kaiman", kaimanDescription, kaimanCoordinates, "Melanosuchus Niger", kaimanHeader);
+            int kaimanImage = Resource.Drawable.baboonHeader;
+            Time kaimanFeeding = new Time(24);
+            Kaiman = new Animal("Sort Kaiman", kaimanDescription, kaimanCoordinates, "Melanosuchus Niger", kaimanImage, kaimanFeeding);
 
             Coordinates tamarinCoordinates = new Coordinates(100, 100);
             string tamarinDescription = "Beskrivelse";
-            Tamarin = new Animal("Kejsertamarin", tamarinDescription, tamarinCoordinates, "Saguinus Imperator", tamarinHeader);
+            int tamarinImage = Resource.Drawable.baboonHeader;
+            Time tamarinFeeding = new Time(24);
+            Tamarin = new Animal("Kejsertamarin", tamarinDescription, tamarinCoordinates, "Saguinus Imperator", tamarinImage, tamarinFeeding);
 
             Coordinates lemurCoordinates = new Coordinates(100, 100);
             string lemurDescription = "Beskrivelse";
-            Lemur = new Animal("Lemur", lemurDescription, lemurCoordinates, "Lemur Catta", lemurHeader);
+            int lemurImage = Resource.Drawable.baboonHeader;
+            Time lemurFeeding = new Time(24);
+            Lemur = new Animal("Lemur", lemurDescription, lemurCoordinates, "Lemur Catta", lemurImage, lemurFeeding);
 
             Coordinates lionCoordinates = new Coordinates(100, 100);
             string lionDescription = "Beskrivelse";
-            Lion = new Animal("Løve", lionDescription, lionCoordinates, "Panthera leo persica", lionHeader);
+            int lionImage = Resource.Drawable.baboonHeader;
+            Time lionFeeding = new Time(24);
+            Lion = new Animal("Løve", lionDescription, lionCoordinates, "Panthera leo persica", lionImage, lionFeeding);
 
             Coordinates penquinCoordinates = new Coordinates(100, 100);
             string penquinDescription = "Beskrivelse";
-            Penguin = new Animal("Penquin", penquinDescription, penquinCoordinates, "Spheniscus Humboldti", penguinHeader);
+            int penquinImage = Resource.Drawable.baboonHeader;
+            Time penquinFeeding = new Time(24);
+            Penguin = new Animal("Penquin", penquinDescription, penquinCoordinates, "Spheniscus Humboldti", penquinImage, penquinFeeding);
 
             Coordinates meercatCoordinates = new Coordinates(100, 100);
             string meercatDescription = "Beskrivelse";
-            Meercat = new Animal("Meercat", meercatDescription, meercatCoordinates, "Suricata Suricatta", meercatHeader);
+            int meercatImage = Resource.Drawable.baboonHeader;
+            Time meercatFeeding = new Time(24);
+            Meercat = new Animal("Meercat", meercatDescription, meercatCoordinates, "Suricata Suricatta", meercatImage, meercatFeeding);
 
             Coordinates zebraCoordinates = new Coordinates(100, 100);
             string zebraDescription = "Beskrivelse";
-            Zebra = new Animal("Zebra", zebraDescription, zebraCoordinates, "Equus Grevyi", zebraHeader);
+            int zebraImage = Resource.Drawable.baboonHeader;
+            Time zebraFeeding = new Time(24);
+            Zebra = new Animal("Zebra", zebraDescription, zebraCoordinates, "Equus Grevyi", zebraImage, zebraFeeding);
 
             Coordinates tigerCoordinates = new Coordinates(100, 100);
             string tigerDescription = "Beskrivelse";
-            Tiger = new Animal("Tiger", tigerDescription, tigerCoordinates, "Panthea Sigris Sumatrae", tigerHeader);
+            int tigerImage = Resource.Drawable.baboonHeader;
+            Time tigerFeeding = new Time(24);
+            Tiger = new Animal("Tiger", tigerDescription, tigerCoordinates, "Panthea Sigris Sumatrae", tigerImage, tigerFeeding);
+#endif
         }
 
         public static void InitializeFacilities()

@@ -1,4 +1,3 @@
-using System;
 using System.Collections.Generic;
 
 // The shared properties between all animals
@@ -9,43 +8,46 @@ namespace GuidR.Droid
     {
         // Lav CTOR'en om til CTOR chaining
 
-        public Animal(string name, string description, Coordinates location, int imgSource, string latinName, params Time[] feedingTimes)
-            : base(name, description, location)
+        public Animal (string name, string description, Coordinates location, string latinName, int image, params Time[] feedingTimes)
         {
+            this.Name = name;
+            this.Description = description;
+            this.Location = location;
             this.LatinName = latinName;
-            this._headerImage = imgSource;
+            this.Image = image;
+
             foreach (Time t in feedingTimes)
                 this.FeedingTimes.Add(t);
         }
 
-        public Animal(string name, string description, Coordinates location, string latinName, int imgSource, Time feedingTime)
-            : base(name, description, location)
+        public Animal (string name, string description, Coordinates location, string latinName, int image, Time feedingTime)
         {
+            this.Name = name;
+            this.Description = description;
+            this.Location = location;
             this.LatinName = latinName;
-            this.FeedingTimes.Add(feedingTime);
-            this._headerImage = imgSource;
-        }
-
-      /*  public Animal(string name, string description, Coordinates location, string latinName, int imgSource, Time feedingTime)
-            : base(name, description, location)
-        {
-            this.LatinName = latinName;
+            this.Image = image;
             this.FeedingTimes.Add(feedingTime);
         }
-        */
 
-        public Animal(string name, string description, Coordinates location, string latinName, int imgSource)
-            : base(name, description, location)
+        public Animal (string name, string description, Coordinates location, string latinName, int image)
         {
-            this._headerImage = imgSource;
+            this.Name = name;
+            this.Description = description;
+            this.Location = location;
             this.LatinName = latinName;
-            this.FeedingTimes = null;
+            this.Image = image;
         }
 
-        public string LatinName
-        {
-            get; set;
-        }
+        public override string Name { get; set; }
+
+        public override string Description { get; set; }
+
+        public override Coordinates Location { get; set; }
+
+        public override int Image { get; set; }
+
+        public string LatinName { get; set; }
 
         public Time NextFeeding
         {
@@ -70,14 +72,6 @@ namespace GuidR.Droid
             }
         }
 
-        private int _headerImage;
-
-        public int HeaderImage {
-            get { return _headerImage; }
-            set { _headerImage = value; }
-        }
-
-
         private List<Time> _feedingTimes = new List<Time>();
 
         public List<Time> FeedingTimes
@@ -93,6 +87,3 @@ namespace GuidR.Droid
         }
     }
 }
-
-/*public Animal (string name) : this (name, "") { }
-public Animal (string name, string latinName) : this (name, latinName, null) { }*/

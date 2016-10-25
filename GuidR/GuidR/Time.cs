@@ -21,22 +21,13 @@ namespace GuidR.Droid
             }
         }
 
-        public int Hour
-        {
-            get; set;
-        }
+        public int Hour { get; set; }
 
-        public int Minutes
-        {
-            get; set;
-        }
+        public int Minutes { get; set; }
 
         public bool IsPassed
         {
-            get
-            {
-                return DateTime.Now > TimeOfDay;
-            }
+            get { return DateTime.Now > TimeOfDay; }
         }
 
         public string TimeRemaining()
@@ -58,7 +49,7 @@ namespace GuidR.Droid
             }
         }
 
-        public override string ToString()
+        public override string ToString ()
         {
             return Hour + " : " + Minutes;
         }

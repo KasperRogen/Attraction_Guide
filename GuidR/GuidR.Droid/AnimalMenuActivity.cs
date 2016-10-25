@@ -1,8 +1,7 @@
-using System.Collections.Generic;
-
 using Android.App;
 using Android.OS;
 using Android.Widget;
+using System.Collections.Generic;
 
 namespace GuidR.Droid {
     [Activity(Label = "Aalborg Zoo", Theme = "@style/NoTitle.splash")]
