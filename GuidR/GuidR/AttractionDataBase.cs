@@ -111,7 +111,7 @@
             Coordinates elephantCoordinates = new Coordinates(100, 100);
             string elephantDescription = "Beskrivelse";
             Time elephantFeeding = new Time(15);
-            Time elephantFeeding2 = new Time(18);
+            Time elephantFeeding2 = new Time(13, 05);
             Elephant = new Animal("Elefant", elephantDescription, elephantCoordinates, "Loxodonta Africana", ElephantImage, elephantFeeding, elephantFeeding2);
 
             Coordinates giraffeCoordinates = new Coordinates(100, 100);

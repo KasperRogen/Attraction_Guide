@@ -59,11 +59,11 @@ namespace GuidR.Droid
             {
                 Time nearestFeedingTime = FeedingTimes[0];
 
-            //    foreach (Time t in FeedingTimes)
-              //  {
-               //     if (/*t.TimeOfDay > DateTime.Now && */t.TimeOfDay < nearestFeedingTime.TimeOfDay && !t.IsPassed)
-                //        nearestFeedingTime = t;
-               // }
+                foreach (Time t in FeedingTimes)
+                {
+                    if (/*t.TimeOfDay > DateTime.Now && */t.TimeOfDay < nearestFeedingTime.TimeOfDay && !t.IsPassed)
+                        nearestFeedingTime = t;
+                }
 
                 return nearestFeedingTime;
             }
