@@ -19,7 +19,10 @@ namespace GuidR.Droid {
             FindViewById<TextView>(Resource.Id.Name).Text = Animal.Name;
             FindViewById<TextView>(Resource.Id.LatinName).Text = Animal.LatinName;
             FindViewById<TextView>(Resource.Id.AboutAnimal).Text = Animal.Description;
-            FindViewById<TextView>(Resource.Id.Feedingtime).Text = Animal.NextFeeding.ToString();
+            if (Animal.HasFeedingTime)
+                FindViewById<TextView>(Resource.Id.Feedingtime).Text = Animal.NextFeeding.ToString();
+            else
+                FindViewById<TextView>(Resource.Id.Feedingtime).Text = "(REPLACE) No feeding times.";
         }
     }
 }

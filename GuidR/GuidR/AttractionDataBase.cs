@@ -56,8 +56,8 @@
                                        "Dens kost består primært af frugter, græs, rødder og insekter, men vil af og til også fange og spise mindre pattedyr.\n\n" +
                                        "Kappebavianen bliver op til 75 cm i højden, hvor hannerne kan veje op til 18 kg og hunnerne kan veje op til 10 kg. " +
                                        "Levealderen for en kappebavian i naturen er stadig ukendt, men den ældste i fangeskab blev 38 år gammel.";
-            Time baboonFeeding = new Time(24);
-            Baboon = new Animal("Kappebavian", baboonDescription, baboonCoordinates, "Papio Hamadryas", BaboonImage, baboonFeeding);
+        //    Time baboonFeeding = new Time(24);
+            Baboon = new Animal("Kappebavian", baboonDescription, baboonCoordinates, "Papio Hamadryas", BaboonImage);
 
 
             Coordinates bearCoordinates = new Coordinates(100, 100);
@@ -89,7 +89,7 @@
                                         "Voksne hanner vejer i gennemsnit 275 kg og er 2,2 meter lange. Hunner er lidt mindre, med et gennemsnit på 91 kg og 1,8 meter i længden. " +
                                         "I naturen blev den ældste dokumenterede søløve 17 år gammel, hvor den ældste i fangenskab blev 31 år gammel. " +
                                         "Alderen af en søløve kan fastgøres ved at tælle antallet af ringe på et tværsnit af dens tænder.";
-            Time seaLionFeeding = new Time(08, 30);
+            Time seaLionFeeding = new Time(08, 00);
             SeaLion = new Animal("Søløve", seaLionDescription, seaLionCoordinates, "Zalophus Californianus", SeaLionImage, seaLionFeeding);
 
             Coordinates hippoCoordinates = new Coordinates(100, 100);
