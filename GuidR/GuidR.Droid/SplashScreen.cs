@@ -15,7 +15,7 @@ namespace GuidR.Droid {
         void InitializeHeaderImages()
         {
             AttractionDataBase.BaboonImage = Resource.Drawable.BaboonHeader;
-            AttractionDataBase.BearImage = Resource.Drawable.BearHeader;
+            AttractionDataBase.BearImage = Resource.Drawable.BrownBearHeader;
             AttractionDataBase.SeaLionImage = Resource.Drawable.SeaLionHeader;
             AttractionDataBase.HippoImage = Resource.Drawable.HippoHeader;
             AttractionDataBase.ElephantImage = Resource.Drawable.ElephantHeader;

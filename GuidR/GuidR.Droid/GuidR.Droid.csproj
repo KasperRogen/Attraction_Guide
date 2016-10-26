@@ -196,7 +196,7 @@
     <AndroidResource Include="Resources\drawable-hdpi\Pygmy_Hippo.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable-hdpi\baboonHeader.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\BaboonHeader.png" />
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\drawable-hdpi\Map_pin.png" />
@@ -220,49 +220,46 @@
     <AndroidResource Include="Resources\drawable-hdpi\Arrow_small.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable-hdpi\brownBearHeader.jpg" />
+    <AndroidResource Include="Resources\drawable-hdpi\BrownBearHeader.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable-hdpi\tigerHeader.jpg" />
+    <AndroidResource Include="Resources\drawable-hdpi\TigerHeader.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable-hdpi\zebraHeader.jpg" />
+    <AndroidResource Include="Resources\drawable-hdpi\ZebraHeader.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable-hdpi\meercatHeader.jpg" />
+    <AndroidResource Include="Resources\drawable-hdpi\MeercatHeader.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable-hdpi\penguinHeader.jpg" />
+    <AndroidResource Include="Resources\drawable-hdpi\PenguinHeader.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable-hdpi\lionHeader.jpg" />
+    <AndroidResource Include="Resources\drawable-hdpi\LionHeader.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable-hdpi\lemurHeader.jpg" />
+    <AndroidResource Include="Resources\drawable-hdpi\LemurHeader.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable-hdpi\tamarinHeader.jpg" />
+    <AndroidResource Include="Resources\drawable-hdpi\TamarinHeader.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable-hdpi\kaimanHeader.jpg" />
+    <AndroidResource Include="Resources\drawable-hdpi\KaimanHeader.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable-hdpi\polarBearHeader.jpg" />
+    <AndroidResource Include="Resources\drawable-hdpi\PolarBearHeader.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable-hdpi\gariffeHeader.jpg" />
+    <AndroidResource Include="Resources\drawable-hdpi\GiraffeHeader.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable-hdpi\elephantHeader.jpg" />
+    <AndroidResource Include="Resources\drawable-hdpi\ElephantHeader.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable-hdpi\hippoHeader.jpg" />
+    <AndroidResource Include="Resources\drawable-hdpi\HippoHeader.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable-hdpi\seaLionHeader.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\drawable-hdpi\giraffeHeader.jpg" />
+    <AndroidResource Include="Resources\drawable-hdpi\SeaLionHeader.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Novell\Novell.MonoDroid.CSharp.targets" />
 </Project>

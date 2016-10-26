@@ -61,8 +61,8 @@
 
             Coordinates seaLionCoordinates = new Coordinates(100, 100);
             string seaLionDescription = "Beskrivelse";
-            Time seaLionFeeding = new Time(11, 30);
-            SeaLion = new Animal("Søløve", seaLionDescription, seaLionCoordinates, "Zalophus Californianusu", SeaLionImage, seaLionFeeding);
+            Time seaLionFeeding = new Time(08, 30);
+            SeaLion = new Animal("Søløve", seaLionDescription, seaLionCoordinates, "Zalophus Californianus", SeaLionImage, seaLionFeeding);
 
             Coordinates hippoCoordinates = new Coordinates(100, 100);
             string hippoDescription = "Beskrivelse";
@@ -73,7 +73,7 @@
             string elephantDescription = "Beskrivelse";
             Time elephantFeeding = new Time(15);
             Time elephantFeeding2 = new Time(18);
-            Elephant = new Animal("Elefant", elephantDescription, elephantCoordinates, "Lozodonta Africana", ElephantImage, elephantFeeding, elephantFeeding2);
+            Elephant = new Animal("Elefant", elephantDescription, elephantCoordinates, "Loxodonta Africana", ElephantImage, elephantFeeding, elephantFeeding2);
 
             Coordinates giraffeCoordinates = new Coordinates(100, 100);
             string giraffeDescription = "Beskrivelse";
