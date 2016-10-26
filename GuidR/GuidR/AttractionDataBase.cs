@@ -49,23 +49,62 @@
         {
             // Ikke godt. Virker ikke på andet end Android, vil fikse snart!
             Coordinates baboonCoordinates = new Coordinates(100, 100);
-            string baboonDescription = "Beskrivelse";
-            //Resource.Drawable.baboonHeader;
+            string baboonDescription = "Kappebavianen lever i den østlige del af det afrikanske kontinent, i lande som Etiopien, Somalia, Sudan og Eritrea. " +
+                                       "Kappebavianen kan findes i stepper og tørre ørkener, og er den bavian-art der tilbringer mest tid på jorden. " +
+                                       "Kappebavianen lever oftest i stenede områder, hvor de bruger klipperne til at finde vand og som soveplads.\n\n" +
+                                       "Kappebavianen er altædende og har tilpasset dens kost til dens tørre levested. " +
+                                       "Dens kost består primært af frugter, græs, rødder og insekter, men vil af og til også fange og spise mindre pattedyr.\n\n" +
+                                       "Kappebavianen bliver op til 75 cm i højden, hvor hannerne kan veje op til 18 kg og hunnerne kan veje op til 10 kg. " +
+                                       "Levealderen for en kappebavian i naturen er stadig ukendt, men den ældste i fangeskab blev 38 år gammel.";
             Time baboonFeeding = new Time(24);
-            Baboon = new Animal("Bavian", baboonDescription, baboonCoordinates, "Papio Hamadryas", BaboonImage, baboonFeeding);
+            Baboon = new Animal("Kappebavian", baboonDescription, baboonCoordinates, "Papio Hamadryas", BaboonImage, baboonFeeding);
+
 
             Coordinates bearCoordinates = new Coordinates(100, 100);
-            string bearDescription = "Beskrivelse";
+            string bearDescription = "Brunbjørnen er den mest udbredte af bjørne-arten i verdenen. " +
+                                     "Den er at finde, i en af dens 11 under-arter, i lande som Rusland, Kina, Canada, USA(dog mest Alaska), " +
+                                     "Skandinavien, og findes også i nærheden af Karpaterne i Central- og Østeuropa. " +
+                                     "Brunbjørnens habitat afhænger af hvilken underart og verdensdel den er at finde i. " +
+                                     "Fælles for alle brunbjørne-arternes habitater er at områderne oftest er tæt bevoksede, så bjørnene har ly i dagstimerne.\n\n" +
+                                     "Brunbjørnen er altædende, og vil spise næsten alt nærende føde. " +
+                                     "Om sommeren og efteråret vil brunbjørnen lede efter frugter, bær, knolde og rødder. " +
+                                     "De er også kendt for at spise insekter, samt at grave mindre pattedyr, for eksempel mus, jordegern og murmeldyr, ud af deres huller i jorden for at spise dem. " +
+                                     "De større under-arter, eksempelvis grizzlybjørnen fra Canada, er kendt for at jage store pattedyr. " +
+                                     "Elge, rensdyr og bjerggeder er en del af grizzlyens diæt.\n\n" +
+                                     "Brunbjørnens vægt og kropsmål afhænger af hvilken underart der tages udgangspunkt i. " +
+                                     "Dens vægt varierer mellem 70-350 kg, og de bliver 1,7-2,5 meter i længden. " +
+                                     "I naturen bliver de omkring 20 år gamle, mens de i zoologiske haver kan blive op til 30 år gamle.";
             Time bearFeeding = new Time(14, 45);
             Bear = new Animal("Brunbjørn", bearDescription, bearCoordinates, "Ursus Arctos", BearImage, bearFeeding);
 
             Coordinates seaLionCoordinates = new Coordinates(100, 100);
-            string seaLionDescription = "Beskrivelse";
+            string seaLionDescription = "Den californiske søløve kan findes langs den nedre del af den nordamerikanske vestkyst og ud fra den mexicanske kyst. " +
+                                        "En underart kan også findes nær Galapagos-øerne. De holder til nær kysterne, men er også set svømme op i floderne nær den amerikanske kyst. " +
+                                        "De californiske søløver samler sig ofte på menneskabte konstruktioner som moler, bøjer og olieplatforme. " +
+                                        "De vælger deres habitat ud fra hvor meget menneskelig indgriben der har været i området. Jo mere indgriben, jo bedre.\n\n" +
+                                        "Søløven er kødædende, og spiser udelukkende fisk, bløddyr og blæksprutter. " +
+                                        "Af og til vil søløven arbejde sammen med andre arter, for eksempel havfugle og hvaler, for at finde føde. " +
+                                        "En af arterne finder en samling af fisk, hvorefter den signalerer til de andre arter hvor samlingen befinder sig. " +
+                                        "Derefter hjælper arterne hinanden med at få fat i fiskene.\n\n" +
+                                        "Voksne hanner vejer i gennemsnit 275 kg og er 2,2 meter lange. Hunner er lidt mindre, med et gennemsnit på 91 kg og 1,8 meter i længden. " +
+                                        "I naturen blev den ældste dokumenterede søløve 17 år gammel, hvor den ældste i fangenskab blev 31 år gammel. " +
+                                        "Alderen af en søløve kan fastgøres ved at tælle antallet af ringe på et tværsnit af dens tænder.";
             Time seaLionFeeding = new Time(08, 30);
             SeaLion = new Animal("Søløve", seaLionDescription, seaLionCoordinates, "Zalophus Californianus", SeaLionImage, seaLionFeeding);
 
             Coordinates hippoCoordinates = new Coordinates(100, 100);
-            string hippoDescription = "Beskrivelse";
+            string hippoDescription = "Dværgflodhesten er en truet dyreart der kun findes i 4 vestafrikanske lande; Liberia, Elfenbenskysten, Sierra Leone og Guinea. " +
+                                      "Størstedelen af dværgflodheste-bestanden, mellem 2000-3000 i verdenen, er koncentreret i Liberia.\n" +
+                                      "Dværgflodhesten opholder sig i lavtliggende områder af træer, aldrig langt fra vandkilder. " +
+                                      "De bruger sumpe, floder og strømme til at holde fare på afstand, samt for at holde deres følsomme hud fugtigt. " +
+                                      "Dværgflodheste er også blevet fundet i huler i siden af flodbredde. " +
+                                      "Man mener ikke at flodhestene selv graver hulerne, men at de finder eksisterende huler og udvider dem.\n\n" +
+                                      "Dværgflodhesten er vegetar og spiser en blanding af urter, bredbladede planter, græs, falden frugt og vandplanter der ligger i overfladen af vandet. " +
+                                      "Som andre drøvtyggere har dværgflodhesten også 4 mavesække, men til forskel fra andre drøvtyggere bruger dværgflodhesten ikke mikrober " + 
+                                      "eller gæring til nedbrydning af deres mad. De tygger heller ikke drøvet før de sluger det.\n\n" +
+                                      "Dværgflodhesten bliver 1,5-1,7 meter lange og 0,7-1,0 meter høje. " +
+                                      "De vejer mellem 160 kg og 275 kg, og der er normalvis ikke er stor forksel mellem hunnerne og hannerne. " +
+                                      "Flodhesten kan blive op til 42 år gammel.";
             Time hippoFeeding = new Time(13);
             Hippo = new Animal("Dværgflodhest", hippoDescription, hippoCoordinates, "Hexaprotodon Liberiensis", HippoImage, hippoFeeding);
 
