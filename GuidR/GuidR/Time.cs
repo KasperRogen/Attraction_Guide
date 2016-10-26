@@ -36,6 +36,7 @@ namespace GuidR.Droid
                 return "This event has passed for today";
             else
             {
+                // Calculates the differences in hours and minutes
                 TimeSpan time = TimeOfDay.Subtract(DateTime.Now);
 
                 // This does not handle plural / singular hours (1 timer).
@@ -51,7 +52,19 @@ namespace GuidR.Droid
 
         public override string ToString ()
         {
-            return Hour + " : " + Minutes;
+            string format = "";
+
+            if (Hour < 10)
+                format = "0" + Hour;
+            else
+                format = Hour.ToString();
+
+            if (Minutes < 10)
+                format += "" + Minutes;
+            else
+                format += Minutes.ToString();
+
+            return format;
         }
     }
 }

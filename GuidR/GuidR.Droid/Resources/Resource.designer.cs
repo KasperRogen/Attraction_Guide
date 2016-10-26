@@ -60,19 +60,19 @@ namespace GuidR.Droid
 			public const int Baboon = 2130837508;
 			
 			// aapt resource value: 0x7f020005
-			public const int baboonHeader = 2130837509;
+			public const int BaboonHeader = 2130837509;
 			
 			// aapt resource value: 0x7f020006
 			public const int Background = 2130837510;
 			
 			// aapt resource value: 0x7f020007
-			public const int Black_kaiman = 2130837511;
+			public const int BearHeader = 2130837511;
 			
 			// aapt resource value: 0x7f020008
-			public const int Brown_bear = 2130837512;
+			public const int Black_kaiman = 2130837512;
 			
 			// aapt resource value: 0x7f020009
-			public const int brownBearHeader = 2130837513;
+			public const int Brown_bear = 2130837513;
 			
 			// aapt resource value: 0x7f02000a
 			public const int Californian_Sea_Lion = 2130837514;
@@ -87,7 +87,7 @@ namespace GuidR.Droid
 			public const int Elephant = 2130837517;
 			
 			// aapt resource value: 0x7f02000e
-			public const int elephantHeader = 2130837518;
+			public const int ElephantHeader = 2130837518;
 			
 			// aapt resource value: 0x7f02000f
 			public const int Emperor_tamarin = 2130837519;
@@ -105,10 +105,10 @@ namespace GuidR.Droid
 			public const int Giraffe = 2130837523;
 			
 			// aapt resource value: 0x7f020014
-			public const int giraffeHeader = 2130837524;
+			public const int GiraffeHeader = 2130837524;
 			
 			// aapt resource value: 0x7f020015
-			public const int hippoHeader = 2130837525;
+			public const int HippoHeader = 2130837525;
 			
 			// aapt resource value: 0x7f020016
 			public const int Icon = 2130837526;
@@ -123,19 +123,19 @@ namespace GuidR.Droid
 			public const int Info_button_small = 2130837529;
 			
 			// aapt resource value: 0x7f02001a
-			public const int kaimanHeader = 2130837530;
+			public const int KaimanHeader = 2130837530;
 			
 			// aapt resource value: 0x7f02001b
 			public const int Lemur = 2130837531;
 			
 			// aapt resource value: 0x7f02001c
-			public const int lemurHeader = 2130837532;
+			public const int LemurHeader = 2130837532;
 			
 			// aapt resource value: 0x7f02001d
 			public const int Lion = 2130837533;
 			
 			// aapt resource value: 0x7f02001e
-			public const int lionHeader = 2130837534;
+			public const int LionHeader = 2130837534;
 			
 			// aapt resource value: 0x7f02001f
 			public const int logo = 2130837535;
@@ -153,7 +153,7 @@ namespace GuidR.Droid
 			public const int Meercat = 2130837539;
 			
 			// aapt resource value: 0x7f020024
-			public const int meercatHeader = 2130837540;
+			public const int MeercatHeader = 2130837540;
 			
 			// aapt resource value: 0x7f020025
 			public const int News_button_medium = 2130837541;
@@ -165,7 +165,7 @@ namespace GuidR.Droid
 			public const int Penguin = 2130837543;
 			
 			// aapt resource value: 0x7f020028
-			public const int penguinHeader = 2130837544;
+			public const int PenguinHeader = 2130837544;
 			
 			// aapt resource value: 0x7f020029
 			public const int placeholderButton = 2130837545;
@@ -177,13 +177,13 @@ namespace GuidR.Droid
 			public const int Polar_bear = 2130837547;
 			
 			// aapt resource value: 0x7f02002c
-			public const int polarBearHeader = 2130837548;
+			public const int PolarBearHeader = 2130837548;
 			
 			// aapt resource value: 0x7f02002d
 			public const int Pygmy_Hippo = 2130837549;
 			
 			// aapt resource value: 0x7f02002e
-			public const int seaLionHeader = 2130837550;
+			public const int SeaLionHeader = 2130837550;
 			
 			// aapt resource value: 0x7f02002f
 			public const int splashScreen = 2130837551;
@@ -198,7 +198,7 @@ namespace GuidR.Droid
 			public const int SquareButton = 2130837554;
 			
 			// aapt resource value: 0x7f020033
-			public const int tamarinHeader = 2130837555;
+			public const int TamarinHeader = 2130837555;
 			
 			// aapt resource value: 0x7f020034
 			public const int test = 2130837556;
@@ -207,7 +207,7 @@ namespace GuidR.Droid
 			public const int Tiger = 2130837557;
 			
 			// aapt resource value: 0x7f020036
-			public const int tigerHeader = 2130837558;
+			public const int TigerHeader = 2130837558;
 			
 			// aapt resource value: 0x7f020037
 			public const int Toilet = 2130837559;
@@ -216,7 +216,7 @@ namespace GuidR.Droid
 			public const int Zebra = 2130837560;
 			
 			// aapt resource value: 0x7f020039
-			public const int zebraHeader = 2130837561;
+			public const int ZebraHeader = 2130837561;
 			
 			static Drawable()
 			{
