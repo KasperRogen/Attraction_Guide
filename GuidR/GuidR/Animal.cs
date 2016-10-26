@@ -20,16 +20,6 @@ namespace GuidR.Droid
                 this.FeedingTimes.Add(t);
         }
 
-        /*public Animal (string name, string description, Coordinates location, string latinName, int image, Time feedingTime)
-        {
-            this.Name = name;
-            this.Description = description;
-            this.Location = location;
-            this.LatinName = latinName;
-            this.Image = image;
-            this.FeedingTimes.Add(feedingTime);
-        }*/
-
         public Animal (string name, string description, Coordinates location, string latinName, int image)
         {
             this.Name = name;
