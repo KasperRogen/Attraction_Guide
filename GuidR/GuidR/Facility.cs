@@ -46,27 +46,45 @@ namespace GuidR.Droid
             }
         }
 
-        // If closed returns time left
-        public string OpensIn
+        // If closed returns time until opening. If open returns 0 
+        public Time OpensIn
         {
             get
             {
-                if (!IsOpened)
+                // Untested:
+                if (IsOpened)
+                    return new Time(0);
+                else
+                {
+                    TimeSpan remainingTime = (Open.TimeOfDay - DateTime.Now);
+                    return new Time((int)remainingTime.TotalHours, (int)remainingTime.TotalMinutes);
+                }
+
+
+                /*if (!IsOpened)
                     return "Opens in: " + (Open.TimeOfDay - DateTime.Now).ToString();
                 else
-                    return "IT IS OPEN, FAGGOT!";
+                    return "IT IS OPEN, FAGGOT!";*/
             }
         }
 
-        // If opened returns time until close
-        public string ClosesIn
+        // If opened returns time until close. If closed returns 0
+        public Time ClosesIn
         {
             get
             {
                 if (IsOpened)
+                {
+                    TimeSpan remainingTime = (Close.TimeOfDay - DateTime.Now);
+                    return new Time((int)remainingTime.TotalHours, (int)remainingTime.TotalMinutes);
+                }
+                else
+                    return new Time(0);
+
+                /*if (IsOpened)
                     return "Closes in: " + (Close.TimeOfDay - DateTime.Now).ToString();
                 else
-                    return "IS CLOSED, FAGGOT!";
+                    return "IS CLOSED, FAGGOT!";*/
             }
         }
     }

@@ -4,9 +4,9 @@ namespace GuidR.Droid
 {
     public class Time
     {
-        public Time(int hour) : this(hour, 0) { }
+        public Time (int hour) : this(hour, 0) { }
 
-        public Time(int hour, int minutes)
+        public Time (int hour, int minutes)
         {
             this.Hour = hour;
             this.Minutes = minutes;
@@ -61,8 +61,9 @@ namespace GuidR.Droid
 
             if (Minutes < 10)
                 format += "" + Minutes;
-            else
+            else if (Minutes >= 10)
                 format += Minutes.ToString();
+            else format += "00";
 
             return format;
         }

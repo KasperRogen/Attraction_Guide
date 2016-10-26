@@ -20,7 +20,7 @@ namespace GuidR.Droid
                 this.FeedingTimes.Add(t);
         }
 
-        public Animal (string name, string description, Coordinates location, string latinName, int image, Time feedingTime)
+        /*public Animal (string name, string description, Coordinates location, string latinName, int image, Time feedingTime)
         {
             this.Name = name;
             this.Description = description;
@@ -28,7 +28,7 @@ namespace GuidR.Droid
             this.LatinName = latinName;
             this.Image = image;
             this.FeedingTimes.Add(feedingTime);
-        }
+        }*/
 
         public Animal (string name, string description, Coordinates location, string latinName, int image)
         {
@@ -49,26 +49,23 @@ namespace GuidR.Droid
 
         public string LatinName { get; set; }
 
+        public bool HasFeedingTime { get { return FeedingTimes.Count > 0; } }
+
+        // Returns the next feeding time if such exist
+        // Check 'HasFeedingTime' before
         public Time NextFeeding
         {
             get
             {
-                if (FeedingTimes.Count == 1)
-                    return FeedingTimes[0];
+                Time nearestFeedingTime = FeedingTimes[0];
 
-                // If the animal is feed more than once a day, get the nearest feeding time
-                else
+                foreach (Time t in FeedingTimes)
                 {
-                    Time nearestFeedingTime = FeedingTimes[0];
-
-                    foreach (Time t in FeedingTimes)
-                    {
-                        if (/*t.TimeOfDay > DateTime.Now && */t.TimeOfDay < nearestFeedingTime.TimeOfDay && !t.IsPassed)
-                            nearestFeedingTime = t;
-                    }
-
-                    return nearestFeedingTime;
+                    if (/*t.TimeOfDay > DateTime.Now && */t.TimeOfDay < nearestFeedingTime.TimeOfDay && !t.IsPassed)
+                        nearestFeedingTime = t;
                 }
+
+                return nearestFeedingTime;
             }
         }
 
@@ -76,14 +73,8 @@ namespace GuidR.Droid
 
         public List<Time> FeedingTimes
         {
-            get
-            {
-                return _feedingTimes;
-            }
-            set
-            {
-                _feedingTimes = value;
-            }
+            get { return _feedingTimes; }
+            set { _feedingTimes = value; }
         }
     }
 }
