@@ -1,2 +1,2 @@
 android.app.Application
-GuidR.Droid
+com.GuidR.Droid

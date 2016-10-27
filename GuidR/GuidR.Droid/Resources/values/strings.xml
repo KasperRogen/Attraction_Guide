@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <resources>
-	<string name="hello">Hello World, Click Me!</string>
-	<string name="app_name">GuidR.Droid</string>
+	<string name="app_name">com.GuidR.Droid</string>
+  <string name="google_maps_key">AIzaSyA25ik3dHv3g0_BeHYsZDwypaj8SpTUflA</string>
 </resources>

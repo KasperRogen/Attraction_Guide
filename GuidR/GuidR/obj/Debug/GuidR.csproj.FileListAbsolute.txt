@@ -24,14 +24,10 @@ C:\Users\Kasper\Documents\Attraction_Guide\GuidR\GuidR\obj\Debug\GuidR.dll.mdb
 C:\Users\Kasper\Documents\Attraction_Guide\GuidR\GuidR\bin\Debug\GuidR.dll.mdb
 C:\Users\Kasper Røgen\Documents\Attraction_Guide\GuidR\GuidR\bin\Debug\GuidR.dll
 C:\Users\Kasper Røgen\Documents\Attraction_Guide\GuidR\GuidR\bin\Debug\GuidR.pdb
-C:\Users\Kasper Røgen\Documents\Attraction_Guide\GuidR\GuidR\obj\Debug\GuidR.csprojResolveAssemblyReference.cache
 C:\Users\Kasper Røgen\Documents\Attraction_Guide\GuidR\GuidR\obj\Debug\GuidR.dll
 C:\Users\Kasper Røgen\Documents\Attraction_Guide\GuidR\GuidR\obj\Debug\GuidR.pdb
+C:\Users\kaspe\Documents\Attraction_Guide\GuidR\GuidR\obj\Debug\GuidR.dll.mdb
+C:\Users\kaspe\Documents\Attraction_Guide\GuidR\GuidR\bin\Debug\GuidR.dll.mdb
+C:\Users\Kasper Røgen\Documents\Attraction_Guide\GuidR\GuidR\obj\Debug\GuidR.csprojResolveAssemblyReference.cache
 C:\Users\Kasper Røgen\Documents\Attraction_Guide\GuidR\GuidR\obj\Debug\GuidR.dll.mdb
 C:\Users\Kasper Røgen\Documents\Attraction_Guide\GuidR\GuidR\bin\Debug\GuidR.dll.mdb
-C:\Users\kaspe\Documents\Attraction_Guide\GuidR\GuidR\obj\Debug\GuidR.dll.mdb
-C:\Users\kaspe\Documents\Attraction_Guide\GuidR\GuidR\bin\Debug\GuidR.dll.mdb
-C:\Users\kaspe\Documents\Attraction_Guide\GuidR\GuidR\obj\Debug\GuidR.dll.mdb
-C:\Users\kaspe\Documents\Attraction_Guide\GuidR\GuidR\bin\Debug\GuidR.dll.mdb
-C:\Users\kaspe\Documents\Attraction_Guide\GuidR\GuidR\obj\Debug\GuidR.dll.mdb
-C:\Users\kaspe\Documents\Attraction_Guide\GuidR\GuidR\bin\Debug\GuidR.dll.mdb

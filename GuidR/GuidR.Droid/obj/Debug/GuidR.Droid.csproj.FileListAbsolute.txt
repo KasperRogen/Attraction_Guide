@@ -271,15 +271,11 @@ C:\Users\Kasper\Documents\Attraction_Guide\GuidR\GuidR.Droid\obj\Debug\GuidR.Dro
 C:\Users\Kasper Røgen\Documents\Attraction_Guide\GuidR\GuidR.Droid\bin\Debug\GuidR.Droid.dll.config
 C:\Users\Kasper Røgen\Documents\Attraction_Guide\GuidR\GuidR.Droid\bin\Debug\GuidR.Droid.dll
 C:\Users\Kasper Røgen\Documents\Attraction_Guide\GuidR\GuidR.Droid\bin\Debug\GuidR.Droid.pdb
-C:\Users\Kasper Røgen\Documents\Attraction_Guide\GuidR\GuidR.Droid\bin\Debug\GuidR.Droid.apk
-C:\Users\Kasper Røgen\Documents\Attraction_Guide\GuidR\GuidR.Droid\bin\Debug\GuidR.Droid-Signed.apk
 C:\Users\Kasper Røgen\Documents\Attraction_Guide\GuidR\GuidR.Droid\bin\Debug\GuidR.dll
 C:\Users\Kasper Røgen\Documents\Attraction_Guide\GuidR\GuidR.Droid\bin\Debug\GuidR.pdb
-C:\Users\Kasper Røgen\Documents\Attraction_Guide\GuidR\GuidR.Droid\bin\Debug\GuidR.dll.mdb
 C:\Users\Kasper Røgen\Documents\Attraction_Guide\GuidR\GuidR.Droid\obj\Debug\GuidR.Droid.csprojResolveAssemblyReference.cache
 C:\Users\Kasper Røgen\Documents\Attraction_Guide\GuidR\GuidR.Droid\obj\Debug\GuidR.Droid.dll
 C:\Users\Kasper Røgen\Documents\Attraction_Guide\GuidR\GuidR.Droid\obj\Debug\GuidR.Droid.pdb
-C:\Users\Kasper Røgen\Documents\Attraction_Guide\GuidR\GuidR.Droid\obj\Debug\android\bin\GuidR.Droid.apk
 C:\Users\Kasper Røgen\Documents\Attraction_Guide\GuidR\GuidR.Droid\obj\Debug\res\layout\main.xml
 C:\Users\Kasper Røgen\Documents\Attraction_Guide\GuidR\GuidR.Droid\obj\Debug\res\values\strings.xml
 C:\Users\Kasper Røgen\Documents\Attraction_Guide\GuidR\GuidR.Droid\obj\Debug\res\drawable-hdpi\icon.png
@@ -335,29 +331,6 @@ C:\Users\Kasper Røgen\Documents\Attraction_Guide\GuidR\GuidR.Droid\obj\Debug\re
 C:\Users\Kasper Røgen\Documents\Attraction_Guide\GuidR\GuidR.Droid\obj\Debug\res\drawable-hdpi\arrow_small.png
 C:\Users\Kasper Røgen\Documents\Attraction_Guide\GuidR\GuidR.Droid\obj\Debug\R.cs.flag
 C:\Users\Kasper Røgen\Documents\Attraction_Guide\GuidR\GuidR.Droid\obj\Debug\uploadflags.txt
-C:\Users\Kasper Røgen\Documents\Attraction_Guide\GuidR\GuidR.Droid\bin\Debug\GuidR.Droid.dll.mdb
-C:\Users\Kasper Røgen\Documents\Attraction_Guide\GuidR\GuidR.Droid\bin\Debug\Java.Interop.dll.mdb
-C:\Users\Kasper Røgen\Documents\Attraction_Guide\GuidR\GuidR.Droid\bin\Debug\Mono.Android.dll.mdb
-C:\Users\Kasper Røgen\Documents\Attraction_Guide\GuidR\GuidR.Droid\bin\Debug\mscorlib.dll.mdb
-C:\Users\Kasper Røgen\Documents\Attraction_Guide\GuidR\GuidR.Droid\bin\Debug\System.ComponentModel.Composition.dll.mdb
-C:\Users\Kasper Røgen\Documents\Attraction_Guide\GuidR\GuidR.Droid\bin\Debug\System.Core.dll.mdb
-C:\Users\Kasper Røgen\Documents\Attraction_Guide\GuidR\GuidR.Droid\bin\Debug\System.dll.mdb
-C:\Users\Kasper Røgen\Documents\Attraction_Guide\GuidR\GuidR.Droid\bin\Debug\System.Net.Http.dll.mdb
-C:\Users\Kasper Røgen\Documents\Attraction_Guide\GuidR\GuidR.Droid\bin\Debug\System.Runtime.Serialization.dll.mdb
-C:\Users\Kasper Røgen\Documents\Attraction_Guide\GuidR\GuidR.Droid\bin\Debug\System.ServiceModel.Internals.dll.mdb
-C:\Users\Kasper Røgen\Documents\Attraction_Guide\GuidR\GuidR.Droid\bin\Debug\System.Xml.dll.mdb
-C:\Users\Kasper Røgen\Documents\Attraction_Guide\GuidR\GuidR.Droid\obj\Debug\android\assets\GuidR.dll.mdb
-C:\Users\Kasper Røgen\Documents\Attraction_Guide\GuidR\GuidR.Droid\obj\Debug\android\assets\GuidR.Droid.dll.mdb
-C:\Users\Kasper Røgen\Documents\Attraction_Guide\GuidR\GuidR.Droid\obj\Debug\android\assets\Java.Interop.dll.mdb
-C:\Users\Kasper Røgen\Documents\Attraction_Guide\GuidR\GuidR.Droid\obj\Debug\android\assets\Mono.Android.dll.mdb
-C:\Users\Kasper Røgen\Documents\Attraction_Guide\GuidR\GuidR.Droid\obj\Debug\android\assets\mscorlib.dll.mdb
-C:\Users\Kasper Røgen\Documents\Attraction_Guide\GuidR\GuidR.Droid\obj\Debug\android\assets\System.ComponentModel.Composition.dll.mdb
-C:\Users\Kasper Røgen\Documents\Attraction_Guide\GuidR\GuidR.Droid\obj\Debug\android\assets\System.Core.dll.mdb
-C:\Users\Kasper Røgen\Documents\Attraction_Guide\GuidR\GuidR.Droid\obj\Debug\android\assets\System.dll.mdb
-C:\Users\Kasper Røgen\Documents\Attraction_Guide\GuidR\GuidR.Droid\obj\Debug\android\assets\System.Net.Http.dll.mdb
-C:\Users\Kasper Røgen\Documents\Attraction_Guide\GuidR\GuidR.Droid\obj\Debug\android\assets\System.Runtime.Serialization.dll.mdb
-C:\Users\Kasper Røgen\Documents\Attraction_Guide\GuidR\GuidR.Droid\obj\Debug\android\assets\System.ServiceModel.Internals.dll.mdb
-C:\Users\Kasper Røgen\Documents\Attraction_Guide\GuidR\GuidR.Droid\obj\Debug\android\assets\System.Xml.dll.mdb
 C:\Users\Kasper Røgen\Documents\Attraction_Guide\GuidR\GuidR.Droid\obj\Debug\res\drawable-hdpi\brownbearheader.jpg
 C:\Users\Kasper Røgen\Documents\Attraction_Guide\GuidR\GuidR.Droid\obj\Debug\res\drawable-hdpi\tigerheader.jpg
 C:\Users\Kasper Røgen\Documents\Attraction_Guide\GuidR\GuidR.Droid\obj\Debug\res\drawable-hdpi\zebraheader.jpg
@@ -368,11 +341,9 @@ C:\Users\Kasper Røgen\Documents\Attraction_Guide\GuidR\GuidR.Droid\obj\Debug\re
 C:\Users\Kasper Røgen\Documents\Attraction_Guide\GuidR\GuidR.Droid\obj\Debug\res\drawable-hdpi\tamarinheader.jpg
 C:\Users\Kasper Røgen\Documents\Attraction_Guide\GuidR\GuidR.Droid\obj\Debug\res\drawable-hdpi\kaimanheader.jpg
 C:\Users\Kasper Røgen\Documents\Attraction_Guide\GuidR\GuidR.Droid\obj\Debug\res\drawable-hdpi\polarbearheader.jpg
-C:\Users\Kasper Røgen\Documents\Attraction_Guide\GuidR\GuidR.Droid\obj\Debug\res\drawable-hdpi\gariffeheader.jpg
 C:\Users\Kasper Røgen\Documents\Attraction_Guide\GuidR\GuidR.Droid\obj\Debug\res\drawable-hdpi\elephantheader.jpg
 C:\Users\Kasper Røgen\Documents\Attraction_Guide\GuidR\GuidR.Droid\obj\Debug\res\drawable-hdpi\hippoheader.jpg
 C:\Users\Kasper Røgen\Documents\Attraction_Guide\GuidR\GuidR.Droid\obj\Debug\res\drawable-hdpi\sealionheader.jpg
-C:\Users\Kasper Røgen\Documents\Attraction_Guide\GuidR\GuidR.Droid\obj\Debug\GuidR.Droid.dll.mdb
 C:\Users\kaspe\Documents\Attraction_Guide\GuidR\GuidR.Droid\obj\Debug\res\layout\facilitiesmenu.xml
 C:\Users\kaspe\Documents\Attraction_Guide\GuidR\GuidR.Droid\obj\Debug\res\drawable-hdpi\toilet.png
 C:\Users\kaspe\Documents\Attraction_Guide\GuidR\GuidR.Droid\obj\Debug\res\drawable-hdpi\arrow.png
@@ -417,4 +388,38 @@ C:\Users\kaspe\Documents\Attraction_Guide\GuidR\GuidR.Droid\obj\Debug\android\as
 C:\Users\kaspe\Documents\Attraction_Guide\GuidR\GuidR.Droid\obj\Debug\android\assets\System.Xml.dll.mdb
 C:\Users\kaspe\Documents\Attraction_Guide\GuidR\GuidR.Droid\obj\Debug\res\drawable-hdpi\giraffeheader.jpg
 C:\Users\kaspe\Documents\Attraction_Guide\GuidR\GuidR.Droid\obj\Debug\GuidR.Droid.dll.mdb
-C:\Users\kaspe\Documents\Attraction_Guide\GuidR\GuidR.Droid\bin\Debug\GuidR.Droid.dll.mdb
+C:\Users\Kasper Røgen\Documents\Attraction_Guide\GuidR\GuidR.Droid\obj\Debug\res\drawable-hdpi\giraffeheader.jpg
+C:\Users\Kasper Røgen\Documents\Attraction_Guide\GuidR\GuidR.Droid\bin\Debug\Xamarin.Android.Support.v4.dll
+C:\Users\Kasper Røgen\Documents\Attraction_Guide\GuidR\GuidR.Droid\bin\Debug\Xamarin.GooglePlayServices.Base.dll
+C:\Users\Kasper Røgen\Documents\Attraction_Guide\GuidR\GuidR.Droid\bin\Debug\Xamarin.GooglePlayServices.Basement.dll
+C:\Users\Kasper Røgen\Documents\Attraction_Guide\GuidR\GuidR.Droid\bin\Debug\Xamarin.GooglePlayServices.Maps.dll
+C:\Users\Kasper Røgen\Documents\Attraction_Guide\GuidR\GuidR.Droid\bin\Debug\GuidR.Droid.dll.mdb
+C:\Users\Kasper Røgen\Documents\Attraction_Guide\GuidR\GuidR.Droid\bin\Debug\com.GuidR.Droid.apk
+C:\Users\Kasper Røgen\Documents\Attraction_Guide\GuidR\GuidR.Droid\bin\Debug\com.GuidR.Droid-Signed.apk
+C:\Users\Kasper Røgen\Documents\Attraction_Guide\GuidR\GuidR.Droid\bin\Debug\GuidR.dll.mdb
+C:\Users\Kasper Røgen\Documents\Attraction_Guide\GuidR\GuidR.Droid\obj\Debug\android\bin\com.GuidR.Droid.apk
+C:\Users\Kasper Røgen\Documents\Attraction_Guide\GuidR\GuidR.Droid\bin\Debug\Java.Interop.dll.mdb
+C:\Users\Kasper Røgen\Documents\Attraction_Guide\GuidR\GuidR.Droid\bin\Debug\Mono.Android.dll.mdb
+C:\Users\Kasper Røgen\Documents\Attraction_Guide\GuidR\GuidR.Droid\bin\Debug\mscorlib.dll.mdb
+C:\Users\Kasper Røgen\Documents\Attraction_Guide\GuidR\GuidR.Droid\bin\Debug\System.ComponentModel.Composition.dll.mdb
+C:\Users\Kasper Røgen\Documents\Attraction_Guide\GuidR\GuidR.Droid\bin\Debug\System.Core.dll.mdb
+C:\Users\Kasper Røgen\Documents\Attraction_Guide\GuidR\GuidR.Droid\bin\Debug\System.dll.mdb
+C:\Users\Kasper Røgen\Documents\Attraction_Guide\GuidR\GuidR.Droid\bin\Debug\System.Net.Http.dll.mdb
+C:\Users\Kasper Røgen\Documents\Attraction_Guide\GuidR\GuidR.Droid\bin\Debug\System.Runtime.Serialization.dll.mdb
+C:\Users\Kasper Røgen\Documents\Attraction_Guide\GuidR\GuidR.Droid\bin\Debug\System.ServiceModel.Internals.dll.mdb
+C:\Users\Kasper Røgen\Documents\Attraction_Guide\GuidR\GuidR.Droid\bin\Debug\System.Xml.dll.mdb
+C:\Users\Kasper Røgen\Documents\Attraction_Guide\GuidR\GuidR.Droid\obj\Debug\android\assets\GuidR.dll.mdb
+C:\Users\Kasper Røgen\Documents\Attraction_Guide\GuidR\GuidR.Droid\obj\Debug\android\assets\GuidR.Droid.dll.mdb
+C:\Users\Kasper Røgen\Documents\Attraction_Guide\GuidR\GuidR.Droid\obj\Debug\android\assets\Java.Interop.dll.mdb
+C:\Users\Kasper Røgen\Documents\Attraction_Guide\GuidR\GuidR.Droid\obj\Debug\android\assets\Mono.Android.dll.mdb
+C:\Users\Kasper Røgen\Documents\Attraction_Guide\GuidR\GuidR.Droid\obj\Debug\android\assets\mscorlib.dll.mdb
+C:\Users\Kasper Røgen\Documents\Attraction_Guide\GuidR\GuidR.Droid\obj\Debug\android\assets\System.ComponentModel.Composition.dll.mdb
+C:\Users\Kasper Røgen\Documents\Attraction_Guide\GuidR\GuidR.Droid\obj\Debug\android\assets\System.Core.dll.mdb
+C:\Users\Kasper Røgen\Documents\Attraction_Guide\GuidR\GuidR.Droid\obj\Debug\android\assets\System.dll.mdb
+C:\Users\Kasper Røgen\Documents\Attraction_Guide\GuidR\GuidR.Droid\obj\Debug\android\assets\System.Net.Http.dll.mdb
+C:\Users\Kasper Røgen\Documents\Attraction_Guide\GuidR\GuidR.Droid\obj\Debug\android\assets\System.Runtime.Serialization.dll.mdb
+C:\Users\Kasper Røgen\Documents\Attraction_Guide\GuidR\GuidR.Droid\obj\Debug\android\assets\System.ServiceModel.Internals.dll.mdb
+C:\Users\Kasper Røgen\Documents\Attraction_Guide\GuidR\GuidR.Droid\obj\Debug\android\assets\System.Xml.dll.mdb
+C:\Users\Kasper Røgen\Documents\Attraction_Guide\GuidR\GuidR.Droid\obj\Debug\res\layout\map.xml
+C:\Users\Kasper Røgen\Documents\Attraction_Guide\GuidR\GuidR.Droid\obj\Debug\GuidR.Droid.dll.mdb
+C:\Users\Kasper Røgen\Documents\Attraction_Guide\GuidR\GuidR.Droid\bin\Debug\GuidR.Droid.dll.mdb

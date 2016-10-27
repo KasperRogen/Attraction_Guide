@@ -1,4 +1,6 @@
-﻿using Android.App;
+﻿using System;
+using Android.App;
+using Android.Gms.Maps;
 using Android.OS;
 using Android.Widget;
 
@@ -8,7 +10,7 @@ namespace GuidR.Droid
 	public class MainActivity : Activity
 	{
 
-		protected override void OnCreate (Bundle bundle)
+        protected override void OnCreate (Bundle bundle)
 		{
             /* Properties:
               Animals:
@@ -35,8 +37,12 @@ namespace GuidR.Droid
 			// Set our view from the "main" layout resource
 			SetContentView (Resource.Layout.Main);
 
+
+
+
             Button button = FindViewById<Button>(Resource.Id.animalButton);
             Button facilityButton = FindViewById<Button>(Resource.Id.facilityButton);
+            Button mapButton = FindViewById<Button>(Resource.Id.mapButton);
 
             button.Click += delegate {
                 StartActivity(typeof(AnimalMenuActivity));
@@ -47,8 +53,13 @@ namespace GuidR.Droid
                 StartActivity(typeof(FacilitiesMenuActivity));
             };
 
+            mapButton.Click += delegate
+            {
+                StartActivity(typeof(MapActivity));
+            };
 
         }
+
     }
 }
 

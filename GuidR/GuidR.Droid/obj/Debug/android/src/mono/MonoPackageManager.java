@@ -100,6 +100,10 @@ class MonoPackageManager_Resources {
 		/* We need to ensure that "GuidR.Droid.dll" comes first in this list. */
 		"GuidR.Droid.dll",
 		"GuidR.dll",
+		"Xamarin.Android.Support.v4.dll",
+		"Xamarin.GooglePlayServices.Base.dll",
+		"Xamarin.GooglePlayServices.Basement.dll",
+		"Xamarin.GooglePlayServices.Maps.dll",
 		"System.Runtime.dll",
 		"System.Diagnostics.Debug.dll",
 		"System.Collections.dll",
@@ -113,5 +117,5 @@ class MonoPackageManager_Resources {
 	};
 	public static final String[] Dependencies = new String[]{
 	};
-	public static final String ApiPackageName = "Mono.Android.Platform.ApiLevel_24";
+	public static final String ApiPackageName = "Mono.Android.Platform.ApiLevel_23";
 }
