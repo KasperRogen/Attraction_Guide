@@ -422,4 +422,3 @@ C:\Users\Kasper Røgen\Documents\Attraction_Guide\GuidR\GuidR.Droid\obj\Debug\an
 C:\Users\Kasper Røgen\Documents\Attraction_Guide\GuidR\GuidR.Droid\obj\Debug\android\assets\System.Xml.dll.mdb
 C:\Users\Kasper Røgen\Documents\Attraction_Guide\GuidR\GuidR.Droid\obj\Debug\res\layout\map.xml
 C:\Users\Kasper Røgen\Documents\Attraction_Guide\GuidR\GuidR.Droid\obj\Debug\GuidR.Droid.dll.mdb
-C:\Users\Kasper Røgen\Documents\Attraction_Guide\GuidR\GuidR.Droid\bin\Debug\GuidR.Droid.dll.mdb
