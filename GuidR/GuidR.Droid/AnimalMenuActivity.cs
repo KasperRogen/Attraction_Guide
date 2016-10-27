@@ -43,45 +43,6 @@ namespace GuidR.Droid {
             tigerButton.Click += delegate { LoadAnimalPage(AttractionDataBase.Tiger); };
             Button zebraButton = FindViewById<Button>(Resource.Id.zebraButton);
             zebraButton.Click += delegate { LoadAnimalPage(AttractionDataBase.Zebra); };
-
-            /*AnimalButton baboonAnimalButton = new AnimalButton(baboonButton, AttractionDataBase.Baboon);
-            AnimalButton brownbearAnimalButton = new AnimalButton(brownbearButton, AttractionDataBase.Bear);
-            AnimalButton sealionAnimalButton = new AnimalButton(sealionButton, AttractionDataBase.SeaLion);
-            AnimalButton hippoAnimalButton = new AnimalButton(hippoButton, AttractionDataBase.Hippo);
-            AnimalButton elephantAnimalButton = new AnimalButton(elephantButton, AttractionDataBase.Elephant);
-            AnimalButton giraffeAnimalButton = new AnimalButton(giraffeButton, AttractionDataBase.Giraffe);
-            AnimalButton polarbearAnimalButton = new AnimalButton(polarbearButton, AttractionDataBase.PolarBear);
-            AnimalButton kaimanAnimalButton = new AnimalButton(kaimanButton, AttractionDataBase.Kaiman);
-            AnimalButton tamarinAnimalButton = new AnimalButton(tamarinButton, AttractionDataBase.Tamarin);
-            AnimalButton lemurAnimalButton = new AnimalButton(lemurButton, AttractionDataBase.Lemur);
-            AnimalButton lionAnimalButton = new AnimalButton(lionButton, AttractionDataBase.Lion);
-            AnimalButton penguinAnimalButton = new AnimalButton(penguinButton, AttractionDataBase.Penguin);
-            AnimalButton meercatAnimalButton = new AnimalButton(meercatButton, AttractionDataBase.Meercat);
-            AnimalButton tigerAnimalButton = new AnimalButton(tigerButton, AttractionDataBase.Tiger);
-            AnimalButton zebraAnimalButton = new AnimalButton(zebraButton, AttractionDataBase.Zebra);
-
-            animalButtons.Add(baboonAnimalButton);
-            animalButtons.Add(brownbearAnimalButton);
-            animalButtons.Add(sealionAnimalButton);
-            animalButtons.Add(hippoAnimalButton);
-            animalButtons.Add(elephantAnimalButton);
-            animalButtons.Add(giraffeAnimalButton);
-            animalButtons.Add(polarbearAnimalButton);
-            animalButtons.Add(kaimanAnimalButton);
-            animalButtons.Add(tamarinAnimalButton);
-            animalButtons.Add(lemurAnimalButton);
-            animalButtons.Add(lionAnimalButton);
-            animalButtons.Add(penguinAnimalButton);
-            animalButtons.Add(meercatAnimalButton);
-            animalButtons.Add(tigerAnimalButton);
-            animalButtons.Add(zebraAnimalButton);
-
-            foreach (AnimalButton ab in animalButtons) 
-            {
-                ab.Button.Click += delegate {
-                    LoadAnimalPage(ab.Animal);
-                };
-            }*/
         }
 
         void LoadAnimalPage (Animal animal) {

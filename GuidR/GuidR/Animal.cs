@@ -2,7 +2,7 @@ using System.Collections.Generic;
 
 // The shared properties between all animals
 
-namespace GuidR.Droid
+namespace GuidR
 {
     public class Animal : Attraction
     {

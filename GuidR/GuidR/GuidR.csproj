@@ -35,6 +35,7 @@
     <Compile Include="Attraction.cs" />
     <Compile Include="AttractionDataBase.cs" />
     <Compile Include="Coordinates.cs" />
+    <Compile Include="Event.cs" />
     <Compile Include="Facility.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Time.cs" />

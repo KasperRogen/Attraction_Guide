@@ -1,6 +1,6 @@
 // The shared properties between all attractions (toilets, resturants, Animals.)
 
-namespace GuidR.Droid
+namespace GuidR
 {
     public abstract class Attraction
     {

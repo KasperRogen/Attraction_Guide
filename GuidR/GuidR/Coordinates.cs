@@ -1,4 +1,4 @@
-namespace GuidR.Droid
+namespace GuidR
 {
     public class Coordinates
     {
