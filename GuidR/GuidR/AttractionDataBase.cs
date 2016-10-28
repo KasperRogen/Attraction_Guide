@@ -48,7 +48,7 @@
         public static void InitializeAnimals()
         {
             // Ikke godt. Virker ikke på andet end Android, vil fikse snart!
-            Coordinates baboonCoordinates = new Coordinates(100, 100);
+            Coordinates baboonCoordinates = new Coordinates(57.037463, 9.898570);
             string baboonDescription = "Kappebavianen lever i den østlige del af det afrikanske kontinent, i lande som Etiopien, Somalia, Sudan og Eritrea. " +
                                        "Kappebavianen kan findes i stepper og tørre ørkener, og er den bavian-art der tilbringer mest tid på jorden. " +
                                        "Kappebavianen lever oftest i stenede områder, hvor de bruger klipperne til at finde vand og som soveplads.\n\n" +
@@ -77,7 +77,7 @@
             Time bearFeeding = new Time(14, 45);
             Bear = new Animal("Brunbjørn", bearDescription, bearCoordinates, "Ursus Arctos", BearImage, bearFeeding);
 
-            Coordinates seaLionCoordinates = new Coordinates(100, 100);
+            Coordinates seaLionCoordinates = new Coordinates(57.036286, 9.898246);
             string seaLionDescription = "Den californiske søløve kan findes langs den nedre del af den nordamerikanske vestkyst og ud fra den mexicanske kyst. " +
                                         "En underart kan også findes nær Galapagos-øerne. De holder til nær kysterne, men er også set svømme op i floderne nær den amerikanske kyst. " +
                                         "De californiske søløver samler sig ofte på menneskabte konstruktioner som moler, bøjer og olieplatforme. " +
@@ -92,7 +92,7 @@
             Time seaLionFeeding = new Time(08, 00);
             SeaLion = new Animal("Søløve", seaLionDescription, seaLionCoordinates, "Zalophus Californianus", SeaLionImage, seaLionFeeding);
 
-            Coordinates hippoCoordinates = new Coordinates(100, 100);
+            Coordinates hippoCoordinates = new Coordinates(57.035092, 9.897645);
             string hippoDescription = "Dværgflodhesten er en truet dyreart der kun findes i 4 vestafrikanske lande; Liberia, Elfenbenskysten, Sierra Leone og Guinea. " +
                                       "Størstedelen af dværgflodheste-bestanden, mellem 2000-3000 i verdenen, er koncentreret i Liberia.\n" +
                                       "Dværgflodhesten opholder sig i lavtliggende områder af træer, aldrig langt fra vandkilder. " +
@@ -108,43 +108,43 @@
             Time hippoFeeding = new Time(13);
             Hippo = new Animal("Dværgflodhest", hippoDescription, hippoCoordinates, "Hexaprotodon Liberiensis", HippoImage, hippoFeeding);
 
-            Coordinates elephantCoordinates = new Coordinates(100, 100);
+            Coordinates elephantCoordinates = new Coordinates(57.035886, 9.897210);
             string elephantDescription = "Beskrivelse";
             Time elephantFeeding = new Time(15);
             Time elephantFeeding2 = new Time(13, 05);
             Elephant = new Animal("Elefant", elephantDescription, elephantCoordinates, "Loxodonta Africana", ElephantImage, elephantFeeding, elephantFeeding2);
 
-            Coordinates giraffeCoordinates = new Coordinates(100, 100);
+            Coordinates giraffeCoordinates = new Coordinates(57.035251, 9.897022);
             string giraffeDescription = "Beskrivelse";
             Time giraffeFeeding = new Time(24);
             Giraffe = new Animal("Giraf", giraffeDescription, giraffeCoordinates, "Giraffa Camelopardalis Rotschildi", GiraffeImage, giraffeFeeding);
 
-            Coordinates polarBearCoordinates = new Coordinates(100, 100);
+            Coordinates polarBearCoordinates = new Coordinates(57.036717, 9.896924);
             string polarBearDescription = "Beskrivelse";
             Time polarBearFeeding = new Time(24);
             PolarBear = new Animal("Isbjørn", polarBearDescription, polarBearCoordinates, "Ursus Maritimus", PolarBearImage, polarBearFeeding);
 
-            Coordinates kaimanCoordinates = new Coordinates(100, 100);
+            Coordinates kaimanCoordinates = new Coordinates(57.036116, 9.898195);
             string kaimanDescription = "Beskrivelse";
             Time kaimanFeeding = new Time(24);
             Kaiman = new Animal("Sort Kaiman", kaimanDescription, kaimanCoordinates, "Melanosuchus Niger", KaimanImage, kaimanFeeding);
 
-            Coordinates tamarinCoordinates = new Coordinates(100, 100);
+            Coordinates tamarinCoordinates = new Coordinates(57.036075, 9.898411);
             string tamarinDescription = "Beskrivelse";
             Time tamarinFeeding = new Time(24);
             Tamarin = new Animal("Kejsertamarin", tamarinDescription, tamarinCoordinates, "Saguinus Imperator", TamarinImage, tamarinFeeding);
 
-            Coordinates lemurCoordinates = new Coordinates(100, 100);
+            Coordinates lemurCoordinates = new Coordinates(57.038091, 9.898626);
             string lemurDescription = "Beskrivelse";
             Time lemurFeeding = new Time(24);
             Lemur = new Animal("Lemur", lemurDescription, lemurCoordinates, "Lemur Catta", LemurImage, lemurFeeding);
 
-            Coordinates lionCoordinates = new Coordinates(100, 100);
+            Coordinates lionCoordinates = new Coordinates(57.036281, 9.897057);
             string lionDescription = "Beskrivelse";
             Time lionFeeding = new Time(24);
             Lion = new Animal("Løve", lionDescription, lionCoordinates, "Panthera leo persica", LionImage, lionFeeding);
 
-            Coordinates penquinCoordinates = new Coordinates(100, 100);
+            Coordinates penquinCoordinates = new Coordinates(57.036389, 9.898301);
             string penquinDescription = "Beskrivelse";
             Time penquinFeeding = new Time(24);
             Penguin = new Animal("Penquin", penquinDescription, penquinCoordinates, "Spheniscus Humboldti", PenquinImage, penquinFeeding);
@@ -154,12 +154,12 @@
             Time meercatFeeding = new Time(24);
             Meercat = new Animal("Meercat", meercatDescription, meercatCoordinates, "Suricata Suricatta", MeercatImage, meercatFeeding);
 
-            Coordinates zebraCoordinates = new Coordinates(100, 100);
+            Coordinates zebraCoordinates = new Coordinates(57.035073, 9.897715);
             string zebraDescription = "Beskrivelse";
             Time zebraFeeding = new Time(24);
             Zebra = new Animal("Zebra", zebraDescription, zebraCoordinates, "Equus Grevyi", ZebraImage, zebraFeeding);
 
-            Coordinates tigerCoordinates = new Coordinates(100, 100);
+            Coordinates tigerCoordinates = new Coordinates(57.036355, 9.896779);
             string tigerDescription = "Beskrivelse";
             Time tigerFeeding = new Time(24);
             Tiger = new Animal("Tiger", tigerDescription, tigerCoordinates, "Panthea Sigris Sumatrae", TigerImage, tigerFeeding);
@@ -167,7 +167,7 @@
 
         public static void InitializeFacilities()
         {
-            Coordinates toiletCoordinates = new Coordinates(100, 100);
+            Coordinates toiletCoordinates = new Coordinates(57.037814, 9.897785);
             string toiletDescription = "sdfsdfsf";
 
             Toilet = new Facility("Toilet - NAVN", toiletDescription, toiletCoordinates);
