@@ -21,6 +21,8 @@ namespace GuidR
                 foreach (Time t in feedingTimes)
                     this.FeedingTimes.Add(t);
             }
+
+            AttractionDataBase.Attractions.Add(this);
         }
 
         public Animal (string name, string description, Coordinates location, string latinName, int image) 

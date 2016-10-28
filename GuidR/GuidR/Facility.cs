@@ -16,6 +16,8 @@ namespace GuidR
             this.Location = location;
             this.Open = open;
             this.Close = close;
+
+            AttractionDataBase.Attractions.Add(this);
         }
 
         public override string Name { get; set; }

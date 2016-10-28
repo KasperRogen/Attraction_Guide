@@ -1,7 +1,11 @@
-﻿namespace GuidR
+﻿using System.Collections.Generic;
+
+namespace GuidR
 {
     public static class AttractionDataBase
     {
+        public static List<Attraction> Attractions = new List<Attraction>();
+
         public static Animal Baboon { get; set; }
         public static Animal Bear { get; set; }
         public static Animal SeaLion { get; set; }
