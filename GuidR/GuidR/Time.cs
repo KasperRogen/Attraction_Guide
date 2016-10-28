@@ -8,64 +8,46 @@ namespace GuidR
 
         public Time (int hour, int minutes)
         {
-            this.Hour = hour;
-            this.Minutes = minutes;
+            this.TimeOfDay = new DateTime(DateTime.Now.Year, DateTime.Now.Month, 
+                DateTime.Now.Day, hour, minutes, 0);
         }
 
-        public DateTime TimeOfDay
-        {
-            get
-            {
-                DateTime now = DateTime.Now;
-                return new DateTime(now.Year, now.Month, now.Day, Hour, Minutes, 0);
-            }
-        }
-
-        public int Hour { get; set; }
-
-        public int Minutes { get; set; }
+        public DateTime TimeOfDay { get; set; }
 
         public bool IsPassed
         {
-            get { return DateTime.Now > TimeOfDay; }
+            get { return TimeOfDay.Subtract(DateTime.Now).TotalSeconds < 0; }
         }
 
-        public string TimeRemaining()
+        public Time TimeRemaining
         {
-            if (IsPassed)
-                return "This event has passed for today";
-            else
+            get
             {
-                // Calculates the differences in hours and minutes
-                TimeSpan time = TimeOfDay.Subtract(DateTime.Now);
-
-                // This does not handle plural / singular hours (1 timer).
-
-                if (time.Hours == 0)
-                    return time.Minutes + "minutter";
-                else if (time.Hours > 0 && time.Minutes > 0)
-                    return time.Hours + "timer " + time.Minutes + " og minutter ";
+                if (IsPassed)
+                    throw new Exception("This event has passed. Check IsPassed prior to calling");
                 else
-                    return time.Hours + "timer";
+                    return new Time(TimeOfDay.Subtract(DateTime.Now).Hours, TimeOfDay.Subtract(DateTime.Now).Minutes);
             }
         }
 
+        // Formates the time to "HH:MM"
         public override string ToString ()
         {
-            string format = "";
+            string formattedHour, formattedMinute;
 
-            if (Hour < 10)
-                format = "0" + Hour;
+            if (TimeOfDay.Hour < 10)
+                formattedHour = "0" + TimeOfDay.Hour;
             else
-                format = Hour.ToString();
+                formattedHour = TimeOfDay.Hour.ToString();
 
-            if (Minutes < 10)
-                format += "" + Minutes;
-            else if (Minutes >= 10)
-                format += Minutes.ToString();
-            else format += "00";
+            if (TimeOfDay.Minute < 10)
+                formattedMinute = "0" + TimeOfDay.Minute;
+            else if (TimeOfDay.Minute >= 10)
+                formattedMinute = TimeOfDay.Minute.ToString();
+            else
+                formattedMinute = "00";
 
-            return format;
+            return formattedHour + ":" + formattedMinute;
         }
     }
 }

@@ -42,29 +42,20 @@ namespace GuidR
                     return true;
 
                 // If current time is between close and open, return true
-                return DateTime.Now > Open.TimeOfDay && DateTime.Now < Close.TimeOfDay;
+                return !Open.IsPassed && Close.IsPassed;
             }
         }
 
-        // If closed returns time until opening. If open returns 0 
+        // If closed returns time until opening. If open returns null 
         public Time OpensIn
         {
             get
             {
                 // Untested:
                 if (IsOpened)
-                    return new Time(0);
+                    throw new Exception("This facility is already open. Check IsOpened prior to calling");
                 else
-                {
-                    TimeSpan remainingTime = (Open.TimeOfDay - DateTime.Now);
-                    return new Time((int)remainingTime.TotalHours, (int)remainingTime.TotalMinutes);
-                }
-
-
-                /*if (!IsOpened)
-                    return "Opens in: " + (Open.TimeOfDay - DateTime.Now).ToString();
-                else
-                    return "IT IS OPEN, FAGGOT!";*/
+                    return Open.TimeRemaining;
             }
         }
 
@@ -74,17 +65,9 @@ namespace GuidR
             get
             {
                 if (IsOpened)
-                {
-                    TimeSpan remainingTime = (Close.TimeOfDay - DateTime.Now);
-                    return new Time((int)remainingTime.TotalHours, (int)remainingTime.TotalMinutes);
-                }
+                    return Close.TimeRemaining;
                 else
-                    return new Time(0);
-
-                /*if (IsOpened)
-                    return "Closes in: " + (Close.TimeOfDay - DateTime.Now).ToString();
-                else
-                    return "IS CLOSED, FAGGOT!";*/
+                    throw new Exception("This facility is already closed. Check IsOpened prior to calling");
             }
         }
     }

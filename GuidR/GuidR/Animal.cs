@@ -16,18 +16,15 @@ namespace GuidR
             this.LatinName = latinName;
             this.Image = image;
 
-            foreach (Time t in feedingTimes)
-                this.FeedingTimes.Add(t);
+            if (feedingTimes != null)
+            {
+                foreach (Time t in feedingTimes)
+                    this.FeedingTimes.Add(t);
+            }
         }
 
-        public Animal (string name, string description, Coordinates location, string latinName, int image)
-        {
-            this.Name = name;
-            this.Description = description;
-            this.Location = location;
-            this.LatinName = latinName;
-            this.Image = image;
-        }
+        public Animal (string name, string description, Coordinates location, string latinName, int image) 
+            : this (name, description, location, latinName, image, null) { }
 
         public override string Name { get; set; }
 
@@ -42,16 +39,18 @@ namespace GuidR
         public bool HasFeedingTime { get { return FeedingTimes.Count > 0; } }
 
         // Returns the next feeding time if such exist
-        // Check 'HasFeedingTime' before
         public Time NextFeeding
         {
             get
             {
-                Time nearestFeedingTime = FeedingTimes[0];
-
+                if (!HasFeedingTime)
+                    throw new System.NullReferenceException(Name + "Does not have a feeding time. Check HasFeedingTime prior to calling");
+                
+                Time nearestFeedingTime = FeedingTimes[FeedingTimes.Count - 1];
+                                                                                                    
                 foreach (Time t in FeedingTimes)
                 {
-                    if (/*t.TimeOfDay > DateTime.Now && */t.TimeOfDay < nearestFeedingTime.TimeOfDay && !t.IsPassed)
+                    if (!t.IsPassed && t.TimeOfDay < nearestFeedingTime.TimeOfDay)
                         nearestFeedingTime = t;
                 }
 
