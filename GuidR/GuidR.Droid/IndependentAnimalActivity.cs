@@ -23,6 +23,14 @@ namespace GuidR.Droid {
                 FindViewById<TextView>(Resource.Id.Feedingtime).Text = Animal.NextFeeding.ToString();
             else
                 FindViewById<TextView>(Resource.Id.Feedingtime).Text = "(REPLACE) No feeding times.";
+
+            Button mapButton = FindViewById<Button>(Resource.Id.mapButton);
+
+            mapButton.Click += delegate {
+                MapActivity.goToPlace = true;
+                MapActivity.PlaceToGo = Animal.Location;
+                StartActivity(typeof(MapActivity));
+            };
         }
     }
 }
