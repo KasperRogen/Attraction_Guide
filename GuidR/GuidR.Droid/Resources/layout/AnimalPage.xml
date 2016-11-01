@@ -81,16 +81,7 @@
             android:orientation="horizontal"
             android:layout_marginTop="15dp"
             android:paddingTop="5dp"
-            android:weightSum="2">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:gravity="right"
-            android:text="Feeding time:"
-                android:textSize="16sp"
-                android:textStyle="normal|bold" />
+            android:weightSum="1">
 
             <TextView
                 android:layout_width="wrap_content"
