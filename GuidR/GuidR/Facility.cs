@@ -16,6 +16,7 @@ namespace GuidR
             this.Location = location;
             this.Open = open;
             this.Close = close;
+            this.Pin = Pin;
 
             AttractionDataBase.Attractions.Add(this);
         }
@@ -27,6 +28,8 @@ namespace GuidR
         public override Coordinates Location { get; set; }
 
         public override int Image { get; set; }
+
+        public override int Pin { get; set; }
 
         // The opening hours of the facility
         public Time Open { get; set; }

@@ -15,5 +15,7 @@ namespace GuidR
 
         // The image for this attraction
         public abstract int Image { get; set; }
+
+        public abstract int Pin { get; set; }
     }
 }

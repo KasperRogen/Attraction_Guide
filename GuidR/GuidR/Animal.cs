@@ -8,13 +8,14 @@ namespace GuidR
     {
         // Lav CTOR'en om til CTOR chaining
 
-        public Animal (string name, string description, Coordinates location, string latinName, int image, params Time[] feedingTimes)
+        public Animal (string name, string description, Coordinates location, string latinName, int image, int pin, params Time[] feedingTimes)
         {
             this.Name = name;
             this.Description = description;
             this.Location = location;
             this.LatinName = latinName;
             this.Image = image;
+            this.Pin = pin;
 
             if (feedingTimes != null)
             {
@@ -25,8 +26,8 @@ namespace GuidR
             AttractionDataBase.Attractions.Add(this);
         }
 
-        public Animal (string name, string description, Coordinates location, string latinName, int image) 
-            : this (name, description, location, latinName, image, null) { }
+        public Animal (string name, string description, Coordinates location, string latinName, int image, int pin) 
+            : this (name, description, location, latinName, image, pin, null) { }
 
         public override string Name { get; set; }
 
@@ -35,6 +36,8 @@ namespace GuidR
         public override Coordinates Location { get; set; }
 
         public override int Image { get; set; }
+
+        public override int Pin { get; set; }
 
         public string LatinName { get; set; }
 

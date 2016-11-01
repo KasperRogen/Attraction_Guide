@@ -33,10 +33,26 @@ namespace GuidR
         public static int TamarinImage { get; set; }
         public static int LemurImage { get; set; }
         public static int LionImage { get; set; }
-        public static int PenquinImage { get; set; }
+        public static int PenguinImage { get; set; }
         public static int MeercatImage { get; set; }
         public static int ZebraImage { get; set; }
         public static int TigerImage { get; set; }
+
+        public static int BaboonPin { get; set; }
+        public static int BearPin { get; set; }
+        public static int SeaLionPin { get; set; }
+        public static int HippoPin { get; set; }
+        public static int ElephantPin { get; set; }
+        public static int GiraffePin { get; set; }
+        public static int PolarBearPin { get; set; }
+        public static int KaimanPin { get; set; }
+        public static int TamarinPin { get; set; }
+        public static int LemurPin { get; set; }
+        public static int LionPin { get; set; }
+        public static int PenguinPin { get; set; }
+        public static int MeercatPin { get; set; }
+        public static int ZebraPin { get; set; }
+        public static int TigerPin { get; set; }
 
         public static Facility Toilet
         {
@@ -60,7 +76,7 @@ namespace GuidR
                                        "Dens kost består primært af frugter, græs, rødder og insekter, men vil af og til også fange og spise mindre pattedyr.\n\n" +
                                        "Kappebavianen bliver op til 75 cm i højden, hvor hannerne kan veje op til 18 kg og hunnerne kan veje op til 10 kg. " +
                                        "Levealderen for en kappebavian i naturen er stadig ukendt, men den ældste i fangeskab blev 38 år gammel.";
-            Baboon = new Animal("Kappebavian", baboonDescription, baboonCoordinates, "Papio Hamadryas", BaboonImage);
+            Baboon = new Animal("Kappebavian", baboonDescription, baboonCoordinates, "Papio Hamadryas", BaboonImage, BaboonPin);
 
 
             Coordinates bearCoordinates = new Coordinates(100, 100);
@@ -78,7 +94,7 @@ namespace GuidR
                                      "Dens vægt varierer mellem 70-350 kg, og de bliver 1,7-2,5 meter i længden. " +
                                      "I naturen bliver de omkring 20 år gamle, mens de i zoologiske haver kan blive op til 30 år gamle.";
             Time bearFeeding = new Time(14, 45);
-            Bear = new Animal("Brunbjørn", bearDescription, bearCoordinates, "Ursus Arctos", BearImage, bearFeeding);
+            Bear = new Animal("Brunbjørn", bearDescription, bearCoordinates, "Ursus Arctos", BearImage, BearPin, bearFeeding);
 
             Coordinates seaLionCoordinates = new Coordinates(57.036286, 9.898246);
             string seaLionDescription = "Den californiske søløve kan findes langs den nedre del af den nordamerikanske vestkyst og ud fra den mexicanske kyst. " +
@@ -93,7 +109,7 @@ namespace GuidR
                                         "I naturen blev den ældste dokumenterede søløve 17 år gammel, hvor den ældste i fangenskab blev 31 år gammel. " +
                                         "Alderen af en søløve kan fastgøres ved at tælle antallet af ringe på et tværsnit af dens tænder.";
             Time seaLionFeeding = new Time(08, 00);
-            SeaLion = new Animal("Søløve", seaLionDescription, seaLionCoordinates, "Zalophus Californianus", SeaLionImage, seaLionFeeding);
+            SeaLion = new Animal("Søløve", seaLionDescription, seaLionCoordinates, "Zalophus Californianus", SeaLionImage, SeaLionPin, seaLionFeeding);
 
             Coordinates hippoCoordinates = new Coordinates(57.035092, 9.897645);
             string hippoDescription = "Dværgflodhesten er en truet dyreart der kun findes i 4 vestafrikanske lande; Liberia, Elfenbenskysten, Sierra Leone og Guinea. " +
@@ -109,53 +125,53 @@ namespace GuidR
                                       "De vejer mellem 160 kg og 275 kg, og der er normalvis ikke er stor forksel mellem hunnerne og hannerne. " +
                                       "Flodhesten kan blive op til 42 år gammel.";
             Time hippoFeeding = new Time(13);
-            Hippo = new Animal("Dværgflodhest", hippoDescription, hippoCoordinates, "Hexaprotodon Liberiensis", HippoImage, hippoFeeding);
+            Hippo = new Animal("Dværgflodhest", hippoDescription, hippoCoordinates, "Hexaprotodon Liberiensis", HippoImage, HippoPin, hippoFeeding);
 
             Coordinates elephantCoordinates = new Coordinates(57.035886, 9.897210);
             string elephantDescription = "Beskrivelse";
             Time elephantFeeding = new Time(15);
             Time elephantFeeding2 = new Time(13, 05);
-            Elephant = new Animal("Elefant", elephantDescription, elephantCoordinates, "Loxodonta Africana", ElephantImage, elephantFeeding, elephantFeeding2);
+            Elephant = new Animal("Elefant", elephantDescription, elephantCoordinates, "Loxodonta Africana", ElephantImage, ElephantPin, elephantFeeding, elephantFeeding2);
 
             Coordinates giraffeCoordinates = new Coordinates(57.035251, 9.897022);
             string giraffeDescription = "Beskrivelse";
-            Giraffe = new Animal("Giraf", giraffeDescription, giraffeCoordinates, "Giraffa Camelopardalis Rotschildi", GiraffeImage);
+            Giraffe = new Animal("Giraf", giraffeDescription, giraffeCoordinates, "Giraffa Camelopardalis Rotschildi", GiraffeImage, GiraffePin);
 
             Coordinates polarBearCoordinates = new Coordinates(57.036717, 9.896924);
             string polarBearDescription = "Beskrivelse";
-            PolarBear = new Animal("Isbjørn", polarBearDescription, polarBearCoordinates, "Ursus Maritimus", PolarBearImage);
+            PolarBear = new Animal("Isbjørn", polarBearDescription, polarBearCoordinates, "Ursus Maritimus", PolarBearImage, PolarBearPin);
 
             Coordinates kaimanCoordinates = new Coordinates(57.036116, 9.898195);
             string kaimanDescription = "Beskrivelse";
-            Kaiman = new Animal("Sort Kaiman", kaimanDescription, kaimanCoordinates, "Melanosuchus Niger", KaimanImage);
+            Kaiman = new Animal("Sort Kaiman", kaimanDescription, kaimanCoordinates, "Melanosuchus Niger", KaimanImage, KaimanPin);
 
             Coordinates tamarinCoordinates = new Coordinates(57.036075, 9.898411);
             string tamarinDescription = "Beskrivelse";
-            Tamarin = new Animal("Kejsertamarin", tamarinDescription, tamarinCoordinates, "Saguinus Imperator", TamarinImage);
+            Tamarin = new Animal("Kejsertamarin", tamarinDescription, tamarinCoordinates, "Saguinus Imperator", TamarinImage, TamarinPin);
 
             Coordinates lemurCoordinates = new Coordinates(57.038091, 9.898626);
             string lemurDescription = "Beskrivelse";
-            Lemur = new Animal("Lemur", lemurDescription, lemurCoordinates, "Lemur Catta", LemurImage);
+            Lemur = new Animal("Lemur", lemurDescription, lemurCoordinates, "Lemur Catta", LemurImage, LemurPin);
 
             Coordinates lionCoordinates = new Coordinates(57.036281, 9.897057);
             string lionDescription = "Beskrivelse";
-            Lion = new Animal("Løve", lionDescription, lionCoordinates, "Panthera leo persica", LionImage);
+            Lion = new Animal("Løve", lionDescription, lionCoordinates, "Panthera leo persica", LionImage, LionPin);
 
             Coordinates penquinCoordinates = new Coordinates(57.036389, 9.898301);
             string penquinDescription = "Beskrivelse";
-            Penguin = new Animal("Penquin", penquinDescription, penquinCoordinates, "Spheniscus Humboldti", PenquinImage);
+            Penguin = new Animal("Penguin", penquinDescription, penquinCoordinates, "Spheniscus Humboldti", PenguinImage, PenguinPin);
 
             Coordinates meercatCoordinates = new Coordinates(100, 100);
             string meercatDescription = "Beskrivelse";
-            Meercat = new Animal("Meercat", meercatDescription, meercatCoordinates, "Suricata Suricatta", MeercatImage);
+            Meercat = new Animal("Meercat", meercatDescription, meercatCoordinates, "Suricata Suricatta", MeercatImage, MeercatPin);
 
             Coordinates zebraCoordinates = new Coordinates(57.035073, 9.897715);
             string zebraDescription = "Beskrivelse";
-            Zebra = new Animal("Zebra", zebraDescription, zebraCoordinates, "Equus Grevyi", ZebraImage);
+            Zebra = new Animal("Zebra", zebraDescription, zebraCoordinates, "Equus Grevyi", ZebraImage, ZebraPin);
 
             Coordinates tigerCoordinates = new Coordinates(57.036355, 9.896779);
             string tigerDescription = "Beskrivelse";
-            Tiger = new Animal("Tiger", tigerDescription, tigerCoordinates, "Panthea Sigris Sumatrae", TigerImage);
+            Tiger = new Animal("Tiger", tigerDescription, tigerCoordinates, "Panthea Sigris Sumatrae", TigerImage, TigerPin);
         }
 
         public static void InitializeFacilities()
