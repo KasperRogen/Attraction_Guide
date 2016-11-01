@@ -19,10 +19,18 @@ namespace GuidR.Droid {
             FindViewById<TextView>(Resource.Id.Name).Text = Animal.Name;
             FindViewById<TextView>(Resource.Id.LatinName).Text = Animal.LatinName;
             FindViewById<TextView>(Resource.Id.AboutAnimal).Text = Animal.Description;
+
+            TextView feedingTime = FindViewById<TextView>(Resource.Id.Feedingtime);
+
             if (Animal.HasFeedingTime)
-                FindViewById<TextView>(Resource.Id.Feedingtime).Text = Animal.NextFeeding.ToString();
+            {
+                if (Animal.NextFeeding.IsPassed)
+                    feedingTime.Text = "Ingen fodring i dag";
+                else
+                    feedingTime.Text = "Næste fodring: " + Animal.NextFeeding.ToString();
+            }
             else
-                FindViewById<TextView>(Resource.Id.Feedingtime).Text = "(REPLACE) No feeding times.";
+                feedingTime.Text = "Ingen fodringstid.";
 
             Button mapButton = FindViewById<Button>(Resource.Id.mapButton);
 
