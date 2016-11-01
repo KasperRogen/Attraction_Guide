@@ -1,13 +1,11 @@
 ﻿using System;
 using Android.App;
-using Android.Gms.Maps;
 using Android.OS;
 using Android.Widget;
-using Android.Gms.Maps.Model;
 
 namespace GuidR.Droid
 {
-    [Activity(Label = "GuidR.Droid", Icon = "@drawable/icon")]
+    [Activity(Label = "Aalborg Zoo", Theme = "@style/NoTitle.splash")]
     public class NewsActivity : Activity
     {
 
