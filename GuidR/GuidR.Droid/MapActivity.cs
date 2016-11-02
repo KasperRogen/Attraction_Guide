@@ -30,6 +30,7 @@ namespace GuidR.Droid
                     break;
 
 
+
                 if (goToPlace) 
                 mMap.MoveCamera(CameraUpdateFactory.NewLatLngZoom( new LatLng(PlaceToGo.Longitude, PlaceToGo.Latitude), 19));
 
@@ -63,6 +64,7 @@ namespace GuidR.Droid
                 FragmentManager.FindFragmentById<MapFragment>(Resource.Id.map).GetMapAsync(this);
             }
         }
+
 
     }
 }
