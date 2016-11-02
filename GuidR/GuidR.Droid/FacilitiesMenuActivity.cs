@@ -19,17 +19,29 @@ namespace GuidR.Droid
             base.OnCreate(bundle);
             SetContentView(Resource.Layout.FacilitiesMenu);
 
-            Button button1 = FindViewById<Button>(Resource.Id.toiletButton1);
-            Button button2 = FindViewById<Button>(Resource.Id.toiletButton2);
+            Button toiletButton = FindViewById<Button>(Resource.Id.toiletButton);
+            Button restaurantButton = FindViewById<Button>(Resource.Id.restaurantButton);
+            Button smokeButton = FindViewById<Button>(Resource.Id.smokeButton);
+            Button playgroundButton = FindViewById<Button>(Resource.Id.playgroudButton);
 
-            button1.Click += delegate
+            toiletButton.Click += delegate
             {
                 Console.WriteLine("hej! :3");
             };
 
-            button2.Click += delegate
+            restaurantButton.Click += delegate
             {
                 Console.WriteLine("HEJ2");
+            };
+
+            smokeButton.Click += delegate
+            {
+                Console.WriteLine("heep!");
+            };
+
+            playgroundButton.Click += delegate
+            {
+                Console.WriteLine("yeeps!");
             };
         }
 

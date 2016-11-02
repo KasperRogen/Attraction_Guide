@@ -29,8 +29,8 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:minHeight="25px"
-        android:minWidth="25px"
+        android:minHeight="25dp"
+        android:minWidth="25dp"
         android:orientation="vertical"
         android:background="@null">
       <LinearLayout
@@ -38,26 +38,55 @@
           android:layout_width="match_parent"
           android:layout_height="wrap_content"
           android:layout_centerHorizontal="false"
-          android:minHeight="25px"
-          android:minWidth="25px"
+          android:minHeight="25dp"
+          android:minWidth="25dp"
           android:orientation="horizontal"
           android:layout_marginTop="15dp"
           android:paddingTop="5dp"
           android:weightSum="2">
         <Button
-            android:id="@+id/toiletButton1"
+            android:id="@+id/toiletButton"
             android:layout_width="0dp"
             android:layout_weight="1"
             android:layout_height="wrap_content"
             android:drawableTop="@drawable/Toilet" 
             android:background="@null" />
         <Button
-            android:id="@+id/toiletButton2"
+            android:id="@+id/restaurantButton"
             android:layout_width="0dp"
             android:layout_weight="1"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:drawableTop="@drawable/Restaurant"
+            android:background="@null" />
+      </LinearLayout>
+
+      <LinearLayout
+          android:id="@+id/buttonPanel2"
+          android:layout_below="@+id/buttonPanel1"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_centerHorizontal="false"
+          android:minHeight="25dp"
+          android:minWidth="25dp"
+          android:orientation="horizontal"
+          android:layout_marginTop="15dp"
+          android:paddingTop="5dp"
+          android:weightSum="2">
+        <Button
+            android:id="@+id/smokeButton"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:drawableTop="@drawable/Smoke_area"
+            android:background="@null" />
+        <Button
+            android:id="@+id/playgroudButton"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:drawableTop="@drawable/Playground"
             android:background="@null" />
       </LinearLayout>
       
