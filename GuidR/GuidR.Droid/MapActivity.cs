@@ -14,8 +14,6 @@ namespace GuidR.Droid
     {
         private GoogleMap mMap;
 
-        public List<MarkerOptions> animals = new List<MarkerOptions>();
-
         public static bool goToPlace = false;
         public static Coordinates PlaceToGo;   
 
@@ -26,10 +24,6 @@ namespace GuidR.Droid
 
             foreach (Attraction attraction in AttractionDataBase.Attractions) {
                 Console.WriteLine(attraction.Name);
-                if (attraction.Name.Contains("Toilet"))
-                    break;
-
-
 
                 if (goToPlace) 
                 mMap.MoveCamera(CameraUpdateFactory.NewLatLngZoom( new LatLng(PlaceToGo.Longitude, PlaceToGo.Latitude), 19));
@@ -39,6 +33,8 @@ namespace GuidR.Droid
 
 
                 mMap.AddMarker(new MarkerOptions().SetPosition(new LatLng(attraction.Location.Longitude, attraction.Location.Latitude)).SetTitle(attraction.Name).SetIcon(BitmapDescriptorFactory.FromResource(attraction.Pin)));
+                if (attraction.Name.Contains("Toilet"))
+                    break;
             }
 
             goToPlace = false;

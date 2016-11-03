@@ -6,17 +6,17 @@ namespace GuidR
 {
     public class Facility : Attraction
     {
-        public Facility (string name, string description, Coordinates location)
-            : this(name, description, location, null, null) { }
+        public Facility (string name, string description, Coordinates location, int pin)
+            : this(name, description, location, null, null, pin) { }
 
-        public Facility (string name, string description, Coordinates location, Time open, Time close)
+        public Facility (string name, string description, Coordinates location, Time open, Time close, int pin)
         {
             this.Name = name;
             this.Description = description;
             this.Location = location;
             this.Open = open;
             this.Close = close;
-            this.Pin = Pin;
+            this.Pin = pin;
 
             AttractionDataBase.Attractions.Add(this);
         }
