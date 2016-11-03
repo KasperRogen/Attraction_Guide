@@ -54,18 +54,24 @@ namespace GuidR
         public static int ZebraPin { get; set; }
         public static int TigerPin { get; set; }
         public static int ToiletPin { get; set; }
+
         public static int SkovbakkenPin { get; set; }
         public static int CasaFamiliaPin { get; set; }
         public static int PlaygroundKioskPin { get; set; }
         public static int SelfGrillPin { get; set; }
         public static int SmokeAreaPin { get; set; }
 
-        public static Facility Toilet { get; set; }
+        public static Facility Toilet1 { get; set; }
+        public static Facility Toilet2 { get; set; }
+        public static Facility Toilet3 { get; set; }
+        public static Facility Toilet4 { get; set; }
+        public static Facility Toilet5 { get; set; }
+        public static Facility SmokeArea1 { get; set; }
+        public static Facility SmokeArea2 { get; set; }
         public static Facility Skovbakken { get; set; }
         public static Facility CasaFamilia { get; set; }
         public static Facility PlaygroundKiosk { get; set; }
         public static Facility SelfGrill { get; set; }
-        public static Facility SmokeArea { get; set; }
 
         public static void InitializeAttraction()
         {
@@ -184,38 +190,59 @@ namespace GuidR
 
         public static void InitializeFacilities()
         {
-            Coordinates toiletCoordinates = new Coordinates(57.037814, 9.897785);
-            string toiletDescription = "Et sted at mudre";
+            Coordinates toiletCoordinates1 = new Coordinates(57.037814, 9.897785);
+            string toiletDescription = "Et sted at lade vandet fra kartoflerne";
 
-            Toilet = new Facility("Toilet - NAVN", toiletDescription, toiletCoordinates, ToiletPin);
+            Toilet1 = new Facility("Toilet - ved aberne", toiletDescription, toiletCoordinates1, ToiletPin);
 
-            Coordinates skovbakkenCoordinates = new Coordinates(100, 100);
+            Coordinates toiletCoordinates2 = new Coordinates(57.038342, 9.899817);
+            Toilet2 = new Facility("Toilet - ved indgangen", toiletDescription, toiletCoordinates2, ToiletPin);
+
+            Coordinates toiletCoordinates3 = new Coordinates(57.037176, 9.898884);
+            Toilet3 = new Facility("Toilet - ved casafamilia", toiletDescription, toiletCoordinates3, ToiletPin);
+
+            Coordinates toiletCoordinates4 = new Coordinates(57.036346, 9.898825);
+            Toilet4 = new Facility("Toilet - ved krokodillerne", toiletDescription, toiletCoordinates4, ToiletPin);
+
+            Coordinates toiletCoordinates5 = new Coordinates(57.035668, 9.896225);
+            Toilet5 = new Facility("Toilet - ved elefanterne", toiletDescription, toiletCoordinates5, ToiletPin);
+
+            Coordinates smokeAreaCoordinates1 = new Coordinates(57.037553, 9.898216);
+            string smokeAreaDescription = "Et sted at ryge";
+
+            SmokeArea1 = new Facility("Rygeområde - ved aberne", smokeAreaDescription, smokeAreaCoordinates1, SmokeAreaPin);
+
+            Coordinates smokeAreaCoordinates2 = new Coordinates(57.036508, 9.898031);
+            SmokeArea2 = new Facility("Rygeområde - ved legepladsen", smokeAreaDescription, smokeAreaCoordinates2, SmokeAreaPin);
+
+            Coordinates skovbakkenCoordinates = new Coordinates(57.037160, 9.897526);
             string skovbakkenDescription = "(REPLACE) Skovbakken er Aalborg Zoos spisested, placeret ved Faunavej på bakken op mod skoven. Her har vi udsigt over byen og Aalborg Zoo.";
             Time skovbakkenOpen = new Time(8);
             Time skovbakkenClose = new Time(16);
 
-            Skovbakken = new Facility("Skovbakken", skovbakkenDescription, skovbakkenCoordinates, skovbakkenOpen, skovbakkenClose, ToiletPin);
+            Skovbakken = new Facility("Skovbakken", skovbakkenDescription, skovbakkenCoordinates, skovbakkenOpen, skovbakkenClose, SkovbakkenPin);
 
-            Coordinates casaFamiliaCoordinates = new Coordinates(100, 100);
+            Coordinates casaFamiliaCoordinates = new Coordinates(57.037185, 9.898629);
             string casaFamiliaDescription = "(REPLACE) Casa Familia er Zoos sydamerikanske spisested, hvor du kan få serveret dagens grill over trækul:";
             Time casaFamiliaOpen = new Time(8);
             Time casaFamiliaClose = new Time(16);
 
-            CasaFamilia = new Facility("Casa Familia", casaFamiliaDescription, casaFamiliaCoordinates, casaFamiliaOpen, casaFamiliaClose, ToiletPin);
+            CasaFamilia = new Facility("Casa Familia", casaFamiliaDescription, casaFamiliaCoordinates, casaFamiliaOpen, casaFamiliaClose, CasaFamiliaPin);
 
-            Coordinates playgroundKioskCoordinates = new Coordinates(100, 100);
+            Coordinates playgroundKioskCoordinates = new Coordinates(57.036423, 9.897760);
             string playgroundKioskDescription = "(REPLACE) I Legepladskiosken kan du få serveret fransk hotdog, burgers, pommes frites, pølser, sandwich, is, kaffe og drikkevarer.";
             Time playgroundKioskOpen = new Time(8);
             Time playgroundKioskClose = new Time(16);
 
-            PlaygroundKiosk = new Facility("Legepladskiosken", playgroundKioskDescription, playgroundKioskCoordinates, playgroundKioskOpen, playgroundKioskClose, ToiletPin);
+            PlaygroundKiosk = new Facility("Legepladskiosken", playgroundKioskDescription, playgroundKioskCoordinates, playgroundKioskOpen, playgroundKioskClose, PlaygroundKioskPin);
 
-            Coordinates selfGrillCoordinates = new Coordinates(100, 100);
-            string selfGrillDescription = "(REPLACE) Pak madkurven og besøg familieområdet i Aalborg Zoo, hvor du har mulighed for at grille din egen medbragte mad i en af vores to store grillhytter (Det er ikke muligt at købe mad til grill selv i Aalborg Zoo) Grillen slukkes ca. en time før havens lukketid. Grillerne kan benyttes indtil 23. oktober.";
+            Coordinates selfGrillCoordinates = new Coordinates(57.037814, 9.21);
+            string selfGrillDescription = "(REPLACE) Pak madkurven og besøg familieområdet i Aalborg Zoo, hvor du har mulighed for at grille din"+ 
+                                          "egen medbragte mad i en af vores to store grillhytter (Det er ikke muligt at købe mad til grill selv i Aalborg Zoo) Grillen slukkes ca. en time før havens lukketid. Grillerne kan benyttes indtil 23. oktober.";
             Time selfGrillOpen = new Time(8);
             Time selfGrillClose = new Time(16);
 
-            SelfGrill = new Facility("Grill-selv", selfGrillDescription, selfGrillCoordinates, selfGrillOpen, selfGrillClose, ToiletPin);
+            SelfGrill = new Facility("Grill-selv", selfGrillDescription, selfGrillCoordinates, selfGrillOpen, selfGrillClose, SelfGrillPin);
         }
     }
 }

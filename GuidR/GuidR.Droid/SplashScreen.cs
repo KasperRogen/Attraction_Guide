@@ -50,6 +50,11 @@ namespace GuidR.Droid {
             AttractionDataBase.TigerPin = Resource.Drawable.Tiger_Pin;
             AttractionDataBase.ZebraPin = Resource.Drawable.Zebra_Pin;
             AttractionDataBase.ToiletPin = Resource.Drawable.Toilet_pin;
+            AttractionDataBase.CasaFamiliaPin = Resource.Drawable.Restaurant_Pin;
+            AttractionDataBase.SkovbakkenPin = Resource.Drawable.Restaurant_Pin;
+            AttractionDataBase.SelfGrillPin = Resource.Drawable.Restaurant_Pin;
+            AttractionDataBase.PlaygroundKioskPin = Resource.Drawable.Restaurant_Pin;
+            AttractionDataBase.SmokeAreaPin = Resource.Drawable.Smoke_area_pin;
         }
 
     }

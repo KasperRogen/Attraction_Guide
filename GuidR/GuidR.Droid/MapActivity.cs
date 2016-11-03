@@ -33,8 +33,6 @@ namespace GuidR.Droid
 
 
                 mMap.AddMarker(new MarkerOptions().SetPosition(new LatLng(attraction.Location.Longitude, attraction.Location.Latitude)).SetTitle(attraction.Name).SetIcon(BitmapDescriptorFactory.FromResource(attraction.Pin)));
-                if (attraction.Name.Contains("Toilet"))
-                    break;
             }
 
             goToPlace = false;

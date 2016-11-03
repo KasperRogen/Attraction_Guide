@@ -7,7 +7,10 @@ namespace GuidR
     public class Facility : Attraction
     {
         public Facility (string name, string description, Coordinates location, int pin)
-            : this(name, description, location, null, null, pin) { }
+            : this(name, description, location, null, null, pin)
+        {
+            AttractionDataBase.Attractions.Add(this);
+        }
 
         public Facility (string name, string description, Coordinates location, Time open, Time close, int pin)
         {
@@ -19,6 +22,7 @@ namespace GuidR
             this.Pin = pin;
 
             AttractionDataBase.Attractions.Add(this);
+
         }
 
         public override string Name { get; set; }
