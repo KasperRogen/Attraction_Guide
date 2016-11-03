@@ -533,7 +533,6 @@ C:\Users\Mads\Dropbox\Uni\Semester 3\App\GuidR\GuidR.Droid\obj\Debug\android\ass
 C:\Users\Mads\Dropbox\Uni\Semester 3\App\GuidR\GuidR.Droid\obj\Debug\android\assets\System.Runtime.Serialization.dll.mdb
 C:\Users\Mads\Dropbox\Uni\Semester 3\App\GuidR\GuidR.Droid\obj\Debug\android\assets\System.ServiceModel.Internals.dll.mdb
 C:\Users\Mads\Dropbox\Uni\Semester 3\App\GuidR\GuidR.Droid\obj\Debug\android\assets\System.Xml.dll.mdb
-C:\Users\Mads\Dropbox\Uni\Semester 3\App\GuidR\GuidR.Droid\obj\Debug\GuidR.Droid.dll.mdb
 C:\Users\tahkd\Documents\Attraction_Guide\GuidR\GuidR.Droid\obj\Debug\GuidR.Droid.csprojResolveAssemblyReference.cache
 C:\Users\tahkd\Documents\Attraction_Guide\GuidR\GuidR.Droid\obj\Debug\GuidR.Droid.dll
 C:\Users\tahkd\Documents\Attraction_Guide\GuidR\GuidR.Droid\obj\Debug\GuidR.Droid.pdb
@@ -638,3 +637,20 @@ C:\Users\tahkd\Documents\Attraction_Guide\GuidR\GuidR.Droid\obj\Debug\R.cs.flag
 C:\Users\tahkd\Documents\Attraction_Guide\GuidR\GuidR.Droid\obj\Debug\uploadflags.txt
 C:\Users\tahkd\Documents\Attraction_Guide\GuidR\GuidR.Droid\obj\Debug\GuidR.Droid.dll.mdb
 C:\Users\tahkd\Documents\Attraction_Guide\GuidR\GuidR.Droid\bin\Debug\GuidR.Droid.dll.mdb
+C:\Users\Mads\Dropbox\Uni\Semester 3\App\GuidR\GuidR.Droid\obj\Debug\res\drawable-hdpi\emperor_tamarin_pin.png
+C:\Users\Mads\Dropbox\Uni\Semester 3\App\GuidR\GuidR.Droid\obj\Debug\res\drawable-hdpi\elephant_pin.png
+C:\Users\Mads\Dropbox\Uni\Semester 3\App\GuidR\GuidR.Droid\obj\Debug\res\drawable-hdpi\californian_sea_lion_pin.png
+C:\Users\Mads\Dropbox\Uni\Semester 3\App\GuidR\GuidR.Droid\obj\Debug\res\drawable-hdpi\brown_bear_pin.png
+C:\Users\Mads\Dropbox\Uni\Semester 3\App\GuidR\GuidR.Droid\obj\Debug\res\drawable-hdpi\black_kaiman_pin.png
+C:\Users\Mads\Dropbox\Uni\Semester 3\App\GuidR\GuidR.Droid\obj\Debug\res\drawable-hdpi\baboon_pin.png
+C:\Users\Mads\Dropbox\Uni\Semester 3\App\GuidR\GuidR.Droid\obj\Debug\res\drawable-hdpi\zebra_pin.png
+C:\Users\Mads\Dropbox\Uni\Semester 3\App\GuidR\GuidR.Droid\obj\Debug\res\drawable-hdpi\tiger_pin.png
+C:\Users\Mads\Dropbox\Uni\Semester 3\App\GuidR\GuidR.Droid\obj\Debug\res\drawable-hdpi\pygmy_hippo_pin.png
+C:\Users\Mads\Dropbox\Uni\Semester 3\App\GuidR\GuidR.Droid\obj\Debug\res\drawable-hdpi\polar_bear_pin.png
+C:\Users\Mads\Dropbox\Uni\Semester 3\App\GuidR\GuidR.Droid\obj\Debug\res\drawable-hdpi\penguin_pin.png
+C:\Users\Mads\Dropbox\Uni\Semester 3\App\GuidR\GuidR.Droid\obj\Debug\res\drawable-hdpi\meercat_pin.png
+C:\Users\Mads\Dropbox\Uni\Semester 3\App\GuidR\GuidR.Droid\obj\Debug\res\drawable-hdpi\lemur_pin.png
+C:\Users\Mads\Dropbox\Uni\Semester 3\App\GuidR\GuidR.Droid\obj\Debug\res\drawable-hdpi\lion_pin.png
+C:\Users\Mads\Dropbox\Uni\Semester 3\App\GuidR\GuidR.Droid\obj\Debug\res\drawable-hdpi\giraffe_pin.png
+C:\Users\Mads\Dropbox\Uni\Semester 3\App\GuidR\GuidR.Droid\obj\Debug\res\drawable-hdpi\restaurant.png
+C:\Users\Mads\Dropbox\Uni\Semester 3\App\GuidR\GuidR.Droid\obj\Debug\GuidR.Droid.dll.mdb
