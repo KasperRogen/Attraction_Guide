@@ -26,22 +26,22 @@ namespace GuidR.Droid
 
             toiletButton.Click += delegate
             {
-                Console.WriteLine("hej! :3");
+                SetContentView(Resource.Layout.ToiletMenu);
             };
 
             restaurantButton.Click += delegate
             {
-                Console.WriteLine("HEJ2");
+                SetContentView(Resource.Layout.RestaurantMenu);
             };
 
             smokeButton.Click += delegate
             {
-                Console.WriteLine("heep!");
+
             };
 
             playgroundButton.Click += delegate
             {
-                Console.WriteLine("yeeps!");
+                SetContentView(Resource.Layout.PlaygroundMenu);
             };
         }
 
