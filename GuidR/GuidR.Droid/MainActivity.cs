@@ -6,7 +6,7 @@ using Android.Widget;
 
 namespace GuidR.Droid
 {
-	[Activity (Label = "GuidR.Droid", Icon = "@drawable/icon")]
+	[Activity (Label = "GuidR.Droid", Theme = "@style/Theme.splash")]
 	public class MainActivity : Activity
 	{
 
@@ -33,7 +33,6 @@ namespace GuidR.Droid
             */
 
             base.OnCreate (bundle);
-            ActionBar.Hide();
 			// Set our view from the "main" layout resource
 			SetContentView (Resource.Layout.Main);
 
@@ -44,6 +43,11 @@ namespace GuidR.Droid
             Button facilityButton = FindViewById<Button>(Resource.Id.facilityButton);
             Button mapButton = FindViewById<Button>(Resource.Id.mapButton);
             Button newsButton = FindViewById<Button>(Resource.Id.newsbutton);
+            Button infoButton = FindViewById<Button>(Resource.Id.infoButton);
+
+            infoButton.Click += delegate {
+                StartActivity(typeof(VideoStreamActivity));
+            };
 
             button.Click += delegate 
             {
