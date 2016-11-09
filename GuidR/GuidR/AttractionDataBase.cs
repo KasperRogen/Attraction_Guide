@@ -4,6 +4,8 @@ namespace GuidR
 {
     public static class AttractionDataBase
     {
+        public static PlatformDependency Platform { get; set; }
+
         public static List<Attraction> Attractions = new List<Attraction>();
 
         public static Animal Baboon { get; set; }
@@ -21,45 +23,6 @@ namespace GuidR
         public static Animal Meercat { get; set; }
         public static Animal Zebra { get; set; }
         public static Animal Tiger { get; set; }
-
-        public static int BaboonImage { get; set; }
-        public static int BearImage { get; set; }
-        public static int SeaLionImage { get; set; }
-        public static int HippoImage { get; set; }
-        public static int ElephantImage { get; set; }
-        public static int GiraffeImage { get; set; }
-        public static int PolarBearImage { get; set; }
-        public static int KaimanImage { get; set; }
-        public static int TamarinImage { get; set; }
-        public static int LemurImage { get; set; }
-        public static int LionImage { get; set; }
-        public static int PenguinImage { get; set; }
-        public static int MeercatImage { get; set; }
-        public static int ZebraImage { get; set; }
-        public static int TigerImage { get; set; }
-
-        public static int BaboonPin { get; set; }
-        public static int BearPin { get; set; }
-        public static int SeaLionPin { get; set; }
-        public static int HippoPin { get; set; }
-        public static int ElephantPin { get; set; }
-        public static int GiraffePin { get; set; }
-        public static int PolarBearPin { get; set; }
-        public static int KaimanPin { get; set; }
-        public static int TamarinPin { get; set; }
-        public static int LemurPin { get; set; }
-        public static int LionPin { get; set; }
-        public static int PenguinPin { get; set; }
-        public static int MeercatPin { get; set; }
-        public static int ZebraPin { get; set; }
-        public static int TigerPin { get; set; }
-        public static int ToiletPin { get; set; }
-
-        public static int SkovbakkenPin { get; set; }
-        public static int CasaFamiliaPin { get; set; }
-        public static int PlaygroundKioskPin { get; set; }
-        public static int SelfGrillPin { get; set; }
-        public static int SmokeAreaPin { get; set; }
 
         public static Facility Toilet1 { get; set; }
         public static Facility Toilet2 { get; set; }
@@ -79,7 +42,7 @@ namespace GuidR
             InitializeFacilities();
         }
 
-        public static void InitializeAnimals()
+        private static void InitializeAnimals()
         {
             // Ikke godt. Virker ikke på andet end Android, vil fikse snart!
             Coordinates baboonCoordinates = new Coordinates(57.037463, 9.898570);
@@ -90,7 +53,7 @@ namespace GuidR
                                        "Dens kost består primært af frugter, græs, rødder og insekter, men vil af og til også fange og spise mindre pattedyr.\n\n" +
                                        "Kappebavianen bliver op til 75 cm i højden, hvor hannerne kan veje op til 18 kg og hunnerne kan veje op til 10 kg. " +
                                        "Levealderen for en kappebavian i naturen er stadig ukendt, men den ældste i fangeskab blev 38 år gammel.";
-            Baboon = new Animal("Kappebavian", baboonDescription, baboonCoordinates, "Papio Hamadryas", BaboonImage, BaboonPin);
+            Baboon = new Animal("Kappebavian", baboonDescription, baboonCoordinates, "Papio Hamadryas");
 
 
             Coordinates bearCoordinates = new Coordinates(100, 100);
@@ -108,7 +71,7 @@ namespace GuidR
                                      "Dens vægt varierer mellem 70-350 kg, og de bliver 1,7-2,5 meter i længden. " +
                                      "I naturen bliver de omkring 20 år gamle, mens de i zoologiske haver kan blive op til 30 år gamle.";
             Time bearFeeding = new Time(14, 45);
-            Bear = new Animal("Brunbjørn", bearDescription, bearCoordinates, "Ursus Arctos", BearImage, BearPin, bearFeeding);
+            Bear = new Animal("Brunbjørn", bearDescription, bearCoordinates, "Ursus Arctos", bearFeeding);
 
             Coordinates seaLionCoordinates = new Coordinates(57.036286, 9.898246);
             string seaLionDescription = "Den californiske søløve kan findes langs den nedre del af den nordamerikanske vestkyst og ud fra den mexicanske kyst. " +
@@ -123,7 +86,7 @@ namespace GuidR
                                         "I naturen blev den ældste dokumenterede søløve 17 år gammel, hvor den ældste i fangenskab blev 31 år gammel. " +
                                         "Alderen af en søløve kan fastgøres ved at tælle antallet af ringe på et tværsnit af dens tænder.";
             Time seaLionFeeding = new Time(08, 00);
-            SeaLion = new Animal("Søløve", seaLionDescription, seaLionCoordinates, "Zalophus Californianus", SeaLionImage, SeaLionPin, seaLionFeeding);
+            SeaLion = new Animal("Søløve", seaLionDescription, seaLionCoordinates, "Zalophus Californianus", seaLionFeeding);
 
             Coordinates hippoCoordinates = new Coordinates(57.035092, 9.897645);
             string hippoDescription = "Dværgflodhesten er en truet dyreart der kun findes i 4 vestafrikanske lande; Liberia, Elfenbenskysten, Sierra Leone og Guinea. " +
@@ -139,102 +102,102 @@ namespace GuidR
                                       "De vejer mellem 160 kg og 275 kg, og der er normalvis ikke er stor forksel mellem hunnerne og hannerne. " +
                                       "Flodhesten kan blive op til 42 år gammel.";
             Time hippoFeeding = new Time(13);
-            Hippo = new Animal("Dværgflodhest", hippoDescription, hippoCoordinates, "Hexaprotodon Liberiensis", HippoImage, HippoPin, hippoFeeding);
+            Hippo = new Animal("Dværgflodhest", hippoDescription, hippoCoordinates, "Hexaprotodon Liberiensis", hippoFeeding);
 
             Coordinates elephantCoordinates = new Coordinates(57.035886, 9.897210);
             string elephantDescription = "Beskrivelse";
             Time elephantFeeding = new Time(15);
             Time elephantFeeding2 = new Time(13, 05);
-            Elephant = new Animal("Elefant", elephantDescription, elephantCoordinates, "Loxodonta Africana", ElephantImage, ElephantPin, elephantFeeding, elephantFeeding2);
+            Elephant = new Animal("Elefant", elephantDescription, elephantCoordinates, "Loxodonta Africana", elephantFeeding, elephantFeeding2);
 
             Coordinates giraffeCoordinates = new Coordinates(57.035251, 9.897022);
             string giraffeDescription = "Beskrivelse";
-            Giraffe = new Animal("Giraf", giraffeDescription, giraffeCoordinates, "Giraffa Camelopardalis Rotschildi", GiraffeImage, GiraffePin);
+            Giraffe = new Animal("Giraf", giraffeDescription, giraffeCoordinates, "Giraffa Camelopardalis Rotschildi");
 
             Coordinates polarBearCoordinates = new Coordinates(57.036717, 9.896924);
             string polarBearDescription = "Beskrivelse";
-            PolarBear = new Animal("Isbjørn", polarBearDescription, polarBearCoordinates, "Ursus Maritimus", PolarBearImage, PolarBearPin);
+            PolarBear = new Animal("Isbjørn", polarBearDescription, polarBearCoordinates, "Ursus Maritimus");
 
             Coordinates kaimanCoordinates = new Coordinates(57.036116, 9.898195);
             string kaimanDescription = "Beskrivelse";
-            Kaiman = new Animal("Sort Kaiman", kaimanDescription, kaimanCoordinates, "Melanosuchus Niger", KaimanImage, KaimanPin);
+            Kaiman = new Animal("Sort Kaiman", kaimanDescription, kaimanCoordinates, "Melanosuchus Niger");
 
             Coordinates tamarinCoordinates = new Coordinates(57.036075, 9.898411);
             string tamarinDescription = "Beskrivelse";
-            Tamarin = new Animal("Kejsertamarin", tamarinDescription, tamarinCoordinates, "Saguinus Imperator", TamarinImage, TamarinPin);
+            Tamarin = new Animal("Kejsertamarin", tamarinDescription, tamarinCoordinates, "Saguinus Imperator");
 
             Coordinates lemurCoordinates = new Coordinates(57.038091, 9.898626);
             string lemurDescription = "Beskrivelse";
-            Lemur = new Animal("Lemur", lemurDescription, lemurCoordinates, "Lemur Catta", LemurImage, LemurPin);
+            Lemur = new Animal("Lemur", lemurDescription, lemurCoordinates, "Lemur Catta");
 
             Coordinates lionCoordinates = new Coordinates(57.036281, 9.897057);
             string lionDescription = "Beskrivelse";
-            Lion = new Animal("Løve", lionDescription, lionCoordinates, "Panthera leo persica", LionImage, LionPin);
+            Lion = new Animal("Løve", lionDescription, lionCoordinates, "Panthera leo persica");
 
             Coordinates penquinCoordinates = new Coordinates(57.036389, 9.898301);
             string penquinDescription = "Beskrivelse";
-            Penguin = new Animal("Penguin", penquinDescription, penquinCoordinates, "Spheniscus Humboldti", PenguinImage, PenguinPin);
+            Penguin = new Animal("Penguin", penquinDescription, penquinCoordinates, "Spheniscus Humboldti");
 
             Coordinates meercatCoordinates = new Coordinates(100, 100);
             string meercatDescription = "Beskrivelse";
-            Meercat = new Animal("Meercat", meercatDescription, meercatCoordinates, "Suricata Suricatta", MeercatImage, MeercatPin);
+            Meercat = new Animal("Meercat", meercatDescription, meercatCoordinates, "Suricata Suricatta");
 
             Coordinates zebraCoordinates = new Coordinates(57.035073, 9.897715);
             string zebraDescription = "Beskrivelse";
-            Zebra = new Animal("Zebra", zebraDescription, zebraCoordinates, "Equus Grevyi", ZebraImage, ZebraPin);
+            Zebra = new Animal("Zebra", zebraDescription, zebraCoordinates, "Equus Grevyi");
 
             Coordinates tigerCoordinates = new Coordinates(57.036355, 9.896779);
             string tigerDescription = "Beskrivelse";
-            Tiger = new Animal("Tiger", tigerDescription, tigerCoordinates, "Panthea Sigris Sumatrae", TigerImage, TigerPin);
+            Tiger = new Animal("Tiger", tigerDescription, tigerCoordinates, "Panthea Sigris Sumatrae");
         }
 
-        public static void InitializeFacilities()
+        private static void InitializeFacilities()
         {
             Coordinates toiletCoordinates1 = new Coordinates(57.037814, 9.897785);
             string toiletDescription = "Et sted at lade vandet fra kartoflerne";
 
-            Toilet1 = new Facility("Toilet - ved aberne", toiletDescription, toiletCoordinates1, ToiletPin);
+            Toilet1 = new Facility("Toilet - ved aberne", toiletDescription, toiletCoordinates1);
 
             Coordinates toiletCoordinates2 = new Coordinates(57.038342, 9.899817);
-            Toilet2 = new Facility("Toilet - ved indgangen", toiletDescription, toiletCoordinates2, ToiletPin);
+            Toilet2 = new Facility("Toilet - ved indgangen", toiletDescription, toiletCoordinates2);
 
             Coordinates toiletCoordinates3 = new Coordinates(57.037176, 9.898884);
-            Toilet3 = new Facility("Toilet - ved casafamilia", toiletDescription, toiletCoordinates3, ToiletPin);
+            Toilet3 = new Facility("Toilet - ved casafamilia", toiletDescription, toiletCoordinates3);
 
             Coordinates toiletCoordinates4 = new Coordinates(57.036346, 9.898825);
-            Toilet4 = new Facility("Toilet - ved krokodillerne", toiletDescription, toiletCoordinates4, ToiletPin);
+            Toilet4 = new Facility("Toilet - ved krokodillerne", toiletDescription, toiletCoordinates4);
 
             Coordinates toiletCoordinates5 = new Coordinates(57.035668, 9.896225);
-            Toilet5 = new Facility("Toilet - ved elefanterne", toiletDescription, toiletCoordinates5, ToiletPin);
+            Toilet5 = new Facility("Toilet - ved elefanterne", toiletDescription, toiletCoordinates5);
 
             Coordinates smokeAreaCoordinates1 = new Coordinates(57.037553, 9.898216);
             string smokeAreaDescription = "Et sted at ryge";
 
-            SmokeArea1 = new Facility("Rygeområde - ved aberne", smokeAreaDescription, smokeAreaCoordinates1, SmokeAreaPin);
+            SmokeArea1 = new Facility("Rygeområde - ved aberne", smokeAreaDescription, smokeAreaCoordinates1);
 
             Coordinates smokeAreaCoordinates2 = new Coordinates(57.036508, 9.898031);
-            SmokeArea2 = new Facility("Rygeområde - ved legepladsen", smokeAreaDescription, smokeAreaCoordinates2, SmokeAreaPin);
+            SmokeArea2 = new Facility("Rygeområde - ved legepladsen", smokeAreaDescription, smokeAreaCoordinates2);
 
             Coordinates skovbakkenCoordinates = new Coordinates(57.037160, 9.897526);
             string skovbakkenDescription = "(REPLACE) Skovbakken er Aalborg Zoos spisested, placeret ved Faunavej på bakken op mod skoven. Her har vi udsigt over byen og Aalborg Zoo.";
             Time skovbakkenOpen = new Time(8);
             Time skovbakkenClose = new Time(16);
 
-            Skovbakken = new Facility("Skovbakken", skovbakkenDescription, skovbakkenCoordinates, skovbakkenOpen, skovbakkenClose, SkovbakkenPin);
+            Skovbakken = new Facility("Skovbakken", skovbakkenDescription, skovbakkenCoordinates, skovbakkenOpen, skovbakkenClose);
 
             Coordinates casaFamiliaCoordinates = new Coordinates(57.037185, 9.898629);
             string casaFamiliaDescription = "(REPLACE) Casa Familia er Zoos sydamerikanske spisested, hvor du kan få serveret dagens grill over trækul:";
             Time casaFamiliaOpen = new Time(8);
             Time casaFamiliaClose = new Time(16);
 
-            CasaFamilia = new Facility("Casa Familia", casaFamiliaDescription, casaFamiliaCoordinates, casaFamiliaOpen, casaFamiliaClose, CasaFamiliaPin);
+            CasaFamilia = new Facility("Casa Familia", casaFamiliaDescription, casaFamiliaCoordinates, casaFamiliaOpen, casaFamiliaClose);
 
             Coordinates playgroundKioskCoordinates = new Coordinates(57.036423, 9.897760);
             string playgroundKioskDescription = "(REPLACE) I Legepladskiosken kan du få serveret fransk hotdog, burgers, pommes frites, pølser, sandwich, is, kaffe og drikkevarer.";
             Time playgroundKioskOpen = new Time(8);
             Time playgroundKioskClose = new Time(16);
 
-            PlaygroundKiosk = new Facility("Legepladskiosken", playgroundKioskDescription, playgroundKioskCoordinates, playgroundKioskOpen, playgroundKioskClose, PlaygroundKioskPin);
+            PlaygroundKiosk = new Facility("Legepladskiosken", playgroundKioskDescription, playgroundKioskCoordinates, playgroundKioskOpen, playgroundKioskClose);
 
             Coordinates selfGrillCoordinates = new Coordinates(57.037814, 9.21);
             string selfGrillDescription = "(REPLACE) Pak madkurven og besøg familieområdet i Aalborg Zoo, hvor du har mulighed for at grille din"+ 
@@ -242,7 +205,7 @@ namespace GuidR
             Time selfGrillOpen = new Time(8);
             Time selfGrillClose = new Time(16);
 
-            SelfGrill = new Facility("Grill-selv", selfGrillDescription, selfGrillCoordinates, selfGrillOpen, selfGrillClose, SelfGrillPin);
+            SelfGrill = new Facility("Grill-selv", selfGrillDescription, selfGrillCoordinates, selfGrillOpen, selfGrillClose);
         }
     }
 }

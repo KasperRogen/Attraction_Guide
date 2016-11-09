@@ -31,12 +31,16 @@
     <ConsolePause>false</ConsolePause>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="PlatformDependency.cs" />
     <Compile Include="Animal.cs" />
     <Compile Include="Attraction.cs" />
     <Compile Include="AttractionDataBase.cs" />
+    <Compile Include="Calendar.cs" />
     <Compile Include="Coordinates.cs" />
     <Compile Include="Event.cs" />
+    <Compile Include="EventTime.cs" />
     <Compile Include="Facility.cs" />
+    <Compile Include="iOSDependency.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Time.cs" />
   </ItemGroup>

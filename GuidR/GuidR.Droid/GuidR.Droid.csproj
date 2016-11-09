@@ -71,6 +71,7 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AndroidDependency.cs" />
     <Compile Include="AnimalButton.cs" />
     <Compile Include="FacilitiesMenuActivity.cs" />
     <Compile Include="IndependentAnimalActivity.cs" />

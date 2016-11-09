@@ -1,63 +1,89 @@
 ﻿using Android.App;
 using Android.OS;
 
-namespace GuidR.Droid {
+namespace GuidR.Droid
+{
     [Activity(Label ="Aalborg Zoo", MainLauncher = true, NoHistory = true, Theme ="@style/Theme.splash", Icon ="@drawable/logo")]
-    public class SplashScreen: Activity {
-        protected override void OnCreate(Bundle bundle) {
+    public class SplashScreen: Activity
+    {
+        protected override void OnCreate(Bundle bundle)
+        {
             base.OnCreate(bundle);
-            InitializeHeaderImages();
-            InitializePinImages();
+
             AttractionDataBase.InitializeAttraction();
-            //Console.WriteLine("elefant: " + AttractionDataBase.Elephant.HeaderImage);
+            InitializeAndroidDependencies();
+
             StartActivity(typeof(MainActivity));
         }
 
-        void InitializeHeaderImages()
+        // Initializes Android specific Drawables
+        void InitializeAndroidDependencies ()
         {
-            AttractionDataBase.BaboonImage = Resource.Drawable.BaboonHeader;
-            AttractionDataBase.BearImage = Resource.Drawable.BrownBearHeader;
-            AttractionDataBase.SeaLionImage = Resource.Drawable.SeaLionHeader;
-            AttractionDataBase.HippoImage = Resource.Drawable.HippoHeader;
-            AttractionDataBase.ElephantImage = Resource.Drawable.ElephantHeader;
-            AttractionDataBase.GiraffeImage = Resource.Drawable.GiraffeHeader;
-            AttractionDataBase.PolarBearImage = Resource.Drawable.PolarBearHeader;
-            AttractionDataBase.KaimanImage = Resource.Drawable.KaimanHeader;
-            AttractionDataBase.TamarinImage = Resource.Drawable.TamarinHeader;
-            AttractionDataBase.LemurImage = Resource.Drawable.LemurHeader;
-            AttractionDataBase.LionImage = Resource.Drawable.LionHeader;
-            AttractionDataBase.PenguinImage = Resource.Drawable.PenguinHeader;
-            AttractionDataBase.MeercatImage = Resource.Drawable.MeercatHeader;
-            AttractionDataBase.TigerImage = Resource.Drawable.TigerHeader;
-            AttractionDataBase.ZebraImage = Resource.Drawable.ZebraHeader;
+            AttractionDataBase.Platform = new AndroidDependency();
+
+            AttractionDataBase.Baboon.Image = Resource.Drawable.BaboonHeader;
+            AttractionDataBase.Bear.Image = Resource.Drawable.BrownBearHeader;
+            AttractionDataBase.SeaLion.Image = Resource.Drawable.SeaLionHeader;
+            AttractionDataBase.Hippo.Image = Resource.Drawable.HippoHeader;
+            AttractionDataBase.Elephant.Image = Resource.Drawable.ElephantHeader;
+            AttractionDataBase.Giraffe.Image = Resource.Drawable.GiraffeHeader;
+            AttractionDataBase.PolarBear.Image = Resource.Drawable.PolarBearHeader;
+            AttractionDataBase.Kaiman.Image = Resource.Drawable.KaimanHeader;
+            AttractionDataBase.Tamarin.Image = Resource.Drawable.TamarinHeader;
+            AttractionDataBase.Lemur.Image = Resource.Drawable.LemurHeader;
+            AttractionDataBase.Lion.Image = Resource.Drawable.LionHeader;
+            AttractionDataBase.Penguin.Image = Resource.Drawable.PenguinHeader;
+            AttractionDataBase.Meercat.Image = Resource.Drawable.MeercatHeader;
+            AttractionDataBase.Tiger.Image = Resource.Drawable.TigerHeader;
+            AttractionDataBase.Zebra.Image = Resource.Drawable.ZebraHeader;
+
+            AttractionDataBase.Toilet1.Image = Resource.Drawable.ZebraHeader;
+            AttractionDataBase.Toilet2.Image = Resource.Drawable.ZebraHeader;
+            AttractionDataBase.Toilet3.Image = Resource.Drawable.ZebraHeader;
+            AttractionDataBase.Toilet4.Image = Resource.Drawable.ZebraHeader;
+            AttractionDataBase.Toilet5.Image = Resource.Drawable.ZebraHeader;
+
+            AttractionDataBase.CasaFamilia.Image = Resource.Drawable.ZebraHeader;
+            AttractionDataBase.Skovbakken.Image = Resource.Drawable.ZebraHeader;
+            AttractionDataBase.SelfGrill.Image = Resource.Drawable.ZebraHeader;
+            AttractionDataBase.PlaygroundKiosk.Image = Resource.Drawable.ZebraHeader;
+            AttractionDataBase.SmokeArea1.Image = Resource.Drawable.ZebraHeader;
+            AttractionDataBase.SmokeArea2.Image = Resource.Drawable.ZebraHeader;
+
+            InitializePins();
         }
 
 
-        void InitializePinImages() {
-            AttractionDataBase.BaboonPin = Resource.Drawable.Baboon_Pin;
-            AttractionDataBase.BearPin = Resource.Drawable.Brown_bear_Pin;
-            AttractionDataBase.SeaLionPin = Resource.Drawable.Californian_Sea_Lion_pin;
-            AttractionDataBase.HippoPin = Resource.Drawable.Pygmy_Hippo_Pin;
-            AttractionDataBase.ElephantPin = Resource.Drawable.Elephant_Pin;
-            AttractionDataBase.GiraffePin = Resource.Drawable.Giraffe_Pin;
-            AttractionDataBase.PolarBearPin = Resource.Drawable.Polar_bear_Pin;
-            AttractionDataBase.KaimanPin = Resource.Drawable.Black_kaiman_Pin;
-            AttractionDataBase.TamarinPin = Resource.Drawable.Emperor_tamarin_Pin;
-            AttractionDataBase.LemurPin = Resource.Drawable.Lemur_pin;
-            AttractionDataBase.LionPin = Resource.Drawable.Lion_Pin;
-            AttractionDataBase.PenguinPin = Resource.Drawable.Penguin_Pin;
-            AttractionDataBase.MeercatPin = Resource.Drawable.Meercat_Pin;
-            AttractionDataBase.TigerPin = Resource.Drawable.Tiger_Pin;
-            AttractionDataBase.ZebraPin = Resource.Drawable.Zebra_Pin;
-            AttractionDataBase.ToiletPin = Resource.Drawable.Toilet_pin;
-            AttractionDataBase.CasaFamiliaPin = Resource.Drawable.Restaurant_Pin;
-            AttractionDataBase.SkovbakkenPin = Resource.Drawable.Restaurant_Pin;
-            AttractionDataBase.SelfGrillPin = Resource.Drawable.Restaurant_Pin;
-            AttractionDataBase.PlaygroundKioskPin = Resource.Drawable.Restaurant_Pin;
-            AttractionDataBase.SmokeAreaPin = Resource.Drawable.Smoke_area_pin;
-        }
+        void InitializePins ()
+        {
+            AttractionDataBase.Baboon.Pin = Resource.Drawable.Baboon_Pin;
+            AttractionDataBase.Bear.Pin = Resource.Drawable.Brown_bear_Pin;
+            AttractionDataBase.SeaLion.Pin = Resource.Drawable.Californian_Sea_Lion_pin;
+            AttractionDataBase.Hippo.Pin = Resource.Drawable.Pygmy_Hippo_Pin;
+            AttractionDataBase.Elephant.Pin = Resource.Drawable.Elephant_Pin;
+            AttractionDataBase.Giraffe.Pin = Resource.Drawable.Giraffe_Pin;
+            AttractionDataBase.PolarBear.Pin = Resource.Drawable.Polar_bear_Pin;
+            AttractionDataBase.Kaiman.Pin = Resource.Drawable.Black_kaiman_Pin;
+            AttractionDataBase.Tamarin.Pin = Resource.Drawable.Emperor_tamarin_Pin;
+            AttractionDataBase.Lemur.Pin = Resource.Drawable.Lemur_pin;
+            AttractionDataBase.Lion.Pin = Resource.Drawable.Lion_Pin;
+            AttractionDataBase.Penguin.Pin = Resource.Drawable.Penguin_Pin;
+            AttractionDataBase.Meercat.Pin = Resource.Drawable.Meercat_Pin;
+            AttractionDataBase.Tiger.Pin = Resource.Drawable.Tiger_Pin;
+            AttractionDataBase.Zebra.Pin = Resource.Drawable.Zebra_Pin;
 
+            AttractionDataBase.Toilet1.Pin = Resource.Drawable.Toilet_pin;
+            AttractionDataBase.Toilet2.Pin = Resource.Drawable.Toilet_pin;
+            AttractionDataBase.Toilet3.Pin = Resource.Drawable.Toilet_pin;
+            AttractionDataBase.Toilet4.Pin = Resource.Drawable.Toilet_pin;
+            AttractionDataBase.Toilet5.Pin = Resource.Drawable.Toilet_pin;
+
+            AttractionDataBase.CasaFamilia.Pin = Resource.Drawable.Restaurant_Pin;
+            AttractionDataBase.Skovbakken.Pin = Resource.Drawable.Restaurant_Pin;
+            AttractionDataBase.SelfGrill.Pin = Resource.Drawable.Restaurant_Pin;
+            AttractionDataBase.PlaygroundKiosk.Pin = Resource.Drawable.Restaurant_Pin;
+            AttractionDataBase.SmokeArea1.Pin = Resource.Drawable.Smoke_area_pin;
+            AttractionDataBase.SmokeArea2.Pin = Resource.Drawable.Smoke_area_pin;
+        }
     }
-   
-
 }

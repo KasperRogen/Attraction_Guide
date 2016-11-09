@@ -4,17 +4,19 @@ namespace GuidR
 {
     public class Event
     {
-        public Event (Attraction attraction, Time time, DayOfWeek dayOfWeek, string description)
+        public Event (string title, EventTime time, string description)
         {
-            this.Attraction = attraction;
+            // An event cannot contain null arguments
+            if (title == null || time == null)
+                throw new ArgumentNullException("Arguments 'Title' or 'Time' cannot be null");
+
+            this.Title = title;
             this.Time = time;
-            this.TESTDateOfWeek = dayOfWeek;
             this.Description = description;
         }
 
-        public Attraction Attraction { get; set; }
-        public Time Time { get; set; }
-        public DayOfWeek TESTDateOfWeek { get; set; }
+        public string Title { get; set; }
+        public EventTime Time { get; set; }
         public string Description { get; set; }
     }
 }

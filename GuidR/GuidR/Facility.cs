@@ -6,20 +6,19 @@ namespace GuidR
 {
     public class Facility : Attraction
     {
-        public Facility (string name, string description, Coordinates location, int pin)
-            : this(name, description, location, null, null, pin)
+        public Facility (string name, string description, Coordinates location)
+            : this(name, description, location, null, null)
         {
             AttractionDataBase.Attractions.Add(this);
         }
 
-        public Facility (string name, string description, Coordinates location, Time open, Time close, int pin)
+        public Facility (string name, string description, Coordinates location, Time open, Time close)
         {
             this.Name = name;
             this.Description = description;
             this.Location = location;
             this.Open = open;
             this.Close = close;
-            this.Pin = pin;
 
             AttractionDataBase.Attractions.Add(this);
 
@@ -31,7 +30,7 @@ namespace GuidR
 
         public override Coordinates Location { get; set; }
 
-        public override int Image { get; set; }
+        public override object Image { get; set; }
 
         public override int Pin { get; set; }
 
