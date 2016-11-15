@@ -45,14 +45,14 @@
           android:paddingTop="5dp"
           android:weightSum="2">
         <Button
-            android:id="@+id/toiletButton"
+            android:id="@+id/playGround1_irl"
             android:layout_width="0dp"
             android:layout_weight="1"
             android:layout_height="wrap_content"
             android:drawableTop="@drawable/Playground1_irl"
             android:background="@null" />
         <Button
-            android:id="@+id/restaurantButton"
+            android:id="@+id/playGround2_irl"
             android:layout_width="0dp"
             android:layout_weight="1"
             android:layout_height="wrap_content"

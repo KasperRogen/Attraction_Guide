@@ -78,10 +78,14 @@
     <Compile Include="AnimalMenuActivity.cs" />
     <Compile Include="MapActivity.cs" />
     <Compile Include="NewsActivity.cs" />
+    <Compile Include="PlaygroundMenuActivity.cs" />
+    <Compile Include="RestaurantMenuActivity.cs" />
+    <Compile Include="SmokeAreaMenuActivity.cs" />
     <Compile Include="SplashScreen.cs" />
     <Compile Include="MainActivity.cs" />
     <Compile Include="Resources\Resource.designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ToiletMenuActivity.cs" />
     <Compile Include="VideoStreamActivity.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -375,7 +379,9 @@
     <AndroidResource Include="Resources\layout\VideoStream.xml" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\layout\ToiletMenu.xml" />
+    <AndroidResource Include="Resources\layout\ToiletMenu.xml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\layout\RestaurantMenu.xml">
@@ -402,6 +408,12 @@
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\drawable-hdpi\Playground1_irl.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\SmokeAreaMenu.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable-hdpi\SmokeArea2_irl.png" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Novell\Novell.MonoDroid.CSharp.targets" />
   <Import Project="..\..\packages\Xamarin.GooglePlayServices.Basement.29.0.0.2\build\Xamarin.GooglePlayServices.Basement.targets" Condition="Exists('..\..\packages\Xamarin.GooglePlayServices.Basement.29.0.0.2\build\Xamarin.GooglePlayServices.Basement.targets')" />

@@ -45,19 +45,19 @@
           android:paddingTop="5dp"
           android:weightSum="2">
         <Button
-            android:id="@+id/restaurantButton1"
+            android:id="@+id/smokeAreaButton2_irl"
             android:layout_width="0dp"
             android:layout_weight="1"
             android:layout_height="wrap_content"
-            android:drawableTop="@drawable/Restaurant1_irl"
+            android:drawableTop="@drawable/SmokeArea2_irl"
             android:background="@null" />
         <Button
-            android:id="@+id/restaurantButton2"
+            android:id="@+id/smokeAreaButton1_irl"
             android:layout_width="0dp"
             android:layout_weight="1"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:drawableTop="@drawable/Restaurant"
+            android:drawableTop="@drawable/Smoke_area"
             android:background="@null" />
       </LinearLayout>
 

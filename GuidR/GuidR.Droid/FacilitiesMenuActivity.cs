@@ -26,24 +26,24 @@ namespace GuidR.Droid
 
             toiletButton.Click += delegate
             {
-                SetContentView(Resource.Layout.ToiletMenu);
+                StartActivity(typeof(ToiletMenuActivity));
             };
 
             restaurantButton.Click += delegate
             {
-                SetContentView(Resource.Layout.RestaurantMenu);
+                StartActivity(typeof(RestaurantMenuActivity));
             };
 
             smokeButton.Click += delegate
             {
-
+                StartActivity(typeof(SmokeAreaMenuActivity));
             };
 
             playgroundButton.Click += delegate
             {
-                SetContentView(Resource.Layout.PlaygroundMenu);
+                StartActivity(typeof(PlaygroundMenuActivity));
             };
         }
-
+            
     }
 }

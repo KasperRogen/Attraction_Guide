@@ -45,19 +45,19 @@
           android:paddingTop="5dp"
           android:weightSum="2">
         <Button
-            android:id="@+id/toiletButton"
+            android:id="@+id/toilet1_irl"
             android:layout_width="0dp"
             android:layout_weight="1"
             android:layout_height="wrap_content"
-            android:drawableTop="@drawable/Toilet1_irl" 
+            android:drawableTop="@drawable/Toilet" 
             android:background="@null" />
         <Button
-            android:id="@+id/restaurantButton"
+            android:id="@+id/toilet2_irl"
             android:layout_width="0dp"
             android:layout_weight="1"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:drawableTop="@drawable/Toilet"
+            android:drawableTop="@drawable/Toilet1_irl"
             android:background="@null" />
       </LinearLayout>
 
@@ -74,14 +74,14 @@
           android:paddingTop="5dp"
           android:weightSum="2">
         <Button
-            android:id="@+id/smokeButton"
+            android:id="@+id/toilet3_irl"
             android:layout_width="0dp"
             android:layout_weight="1"
             android:layout_height="wrap_content"
             android:drawableTop="@drawable/Toilet3_irl"
             android:background="@null" />
         <Button
-            android:id="@+id/playgroudButton"
+            android:id="@+id/toilet4_irl"
             android:layout_width="0dp"
             android:layout_weight="1"
             android:layout_height="wrap_content"
@@ -103,7 +103,7 @@
           android:paddingTop="5dp"
           android:weightSum="2">
         <Button
-            android:id="@+id/smokeButton"
+            android:id="@+id/toilet5_irl"
             android:layout_width="0dp"
             android:layout_weight="1"
             android:layout_height="wrap_content"
