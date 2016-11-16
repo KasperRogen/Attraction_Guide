@@ -6,7 +6,7 @@ using Android.Widget;
 
 namespace GuidR.Droid
 {
-	[Activity (Label = "GuidR.Droid", Theme = "@style/Theme.splash")]
+	[Activity (Label = "GuidR.Droid", Theme = "@style/NoTitle.splash")]
 	public class MainActivity : Activity
 	{
 
@@ -61,7 +61,8 @@ namespace GuidR.Droid
 
             mapButton.Click += delegate
             {
-                StartActivity(typeof(MapActivity));
+                // StartActivity(typeof(MapActivity));
+                SetContentView(Resource.Layout.Map_Info_Window);
             };
 
             newsButton.Click += delegate
