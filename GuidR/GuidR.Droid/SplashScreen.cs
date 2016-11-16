@@ -37,18 +37,18 @@ namespace GuidR.Droid
             AttractionDataBase.Tiger.Image = Resource.Drawable.TigerHeader;
             AttractionDataBase.Zebra.Image = Resource.Drawable.ZebraHeader;
 
-            AttractionDataBase.Toilet1.Image = Resource.Drawable.ZebraHeader;
-            AttractionDataBase.Toilet2.Image = Resource.Drawable.ZebraHeader;
-            AttractionDataBase.Toilet3.Image = Resource.Drawable.ZebraHeader;
-            AttractionDataBase.Toilet4.Image = Resource.Drawable.ZebraHeader;
-            AttractionDataBase.Toilet5.Image = Resource.Drawable.ZebraHeader;
+            AttractionDataBase.Toilet1.Image = Resource.Drawable.Toilet;
+            AttractionDataBase.Toilet2.Image = Resource.Drawable.Toilet1_irl;
+            AttractionDataBase.Toilet3.Image = Resource.Drawable.Toilet3_irl;
+            AttractionDataBase.Toilet4.Image = Resource.Drawable.Toilet4_irl;
+            AttractionDataBase.Toilet5.Image = Resource.Drawable.Toilet5_irl;
 
-            AttractionDataBase.CasaFamilia.Image = Resource.Drawable.ZebraHeader;
-            AttractionDataBase.Skovbakken.Image = Resource.Drawable.ZebraHeader;
-            AttractionDataBase.SelfGrill.Image = Resource.Drawable.ZebraHeader;
-            AttractionDataBase.PlaygroundKiosk.Image = Resource.Drawable.ZebraHeader;
-            AttractionDataBase.SmokeArea1.Image = Resource.Drawable.ZebraHeader;
-            AttractionDataBase.SmokeArea2.Image = Resource.Drawable.ZebraHeader;
+            AttractionDataBase.CasaFamilia.Image = Resource.Drawable.Restaurant;
+            AttractionDataBase.Skovbakken.Image = Resource.Drawable.Restaurant1_irl;
+            AttractionDataBase.SelfGrill.Image = Resource.Drawable.Restaurant;
+            AttractionDataBase.PlaygroundKiosk.Image = Resource.Drawable.Playground1_irl;
+            AttractionDataBase.SmokeArea1.Image = Resource.Drawable.Smoke_area;
+            AttractionDataBase.SmokeArea2.Image = Resource.Drawable.SmokeArea2_irl;
 
             InitializePins();
         }
