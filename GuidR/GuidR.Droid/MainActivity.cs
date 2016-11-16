@@ -61,8 +61,7 @@ namespace GuidR.Droid
 
             mapButton.Click += delegate
             {
-                // StartActivity(typeof(MapActivity));
-                SetContentView(Resource.Layout.Map_Info_Window);
+                 StartActivity(typeof(MapActivity));
             };
 
             newsButton.Click += delegate
