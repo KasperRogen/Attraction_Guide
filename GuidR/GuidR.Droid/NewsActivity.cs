@@ -22,39 +22,73 @@ namespace GuidR.Droid
 
             base.OnCreate(bundle);
 
-            SetContentView(Resource.Layout.News);
+            SetContentView(Resource.Layout.RelativeNews);
 
-            AddCardToNews(5);
+      //      AddCardToNews(5);
 
         }
 
-        public void AddCardToNews(int i) {
+
+        public void AddCardToNews(int i)
+        {
             for (int n = 0; n < i; n++)
             {
                 LinearLayout cardContainer = FindViewById<LinearLayout>(Resource.Id.cardContainer);
 
+
+                //    cardContainer.LayoutParameters = lparams;
+
+
                 CardView card = new CardView(this);
-                card.Id = 987654114;
-                card.SetMinimumHeight(200);
+                card.Id = (int)System.DateTime.Now.Ticks * (n + 1);
+                card.SetMinimumHeight(400);
                 card.SetMinimumWidth(200);
-                card.SetContentPadding(2, 1, 1, 2);
+                card.SetContentPadding(5, 5, 5, 5);
                 cardContainer.AddView(card);
 
+
                 ImageView img = new ImageView(this);
-                img.SetMinimumHeight(100);
-                img.SetMinimumWidth(100);
+                img.SetMinimumHeight(300);
+                img.SetMinimumWidth(200);
                 img.SetBackgroundColor(Android.Graphics.Color.Blue);
+                var lparams = new RelativeLayout.LayoutParams(ViewGroup.LayoutParams.WrapContent, ViewGroup.LayoutParams.WrapContent);
+                img.LayoutParameters = lparams;
                 card.AddView(img);
 
-                LinearLayout space = new LinearLayout(this);
+
+                TextView txt = new TextView(this);
+                txt.SetMinimumHeight(400);
+                txt.SetMinimumWidth(200);
+                txt.SetTextColor(Android.Graphics.Color.Black);
+                txt.LayoutParameters = lparams;
+                txt.Text = "AIDSNIGGER";
+                card.AddView(txt);
+
+
+                RelativeLayout space = new RelativeLayout(this);
                 space.SetMinimumHeight(20);
                 space.SetMinimumWidth(20);
-                cardContainer.AddView(space);
+                cardContainer.AddView(space); 
 
             }
-
-
         }
+
+        /*  var linearLayout = new LinearLayout(this);
+            var lp = new LinearLayout.LayoutParams(ViewGroup.LayoutParams.FillParent,
+                ViewGroup.LayoutParams.WrapContent)
+            { Gravity = GravityFlags.Right };
+            linearLayout.LayoutParameters = lp;
+            linearLayout.Orientation = Orientation.Vertical;
+
+            var textView = new TextView(this)
+            {
+                LayoutParameters = new LinearLayout.LayoutParams(ViewGroup.LayoutParams.WrapContent,
+                    ViewGroup.LayoutParams.WrapContent)
+            };
+
+            linearLayout.AddView(textView);
+            */
+    //    }
 
     }
 }
