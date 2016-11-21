@@ -31,6 +31,8 @@
     <ConsolePause>false</ConsolePause>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="News.cs" />
+    <Compile Include="NewsDatabase.cs" />
     <Compile Include="PlatformDependency.cs" />
     <Compile Include="Animal.cs" />
     <Compile Include="Attraction.cs" />
