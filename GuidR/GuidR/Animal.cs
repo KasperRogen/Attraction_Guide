@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -9,7 +10,7 @@ namespace GuidR
     {
         // Lav CTOR'en om til CTOR chaining
 
-        public Animal (string name, string description, Coordinates location, string latinName, params Time[] feedingTimes)
+        public Animal (string name, string description, Coordinates location, string latinName, params FeedingTime[] feedingTimes)
         {
             this.Name = name;
             this.Description = description;
@@ -18,7 +19,7 @@ namespace GuidR
 
             if (feedingTimes != null)
             {
-                foreach (Time t in feedingTimes)
+                foreach (FeedingTime t in feedingTimes)
                     _feedingTimes.Add(t);
             }
 
@@ -42,17 +43,19 @@ namespace GuidR
 
         public bool HasFeedingTime { get { return FeedingTimes.Count > 0; } }
 
+        public bool IsInSeason { get { return (DateTime.Today <= NextFeeding._endDate && DateTime.Today >= NextFeeding._startDate); } }
+
         // Returns the next feeding time if such exist
-        public Time NextFeeding
+        public FeedingTime NextFeeding
         {
             get
             {
                 if (!HasFeedingTime)
                     throw new System.NullReferenceException(Name + "Does not have a feeding time. Check HasFeedingTime prior to calling");
                 
-                Time nearestFeedingTime = FeedingTimes[FeedingTimes.Count - 1];
+                FeedingTime nearestFeedingTime = FeedingTimes[FeedingTimes.Count - 1];
                                                                                                     
-                foreach (Time t in FeedingTimes)
+                foreach (FeedingTime t in FeedingTimes)
                 {
                     if (!t.IsPassed && t.TimeOfDay < nearestFeedingTime.TimeOfDay)
                         nearestFeedingTime = t;
@@ -62,9 +65,9 @@ namespace GuidR
             }
         }
 
-        private List<Time> _feedingTimes = new List<Time>();
+        private List<FeedingTime> _feedingTimes = new List<FeedingTime>();
 
-        public List<Time> FeedingTimes
+        public List<FeedingTime> FeedingTimes
         {
             get { return _feedingTimes; }
             set { _feedingTimes = value; }

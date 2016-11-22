@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 
 namespace GuidR
 {
@@ -56,7 +57,7 @@ namespace GuidR
             Baboon = new Animal("Kappebavian", baboonDescription, baboonCoordinates, "Papio Hamadryas");
 
 
-            Coordinates bearCoordinates = new Coordinates(100, 100);
+            Coordinates bearCoordinates = new Coordinates(57.037393, 9.897042);
             string bearDescription = "Brunbjørnen er den mest udbredte af bjørne-arten i verdenen. " +
                                      "Den er at finde, i en af dens 11 under-arter, i lande som Rusland, Kina, Canada, USA(dog mest Alaska), " +
                                      "Skandinavien, og findes også i nærheden af Karpaterne i Central- og Østeuropa. " +
@@ -70,7 +71,7 @@ namespace GuidR
                                      "Brunbjørnens vægt og kropsmål afhænger af hvilken underart der tages udgangspunkt i. " +
                                      "Dens vægt varierer mellem 70-350 kg, og de bliver 1,7-2,5 meter i længden. " +
                                      "I naturen bliver de omkring 20 år gamle, mens de i zoologiske haver kan blive op til 30 år gamle.";
-            Time bearFeeding = new Time(14, 45);
+            FeedingTime bearFeeding = new FeedingTime(new DateTime(2016, 1, 1), new DateTime(2016, 12, DateTime.DaysInMonth(2016, 12)), new Time(13, 45), new int[] { 2, 3, 6, 7 });
             Bear = new Animal("Brunbjørn", bearDescription, bearCoordinates, "Ursus Arctos", bearFeeding);
 
             Coordinates seaLionCoordinates = new Coordinates(57.036286, 9.898246);
@@ -85,10 +86,12 @@ namespace GuidR
                                         "Voksne hanner vejer i gennemsnit 275 kg og er 2,2 meter lange. Hunner er lidt mindre, med et gennemsnit på 91 kg og 1,8 meter i længden. " +
                                         "I naturen blev den ældste dokumenterede søløve 17 år gammel, hvor den ældste i fangenskab blev 31 år gammel. " +
                                         "Alderen af en søløve kan fastgøres ved at tælle antallet af ringe på et tværsnit af dens tænder.";
-            Time seaLionFeeding = new Time(08, 00);
-            SeaLion = new Animal("Søløve", seaLionDescription, seaLionCoordinates, "Zalophus Californianus", seaLionFeeding);
+            FeedingTime seaLionFeeding = new FeedingTime(new DateTime(2016, 5, 1), new DateTime(2016, 10, DateTime.DaysInMonth(2016,10)), new Time(13, 45), new int[] { 2, 3, 6, 7 });
+            FeedingTime seaLionFeeding2 = new FeedingTime(new DateTime(2016, 5, 1), new DateTime(2016, 10, DateTime.DaysInMonth(2016, 10)), new Time(14,30), new int[] { 2, 3, 6, 7 });
 
-            Coordinates hippoCoordinates = new Coordinates(57.035092, 9.897645);
+            SeaLion = new Animal("Søløve", seaLionDescription, seaLionCoordinates, "Zalophus Californianus", seaLionFeeding, seaLionFeeding2);
+
+            Coordinates hippoCoordinates = new Coordinates(57.035081, 9.898212);
             string hippoDescription = "Dværgflodhesten er en truet dyreart der kun findes i 4 vestafrikanske lande; Liberia, Elfenbenskysten, Sierra Leone og Guinea. " +
                                       "Størstedelen af dværgflodheste-bestanden, mellem 2000-3000 i verdenen, er koncentreret i Liberia.\n" +
                                       "Dværgflodhesten opholder sig i lavtliggende områder af træer, aldrig langt fra vandkilder. " +
@@ -101,8 +104,7 @@ namespace GuidR
                                       "Dværgflodhesten bliver 1,5-1,7 meter lange og 0,7-1,0 meter høje. " +
                                       "De vejer mellem 160 kg og 275 kg, og der er normalvis ikke er stor forksel mellem hunnerne og hannerne. " +
                                       "Flodhesten kan blive op til 42 år gammel.";
-            Time hippoFeeding = new Time(13);
-            Hippo = new Animal("Dværgflodhest", hippoDescription, hippoCoordinates, "Hexaprotodon Liberiensis", hippoFeeding);
+            Hippo = new Animal("Dværgflodhest", hippoDescription, hippoCoordinates, "Hexaprotodon Liberiensis");
 
             Coordinates elephantCoordinates = new Coordinates(57.035886, 9.897210);
             string elephantDescription = "Historisk set fandtes den afrikanske elefant syd for Sahara ørkenen, mod den sydlige del af Afrika, helt fra Atlanterhavet " +
@@ -114,9 +116,9 @@ namespace GuidR
                                          "De vejer i gennemsnit 135 kg. Deres stødtænder kan blive op til 250 cm lange og veje omkring 60 kg hver. " +
                                          "Den afrikanske elefant bliver op til 70 år gammel i naturen og 80 år i fangeskab.\n\n" + 
                                          "Elefanter er vegetarer og spiser ting som blade, rødder, bark og frugt. De spiser mellem 100 og 300 kg mad, og drikker omkring 190 liter vand, hver dag!";
-            Time elephantFeeding = new Time(15);
-            Time elephantFeeding2 = new Time(13, 05);
-            Elephant = new Animal("Elefant", elephantDescription, elephantCoordinates, "Loxodonta Africana", elephantFeeding, elephantFeeding2);
+                       
+            FeedingTime elephantFeeding = new FeedingTime(new DateTime(2016, 5, 1), new DateTime(2016, 8, DateTime.DaysInMonth(2016, 8)), new Time(13, 00), new int[] { 2, 3, 6, 7 });
+            Elephant = new Animal("Elefant", elephantDescription, elephantCoordinates, "Loxodonta Africana", elephantFeeding);
 
             Coordinates giraffeCoordinates = new Coordinates(57.035251, 9.897022);
             string giraffeDescription = "Giraffen findes i Afrika, primært fra Sahara's sydlige grænse til det østlige Transvaal i Sydafrika, og det nordlige Botswana. " +
@@ -129,6 +131,7 @@ namespace GuidR
                                         "Giraffen er drøvtygger og har derfor 4 maver. Under en rejse bruger giraffen tiden på at tygge drøv for at få det meste ud af føden.";
             Giraffe = new Animal("Giraf", giraffeDescription, giraffeCoordinates, "Giraffa Camelopardalis Rotschildi");
 
+            FeedingTime polarBearFeeding = new FeedingTime(new DateTime(2016, 1, 1), new DateTime(2016, 12, DateTime.DaysInMonth(2016, 12)), new Time(13, 45), new int[] { 2, 3, 6, 7 });
             Coordinates polarBearCoordinates = new Coordinates(57.036717, 9.896924);
             string polarBearDescription = "Isbjørne findes i størstedelen af Nordpolen, og er også blevet set i de sydligste dele af Island og Grønland. " +
                                           "Om vinteren kan man finde dem gående langs den sydlige kyst eller den nordlige kant af Nordpolen. " + 
@@ -139,7 +142,7 @@ namespace GuidR
                                           "I naturen lever de oftest mellem 25 og 30 år, hvor de i fangenskab kan blive op til 38 år gamle.\n\n" +
                                           "Isbjørnen er kødædende og har en diæt primært bestående af sæler og hvalrosser, samt fugle og mindre fisk. " +
                                           "Om sommeren kan de godt finde på at spise vegetation hvis de kan finde det.";
-            PolarBear = new Animal("Isbjørn", polarBearDescription, polarBearCoordinates, "Ursus Maritimus");
+            PolarBear = new Animal("Isbjørn", polarBearDescription, polarBearCoordinates, "Ursus Maritimus", polarBearFeeding);
 
             Coordinates kaimanCoordinates = new Coordinates(57.036116, 9.898195);
             string kaimanDescription = "Den sorte kaiman findes i størstedelen af Amazonas. Dens leveområde strækker sig fra det nordlige til det centrale Sydamerika. " +
@@ -176,7 +179,8 @@ namespace GuidR
                                       "I fangenskab lever lemuren i gennemsnit 30 år, mens de i naturen lever omkring 27 år.";
             Lemur = new Animal("Lemur", lemurDescription, lemurCoordinates, "Lemur Catta");
 
-            Coordinates lionCoordinates = new Coordinates(57.036281, 9.897057);
+            FeedingTime lionFeeding = new FeedingTime(new DateTime(2016, 1, 1), new DateTime(2016, 12, DateTime.DaysInMonth(2016, 12)), new Time(13, 45), new int[] { 2, 3, 6, 7 });
+            Coordinates lionCoordinates = new Coordinates(57.036185, 9.896652);
             string lionDescription = "Den asiatiske løve var før i tiden meget udbredt helt fra Grækenland til det centrale Indien, " +
                                      "men på grund af krybskytteri og ødelæggelse af habitater findes den asiatiske løve nu kun Girskoven i det nordvestlige Indien. " +
                                      "Man mener at bestanden er faldet til kun at være på cirka 350 løver. " +
@@ -190,8 +194,10 @@ namespace GuidR
                                      "Den asiatiske løve jager oftest hjorte og antiloper, og i nogle tilfælde også mindre pattedyr. " +
                                      "Løven søger også aktivt efter bytte der allerede er dødt, på samme måde som hyænen gør. " +
                                      "I naturen lever løver mellem 12 og 15 år, mens de i fangenskab i gennemsnit bliver 25 år gamle.";
-            Lion = new Animal("Løve", lionDescription, lionCoordinates, "Panthera leo persica");
+            Lion = new Animal("Løve", lionDescription, lionCoordinates, "Panthera leo persica", lionFeeding);
 
+            FeedingTime penguinFeeding = new FeedingTime(new DateTime(2016, 5, 1), new DateTime(2016, 10, DateTime.DaysInMonth(2016, 10)), new Time(11, 15), new int[] { 1, 2, 3, 4, 5, 6, 7 });
+            FeedingTime penguinFeeding2 = new FeedingTime(new DateTime(2016, 5, 1), new DateTime(2016, 10, DateTime.DaysInMonth(2016, 10)), new Time(14, 15), new int[] { 1, 2, 3, 4, 5, 6, 7 });
             Coordinates penquinCoordinates = new Coordinates(57.036389, 9.898301);
             string penquinDescription = "Humboldt-pingvinen er knyttet til kun et sted på Jorden. " +
                                         "De lever ved den sydamerikanske vestkyst i Chile og Peru, et område også kendetegnet " + 
@@ -207,9 +213,9 @@ namespace GuidR
                                         "Pingvinerne nær det nordlige Chile spiser ofte hornfisk, mens dem nær det centrale Chile ofte spiser ansjoser og sardiner. " +
                                         "Uafhængigt af område spiser humboldt-pingvinen også mange sild. " +
                                         "Humboldt-pingvinens levetid i naturen er ukendt, men i fangenskab bliver de mellem 15-20 år gammel.";
-            Penguin = new Animal("Penguin", penquinDescription, penquinCoordinates, "Spheniscus Humboldti");
+            Penguin = new Animal("Penguin", penquinDescription, penquinCoordinates, "Spheniscus Humboldti", penguinFeeding, penguinFeeding2);
 
-            Coordinates meercatCoordinates = new Coordinates(100, 100);
+            Coordinates meercatCoordinates = new Coordinates(57.036098, 9.897970);
             string meercatDescription = "Surikaten lever i områder af Sydafrika, Botswana, Mozambique og Zimbabwe. " +
                                         "Fælles for disse områder er at de er savannaher eller tørre græslande. " +
                                         "Oftest vælger surikaten levested efter hårdheden af jorden. " +
@@ -244,6 +250,7 @@ namespace GuidR
                                       "Zebraen vil nogle gange arbejde sammen med andre dyr, som fx strudse og antiloper, for at holde øje med rovdyr mens dyrene græsser.";
             Zebra = new Animal("Zebra", zebraDescription, zebraCoordinates, "Equus Grevyi");
 
+            FeedingTime tigerFeeding = new FeedingTime(new DateTime(2016, 1, 1), new DateTime(2016, 12, DateTime.DaysInMonth(2016, 12)), new Time(13, 45), new int[] { 2, 3, 6, 7 });
             Coordinates tigerCoordinates = new Coordinates(57.036355, 9.896779);
             string tigerDescription = "Der er 8 anerkendte underarter af tiger-arten, hvoraf 3 af arterne menes at være uddøde. " +
                                       "De nulevende arter er den Sibiriske tiger, Bengalske tiger, Indo-kinesiske tiger, Syd-kinesiske tiger og, den som er i Aalborg Zoo, Sumatra-tigeren. " +
@@ -261,7 +268,7 @@ namespace GuidR
                                       "Sumatra-tigeren er den mindste levende tiger-art, hvor hannerne i gennemsnit er 2,34 meter lange og vejer 136 kg. " +
                                       "Hunnerne er lidt mindre, med en længde på 1,98 meter og en vægt på 91 kg. " +
                                       "I naturen lever tigre oftest ikke mere end 8 til 10 år, hvor de i fangenskab kan blive helt op til 26 år gamle.";
-            Tiger = new Animal("Tiger", tigerDescription, tigerCoordinates, "Panthea Sigris Sumatrae");
+            Tiger = new Animal("Tiger", tigerDescription, tigerCoordinates, "Panthea Sigris Sumatrae", tigerFeeding);
         }
 
         private static void InitializeFacilities()
@@ -312,7 +319,7 @@ namespace GuidR
 
             PlaygroundKiosk = new Facility("Legepladskiosken", playgroundKioskDescription, playgroundKioskCoordinates, playgroundKioskOpen, playgroundKioskClose, PlaygroundKiosk);
 
-            Coordinates selfGrillCoordinates = new Coordinates(57.037814, 9.21);
+            Coordinates selfGrillCoordinates = new Coordinates(57.036904, 9.898414);
             string selfGrillDescription = "(REPLACE) Pak madkurven og besøg familieområdet i Aalborg Zoo, hvor du har mulighed for at grille din"+ 
                                           "egen medbragte mad i en af vores to store grillhytter (Det er ikke muligt at købe mad til grill selv i Aalborg Zoo) Grillen slukkes ca. en time før havens lukketid. Grillerne kan benyttes indtil 23. oktober.";
             Time selfGrillOpen = new Time(8);

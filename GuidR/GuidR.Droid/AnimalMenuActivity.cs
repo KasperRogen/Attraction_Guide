@@ -10,7 +10,6 @@ namespace GuidR.Droid {
             base.OnCreate(bundle);
             SetContentView(Resource.Layout.AnimalMenu);
 
-            List<Button> animalMenuButtons = new List<Button>();
             List<AnimalButton> animalButtons = new List<AnimalButton>();
 
             Button baboonButton = FindViewById<Button>(Resource.Id.baboonButton);

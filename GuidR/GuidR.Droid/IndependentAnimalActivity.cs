@@ -28,6 +28,8 @@ namespace GuidR.Droid {
             {
                 if (Animal.NextFeeding.IsPassed)
                     feedingTime.Text = "Ingen fodring i dag";
+                else if (Animal.IsInSeason == false)
+                    feedingTime.Text = "Ude af sæson";
                 else
                     feedingTime.Text = "Næste fodring: " + Animal.NextFeeding.ToString();
             }

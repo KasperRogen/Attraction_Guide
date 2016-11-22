@@ -46,7 +46,7 @@ namespace GuidR.Droid
             Button infoButton = FindViewById<Button>(Resource.Id.infoButton);
 
             infoButton.Click += delegate {
-                StartActivity(typeof(VideoStreamActivity));
+                StartActivity(typeof(FeedingTimeSchemeActivity));
             };
 
             button.Click += delegate 

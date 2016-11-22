@@ -85,5 +85,14 @@ namespace GuidR.Droid
             AttractionDataBase.SmokeArea1.Pin = Resource.Drawable.Smoke_area_pin;
             AttractionDataBase.SmokeArea2.Pin = Resource.Drawable.Smoke_area_pin;
         }
-    }
+
+
+      /*  void InitializeCalendar() {
+            foreach (Attraction a in AttractionDataBase.Attractions) {
+                if (a is Animal && (a as Animal).HasFeedingTime)
+                    foreach (Time t in (a as Animal).FeedingTimes)
+                        Calendar.AddEvent(new Event(a.Name, t, "description"));
+                    }
+        }
+    */}
 }

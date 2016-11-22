@@ -74,6 +74,7 @@
     <Compile Include="AndroidDependency.cs" />
     <Compile Include="AnimalButton.cs" />
     <Compile Include="FacilitiesMenuActivity.cs" />
+    <Compile Include="FeedingTimeSchemeActivity.cs" />
     <Compile Include="IndependentAnimalActivity.cs" />
     <Compile Include="AnimalMenuActivity.cs" />
     <Compile Include="MapActivity.cs" />
@@ -428,6 +429,12 @@
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\layout\NewsItem.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\FeedingTimeScheme.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\AnimalFeedingBlock.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Novell\Novell.MonoDroid.CSharp.targets" />
   <Import Project="..\..\packages\Xamarin.GooglePlayServices.Basement.29.0.0.2\build\Xamarin.GooglePlayServices.Basement.targets" Condition="Exists('..\..\packages\Xamarin.GooglePlayServices.Basement.29.0.0.2\build\Xamarin.GooglePlayServices.Basement.targets')" />

@@ -31,6 +31,7 @@
     <ConsolePause>false</ConsolePause>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="FeedingTime.cs" />
     <Compile Include="News.cs" />
     <Compile Include="NewsDatabase.cs" />
     <Compile Include="PlatformDependency.cs" />
