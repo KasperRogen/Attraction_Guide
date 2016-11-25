@@ -19,10 +19,10 @@ namespace GuidR.Droid {
 
 
             SetContentView(Resource.Layout.VideoStream);
-            VideoView mVideoView = FindViewById<VideoView>(Resource.Id.SampleVideoView);
 
-            mVideoView.SetVideoPath("https://monitor.y-cam.com/bc/viewZooCam.php?cam=camera8");
-            mVideoView.SetMediaController(new MediaController(this));
+                var uri = Android.Net.Uri.Parse("https://monitor.y-cam.com/bc/viewZooCam.php?cam=camera8");
+                var intent = new Intent(Intent.ActionView, uri);
+                StartActivity(intent);
 
         }
 

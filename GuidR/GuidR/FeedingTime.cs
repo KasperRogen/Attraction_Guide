@@ -16,18 +16,21 @@ namespace GuidR {
         public DateTime _endDate { get; set; }
 
         public int CompareTo(object obj) {
-            if ((obj as FeedingTime).TimeOfDay.Hour < this.TimeOfDay.Hour) // Hour is earlier
-                return -1;
-
-            else if ((obj as FeedingTime).TimeOfDay.Hour == this.TimeOfDay.Hour) //Hour is the same
-                if ((obj as FeedingTime).TimeOfDay.Minute < this.TimeOfDay.Minute) //Minute is earlier, time is earlier
+            if (obj is FeedingTime)
+            {
+                if ((obj as FeedingTime).TimeOfDay.Hour < this.TimeOfDay.Hour) // Hour is earlier
                     return -1;
+
+                else if ((obj as FeedingTime).TimeOfDay.Hour == this.TimeOfDay.Hour) //Hour is the same
+                    if ((obj as FeedingTime).TimeOfDay.Minute < this.TimeOfDay.Minute) //Minute is earlier, time is earlier
+                        return -1;
+                    else
+                        return 0; //minute is the same, time is the same
+
                 else
-                    return 0; //minute is the same, time is the same
-
-            else
-                return 1; //Time is later
-
+                    return 1; //Time is later
+            }
+            else return 2;
         }
     }
 
