@@ -276,13 +276,13 @@ namespace GuidR
 
         private static void InitializeFacilities()
         {
-            Coordinates toiletCoordinates1 = new Coordinates(57.03760766, 9.89764463);
+            Coordinates toiletCoordinates1 = new Coordinates(57.03847141, 9.90024678);
             string toiletDescription = "Et sted at lade vandet fra kartoflerne";
 
-            Toilet1 = new Facility("Toilet - ved chimpanserne", toiletDescription, toiletCoordinates1, Toilet1);
+            Toilet1 = new Facility("Toilet - ved indgangen", toiletDescription, toiletCoordinates1, Toilet1);
 
-            Coordinates toiletCoordinates2 = new Coordinates(57.03847141, 9.90024678);
-            Toilet2 = new Facility("Toilet - ved indgangen", toiletDescription, toiletCoordinates2, Toilet2);
+            Coordinates toiletCoordinates2 = new Coordinates(57.03760766, 9.89764463); 
+            Toilet2 = new Facility("Toilet - ved chimpanserne", toiletDescription, toiletCoordinates2, Toilet2);
 
             Coordinates toiletCoordinates3 = new Coordinates(57.037176, 9.898884);
             Toilet3 = new Facility("Toilet - ved casafamilia", toiletDescription, toiletCoordinates3, Toilet3);

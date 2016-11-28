@@ -21,19 +21,19 @@ namespace GuidR.Droid
             base.OnCreate(bundle);
             SetContentView(Resource.Layout.SmokeAreaMenu);
 
-            Button smokeArea2_irl = FindViewById<Button>(Resource.Id.smokeAreaButton2_irl);
             Button smokeArea1_irl = FindViewById<Button>(Resource.Id.smokeAreaButton1_irl);
-
-            smokeArea2_irl.Click += delegate
-            {
-                LoadSmoke(AttractionDataBase.SmokeArea2);
-                MapActivity.Attraction = Facility;
-                StartActivity(typeof(MapActivity));
-            };
+            Button smokeArea2_irl = FindViewById<Button>(Resource.Id.smokeAreaButton2_irl);
 
             smokeArea1_irl.Click += delegate
             {
                 LoadSmoke(AttractionDataBase.SmokeArea1);
+                MapActivity.Attraction = Facility;
+                StartActivity(typeof(MapActivity));
+            };
+
+            smokeArea2_irl.Click += delegate
+            {
+                LoadSmoke(AttractionDataBase.SmokeArea2);
                 MapActivity.Attraction = Facility;
                 StartActivity(typeof(MapActivity));
             };

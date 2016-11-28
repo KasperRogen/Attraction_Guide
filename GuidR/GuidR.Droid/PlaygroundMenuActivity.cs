@@ -23,17 +23,26 @@ namespace GuidR.Droid
 
             Button playground1_irl = FindViewById<Button>(Resource.Id.playGround1_irl);
             Button playground2_irl = FindViewById<Button>(Resource.Id.playGround2_irl);
+            Button playground3_irl = FindViewById<Button>(Resource.Id.playGround3_irl);
+
 
             playground1_irl.Click += delegate
             {
-                LoadPlayGround(AttractionDataBase.PlaygroundKiosk);
+                LoadPlayGround(AttractionDataBase.Playground);
                 MapActivity.Attraction = Facility;
                 StartActivity(typeof(MapActivity));
             };
 
             playground2_irl.Click += delegate
             {
-                LoadPlayGround(AttractionDataBase.PlaygroundKiosk);
+                LoadPlayGround(AttractionDataBase.Bornezoo);
+                MapActivity.Attraction = Facility;
+                StartActivity(typeof(MapActivity));
+            };
+
+            playground3_irl.Click += delegate
+            {
+                LoadPlayGround(AttractionDataBase.zoofariScene);
                 MapActivity.Attraction = Facility;
                 StartActivity(typeof(MapActivity));
             };

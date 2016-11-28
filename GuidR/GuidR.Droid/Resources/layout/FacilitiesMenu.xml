@@ -86,7 +86,7 @@
             android:layout_weight="1"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:drawableTop="@drawable/Playground"
+            android:drawableTop="@drawable/Playground_Menu"
             android:background="@null" />
       </LinearLayout>
       

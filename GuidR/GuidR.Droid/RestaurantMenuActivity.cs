@@ -23,6 +23,8 @@ namespace GuidR.Droid
 
             Button restaurant1_irl = FindViewById<Button>(Resource.Id.restaurantButton1);
             Button restaurant2_irl = FindViewById<Button>(Resource.Id.restaurantButton2);
+            Button restaurant3_irl = FindViewById<Button>(Resource.Id.restaurantButton3);
+
 
             restaurant1_irl.Click += delegate
             {
@@ -32,6 +34,13 @@ namespace GuidR.Droid
             };
 
             restaurant2_irl.Click += delegate
+            {
+                LoadRestaurant(AttractionDataBase.CasaFamilia);
+                MapActivity.Attraction = Facility;
+                StartActivity(typeof(MapActivity));
+            };
+
+            restaurant3_irl.Click += delegate
             {
                 LoadRestaurant(AttractionDataBase.SelfGrill);
                 MapActivity.Attraction = Facility;

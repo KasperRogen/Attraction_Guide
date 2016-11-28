@@ -49,7 +49,7 @@
             android:layout_width="0dp"
             android:layout_weight="1"
             android:layout_height="wrap_content"
-            android:drawableTop="@drawable/Playground1_irl"
+            android:drawableTop="@drawable/Playground"
             android:background="@null" />
         <Button
             android:id="@+id/playGround2_irl"
@@ -57,7 +57,28 @@
             android:layout_weight="1"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:drawableTop="@drawable/Playground"
+            android:drawableTop="@drawable/bornezoo"
+            android:background="@null" />
+      </LinearLayout>
+
+      <LinearLayout
+          android:id="@+id/buttonPanel2"
+          android:layout_below="@+id/buttonPanel1"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_centerHorizontal="false"
+          android:minHeight="25dp"
+          android:minWidth="25dp"
+          android:orientation="horizontal"
+          android:layout_marginTop="15dp"
+          android:paddingTop="5dp"
+          android:weightSum="2">
+        <Button
+            android:id="@+id/playGround3_irl"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:drawableTop="@drawable/ZoofariScenen"
             android:background="@null" />
       </LinearLayout>
 
