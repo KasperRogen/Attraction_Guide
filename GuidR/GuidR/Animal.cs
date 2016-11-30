@@ -43,7 +43,7 @@ namespace GuidR
 
         public bool HasFeedingTime { get { return FeedingTimes.Count > 0; } }
 
-        public bool IsInSeason { get { return (DateTime.Today <= NextFeeding._endDate && DateTime.Today >= NextFeeding._startDate); } }
+        public bool IsInSeason { get { return (DateTime.Today <= NextFeeding.EndDate && DateTime.Today >= NextFeeding.StartDate); } }
 
         // Returns the next feeding time if such exist
         public FeedingTime NextFeeding

@@ -6,31 +6,26 @@ using System.Threading.Tasks;
 
 namespace GuidR {
     public class FeedingTime : Time, IComparable {
-        public FeedingTime(DateTime startDate, DateTime endDate, Time time, int[] feedingDates) 
+        public FeedingTime(DateTime startDate, DateTime endDate, Time time, int showLength, int[] feedingDates) 
             : base (time.TimeOfDay.Hour, time.TimeOfDay.Minute) {
-            _startDate = startDate;
-            _endDate = endDate;
+            StartDate = startDate;
+            EndDate = endDate;
+            ShowLength = showLength;
         }
 
-        public DateTime _startDate { get; set; }
-        public DateTime _endDate { get; set; }
+        public DateTime StartDate { get; set; }
+        public DateTime EndDate { get; set; }
+        public int ShowLength { get; set; }
 
         public int CompareTo(object obj) {
-            if (obj is FeedingTime)
-            {
-                if ((obj as FeedingTime).TimeOfDay.Hour < this.TimeOfDay.Hour) // Hour is earlier
-                    return -1;
+            if (obj == null)
+                return 1;
 
-                else if ((obj as FeedingTime).TimeOfDay.Hour == this.TimeOfDay.Hour) //Hour is the same
-                    if ((obj as FeedingTime).TimeOfDay.Minute < this.TimeOfDay.Minute) //Minute is earlier, time is earlier
-                        return -1;
-                    else
-                        return 0; //minute is the same, time is the same
-
-                else
-                    return 1; //Time is later
-            }
-            else return 2;
+            FeedingTime FT = (obj as FeedingTime);
+            if (FT != null)
+                return this.TimeOfDay.CompareTo(FT.TimeOfDay);
+            else
+                throw new ArgumentException("Object is not a feedingtime!");
         }
     }
 

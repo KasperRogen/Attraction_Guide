@@ -74,7 +74,7 @@ namespace GuidR
                                      "Brunbjørnens vægt og kropsmål afhænger af hvilken underart der tages udgangspunkt i. " +
                                      "Dens vægt varierer mellem 70-350 kg, og de bliver 1,7-2,5 meter i længden. " +
                                      "I naturen bliver de omkring 20 år gamle, mens de i zoologiske haver kan blive op til 30 år gamle.";
-            FeedingTime bearFeeding = new FeedingTime(new DateTime(2016, 1, 1), new DateTime(2016, 12, DateTime.DaysInMonth(2016, 12)), new Time(13, 45), new int[] { 2, 3, 6, 7 });
+            FeedingTime bearFeeding = new FeedingTime(new DateTime(2016, 1, 1), new DateTime(2016, 12, DateTime.DaysInMonth(2016, 12)), new Time(13, 45), 30, new int[] { 2, 3, 6, 7 });
             Bear = new Animal("Brunbjørn", bearDescription, bearCoordinates, "Ursus Arctos", bearFeeding);
 
             Coordinates seaLionCoordinates = new Coordinates(57.036286, 9.898246);
@@ -89,8 +89,8 @@ namespace GuidR
                                         "Voksne hanner vejer i gennemsnit 275 kg og er 2,2 meter lange. Hunner er lidt mindre, med et gennemsnit på 91 kg og 1,8 meter i længden. " +
                                         "I naturen blev den ældste dokumenterede søløve 17 år gammel, hvor den ældste i fangenskab blev 31 år gammel. " +
                                         "Alderen af en søløve kan fastgøres ved at tælle antallet af ringe på et tværsnit af dens tænder.";
-            FeedingTime seaLionFeeding = new FeedingTime(new DateTime(2016, 5, 1), new DateTime(2016, 10, DateTime.DaysInMonth(2016,10)), new Time(13, 45), new int[] { 2, 3, 6, 7 });
-            FeedingTime seaLionFeeding2 = new FeedingTime(new DateTime(2016, 5, 1), new DateTime(2016, 10, DateTime.DaysInMonth(2016, 10)), new Time(14,30), new int[] { 2, 3, 6, 7 });
+            FeedingTime seaLionFeeding = new FeedingTime(new DateTime(2016, 5, 1), new DateTime(2016, 10, DateTime.DaysInMonth(2016, 10)), new Time(13, 45), 45, new int[] { 2, 3, 6, 7 });
+            FeedingTime seaLionFeeding2 = new FeedingTime(new DateTime(2016, 5, 1), new DateTime(2016, 10, DateTime.DaysInMonth(2016, 10)), new Time(14, 30), 45, new int[] { 2, 3, 6, 7 });
 
             SeaLion = new Animal("Søløve", seaLionDescription, seaLionCoordinates, "Zalophus Californianus", seaLionFeeding, seaLionFeeding2);
 
@@ -102,7 +102,7 @@ namespace GuidR
                                       "Dværgflodheste er også blevet fundet i huler i siden af flodbredde. " +
                                       "Man mener ikke at flodhestene selv graver hulerne, men at de finder eksisterende huler og udvider dem.\n\n" +
                                       "Dværgflodhesten er vegetar og spiser en blanding af urter, bredbladede planter, græs, falden frugt og vandplanter der ligger i overfladen af vandet. " +
-                                      "Som andre drøvtyggere har dværgflodhesten også 4 mavesække, men til forskel fra andre drøvtyggere bruger dværgflodhesten ikke mikrober " + 
+                                      "Som andre drøvtyggere har dværgflodhesten også 4 mavesække, men til forskel fra andre drøvtyggere bruger dværgflodhesten ikke mikrober " +
                                       "eller gæring til nedbrydning af deres mad. De tygger heller ikke drøvet før de sluger det.\n\n" +
                                       "Dværgflodhesten bliver 1,5-1,7 meter lange og 0,7-1,0 meter høje. " +
                                       "De vejer mellem 160 kg og 275 kg, og der er normalvis ikke er stor forksel mellem hunnerne og hannerne. " +
@@ -112,15 +112,15 @@ namespace GuidR
             Coordinates elephantCoordinates = new Coordinates(57.035886, 9.897210);
             string elephantDescription = "Historisk set fandtes den afrikanske elefant syd for Sahara ørkenen, mod den sydlige del af Afrika, helt fra Atlanterhavet " +
                                          "i vest til Det Indiske Ocean i øst. Den nuværende bestand af elefanter findes i splittede habitater, der stadigt spredes mere og mere. " +
-                                         "Elefanten findes primært i nærheden af reservater og beskyttede områder grundet krybskytteri og habitat-ødelæggelser. \n" + 
+                                         "Elefanten findes primært i nærheden af reservater og beskyttede områder grundet krybskytteri og habitat-ødelæggelser. \n" +
                                          "Elefantens habitat er meget varierende da elefanter kan overleve længe uden vand. De lever som regel i ørkner, skove, savannaer, flod dale eller sumpe.\n\n" +
                                          "Den afrikanske elefant er det tungeste landdyr i verden. Det er også det andet højeste dyr i dyreriget. " +
                                          "Hannerne bliver op til 3,75 meter høje, hvor hunnerne bliver cirka 3 meter høje. Deres kæmpe ører måler omkring 120-125 cm og snablen er cirka 150 cm lang. " +
                                          "De vejer i gennemsnit 135 kg. Deres stødtænder kan blive op til 250 cm lange og veje omkring 60 kg hver. " +
-                                         "Den afrikanske elefant bliver op til 70 år gammel i naturen og 80 år i fangeskab.\n\n" + 
+                                         "Den afrikanske elefant bliver op til 70 år gammel i naturen og 80 år i fangeskab.\n\n" +
                                          "Elefanter er vegetarer og spiser ting som blade, rødder, bark og frugt. De spiser mellem 100 og 300 kg mad, og drikker omkring 190 liter vand, hver dag!";
-                       
-            FeedingTime elephantFeeding = new FeedingTime(new DateTime(2016, 5, 1), new DateTime(2016, 8, DateTime.DaysInMonth(2016, 8)), new Time(13, 00), new int[] { 2, 3, 6, 7 });
+
+            FeedingTime elephantFeeding = new FeedingTime(new DateTime(2016, 5, 1), new DateTime(2016, 8, DateTime.DaysInMonth(2016, 8)), new Time(13, 00), 60, new int[] { 2, 3, 6, 7 });
             Elephant = new Animal("Elefant", elephantDescription, elephantCoordinates, "Loxodonta Africana", elephantFeeding);
 
             Coordinates giraffeCoordinates = new Coordinates(57.035251, 9.897022);
@@ -134,11 +134,11 @@ namespace GuidR
                                         "Giraffen er drøvtygger og har derfor 4 maver. Under en rejse bruger giraffen tiden på at tygge drøv for at få det meste ud af føden.";
             Giraffe = new Animal("Giraf", giraffeDescription, giraffeCoordinates, "Giraffa Camelopardalis Rotschildi");
 
-            FeedingTime polarBearFeeding = new FeedingTime(new DateTime(2016, 1, 1), new DateTime(2016, 12, DateTime.DaysInMonth(2016, 12)), new Time(13, 45), new int[] { 2, 3, 6, 7 });
+            FeedingTime polarBearFeeding = new FeedingTime(new DateTime(2016, 1, 1), new DateTime(2016, 12, DateTime.DaysInMonth(2016, 12)), new Time(13, 45), 30, new int[] { 2, 3, 6, 7 });
             Coordinates polarBearCoordinates = new Coordinates(57.036717, 9.896924);
             string polarBearDescription = "Isbjørne findes i størstedelen af Nordpolen, og er også blevet set i de sydligste dele af Island og Grønland. " +
-                                          "Om vinteren kan man finde dem gående langs den sydlige kyst eller den nordlige kant af Nordpolen. " + 
-                                          "Isbjørne er også blevet fundet i den vestlige og nordlige del af Alaska.\n" + 
+                                          "Om vinteren kan man finde dem gående langs den sydlige kyst eller den nordlige kant af Nordpolen. " +
+                                          "Isbjørne er også blevet fundet i den vestlige og nordlige del af Alaska.\n" +
                                           "Isbjørnen antages af mange for at være et havpattedyr. Deres foretrukne habitat er områder med pakis i det arktiske ocean, da dette giver de bedste jage-muligheder for isbjørnen. " +
                                           "Hvis pakisen smelter i det område isbjørnen befinder sig i, vil isbjørnen bevæge sig op til 1,000 km nord eller syd, i jagt på nye områder hvor pakisen er tæt nok.\n\n" +
                                           "Isbjørnen kan blive op til 1,6 meter høj. De voksne hanner kan veje mellem 300 og 800 kg, mens hunnerne vejer mellem 150 og 300 kg. " +
@@ -182,7 +182,7 @@ namespace GuidR
                                       "I fangenskab lever lemuren i gennemsnit 30 år, mens de i naturen lever omkring 27 år.";
             Lemur = new Animal("Lemur", lemurDescription, lemurCoordinates, "Lemur Catta");
 
-            FeedingTime lionFeeding = new FeedingTime(new DateTime(2016, 1, 1), new DateTime(2016, 12, DateTime.DaysInMonth(2016, 12)), new Time(13, 45), new int[] { 2, 3, 6, 7 });
+            FeedingTime lionFeeding = new FeedingTime(new DateTime(2016, 1, 1), new DateTime(2016, 12, DateTime.DaysInMonth(2016, 12)), new Time(13, 45), 30, new int[] { 2, 3, 6, 7 });
             Coordinates lionCoordinates = new Coordinates(57.036185, 9.896652);
             string lionDescription = "Den asiatiske løve var før i tiden meget udbredt helt fra Grækenland til det centrale Indien, " +
                                      "men på grund af krybskytteri og ødelæggelse af habitater findes den asiatiske løve nu kun Girskoven i det nordvestlige Indien. " +
@@ -199,11 +199,11 @@ namespace GuidR
                                      "I naturen lever løver mellem 12 og 15 år, mens de i fangenskab i gennemsnit bliver 25 år gamle.";
             Lion = new Animal("Løve", lionDescription, lionCoordinates, "Panthera leo persica", lionFeeding);
 
-            FeedingTime penguinFeeding = new FeedingTime(new DateTime(2016, 5, 1), new DateTime(2016, 10, DateTime.DaysInMonth(2016, 10)), new Time(11, 15), new int[] { 1, 2, 3, 4, 5, 6, 7 });
-            FeedingTime penguinFeeding2 = new FeedingTime(new DateTime(2016, 5, 1), new DateTime(2016, 10, DateTime.DaysInMonth(2016, 10)), new Time(14, 15), new int[] { 1, 2, 3, 4, 5, 6, 7 });
+            FeedingTime penguinFeeding = new FeedingTime(new DateTime(2016, 5, 1), new DateTime(2016, 10, DateTime.DaysInMonth(2016, 10)), new Time(11, 15), 45, new int[] { 1, 2, 3, 4, 5, 6, 7 });
+            FeedingTime penguinFeeding2 = new FeedingTime(new DateTime(2016, 5, 1), new DateTime(2016, 10, DateTime.DaysInMonth(2016, 10)), new Time(14, 15), 45, new int[] { 1, 2, 3, 4, 5, 6, 7 });
             Coordinates penquinCoordinates = new Coordinates(57.036389, 9.898301);
             string penquinDescription = "Humboldt-pingvinen er knyttet til kun et sted på Jorden. " +
-                                        "De lever ved den sydamerikanske vestkyst i Chile og Peru, et område også kendetegnet " + 
+                                        "De lever ved den sydamerikanske vestkyst i Chile og Peru, et område også kendetegnet " +
                                         "ved at ligge nær Humboldt-strømmen, som er en havstrøm karakteriseret ved koldt, næringsholdigt vand. " +
                                         "Humboldt-pingvinen bruger det meste af sin tid i vandet nær kysten, hvor de i gennemsnit bruger 60 timer i vandet før de svømmer tilbage til land. " +
                                         "De bruger landjorden til at sove og avle, men også til at opdrage deres nyfødte unger før de også kan komme i vandet. " +
@@ -245,7 +245,7 @@ namespace GuidR
                                       "De vejer mellem 350 og 450 kg, og har en gennemsnitlig længde på 135 cm. " +
                                       "Hver zebra har et unikt sort/hvid mønster, hvilket gør at mønsteret fungerer på samme måde som menneskets fingeraftryk. " +
                                       "Mønsteret er et forsvarsværktøj der bruges til at forvirre rovdyr. " +
-                                      "Når en zebraflok bliver angrebet vil de løbe væk i en samlet flok, " + 
+                                      "Når en zebraflok bliver angrebet vil de løbe væk i en samlet flok, " +
                                       "hvor mønsteret gør det svært for rovdyrene at udvælge et enkelt dyr at udskille fra resten af flokken.\n\n" +
                                       "I naturen bliver zebraen oftest ikke mere end 12-13 år gammel, hvor de i fangenskab bliver mellem 22 og 30 år gammel. " +
                                       "Grevys zebra er planteædende og spiser primært blade, hårdt græs og skud fra buske. " +
@@ -253,7 +253,7 @@ namespace GuidR
                                       "Zebraen vil nogle gange arbejde sammen med andre dyr, som fx strudse og antiloper, for at holde øje med rovdyr mens dyrene græsser.";
             Zebra = new Animal("Zebra", zebraDescription, zebraCoordinates, "Equus Grevyi");
 
-            FeedingTime tigerFeeding = new FeedingTime(new DateTime(2016, 1, 1), new DateTime(2016, 12, DateTime.DaysInMonth(2016, 12)), new Time(13, 45), new int[] { 2, 3, 6, 7 });
+            FeedingTime tigerFeeding = new FeedingTime(new DateTime(2016, 1, 1), new DateTime(2016, 12, DateTime.DaysInMonth(2016, 12)), new Time(13, 45), 30, new int[] { 2, 3, 6, 7 });
             Coordinates tigerCoordinates = new Coordinates(57.036355, 9.896779);
             string tigerDescription = "Der er 8 anerkendte underarter af tiger-arten, hvoraf 3 af arterne menes at være uddøde. " +
                                       "De nulevende arter er den Sibiriske tiger, Bengalske tiger, Indo-kinesiske tiger, Syd-kinesiske tiger og, den som er i Aalborg Zoo, Sumatra-tigeren. " +
@@ -281,7 +281,7 @@ namespace GuidR
 
             Toilet1 = new Facility("Toilet - ved indgangen", toiletDescription, toiletCoordinates1, Toilet1);
 
-            Coordinates toiletCoordinates2 = new Coordinates(57.03760766, 9.89764463); 
+            Coordinates toiletCoordinates2 = new Coordinates(57.03760766, 9.89764463);
             Toilet2 = new Facility("Toilet - ved chimpanserne", toiletDescription, toiletCoordinates2, Toilet2);
 
             Coordinates toiletCoordinates3 = new Coordinates(57.037176, 9.898884);

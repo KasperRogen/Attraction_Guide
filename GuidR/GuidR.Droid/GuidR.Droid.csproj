@@ -13,7 +13,7 @@
     <AndroidResgenFile>Resources\Resource.designer.cs</AndroidResgenFile>
     <AndroidApplication>True</AndroidApplication>
     <AndroidUseLatestPlatformSdk>True</AndroidUseLatestPlatformSdk>
-    <TargetFrameworkVersion>v6.0</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v7.0</TargetFrameworkVersion>
     <AssemblyName>GuidR.Droid</AssemblyName>
     <AndroidManifest>Properties\AndroidManifest.xml</AndroidManifest>
     <NuGetPackageImportStamp>
@@ -74,12 +74,12 @@
     <Compile Include="AndroidDependency.cs" />
     <Compile Include="AnimalButton.cs" />
     <Compile Include="FacilitiesMenuActivity.cs" />
-    <Compile Include="FeedingTimeSchemeActivity.cs" />
     <Compile Include="IndependentAnimalActivity.cs" />
     <Compile Include="AnimalMenuActivity.cs" />
     <Compile Include="MapActivity.cs" />
     <Compile Include="NewsActivity.cs" />
     <Compile Include="PlaygroundMenuActivity.cs" />
+    <Compile Include="FeedingTimeSchemeActivity.cs" />
     <Compile Include="RestaurantMenuActivity.cs" />
     <Compile Include="SmokeAreaMenuActivity.cs" />
     <Compile Include="SplashScreen.cs" />
@@ -470,6 +470,18 @@
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\drawable-hdpi\Playground_Menu.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\Text.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\line.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\AnimalFeedingText.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\LinearLayout.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Novell\Novell.MonoDroid.CSharp.targets" />
   <Import Project="..\..\packages\Xamarin.GooglePlayServices.Basement.29.0.0.2\build\Xamarin.GooglePlayServices.Basement.targets" Condition="Exists('..\..\packages\Xamarin.GooglePlayServices.Basement.29.0.0.2\build\Xamarin.GooglePlayServices.Basement.targets')" />
