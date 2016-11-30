@@ -67,6 +67,7 @@ namespace GuidR.Droid
             LinearLayout.LayoutParams timelineLayoutParams = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MatchParent, 100);
             timelineLayout.Orientation = Orientation.Horizontal;
             timelineLayout.LayoutParameters = timelineLayoutParams;
+            timelineLayout.SetGravity(GravityFlags.Left);
 
             timeLine.AddView(timelineLayout);
 
@@ -123,45 +124,49 @@ namespace GuidR.Droid
 
            TempAnimalList = TempAnimalList.OrderBy(x => x.NextFeeding).ToList();
 
-      foreach (Animal a in TempAnimalList) {
+            foreach (Animal a in TempAnimalList) {
+                View textLine = LayoutInflater.Inflate(Resource.Layout.line, Text, false); 
+                View blockLine = LayoutInflater.Inflate(Resource.Layout.line, Text, false);
+                foreach (FeedingTime FT in a.FeedingTimes) {
+                    //set the destination
 
-                //set the destination
-                View textLine;
-                View blockLine;
-                textLine = LayoutInflater.Inflate(Resource.Layout.line, Text, false);
-                blockLine = LayoutInflater.Inflate(Resource.Layout.line, Text, false);
-                LinearLayout.LayoutParams horizontalLine = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MatchParent, 2);
-                textLine.LayoutParameters = horizontalLine;
-                textLine.SetBackgroundColor(Color.ParseColor("#FFFFFF"));
-                blockLine.LayoutParameters = horizontalLine;
-                blockLine.SetBackgroundColor(Color.ParseColor("#FFFFFF"));
-                View animalBlock = LayoutInflater.Inflate(Resource.Layout.AnimalFeedingBlock, Scheme, false);
-                View animalText  = LayoutInflater.Inflate(Resource.Layout.AnimalFeedingText, Text, false);
-
-                LinearLayout.LayoutParams animalTextLL = new LinearLayout.LayoutParams(270, 225);
-                animalText.LayoutParameters = animalTextLL;
-                if(((animalText as ViewGroup).GetChildAt(0) is ImageView))
-                ((animalText as ViewGroup).GetChildAt(0) as ImageView).SetImageResource((int)a.Image);
-                Text.AddView(animalText);
+                    textLine = LayoutInflater.Inflate(Resource.Layout.line, Text, false);
+                    blockLine = LayoutInflater.Inflate(Resource.Layout.line, Text, false);
+                    LinearLayout.LayoutParams horizontalLine = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MatchParent, 2);
+                    textLine.LayoutParameters = horizontalLine;
+                    textLine.SetBackgroundColor(Color.ParseColor("#FFFFFF"));
+                    blockLine.LayoutParameters = horizontalLine;
+                    blockLine.SetBackgroundColor(Color.ParseColor("#FFFFFF"));
 
 
-                //Find the text and linearlayout children
-                for (int i = 0; i < (animalBlock as ViewGroup).ChildCount; i++) {
+                    View animalBlock = LayoutInflater.Inflate(Resource.Layout.AnimalFeedingBlock, Scheme, false);
+                    View animalText = LayoutInflater.Inflate(Resource.Layout.AnimalFeedingText, Text, false);
+
+                    LinearLayout.LayoutParams animalTextLL = new LinearLayout.LayoutParams(270, 225);
+                    animalText.LayoutParameters = animalTextLL;
+                    if (((animalText as ViewGroup).GetChildAt(0) is ImageView))
+                        ((animalText as ViewGroup).GetChildAt(0) as ImageView).SetImageResource((int)a.Image);
+                    Text.AddView(animalText);
+
+
+                    //Find the text and linearlayout children
+                    for (int i = 0; i < (animalBlock as ViewGroup).ChildCount; i++) {
 
                         if ((animalBlock as ViewGroup).GetChildAt(i) is LinearLayout) {
-                        LinearLayout.LayoutParams animalBlockParams = new LinearLayout.LayoutParams(((animalBlock as ViewGroup).GetChildAt(i) as LinearLayout).LayoutParameters.Width = a.NextFeeding.ShowLength * 5, 225);
-                        ((animalBlock as ViewGroup).GetChildAt(i) as LinearLayout).LayoutParameters = animalBlockParams;
-                        animalBlockParams.LeftMargin = a.NextFeeding.TimeOfDay.Hour * 60 * 5 + a.NextFeeding.TimeOfDay.Second * 5;
-                        ((animalBlock as ViewGroup).GetChildAt(i) as LinearLayout).SetBackgroundColor(Color.ParseColor("#AAAAAA"));
-                            ((animalBlock as ViewGroup).GetChildAt(i) as LinearLayout).LayoutParameters.Width = a.NextFeeding.ShowLength*5;
+                            LinearLayout.LayoutParams animalBlockParams = new LinearLayout.LayoutParams(((animalBlock as ViewGroup).GetChildAt(i) as LinearLayout).LayoutParameters.Width = FT.ShowLength * 5, 225);
+                            ((animalBlock as ViewGroup).GetChildAt(i) as LinearLayout).LayoutParameters = animalBlockParams;
+                            //((animalBlock as ViewGroup).GetChildAt(i) as LinearLayout).Left = FT.TimeOfDay.Hour * 60 * 5 + FT.TimeOfDay.Second * 5;
+                            animalBlockParams.LeftMargin = (int)(25 + FT.TimeOfDay.Hour * 60 * 5 + FT.TimeOfDay.Second * 5);
+                            ((animalBlock as ViewGroup).GetChildAt(i) as LinearLayout).SetBackgroundColor(Color.ParseColor("#AAAAAA"));
+                            ((animalBlock as ViewGroup).GetChildAt(i) as LinearLayout).LayoutParameters.Width = FT.ShowLength * 5;
                         }
                     }
                     (animalBlock as LinearLayout).LayoutParameters.Height = 225;
                     Scheme.AddView(animalBlock);
-
-                Text.AddView(textLine);
-                Scheme.AddView(blockLine);
+                    Text.AddView(textLine);
+                    Scheme.AddView(blockLine);
                 }
+            }
             }
         }
     }

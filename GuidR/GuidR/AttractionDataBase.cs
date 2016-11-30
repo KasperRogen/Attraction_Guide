@@ -199,8 +199,8 @@ namespace GuidR
                                      "I naturen lever løver mellem 12 og 15 år, mens de i fangenskab i gennemsnit bliver 25 år gamle.";
             Lion = new Animal("Løve", lionDescription, lionCoordinates, "Panthera leo persica", lionFeeding);
 
-            FeedingTime penguinFeeding = new FeedingTime(new DateTime(2016, 5, 1), new DateTime(2016, 10, DateTime.DaysInMonth(2016, 10)), new Time(11, 15), 45, new int[] { 1, 2, 3, 4, 5, 6, 7 });
-            FeedingTime penguinFeeding2 = new FeedingTime(new DateTime(2016, 5, 1), new DateTime(2016, 10, DateTime.DaysInMonth(2016, 10)), new Time(14, 15), 45, new int[] { 1, 2, 3, 4, 5, 6, 7 });
+            FeedingTime penguinFeeding = new FeedingTime(new DateTime(2016, 5, 1), new DateTime(2016, 10, DateTime.DaysInMonth(2016, 10)), new Time(23, 0), 45, new int[] { 1, 2, 3, 4, 5, 6, 7 });
+            FeedingTime penguinFeeding2 = new FeedingTime(new DateTime(2016, 5, 1), new DateTime(2016, 10, DateTime.DaysInMonth(2016, 10)), new Time(5, 0), 45, new int[] { 1, 2, 3, 4, 5, 6, 7 });
             Coordinates penquinCoordinates = new Coordinates(57.036389, 9.898301);
             string penquinDescription = "Humboldt-pingvinen er knyttet til kun et sted på Jorden. " +
                                         "De lever ved den sydamerikanske vestkyst i Chile og Peru, et område også kendetegnet " +
@@ -253,7 +253,7 @@ namespace GuidR
                                       "Zebraen vil nogle gange arbejde sammen med andre dyr, som fx strudse og antiloper, for at holde øje med rovdyr mens dyrene græsser.";
             Zebra = new Animal("Zebra", zebraDescription, zebraCoordinates, "Equus Grevyi");
 
-            FeedingTime tigerFeeding = new FeedingTime(new DateTime(2016, 1, 1), new DateTime(2016, 12, DateTime.DaysInMonth(2016, 12)), new Time(13, 45), 30, new int[] { 2, 3, 6, 7 });
+            FeedingTime tigerFeeding = new FeedingTime(new DateTime(2016, 1, 1), new DateTime(2016, 12, DateTime.DaysInMonth(2016, 12)), new Time(00, 00), 30, new int[] { 2, 3, 6, 7 });
             Coordinates tigerCoordinates = new Coordinates(57.036355, 9.896779);
             string tigerDescription = "Der er 8 anerkendte underarter af tiger-arten, hvoraf 3 af arterne menes at være uddøde. " +
                                       "De nulevende arter er den Sibiriske tiger, Bengalske tiger, Indo-kinesiske tiger, Syd-kinesiske tiger og, den som er i Aalborg Zoo, Sumatra-tigeren. " +
