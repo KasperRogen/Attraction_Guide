@@ -45,8 +45,9 @@ namespace GuidR.Droid
             Button newsButton = FindViewById<Button>(Resource.Id.newsbutton);
             Button infoButton = FindViewById<Button>(Resource.Id.infoButton);
 
-            infoButton.Click += delegate {
-                StartActivity(typeof(FeedingTimeSchemeActivity));
+            infoButton.Click += delegate
+            {
+                StartActivity(typeof(InformationActivity));
             };
 
             button.Click += delegate 

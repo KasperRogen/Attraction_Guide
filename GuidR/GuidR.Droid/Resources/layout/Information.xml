@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:cardview="http://schemas.android.com/apk/res-auto"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:orientation="vertical"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  android:padding="5dp">
+    
+  <LinearLayout
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#6394FF">
+    <ImageView
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:src="@drawable/logo"
+      android:id="@+id/imageView" />
+  </LinearLayout>
+  
+  
+  <RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#222"
+    android:layout_marginTop="5dp"
+    android:layout_marginBottom="5dp">
+    <View
+      android:id="@+id/strut"
+      android:layout_width="0dp"
+      android:layout_height="0dp"
+      android:layout_centerHorizontal="true" />
+    <TextView
+      android:id="@+id/Parking"
+      android:layout_width="fill_parent"
+      android:layout_height="wrap_content"
+      android:layout_alignLeft="@id/strut"
+      android:layout_alignParentRight="true"
+      android:layout_centerVertical="true"
+      android:layout_centerHorizontal="true"
+      android:gravity="center"
+      android:textSize="15sp"
+      android:text="Der er gratis parkering i skoven ved siden af Aalborg Zoo." />
+    <RelativeLayout
+      android:layout_width="fill_parent"
+      android:layout_height="wrap_content"
+      android:layout_alignRight="@id/strut"
+      android:background="#222"
+      android:layout_alignParentLeft="true">
+      <TextView
+        android:id="@+id/adresseHeader"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textSize="25sp"
+        android:textColor="#ffffff"
+        android:textStyle="italic"
+        android:text="Adresse" />
+      <TextView
+        android:id="@+id/adresseTekst"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/adresseHeader"
+        android:layout_marginBottom="5dp"
+        android:gravity="center"
+        android:textSize="15sp"
+        android:text="Mølleparkvej 63\n9000 Aalborg" />
+    </RelativeLayout>
+  </RelativeLayout>
+
+
+  <Button
+    android:background="@drawable/InfoButton"
+    android:id="@+id/openingHoursButton"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:text="Tryk her for åbningstider!\n(Åbner browser)"
+    style="@style/button_text" />
+
+  
+  <RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#222"
+    android:layout_marginTop="5dp"
+    android:layout_marginBottom="5dp">
+    <TextView
+      android:id="@+id/entranceHeader"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:gravity="center"
+      android:textSize="20dp"
+      android:textColor="#ffffff"
+      android:text="Entrépriser"/>
+    <RelativeLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_below="@id/entranceHeader">
+      <View
+        android:id="@+id/strut2"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_centerHorizontal="true" />
+      <TextView
+        android:id="@+id/entranceType"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_alignRight="@id/strut2"
+        android:layout_alignParentLeft="true"
+        android:textSize="15sp"
+        android:text="Barn 3-11 år:\nVoksen:\nSenior/Studerende:\nGrupper min. 20 pers:" />
+      <TextView
+        android:id="@+id/entrancePrice"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_alignLeft="@id/strut2"
+        android:layout_alignParentRight="true"
+        android:textSize="15sp"
+        android:text="                   Kr. 95,-\n                   Kr. 155,-\n                   Kr. 124,-\n                   20% i rabat" />
+    </RelativeLayout>
+  </RelativeLayout>
+  
+  
+  <RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#222"
+    android:layout_marginTop="5dp"
+    android:layout_marginBottom="5dp">
+    <TextView
+      android:id="@+id/yearlyHeader"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:gravity="center"
+      android:textSize="20dp"
+      android:textColor="#ffffff"
+      android:text="Priser for årskort"/>
+    <RelativeLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_below="@id/yearlyHeader">
+      <View
+        android:id="@+id/strut3"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_centerHorizontal="true" />
+      <TextView
+        android:id="@+id/yearlyType"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_alignRight="@id/strut3"
+        android:layout_alignParentLeft="true"
+        android:textSize="15sp"
+        android:text="Barn 3-11 år:\nVoksen:\nSenior:\nVed køb af 4 eller flere årskort:" />
+      <TextView
+        android:id="@+id/yearlyPrice"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_alignLeft="@id/strut3"
+        android:layout_alignParentRight="true"
+        android:textSize="15sp"
+        android:text="                   Kr. 230,-\n                   Kr. 399,-\n                   Kr. 310,-\n                   10% i rabat på\n                   samlet ordre" />
+    </RelativeLayout>
+  </RelativeLayout>
+  
+  
+  <RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <View
+      android:id="@+id/buttonStrut"
+      android:layout_width="0dp"
+      android:layout_height="0dp"
+      android:layout_centerHorizontal="true" />
+    <Button
+      android:background="@drawable/InfoButton"
+      android:id="@+id/webpageButton"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_alignRight="@id/buttonStrut"
+      android:layout_alignParentLeft="true"
+      android:text="Aalborg Zoo's hjemmeside"
+      style="@style/button_text" />
+    <Button
+      android:background="@drawable/InfoButton"
+      android:id="@+id/ticketsButton"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_alignLeft="@id/buttonStrut"
+      android:layout_alignParentRight="true"
+      android:text="Køb entrébillet\n(Åbner browser)"
+      style="@style/button_text" />
+  </RelativeLayout>
+  
+
+  <Button
+    android:background="@drawable/InfoButton"
+    android:id="@+id/zoomapButton"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:text="Se Aalborg Zoo's eget\nkort over parken"
+    style="@style/button_text" />
+
+
+  <RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#222"
+    android:layout_marginTop="5dp"
+    android:layout_marginBottom="5dp">
+    <View
+      android:id="@+id/strutContact"
+      android:layout_width="0dp"
+      android:layout_height="0dp"
+      android:layout_centerHorizontal="true" />
+    <TextView
+      android:id="@+id/contactPhone"
+      android:layout_width="fill_parent"
+      android:layout_height="fill_parent"
+      android:layout_alignLeft="@id/strutContact"
+      android:layout_alignParentRight="true"
+      android:layout_centerVertical="true"
+      android:layout_centerHorizontal="true"
+      android:layout_marginBottom="5dp"
+      android:gravity="center"
+      android:textSize="15sp"
+      android:text="96 31 29 29\nInfo@aalborgzoo.dk" />
+    <TextView
+      android:id="@+id/contactEmail"
+      android:layout_width="match_parent"
+      android:layout_height="fill_parent"
+      android:layout_alignRight="@id/strutContact"
+      android:layout_alignParentLeft="true"
+      android:layout_centerVertical="true"
+      android:layout_centerHorizontal="true"
+      android:layout_marginBottom="5dp"
+      android:gravity="center"
+      android:textSize="15sp"
+      android:text="Kontakt Aalborg Zoo:" />
+  </RelativeLayout>
+  
+
+</LinearLayout>

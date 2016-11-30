@@ -76,6 +76,7 @@
     <Compile Include="FacilitiesMenuActivity.cs" />
     <Compile Include="IndependentAnimalActivity.cs" />
     <Compile Include="AnimalMenuActivity.cs" />
+    <Compile Include="InformationActivity.cs" />
     <Compile Include="MapActivity.cs" />
     <Compile Include="NewsActivity.cs" />
     <Compile Include="PlaygroundMenuActivity.cs" />
@@ -97,6 +98,7 @@
       <SubType>Designer</SubType>
     </None>
     <None Include="Assets\AboutAssets.txt" />
+    <AndroidResource Include="Resources\layout\Information.xml" />
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\layout\Main.xml">
@@ -482,6 +484,9 @@
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\layout\LinearLayout.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable-hdpi\InfoButton.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Novell\Novell.MonoDroid.CSharp.targets" />
   <Import Project="..\..\packages\Xamarin.GooglePlayServices.Basement.29.0.0.2\build\Xamarin.GooglePlayServices.Basement.targets" Condition="Exists('..\..\packages\Xamarin.GooglePlayServices.Basement.29.0.0.2\build\Xamarin.GooglePlayServices.Basement.targets')" />
