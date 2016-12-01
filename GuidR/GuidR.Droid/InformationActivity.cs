@@ -59,6 +59,11 @@ namespace GuidR.Droid
 
                 // MÅSKE INDLEJRE BILLEDET I PROGRAMMET I STEDET FOR AT SE DET GENNEM EN HJEMMESIDE?
             };
+
+            ImageView banner = FindViewById<ImageView>(Resource.Id.homeBanner);
+            banner.Click += delegate {
+                StartActivity(typeof(MainActivity));
+            };
         }
     }
 }

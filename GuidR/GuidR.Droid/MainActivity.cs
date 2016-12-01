@@ -38,12 +38,12 @@ namespace GuidR.Droid
 
 
 
-
             Button button = FindViewById<Button>(Resource.Id.animalButton);
             Button facilityButton = FindViewById<Button>(Resource.Id.facilityButton);
             Button mapButton = FindViewById<Button>(Resource.Id.mapButton);
             Button newsButton = FindViewById<Button>(Resource.Id.newsbutton);
             Button infoButton = FindViewById<Button>(Resource.Id.infoButton);
+            Button CheckInButton = FindViewById<Button>(Resource.Id.checkinbutton);
 
             infoButton.Click += delegate
             {
@@ -68,6 +68,10 @@ namespace GuidR.Droid
             newsButton.Click += delegate
             {
                 StartActivity(typeof(NewsActivity));
+            };
+
+            CheckInButton.Click += delegate {
+                StartActivity(typeof(FeedingTimeSchemeActivity));
             };
 
         }

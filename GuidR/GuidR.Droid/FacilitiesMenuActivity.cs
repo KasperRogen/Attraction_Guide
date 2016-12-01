@@ -43,6 +43,11 @@ namespace GuidR.Droid
             {
                 StartActivity(typeof(PlaygroundMenuActivity));
             };
+
+            ImageView banner = FindViewById<ImageView>(Resource.Id.homeBanner);
+            banner.Click += delegate {
+                StartActivity(typeof(MainActivity));
+            };
         }
             
     }

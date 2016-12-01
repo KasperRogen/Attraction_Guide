@@ -24,6 +24,11 @@ namespace GuidR.Droid
 
             SetContentView(Resource.Layout.News);
 
+            ImageView banner = FindViewById<ImageView>(Resource.Id.homeBanner);
+            banner.Click += delegate {
+                StartActivity(typeof(MainActivity));
+            };
+
             AddCardToNews();
 
         }

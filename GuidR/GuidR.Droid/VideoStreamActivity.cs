@@ -20,7 +20,13 @@ namespace GuidR.Droid {
 
             SetContentView(Resource.Layout.VideoStream);
 
-                var uri = Android.Net.Uri.Parse("https://monitor.y-cam.com/bc/viewZooCam.php?cam=camera8");
+
+            ImageView banner = FindViewById<ImageView>(Resource.Id.homeBanner);
+            banner.Click += delegate {
+                StartActivity(typeof(MainActivity));
+            };
+
+            var uri = Android.Net.Uri.Parse("https://monitor.y-cam.com/bc/viewZooCam.php?cam=camera8");
                 var intent = new Intent(Intent.ActionView, uri);
                 StartActivity(intent);
 

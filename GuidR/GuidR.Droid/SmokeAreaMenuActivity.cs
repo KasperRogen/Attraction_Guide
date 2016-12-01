@@ -38,6 +38,12 @@ namespace GuidR.Droid
                 StartActivity(typeof(MapActivity));
             };
 
+
+            ImageView banner = FindViewById<ImageView>(Resource.Id.homeBanner);
+            banner.Click += delegate {
+                StartActivity(typeof(MainActivity));
+            };
+
         }
         public void LoadSmoke(Facility facility)
         {

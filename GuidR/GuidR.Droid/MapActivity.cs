@@ -81,6 +81,11 @@ namespace GuidR.Droid
 
             SetContentView(Resource.Layout.Map);
 
+            ImageView banner = FindViewById<ImageView>(Resource.Id.homeBanner);
+            banner.Click += delegate {
+                StartActivity(typeof(MainActivity));
+            };
+
             SetUpMap();
         }
 

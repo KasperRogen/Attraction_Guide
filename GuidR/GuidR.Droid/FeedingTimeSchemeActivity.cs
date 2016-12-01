@@ -24,8 +24,26 @@ namespace GuidR.Droid
 
             SetContentView(Resource.Layout.FeedingTimeScheme);
 
+            ImageView banner = FindViewById<ImageView>(Resource.Id.homeBanner);
+            banner.Click += delegate {
+                StartActivity(typeof(MainActivity));
+            };
+
+
             setTimeline();
             DoIt();
+
+            HorizontalScrollView animalScroller = FindViewById<HorizontalScrollView>(Resource.Id.animalScroller);
+            HorizontalScrollView timelineScroller = FindViewById<HorizontalScrollView>(Resource.Id.timelineScrollView);
+            //HERFRA
+           // animalScroller.ViewTreeObserver.AddOnScrollChangedListener(this);
+            animalScroller.ScrollChange += delegate {
+                timelineScroller.ScrollTo(animalScroller.ScrollX, animalScroller.ScrollY);
+            };
+
+            timelineScroller.ScrollChange += delegate {
+                animalScroller.ScrollTo(timelineScroller.ScrollX, timelineScroller.ScrollY);
+            };
 
         }
 
@@ -36,31 +54,21 @@ namespace GuidR.Droid
         {
 
 
-            LinearLayout Text = FindViewById<LinearLayout>(Resource.Id.FeedingTimeSchemeText);
-            LinearLayout timeLine = FindViewById<LinearLayout>(Resource.Id.FeedingTimeSchemeLayout);
+            LinearLayout timeLine = FindViewById<LinearLayout>(Resource.Id.timeLine);
 
-            View textLine;
             View blockLine;
 
-            textLine = LayoutInflater.Inflate(Resource.Layout.line, Text, false);
-            blockLine = LayoutInflater.Inflate(Resource.Layout.line, Text, false);
+            blockLine = LayoutInflater.Inflate(Resource.Layout.line, timeLine, false);
 
             //Make the horizontal white lines between the animals
             LinearLayout.LayoutParams horizontalLine = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MatchParent, 10);
-            textLine.LayoutParameters = horizontalLine;
-            textLine.SetBackgroundColor(Color.ParseColor("#FFFFFF"));
             blockLine.LayoutParameters = horizontalLine;
             blockLine.SetBackgroundColor(Color.ParseColor("#FFFFFF"));
 
 
 
             //Make the block that goes where the animal image should go, used to space everything correctly
-            LinearLayout textBlock = (LinearLayout)LayoutInflater.Inflate(Resource.Layout.AnimalFeedingText, Text, false);
-            textBlock.LayoutParameters.Height = 100;
-            textBlock.LayoutParameters.Width = 272;
-
-            Text.AddView(textBlock);
-
+            
 
             //Make the timeline addition
             LinearLayout timelineLayout = (LinearLayout)LayoutInflater.Inflate(Resource.Layout.LinearLayout, timeLine, false);
@@ -94,9 +102,9 @@ namespace GuidR.Droid
 
             }
 
-            Text.AddView(textLine);
             timeLine.AddView(blockLine);
-
+            HorizontalScrollView animalScroller = FindViewById<HorizontalScrollView>(Resource.Id.animalScroller);
+            animalScroller.LayoutParameters.Width = timeLine.Width;
         }
 
 
@@ -156,7 +164,7 @@ namespace GuidR.Droid
                             LinearLayout.LayoutParams animalBlockParams = new LinearLayout.LayoutParams(((animalBlock as ViewGroup).GetChildAt(i) as LinearLayout).LayoutParameters.Width = FT.ShowLength * 5, 225);
                             ((animalBlock as ViewGroup).GetChildAt(i) as LinearLayout).LayoutParameters = animalBlockParams;
                             //((animalBlock as ViewGroup).GetChildAt(i) as LinearLayout).Left = FT.TimeOfDay.Hour * 60 * 5 + FT.TimeOfDay.Second * 5;
-                            animalBlockParams.LeftMargin = (int)(25 + FT.TimeOfDay.Hour * 60 * 5 + FT.TimeOfDay.Second * 5);
+                            animalBlockParams.LeftMargin = (int)(FT.TimeOfDay.Hour * 60 * 5 + FT.TimeOfDay.Second * 5);
                             ((animalBlock as ViewGroup).GetChildAt(i) as LinearLayout).SetBackgroundColor(Color.ParseColor("#AAAAAA"));
                             ((animalBlock as ViewGroup).GetChildAt(i) as LinearLayout).LayoutParameters.Width = FT.ShowLength * 5;
                         }

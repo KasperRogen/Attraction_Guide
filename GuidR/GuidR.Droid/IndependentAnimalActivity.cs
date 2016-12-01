@@ -40,6 +40,11 @@ namespace GuidR.Droid {
                 MapActivity.Attraction = Animal;
                 StartActivity(typeof(MapActivity));
             };
+
+            ImageView banner = FindViewById<ImageView>(Resource.Id.homeBanner);
+            banner.Click += delegate {
+                StartActivity(typeof(MainActivity));
+            };
         }
     }
 }

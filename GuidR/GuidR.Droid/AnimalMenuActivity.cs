@@ -42,6 +42,11 @@ namespace GuidR.Droid {
             tigerButton.Click += delegate { LoadAnimalPage(AttractionDataBase.Tiger); };
             Button zebraButton = FindViewById<Button>(Resource.Id.zebraButton);
             zebraButton.Click += delegate { LoadAnimalPage(AttractionDataBase.Zebra); };
+
+            ImageView banner = FindViewById<ImageView>(Resource.Id.homeBanner);
+            banner.Click += delegate {
+                StartActivity(typeof(MainActivity));
+            };
         }
 
         void LoadAnimalPage (Animal animal) {
