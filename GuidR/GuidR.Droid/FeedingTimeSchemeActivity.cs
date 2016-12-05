@@ -8,17 +8,14 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace GuidR.Droid
-{
+namespace GuidR.Droid {
     [Activity(Label = "Aalborg Zoo", Theme = "@style/NoTitle.splash")]
 
-    public class FeedingTimeSchemeActivity : Activity
-    {
+    public class FeedingTimeSchemeActivity : Activity {
 
 
 
-        protected override void OnCreate(Bundle bundle)
-        {
+        protected override void OnCreate(Bundle bundle) {
 
             base.OnCreate(bundle);
 
@@ -36,7 +33,10 @@ namespace GuidR.Droid
             HorizontalScrollView animalScroller = FindViewById<HorizontalScrollView>(Resource.Id.animalScroller);
             HorizontalScrollView timelineScroller = FindViewById<HorizontalScrollView>(Resource.Id.timelineScrollView);
             //HERFRA
-           // animalScroller.ViewTreeObserver.AddOnScrollChangedListener(this);
+            // animalScroller.ViewTreeObserver.AddOnScrollChangedListener(this);
+
+            animalScroller.LayoutParameters.Width = timelineScroller.Width - 2000;
+
             animalScroller.ScrollChange += delegate {
                 timelineScroller.ScrollTo(animalScroller.ScrollX, animalScroller.ScrollY);
             };
@@ -50,8 +50,7 @@ namespace GuidR.Droid
 
 
 
-        void setTimeline()
-        {
+        void setTimeline() {
 
 
             LinearLayout timeLine = FindViewById<LinearLayout>(Resource.Id.timeLine);
@@ -63,12 +62,12 @@ namespace GuidR.Droid
             //Make the horizontal white lines between the animals
             LinearLayout.LayoutParams horizontalLine = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MatchParent, 10);
             blockLine.LayoutParameters = horizontalLine;
-            blockLine.SetBackgroundColor(Color.ParseColor("#FFFFFF"));
+            blockLine.SetBackgroundColor(Color.ParseColor("#000000"));
 
 
 
             //Make the block that goes where the animal image should go, used to space everything correctly
-            
+
 
             //Make the timeline addition
             LinearLayout timelineLayout = (LinearLayout)LayoutInflater.Inflate(Resource.Layout.LinearLayout, timeLine, false);
@@ -81,17 +80,16 @@ namespace GuidR.Droid
 
 
             //for every hour, there should be a xx:00 and a xx:30.
-            for(int i = 0; i < 24; i++)
-            {
+            for (int i = 0; i < 24; i++) {
                 TextView timelineElement = (TextView)LayoutInflater.Inflate(Resource.Layout.Text, timelineLayout, false);
                 timelineElement.SetTextSize(Android.Util.ComplexUnitType.Dip, 17);
                 timelineElement.Gravity = GravityFlags.Center;
-                timelineElement.SetTextColor(Color.ParseColor("#FFFFFF"));
+                timelineElement.SetTextColor(Color.ParseColor("#000000"));
                 timelineElement.Text = i.ToString() + ".00";
                 timelineElement.SetWidth(30 * 5);
-               // timelineElement.Gravity = GravityFlags.Center;
+                // timelineElement.Gravity = GravityFlags.Center;
                 timelineLayout.AddView(timelineElement);
-                
+
                 timelineElement = (TextView)LayoutInflater.Inflate(Resource.Layout.Text, timelineLayout, false);
                 timelineElement.Gravity = GravityFlags.Center;
                 timelineElement.SetTextSize(Android.Util.ComplexUnitType.Dip, 17);
@@ -108,73 +106,115 @@ namespace GuidR.Droid
         }
 
 
-        void DoIt()
-        {
-            LinearLayout Scheme = FindViewById<LinearLayout>(Resource.Id.FeedingTimeSchemeLayout);
-            LinearLayout Text = FindViewById<LinearLayout>(Resource.Id.FeedingTimeSchemeText);
-            LinearLayout Root = FindViewById<LinearLayout>(Resource.Id.FeedingTimeSchemeRoot);
-
+        void DoIt() {
             List<Animal> TempAnimalList = new List<Animal>();
-          
+
 
 
             Animal animal;
-            for(int i = AttractionDataBase.Attractions.Count - 1; i > 0; i--)
-            {
+            for (int i = AttractionDataBase.Attractions.Count - 1; i > 0; i--) {
                 Attraction attraction = AttractionDataBase.Attractions[i];
                 if (attraction is Animal && (attraction as Animal).HasFeedingTime) {
                     animal = (attraction as Animal);
-                        TempAnimalList.Add(animal);
-                    
+                    TempAnimalList.Add(animal);
+
                 }
             }
 
 
-           TempAnimalList = TempAnimalList.OrderBy(x => x.NextFeeding).ToList();
+            TempAnimalList = TempAnimalList.OrderBy(x => x.NextFeeding).ToList();
 
+            LinearLayout Scheme = FindViewById<LinearLayout>(Resource.Id.FeedingTimeSchemeLayout);
+            LinearLayout Text = FindViewById<LinearLayout>(Resource.Id.FeedingTimeSchemeText);
+            LinearLayout Root = FindViewById<LinearLayout>(Resource.Id.FeedingTimeSchemeRoot);
+            Random rng = new Random();
+            int index = 0;
             foreach (Animal a in TempAnimalList) {
-                View textLine = LayoutInflater.Inflate(Resource.Layout.line, Text, false); 
-                View blockLine = LayoutInflater.Inflate(Resource.Layout.line, Text, false);
+
+                View animalText = LayoutInflater.Inflate(Resource.Layout.AnimalFeedingText, Text, false);
+
+
+                Color[] colours = new Color[] { Color.Red, Color.Green, Color.Blue, Color.Yellow, Color.Red, Color.Green, Color.Blue, Color.Yellow , Color.Red, Color.Green, Color.Blue, Color.Yellow , Color.Red, Color.Green, Color.Blue, Color.Yellow };
+
+
+
+
+
+                LinearLayout horizontalAnimalLayout = (LinearLayout)LayoutInflater.Inflate(Resource.Layout.LinearLayout, Scheme, false);
+                LinearLayout.LayoutParams LL = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MatchParent, 225);
+                horizontalAnimalLayout.Orientation = Orientation.Horizontal;
+              //  horizontalAnimalLayout.SetBackgroundColor(colours[index]);
+
+                horizontalAnimalLayout.LayoutParameters = LL;
+                Scheme.AddView(horizontalAnimalLayout);
+                
+
+                LinearLayout.LayoutParams animalTextLL = new LinearLayout.LayoutParams(270, 225);
+                animalText.LayoutParameters = animalTextLL;
+                if (((animalText as ViewGroup).GetChildAt(0) is ImageView))
+                    ((animalText as ViewGroup).GetChildAt(0) as ImageView).SetImageResource((int)a.Image);
+                Text.AddView(animalText);
+
+
+                LinearLayout.LayoutParams horizontalLine = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MatchParent, 2);
+                View textLine = LayoutInflater.Inflate(Resource.Layout.line, Text, false);
+                textLine = LayoutInflater.Inflate(Resource.Layout.line, Text, false);
+                textLine.LayoutParameters = horizontalLine;
+                textLine.SetBackgroundColor(Color.ParseColor("#000000"));
+
+
+                int feedingtimeCounter = 0;
                 foreach (FeedingTime FT in a.FeedingTimes) {
                     //set the destination
 
-                    textLine = LayoutInflater.Inflate(Resource.Layout.line, Text, false);
-                    blockLine = LayoutInflater.Inflate(Resource.Layout.line, Text, false);
-                    LinearLayout.LayoutParams horizontalLine = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MatchParent, 2);
-                    textLine.LayoutParameters = horizontalLine;
-                    textLine.SetBackgroundColor(Color.ParseColor("#FFFFFF"));
-                    blockLine.LayoutParameters = horizontalLine;
-                    blockLine.SetBackgroundColor(Color.ParseColor("#FFFFFF"));
+                    
 
 
-                    View animalBlock = LayoutInflater.Inflate(Resource.Layout.AnimalFeedingBlock, Scheme, false);
-                    View animalText = LayoutInflater.Inflate(Resource.Layout.AnimalFeedingText, Text, false);
 
-                    LinearLayout.LayoutParams animalTextLL = new LinearLayout.LayoutParams(270, 225);
-                    animalText.LayoutParameters = animalTextLL;
-                    if (((animalText as ViewGroup).GetChildAt(0) is ImageView))
-                        ((animalText as ViewGroup).GetChildAt(0) as ImageView).SetImageResource((int)a.Image);
-                    Text.AddView(animalText);
+                    
 
+                    View animalBlock = LayoutInflater.Inflate(Resource.Layout.AnimalFeedingBlock, (LinearLayout)Scheme.GetChildAt(index), false);
 
                     //Find the text and linearlayout children
-                    for (int i = 0; i < (animalBlock as ViewGroup).ChildCount; i++) {
 
-                        if ((animalBlock as ViewGroup).GetChildAt(i) is LinearLayout) {
-                            LinearLayout.LayoutParams animalBlockParams = new LinearLayout.LayoutParams(((animalBlock as ViewGroup).GetChildAt(i) as LinearLayout).LayoutParameters.Width = FT.ShowLength * 5, 225);
-                            ((animalBlock as ViewGroup).GetChildAt(i) as LinearLayout).LayoutParameters = animalBlockParams;
-                            //((animalBlock as ViewGroup).GetChildAt(i) as LinearLayout).Left = FT.TimeOfDay.Hour * 60 * 5 + FT.TimeOfDay.Second * 5;
-                            animalBlockParams.LeftMargin = (int)(FT.TimeOfDay.Hour * 60 * 5 + FT.TimeOfDay.Second * 5);
-                            ((animalBlock as ViewGroup).GetChildAt(i) as LinearLayout).SetBackgroundColor(Color.ParseColor("#AAAAAA"));
-                            ((animalBlock as ViewGroup).GetChildAt(i) as LinearLayout).LayoutParameters.Width = FT.ShowLength * 5;
-                        }
+                    LinearLayout.LayoutParams animalBlockParams = new LinearLayout.LayoutParams((animalBlock as LinearLayout).LayoutParameters.Width = FT.ShowLength * 5, 225);
+
+                    (animalBlock as LinearLayout).LayoutParameters = animalBlockParams;
+                    //((animalBlock as ViewGroup).GetChildAt(i) as LinearLayout).Left = FT.TimeOfDay.Hour * 60 * 5 + FT.TimeOfDay.Second * 5;
+
+                    int timeBeforeCurrentFeedingtime = 0;
+                    for (int i = 0; i < feedingtimeCounter; i++)
+                    {
+                        timeBeforeCurrentFeedingtime += a.FeedingTimes[i].TimeOfDay.Hour * 60 * 5 + a.FeedingTimes[i].TimeOfDay.Minute * 5 + a.FeedingTimes[i].ShowLength;
                     }
+
+
+
+                     animalBlockParams.LeftMargin = (int)(FT.TimeOfDay.Hour * 60 * 5 + FT.TimeOfDay.Second * 5) - timeBeforeCurrentFeedingtime ;
+
+                    (animalBlock as LinearLayout).SetBackgroundColor(Color.ParseColor("#e6e8ed"));
                     (animalBlock as LinearLayout).LayoutParameters.Height = 225;
-                    Scheme.AddView(animalBlock);
-                    Text.AddView(textLine);
-                    Scheme.AddView(blockLine);
+
+
+                    ((animalBlock as ViewGroup).GetChildAt(0) as TextView).Text = (FT.TimeOfDay.Hour.ToString("00") + ":" + FT.TimeOfDay.Minute.ToString("00"));
+
+                    (Scheme.GetChildAt(index) as LinearLayout).AddView(animalBlock);
+                    feedingtimeCounter++;
                 }
-            }
+
+                //if(index < 3) { 
+                View blockLine = LayoutInflater.Inflate(Resource.Layout.line, Scheme, false);
+                horizontalLine = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MatchParent, 2);
+                blockLine.LayoutParameters = horizontalLine;
+                blockLine.SetBackgroundColor(Color.ParseColor("#000000"));
+                Scheme.AddView(blockLine);
+                //}
+
+
+                index+=2;
+                Text.AddView(textLine);
+
             }
         }
     }
+}
