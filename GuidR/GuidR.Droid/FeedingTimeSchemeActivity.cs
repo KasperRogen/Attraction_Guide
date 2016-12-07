@@ -21,13 +21,14 @@ namespace GuidR.Droid {
             base.OnCreate(bundle);
 
             SetContentView(Resource.Layout.FeedingTimeScheme);
+            
 
             ImageView banner = FindViewById<ImageView>(Resource.Id.homeBanner);
             banner.Click += delegate {
                 StartActivity(typeof(MainActivity));
             };
-
-            if(CrossDeviceInfo.Current.Version.CompareTo("5.0") >= 0) {
+            
+            if(CrossDeviceInfo.Current.Version.CompareTo("6.0") >= 0) {
                 setTimeline();
                 HorizontalScrollView animalScroller = FindViewById<HorizontalScrollView>(Resource.Id.animalScroller);
                 HorizontalScrollView timelineScroller = FindViewById<HorizontalScrollView>(Resource.Id.timelineScrollView);
@@ -53,7 +54,10 @@ namespace GuidR.Droid {
         }
 
 
-
+        private int ConvertPixelsToDp(float pixelValue) {
+            var dp = (int)((pixelValue) / Resources.DisplayMetrics.Density);
+            return dp;
+        }
 
         void setTimeline() {
 
@@ -73,7 +77,7 @@ namespace GuidR.Droid {
 
 
             //Make the block that goes where the animal image should go, used to space everything correctly
-
+            
 
             //Make the timeline addition
             LinearLayout timelineLayout = (LinearLayout)LayoutInflater.Inflate(Resource.Layout.LinearLayout, timeLine, false);
@@ -145,10 +149,10 @@ namespace GuidR.Droid {
 
 
 
-
+                Android.Util.DisplayMetrics metrics = Resources.DisplayMetrics;
 
                 LinearLayout horizontalAnimalLayout = (LinearLayout)LayoutInflater.Inflate(Resource.Layout.LinearLayout, Scheme, false);
-                LinearLayout.LayoutParams LL = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MatchParent, 225);
+                LinearLayout.LayoutParams LL = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MatchParent,ConvertPixelsToDp(metrics.HeightPixels/2.84f));
                 horizontalAnimalLayout.Orientation = Orientation.Horizontal;
               //  horizontalAnimalLayout.SetBackgroundColor(colours[index]);
 
