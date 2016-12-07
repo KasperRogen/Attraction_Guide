@@ -14,6 +14,8 @@ namespace GuidR.Droid {
 
     public class FeedingTimeSchemeActivity : Activity {
 
+        int feedingtimeLineHeight;
+
 
 
         protected override void OnCreate(Bundle bundle) {
@@ -21,7 +23,11 @@ namespace GuidR.Droid {
             base.OnCreate(bundle);
 
             SetContentView(Resource.Layout.FeedingTimeScheme);
-            
+
+
+            Android.Util.DisplayMetrics metrics = Resources.DisplayMetrics;
+            feedingtimeLineHeight = (int)(metrics.HeightPixels / 8.5);
+
 
             ImageView banner = FindViewById<ImageView>(Resource.Id.homeBanner);
             banner.Click += delegate {
@@ -51,12 +57,6 @@ namespace GuidR.Droid {
 
            
             
-        }
-
-
-        private int ConvertPixelsToDp(float pixelValue) {
-            var dp = (int)((pixelValue) / Resources.DisplayMetrics.Density);
-            return dp;
         }
 
         void setTimeline() {
@@ -149,10 +149,9 @@ namespace GuidR.Droid {
 
 
 
-                Android.Util.DisplayMetrics metrics = Resources.DisplayMetrics;
 
                 LinearLayout horizontalAnimalLayout = (LinearLayout)LayoutInflater.Inflate(Resource.Layout.LinearLayout, Scheme, false);
-                LinearLayout.LayoutParams LL = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MatchParent,ConvertPixelsToDp(metrics.HeightPixels/2.84f));
+                LinearLayout.LayoutParams LL = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MatchParent, feedingtimeLineHeight);
                 horizontalAnimalLayout.Orientation = Orientation.Horizontal;
               //  horizontalAnimalLayout.SetBackgroundColor(colours[index]);
 
@@ -160,7 +159,7 @@ namespace GuidR.Droid {
                 Scheme.AddView(horizontalAnimalLayout);
                 
 
-                LinearLayout.LayoutParams animalTextLL = new LinearLayout.LayoutParams(240, 225);
+                LinearLayout.LayoutParams animalTextLL = new LinearLayout.LayoutParams(240, feedingtimeLineHeight);
                 animalText.LayoutParameters = animalTextLL;
                 if (((animalText as ViewGroup).GetChildAt(0) is ImageView))
                     ((animalText as ViewGroup).GetChildAt(0) as ImageView).SetImageResource((int)a.Image);
@@ -188,7 +187,7 @@ namespace GuidR.Droid {
 
                     //Find the text and linearlayout children
 
-                    LinearLayout.LayoutParams animalBlockParams = new LinearLayout.LayoutParams((animalBlock as LinearLayout).LayoutParameters.Width = FT.ShowLength * 5, 225);
+                    LinearLayout.LayoutParams animalBlockParams = new LinearLayout.LayoutParams((animalBlock as LinearLayout).LayoutParameters.Width = FT.ShowLength * 5, feedingtimeLineHeight);
 
                     (animalBlock as LinearLayout).LayoutParameters = animalBlockParams;
                     //((animalBlock as ViewGroup).GetChildAt(i) as LinearLayout).Left = FT.TimeOfDay.Hour * 60 * 5 + FT.TimeOfDay.Second * 5;
@@ -205,7 +204,7 @@ namespace GuidR.Droid {
                         * 5 + 25 - timeBeforeCurrentFeedingtime ;
 
                     (animalBlock as LinearLayout).SetBackgroundColor(Color.ParseColor("#e6e8ed"));
-                    (animalBlock as LinearLayout).LayoutParameters.Height = 225;
+                    (animalBlock as LinearLayout).LayoutParameters.Height = feedingtimeLineHeight;
 
 
 
