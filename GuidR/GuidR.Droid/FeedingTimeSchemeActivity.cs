@@ -161,8 +161,10 @@ namespace GuidR.Droid {
 
                 LinearLayout.LayoutParams animalTextLL = new LinearLayout.LayoutParams(240, feedingtimeLineHeight);
                 animalText.LayoutParameters = animalTextLL;
-                if (((animalText as ViewGroup).GetChildAt(0) is ImageView))
+                if ((animalText as ViewGroup).GetChildAt(0) is ImageView)
                     ((animalText as ViewGroup).GetChildAt(0) as ImageView).SetImageResource((int)a.Image);
+                if ((animalText as ViewGroup).GetChildAt(1) is LinearLayout)
+                    ((animalText as ViewGroup).GetChildAt(1) as LinearLayout).LayoutParameters.Height = feedingtimeLineHeight;
                 Text.AddView(animalText);
 
 
