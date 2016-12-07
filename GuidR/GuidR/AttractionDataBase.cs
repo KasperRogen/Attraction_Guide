@@ -5,6 +5,9 @@ namespace GuidR
 {
     public static class AttractionDataBase
     {
+
+        public static bool splashScreenHasRun = false;
+
         public static PlatformDependency Platform { get; set; }
 
         public static List<Attraction> Attractions = new List<Attraction>();
@@ -90,7 +93,7 @@ namespace GuidR
                                         "I naturen blev den ældste dokumenterede søløve 17 år gammel, hvor den ældste i fangenskab blev 31 år gammel. " +
                                         "Alderen af en søløve kan fastgøres ved at tælle antallet af ringe på et tværsnit af dens tænder.";
             FeedingTime seaLionFeeding = new FeedingTime(new DateTime(2016, 5, 1), new DateTime(2016, 10, DateTime.DaysInMonth(2016, 10)), new Time(13, 45), 45, new int[] { 2, 3, 6, 7 });
-            FeedingTime seaLionFeeding2 = new FeedingTime(new DateTime(2016, 5, 1), new DateTime(2016, 10, DateTime.DaysInMonth(2016, 10)), new Time(14, 30), 45, new int[] { 2, 3, 6, 7 });
+            FeedingTime seaLionFeeding2 = new FeedingTime(new DateTime(2016, 5, 1), new DateTime(2016, 10, DateTime.DaysInMonth(2016, 10)), new Time(16, 30), 45, new int[] { 2, 3, 6, 7 });
 
             SeaLion = new Animal("Søløve", seaLionDescription, seaLionCoordinates, "Zalophus Californianus", seaLionFeeding, seaLionFeeding2);
 

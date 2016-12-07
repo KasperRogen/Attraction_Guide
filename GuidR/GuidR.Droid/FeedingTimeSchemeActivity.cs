@@ -4,9 +4,11 @@ using Android.Graphics;
 using Android.OS;
 using Android.Views;
 using Android.Widget;
+using DeviceInfo.Plugin;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+
 
 namespace GuidR.Droid {
     [Activity(Label = "Aalborg Zoo", Theme = "@style/NoTitle.splash")]
@@ -26,25 +28,29 @@ namespace GuidR.Droid {
                 StartActivity(typeof(MainActivity));
             };
 
+            if(CrossDeviceInfo.Current.Version.CompareTo("5.0") >= 0) {
+                setTimeline();
+                HorizontalScrollView animalScroller = FindViewById<HorizontalScrollView>(Resource.Id.animalScroller);
+                HorizontalScrollView timelineScroller = FindViewById<HorizontalScrollView>(Resource.Id.timelineScrollView);
+                //HERFRA
 
-            setTimeline();
-            DoIt();
+                animalScroller.ScrollChange += delegate {
+                    timelineScroller.ScrollTo(animalScroller.ScrollX, animalScroller.ScrollY);
+                };
 
-            HorizontalScrollView animalScroller = FindViewById<HorizontalScrollView>(Resource.Id.animalScroller);
-            HorizontalScrollView timelineScroller = FindViewById<HorizontalScrollView>(Resource.Id.timelineScrollView);
-            //HERFRA
-            // animalScroller.ViewTreeObserver.AddOnScrollChangedListener(this);
+                timelineScroller.ScrollChange += delegate {
+                    animalScroller.ScrollTo(timelineScroller.ScrollX, timelineScroller.ScrollY);
+                };
+            }
+            else {
+                HorizontalScrollView timelineScroller = FindViewById<HorizontalScrollView>(Resource.Id.timelineScrollView);
+                timelineScroller.RemoveAllViews();
+            }
 
-            animalScroller.LayoutParameters.Width = timelineScroller.Width - 2000;
+            SetFeedingtimeBlocks();
 
-            animalScroller.ScrollChange += delegate {
-                timelineScroller.ScrollTo(animalScroller.ScrollX, animalScroller.ScrollY);
-            };
-
-            timelineScroller.ScrollChange += delegate {
-                animalScroller.ScrollTo(timelineScroller.ScrollX, timelineScroller.ScrollY);
-            };
-
+           
+            
         }
 
 
@@ -54,6 +60,7 @@ namespace GuidR.Droid {
 
 
             LinearLayout timeLine = FindViewById<LinearLayout>(Resource.Id.timeLine);
+            timeLine.SetGravity(GravityFlags.CenterVertical);
 
             View blockLine;
 
@@ -84,8 +91,8 @@ namespace GuidR.Droid {
                 TextView timelineElement = (TextView)LayoutInflater.Inflate(Resource.Layout.Text, timelineLayout, false);
                 timelineElement.SetTextSize(Android.Util.ComplexUnitType.Dip, 17);
                 timelineElement.Gravity = GravityFlags.Center;
-                timelineElement.SetTextColor(Color.ParseColor("#000000"));
-                timelineElement.Text = i.ToString() + ".00";
+                timelineElement.SetTextColor(Color.ParseColor("#AAAAAA"));
+                timelineElement.Text = i.ToString("00") + ".00";
                 timelineElement.SetWidth(30 * 5);
                 // timelineElement.Gravity = GravityFlags.Center;
                 timelineLayout.AddView(timelineElement);
@@ -93,7 +100,8 @@ namespace GuidR.Droid {
                 timelineElement = (TextView)LayoutInflater.Inflate(Resource.Layout.Text, timelineLayout, false);
                 timelineElement.Gravity = GravityFlags.Center;
                 timelineElement.SetTextSize(Android.Util.ComplexUnitType.Dip, 17);
-                timelineElement.Text = i.ToString() + ".30";
+                timelineElement.SetTextColor(Color.ParseColor("#FFFFFF"));
+                timelineElement.Text = i.ToString("00") + ".30";
                 timelineElement.SetWidth(30 * 5);
                 timelineElement.Gravity = GravityFlags.Center;
                 timelineLayout.AddView(timelineElement);
@@ -106,7 +114,7 @@ namespace GuidR.Droid {
         }
 
 
-        void DoIt() {
+        void SetFeedingtimeBlocks() {
             List<Animal> TempAnimalList = new List<Animal>();
 
 
@@ -149,7 +157,7 @@ namespace GuidR.Droid {
                 Scheme.AddView(horizontalAnimalLayout);
                 
 
-                LinearLayout.LayoutParams animalTextLL = new LinearLayout.LayoutParams(270, 225);
+                LinearLayout.LayoutParams animalTextLL = new LinearLayout.LayoutParams(240, 225);
                 animalText.LayoutParameters = animalTextLL;
                 if (((animalText as ViewGroup).GetChildAt(0) is ImageView))
                     ((animalText as ViewGroup).GetChildAt(0) as ImageView).SetImageResource((int)a.Image);
@@ -185,15 +193,18 @@ namespace GuidR.Droid {
                     int timeBeforeCurrentFeedingtime = 0;
                     for (int i = 0; i < feedingtimeCounter; i++)
                     {
-                        timeBeforeCurrentFeedingtime += a.FeedingTimes[i].TimeOfDay.Hour * 60 * 5 + a.FeedingTimes[i].TimeOfDay.Minute * 5 + a.FeedingTimes[i].ShowLength;
+                        timeBeforeCurrentFeedingtime += a.FeedingTimes[i].TimeOfDay.Hour * 60 * 5 + a.FeedingTimes[i].TimeOfDay.Minute * 5 + a.FeedingTimes[i].ShowLength * 5 + 25;
                     }
 
 
 
-                     animalBlockParams.LeftMargin = (int)(FT.TimeOfDay.Hour * 60 * 5 + FT.TimeOfDay.Second * 5) - timeBeforeCurrentFeedingtime ;
+                     animalBlockParams.LeftMargin = (int)(FT.TimeOfDay.Hour * 60 + FT.TimeOfDay.Minute)
+                        * 5 + 25 - timeBeforeCurrentFeedingtime ;
 
                     (animalBlock as LinearLayout).SetBackgroundColor(Color.ParseColor("#e6e8ed"));
                     (animalBlock as LinearLayout).LayoutParameters.Height = 225;
+
+
 
 
                     ((animalBlock as ViewGroup).GetChildAt(0) as TextView).Text = (FT.TimeOfDay.Hour.ToString("00") + ":" + FT.TimeOfDay.Minute.ToString("00"));

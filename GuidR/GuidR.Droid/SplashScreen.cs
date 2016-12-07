@@ -10,7 +10,9 @@ namespace GuidR.Droid
         {
             base.OnCreate(bundle);
 
-            AttractionDataBase.InitializeAttraction();
+            if (AttractionDataBase.splashScreenHasRun == false)
+                AttractionDataBase.InitializeAttraction();
+
             InitializeAndroidDependencies();
 
             StartActivity(typeof(MainActivity));
@@ -90,6 +92,7 @@ namespace GuidR.Droid
             AttractionDataBase.SmokeArea2.Pin = Resource.Drawable.Smoke_area_pin;
             AttractionDataBase.Bornezoo.Pin = Resource.Drawable.Playground_Pin;
             AttractionDataBase.zoofariScene.Pin = Resource.Drawable.Playground_Pin;
+            AttractionDataBase.splashScreenHasRun = true;
         }
 
 
