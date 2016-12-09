@@ -22,6 +22,30 @@ namespace GuidR.Droid {
             FindViewById<TextView>(Resource.Id.LatinName).Text = Animal.LatinName;
             FindViewById<TextView>(Resource.Id.AboutAnimal).Text = Animal.Description;
 
+            if(AttractionDataBase.animalsToWatch.Contains(Animal) == false) {
+                FindViewById<ImageView>(Resource.Id.AlarmButton).SetImageResource(Resource.Drawable.Alarm_inactive);
+            }
+            else {
+                FindViewById<ImageView>(Resource.Id.AlarmButton).SetImageResource(Resource.Drawable.Alarm);
+            }
+
+            if(Animal.HasFeedingTime == false || Animal.IsInSeason == false) {
+                FindViewById<ImageView>(Resource.Id.AlarmButton).SetImageResource(0);
+            } else {
+
+                FindViewById<ImageView>(Resource.Id.AlarmButton).Click += delegate {
+                    if (AttractionDataBase.animalsToWatch.Contains(Animal) == false) {
+                        FindViewById<ImageView>(Resource.Id.AlarmButton).SetImageResource(Resource.Drawable.Alarm);
+                        AttractionDataBase.animalsToWatch.Add(Animal);
+                    }
+                    else {
+                        FindViewById<ImageView>(Resource.Id.AlarmButton).SetImageResource(Resource.Drawable.Alarm_inactive);
+                        AttractionDataBase.animalsToWatch.Remove(Animal);
+                    }
+                };
+
+            }
+
             TextView feedingTime = FindViewById<TextView>(Resource.Id.Feedingtime);
 
             if (Animal.HasFeedingTime)

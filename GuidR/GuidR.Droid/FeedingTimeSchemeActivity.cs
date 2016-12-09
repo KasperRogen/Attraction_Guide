@@ -1,4 +1,5 @@
 ﻿using Android.App;
+using Android.Content;
 using Android.Graphics;
 using Android.OS;
 using Android.Views;
@@ -24,6 +25,7 @@ namespace GuidR.Droid {
 
             SetContentView(Resource.Layout.FeedingTimeScheme);
 
+            StartService(new Intent(this, typeof(FeedingTimeNotification)));
 
             Android.Util.DisplayMetrics metrics = Resources.DisplayMetrics;
             feedingtimeLineHeight = (int)(metrics.HeightPixels / 8.5);
@@ -125,7 +127,7 @@ namespace GuidR.Droid {
             Animal animal;
             for (int i = AttractionDataBase.Attractions.Count - 1; i > 0; i--) {
                 Attraction attraction = AttractionDataBase.Attractions[i];
-                if (attraction is Animal && (attraction as Animal).HasFeedingTime) {
+                if (attraction is Animal && (attraction as Animal).HasFeedingTime && (attraction as Animal).IsInSeason) {
                     animal = (attraction as Animal);
                     TempAnimalList.Add(animal);
 
@@ -159,10 +161,16 @@ namespace GuidR.Droid {
                 Scheme.AddView(horizontalAnimalLayout);
                 
 
-                LinearLayout.LayoutParams animalTextLL = new LinearLayout.LayoutParams(240, feedingtimeLineHeight);
+                LinearLayout.LayoutParams animalTextLL = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.FillParent, feedingtimeLineHeight);
                 animalText.LayoutParameters = animalTextLL;
-                if ((animalText as ViewGroup).GetChildAt(0) is ImageView)
+                if ((animalText as ViewGroup).GetChildAt(0) is ImageView) { 
                     ((animalText as ViewGroup).GetChildAt(0) as ImageView).SetImageResource((int)a.Image);
+                    ((animalText as ViewGroup).GetChildAt(0) as ImageView).Click += delegate {
+                        PopupMenu menu = new PopupMenu(this, ((animalText as ViewGroup).GetChildAt(0) as ImageView));
+                        menu.MenuInflater.Inflate(Resource.Layout.FeedingAlarmMenu, menu.Menu);
+                        menu.Show();
+                    };
+                }
                 if ((animalText as ViewGroup).GetChildAt(1) is LinearLayout)
                     ((animalText as ViewGroup).GetChildAt(1) as LinearLayout).LayoutParameters.Height = feedingtimeLineHeight;
                 Text.AddView(animalText);

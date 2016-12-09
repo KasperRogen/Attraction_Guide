@@ -5,7 +5,7 @@ namespace GuidR
 {
     public static class AttractionDataBase
     {
-
+        public static List<Animal> animalsToWatch = new List<Animal>();
         public static bool splashScreenHasRun = false;
 
         public static PlatformDependency Platform { get; set; }
@@ -51,6 +51,20 @@ namespace GuidR
 
         private static void InitializeAnimals()
         {
+
+
+            FeedingTime bearFeeding = new FeedingTime(new DateTime(2016, 1, 1), new DateTime(2016, 12, DateTime.DaysInMonth(2016, 12)), new Time(10, 56), 30, new int[] { 2, 3, 6, 7 });
+            FeedingTime seaLionFeeding = new FeedingTime(new DateTime(2016, 5, 1), new DateTime(2016, 10, DateTime.DaysInMonth(2016, 10)), new Time(10, 56), 45, new int[] { 2, 3, 6, 7 });
+            FeedingTime seaLionFeeding2 = new FeedingTime(new DateTime(2016, 5, 1), new DateTime(2016, 10, DateTime.DaysInMonth(2016, 10)), new Time(10, 56), 45, new int[] { 2, 3, 6, 7 });
+            FeedingTime elephantFeeding = new FeedingTime(new DateTime(2016, 5, 1), new DateTime(2016, 8, DateTime.DaysInMonth(2016, 8)), new Time(10, 56), 60, new int[] { 2, 3, 6, 7 });
+            FeedingTime tigerFeeding = new FeedingTime(new DateTime(2016, 1, 1), new DateTime(2016, 12, DateTime.DaysInMonth(2016, 12)), new Time(10, 56), 30, new int[] { 2, 3, 6, 7 });
+            FeedingTime penguinFeeding = new FeedingTime(new DateTime(2016, 5, 1), new DateTime(2016, 10, DateTime.DaysInMonth(2016, 10)), new Time(10, 56), 45, new int[] { 1, 2, 3, 4, 5, 6, 7 });
+            FeedingTime penguinFeeding2 = new FeedingTime(new DateTime(2016, 5, 1), new DateTime(2016, 10, DateTime.DaysInMonth(2016, 10)), new Time(10, 56), 45, new int[] { 1, 2, 3, 4, 5, 6, 7 });
+            FeedingTime lionFeeding = new FeedingTime(new DateTime(2016, 1, 1), new DateTime(2016, 12, DateTime.DaysInMonth(2016, 12)), new Time(10, 56), 30, new int[] { 2, 3, 6, 7 });
+            FeedingTime polarBearFeeding = new FeedingTime(new DateTime(2016, 1, 1), new DateTime(2016, 12, DateTime.DaysInMonth(2016, 12)), new Time(10, 56), 30, new int[] { 2, 3, 6, 7 });
+
+
+
             // Ikke godt. Virker ikke på andet end Android, vil fikse snart!
             Coordinates baboonCoordinates = new Coordinates(57.037463, 9.898570);
             string baboonDescription = "Kappebavianen lever i den østlige del af det afrikanske kontinent, i lande som Etiopien, Somalia, Sudan og Eritrea. " +
@@ -77,7 +91,7 @@ namespace GuidR
                                      "Brunbjørnens vægt og kropsmål afhænger af hvilken underart der tages udgangspunkt i. " +
                                      "Dens vægt varierer mellem 70-350 kg, og de bliver 1,7-2,5 meter i længden. " +
                                      "I naturen bliver de omkring 20 år gamle, mens de i zoologiske haver kan blive op til 30 år gamle.";
-            FeedingTime bearFeeding = new FeedingTime(new DateTime(2016, 1, 1), new DateTime(2016, 12, DateTime.DaysInMonth(2016, 12)), new Time(13, 45), 30, new int[] { 2, 3, 6, 7 });
+
             Bear = new Animal("Brunbjørn", bearDescription, bearCoordinates, "Ursus Arctos", bearFeeding);
 
             Coordinates seaLionCoordinates = new Coordinates(57.036286, 9.898246);
@@ -92,8 +106,6 @@ namespace GuidR
                                         "Voksne hanner vejer i gennemsnit 275 kg og er 2,2 meter lange. Hunner er lidt mindre, med et gennemsnit på 91 kg og 1,8 meter i længden. " +
                                         "I naturen blev den ældste dokumenterede søløve 17 år gammel, hvor den ældste i fangenskab blev 31 år gammel. " +
                                         "Alderen af en søløve kan fastgøres ved at tælle antallet af ringe på et tværsnit af dens tænder.";
-            FeedingTime seaLionFeeding = new FeedingTime(new DateTime(2016, 5, 1), new DateTime(2016, 10, DateTime.DaysInMonth(2016, 10)), new Time(13, 45), 45, new int[] { 2, 3, 6, 7 });
-            FeedingTime seaLionFeeding2 = new FeedingTime(new DateTime(2016, 5, 1), new DateTime(2016, 10, DateTime.DaysInMonth(2016, 10)), new Time(16, 30), 45, new int[] { 2, 3, 6, 7 });
 
             SeaLion = new Animal("Søløve", seaLionDescription, seaLionCoordinates, "Zalophus Californianus", seaLionFeeding, seaLionFeeding2);
 
@@ -123,7 +135,6 @@ namespace GuidR
                                          "Den afrikanske elefant bliver op til 70 år gammel i naturen og 80 år i fangeskab.\n\n" +
                                          "Elefanter er vegetarer og spiser ting som blade, rødder, bark og frugt. De spiser mellem 100 og 300 kg mad, og drikker omkring 190 liter vand, hver dag!";
 
-            FeedingTime elephantFeeding = new FeedingTime(new DateTime(2016, 5, 1), new DateTime(2016, 8, DateTime.DaysInMonth(2016, 8)), new Time(13, 00), 60, new int[] { 2, 3, 6, 7 });
             Elephant = new Animal("Elefant", elephantDescription, elephantCoordinates, "Loxodonta Africana", elephantFeeding);
 
             Coordinates giraffeCoordinates = new Coordinates(57.035251, 9.897022);
@@ -137,7 +148,6 @@ namespace GuidR
                                         "Giraffen er drøvtygger og har derfor 4 maver. Under en rejse bruger giraffen tiden på at tygge drøv for at få det meste ud af føden.";
             Giraffe = new Animal("Giraf", giraffeDescription, giraffeCoordinates, "Giraffa Camelopardalis Rotschildi");
 
-            FeedingTime polarBearFeeding = new FeedingTime(new DateTime(2016, 1, 1), new DateTime(2016, 12, DateTime.DaysInMonth(2016, 12)), new Time(13, 45), 30, new int[] { 2, 3, 6, 7 });
             Coordinates polarBearCoordinates = new Coordinates(57.036717, 9.896924);
             string polarBearDescription = "Isbjørne findes i størstedelen af Nordpolen, og er også blevet set i de sydligste dele af Island og Grønland. " +
                                           "Om vinteren kan man finde dem gående langs den sydlige kyst eller den nordlige kant af Nordpolen. " +
@@ -185,7 +195,7 @@ namespace GuidR
                                       "I fangenskab lever lemuren i gennemsnit 30 år, mens de i naturen lever omkring 27 år.";
             Lemur = new Animal("Lemur", lemurDescription, lemurCoordinates, "Lemur Catta");
 
-            FeedingTime lionFeeding = new FeedingTime(new DateTime(2016, 1, 1), new DateTime(2016, 12, DateTime.DaysInMonth(2016, 12)), new Time(13, 45), 30, new int[] { 2, 3, 6, 7 });
+
             Coordinates lionCoordinates = new Coordinates(57.036185, 9.896652);
             string lionDescription = "Den asiatiske løve var før i tiden meget udbredt helt fra Grækenland til det centrale Indien, " +
                                      "men på grund af krybskytteri og ødelæggelse af habitater findes den asiatiske løve nu kun Girskoven i det nordvestlige Indien. " +
@@ -202,8 +212,7 @@ namespace GuidR
                                      "I naturen lever løver mellem 12 og 15 år, mens de i fangenskab i gennemsnit bliver 25 år gamle.";
             Lion = new Animal("Løve", lionDescription, lionCoordinates, "Panthera leo persica", lionFeeding);
 
-            FeedingTime penguinFeeding = new FeedingTime(new DateTime(2016, 5, 1), new DateTime(2016, 10, DateTime.DaysInMonth(2016, 10)), new Time(5, 0), 45, new int[] { 1, 2, 3, 4, 5, 6, 7 });
-            FeedingTime penguinFeeding2 = new FeedingTime(new DateTime(2016, 5, 1), new DateTime(2016, 10, DateTime.DaysInMonth(2016, 10)), new Time(20, 0), 45, new int[] { 1, 2, 3, 4, 5, 6, 7 });
+
             Coordinates penquinCoordinates = new Coordinates(57.036389, 9.898301);
             string penquinDescription = "Humboldt-pingvinen er knyttet til kun et sted på Jorden. " +
                                         "De lever ved den sydamerikanske vestkyst i Chile og Peru, et område også kendetegnet " +
@@ -256,7 +265,7 @@ namespace GuidR
                                       "Zebraen vil nogle gange arbejde sammen med andre dyr, som fx strudse og antiloper, for at holde øje med rovdyr mens dyrene græsser.";
             Zebra = new Animal("Zebra", zebraDescription, zebraCoordinates, "Equus Grevyi");
 
-            FeedingTime tigerFeeding = new FeedingTime(new DateTime(2016, 1, 1), new DateTime(2016, 12, DateTime.DaysInMonth(2016, 12)), new Time(00, 00), 30, new int[] { 2, 3, 6, 7 });
+
             Coordinates tigerCoordinates = new Coordinates(57.036355, 9.896779);
             string tigerDescription = "Der er 8 anerkendte underarter af tiger-arten, hvoraf 3 af arterne menes at være uddøde. " +
                                       "De nulevende arter er den Sibiriske tiger, Bengalske tiger, Indo-kinesiske tiger, Syd-kinesiske tiger og, den som er i Aalborg Zoo, Sumatra-tigeren. " +

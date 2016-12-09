@@ -30,6 +30,7 @@ namespace GuidR
             }
         }
 
+
         // Formates the time to "HH:MM"
         public override string ToString ()
         {

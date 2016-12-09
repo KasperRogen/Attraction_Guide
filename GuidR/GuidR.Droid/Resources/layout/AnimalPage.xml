@@ -114,7 +114,7 @@
                 android:id="@+id/Feedingtime"
                 android:text=" 12:15"
                 android:textSize="16sp"
-                android:gravity="left"
+                android:gravity="center"
                 android:textStyle="normal|bold" />
 
         </LinearLayout>
@@ -127,7 +127,7 @@
             android:minWidth="25px"
             android:layout_marginTop="10dp"
             android:orientation="horizontal"
-            android:weightSum="1">
+            android:weightSum="2">
             <Button
                 android:id="@+id/mapButton"
                 android:layout_width="0dp"
@@ -135,6 +135,14 @@
                 android:minHeight="1dp"
                 android:layout_height="80dp"
                 android:drawableTop="@drawable/map_pin"
+                android:background="@null" />
+            <ImageView
+                android:id="@+id/AlarmButton"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:minHeight="1dp"
+                android:layout_height="80dp"
+                android:src="@drawable/Alarm"
                 android:background="@null" />
 
         </LinearLayout>
