@@ -5,13 +5,23 @@ using Android.OS;
 using Android.Gms.Maps.Model;
 using Android.Views;
 using Android.Widget;
+using Android.Locations;
+using System.Collections.Generic;
+using System.Linq;
+using Android.Runtime;
+using Android.Graphics;
+using Android.Content.PM;
 
 namespace GuidR.Droid
 {
-    [Activity(Label = "Aalborg Zoo", Theme = "@style/NoTitle.splash")]
-    public class MapActivity : Activity, IOnMapReadyCallback, Android.Gms.Maps.GoogleMap.IInfoWindowAdapter
-    {
+    [Activity(Label = "Aalborg Zoo", Theme = "@style/NoTitle.splash", ScreenOrientation = ScreenOrientation.Portrait)]
+    public class MapActivity : Activity, IOnMapReadyCallback, Android.Gms.Maps.GoogleMap.IInfoWindowAdapter, ILocationListener {
         private GoogleMap mMap;
+        LocationManager locationManager;
+        Location myLocation;
+        string locationProvider;
+
+        Circle positionMarker;
 
         public static Attraction Attraction { get; set; }
 
@@ -67,9 +77,8 @@ namespace GuidR.Droid
                 {
                     throw new Exception("Caught an exception at: " + attraction.Name);
                 }
-            }
 
-            
+            }
 
             mMap.SetInfoWindowAdapter(this);
         }
@@ -86,7 +95,19 @@ namespace GuidR.Droid
                 StartActivity(typeof(MainActivity));
             };
 
+            InitializeLocationManager();
+            locationManager.RequestLocationUpdates(locationProvider, 2000, 0, this);
             SetUpMap();
+        }
+
+        void InitializeLocationManager() {
+            locationManager = Application.Context.GetSystemService("location") as LocationManager;
+        Criteria criteriaForLocationService = new Criteria {
+                Accuracy = Accuracy.Fine,
+                PowerRequirement = Power.NoRequirement
+            };
+            locationProvider = locationManager.GetBestProvider(criteriaForLocationService, true);
+            //this.RunOnUiThread(() => locationManager.RequestLocationUpdates(locationProvider, 1000, 1, this));
         }
 
         private void SetUpMap ()
@@ -95,6 +116,64 @@ namespace GuidR.Droid
                 FragmentManager.FindFragmentById<MapFragment>(Resource.Id.map).GetMapAsync(this);
 
         }
+
+        protected override void OnResume() {
+            base.OnResume();
+            locationManager.RequestLocationUpdates(locationProvider, 2000, 0, this);
+        }
+
+        protected override void OnPause() {
+            base.OnPause();
+            locationManager.RemoveUpdates(this);
+        }
+
+        public void OnProviderDisabled(string provider) {
+            throw new NotImplementedException();
+        }
+
+        public void OnProviderEnabled(string provider) {
+            throw new NotImplementedException();
+        }
+
+        public void OnStatusChanged(string provider, [GeneratedEnum] Availability status, Bundle extras) {
+            throw new NotImplementedException();
+        }
+
+
+        public void OnLocationChanged(Location location) {
+            Location currentLocation = location;
+            myLocation = location;
+            if (currentLocation == null) {
+                Console.WriteLine("Unable to determine your location. Try again in a short while.");
+            }
+            else {
+                Console.WriteLine("Ø****************************************************************");
+                Console.WriteLine("Ø****************************************************************");
+                Console.WriteLine("Ø****************************************************************");
+                Console.WriteLine("Ø****************************************************************");
+                Console.WriteLine("Ø****************************************************************");
+                Console.WriteLine("Ø****************************************************************");
+                Console.WriteLine("Ø****************************************************************");
+                Console.WriteLine("Ø****************************************************************");
+                Console.WriteLine(string.Format("{0:f6},{1:f6}", currentLocation.Latitude, currentLocation.Longitude));
+                myLocation = location;
+                Console.WriteLine("Ø****************************************************************: " + myLocation);
+
+                if (positionMarker != null)
+                    positionMarker.Remove();
+                var circleOptions = new CircleOptions();
+                circleOptions.InvokeCenter(new LatLng(location.Latitude, location.Longitude));
+                circleOptions.InvokeRadius(20);
+                circleOptions.InvokeFillColor(0X66FF0000);
+                circleOptions.InvokeStrokeColor(0X66FF0000);
+                circleOptions.InvokeStrokeWidth(0);
+               positionMarker = mMap.AddCircle(circleOptions);
+                //.SetTitle("")
+                //.SetIcon(BitmapDescriptorFactory.FromResource(Resource.Drawable.your_location)));
+
+            }
+        }
+
     }
 
     

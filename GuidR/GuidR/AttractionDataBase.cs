@@ -7,7 +7,6 @@ namespace GuidR
     {
         public static List<Animal> animalsToWatch = new List<Animal>();
         public static bool splashScreenHasRun = false;
-
         public static PlatformDependency Platform { get; set; }
 
         public static List<Attraction> Attractions = new List<Attraction>();
@@ -53,15 +52,15 @@ namespace GuidR
         {
 
 
-            FeedingTime bearFeeding = new FeedingTime(new DateTime(2016, 1, 1), new DateTime(2016, 12, DateTime.DaysInMonth(2016, 12)), new Time(10, 56), 30, new int[] { 2, 3, 6, 7 });
-            FeedingTime seaLionFeeding = new FeedingTime(new DateTime(2016, 5, 1), new DateTime(2016, 10, DateTime.DaysInMonth(2016, 10)), new Time(10, 56), 45, new int[] { 2, 3, 6, 7 });
-            FeedingTime seaLionFeeding2 = new FeedingTime(new DateTime(2016, 5, 1), new DateTime(2016, 10, DateTime.DaysInMonth(2016, 10)), new Time(10, 56), 45, new int[] { 2, 3, 6, 7 });
-            FeedingTime elephantFeeding = new FeedingTime(new DateTime(2016, 5, 1), new DateTime(2016, 8, DateTime.DaysInMonth(2016, 8)), new Time(10, 56), 60, new int[] { 2, 3, 6, 7 });
-            FeedingTime tigerFeeding = new FeedingTime(new DateTime(2016, 1, 1), new DateTime(2016, 12, DateTime.DaysInMonth(2016, 12)), new Time(10, 56), 30, new int[] { 2, 3, 6, 7 });
-            FeedingTime penguinFeeding = new FeedingTime(new DateTime(2016, 5, 1), new DateTime(2016, 10, DateTime.DaysInMonth(2016, 10)), new Time(10, 56), 45, new int[] { 1, 2, 3, 4, 5, 6, 7 });
-            FeedingTime penguinFeeding2 = new FeedingTime(new DateTime(2016, 5, 1), new DateTime(2016, 10, DateTime.DaysInMonth(2016, 10)), new Time(10, 56), 45, new int[] { 1, 2, 3, 4, 5, 6, 7 });
-            FeedingTime lionFeeding = new FeedingTime(new DateTime(2016, 1, 1), new DateTime(2016, 12, DateTime.DaysInMonth(2016, 12)), new Time(10, 56), 30, new int[] { 2, 3, 6, 7 });
-            FeedingTime polarBearFeeding = new FeedingTime(new DateTime(2016, 1, 1), new DateTime(2016, 12, DateTime.DaysInMonth(2016, 12)), new Time(10, 56), 30, new int[] { 2, 3, 6, 7 });
+            FeedingTime bearFeeding = new FeedingTime(new DateTime(2016, 1, 1), new DateTime(2016, 12, DateTime.DaysInMonth(2016, 12)), new Time(13, 45), 30, new int[] { 2, 3, 6, 7 });
+            FeedingTime seaLionFeeding = new FeedingTime(new DateTime(2016, 5, 1), new DateTime(2016, 10, DateTime.DaysInMonth(2016, 10)), new Time(11, 30), 45, new int[] { 2, 3, 6, 7 });
+            FeedingTime seaLionFeeding2 = new FeedingTime(new DateTime(2016, 5, 1), new DateTime(2016, 10, DateTime.DaysInMonth(2016, 10)), new Time(14, 30), 45, new int[] { 2, 3, 6, 7 });
+            FeedingTime elephantFeeding = new FeedingTime(new DateTime(2016, 5, 1), new DateTime(2016, 8, DateTime.DaysInMonth(2016, 8)), new Time(13, 00), 60, new int[] { 2, 3, 6, 7 });
+            FeedingTime tigerFeeding = new FeedingTime(new DateTime(2016, 1, 1), new DateTime(2016, 12, DateTime.DaysInMonth(2016, 12)), new Time(13, 45), 30, new int[] { 2, 3, 6, 7 });
+            FeedingTime penguinFeeding = new FeedingTime(new DateTime(2016, 5, 1), new DateTime(2016, 10, DateTime.DaysInMonth(2016, 10)), new Time(11, 15), 45, new int[] { 1, 2, 3, 4, 5, 6, 7 });
+            FeedingTime penguinFeeding2 = new FeedingTime(new DateTime(2016, 5, 1), new DateTime(2016, 10, DateTime.DaysInMonth(2016, 10)), new Time(14, 15), 45, new int[] { 1, 2, 3, 4, 5, 6, 7 });
+            FeedingTime lionFeeding = new FeedingTime(new DateTime(2016, 1, 1), new DateTime(2016, 12, DateTime.DaysInMonth(2016, 12)), new Time(13, 45), 30, new int[] { 2, 3, 6, 7 });
+            FeedingTime polarBearFeeding = new FeedingTime(new DateTime(2016, 1, 1), new DateTime(2016, 12, DateTime.DaysInMonth(2016, 12)), new Time(13, 45), 30, new int[] { 2, 3, 6, 7 });
 
 
 

@@ -498,6 +498,7 @@
     <AndroidResource Include="Resources\drawable-hdpi\Alarm.png" />
     <AndroidResource Include="Resources\drawable-hdpi\Alarm_inactive.png" />
     <AndroidResource Include="Resources\layout\FeedingAlarmMenu.xml" />
+    <AndroidResource Include="Resources\drawable-hdpi\your_location.png" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildExtensionsPath)\Novell\Novell.MonoDroid.CSharp.targets" />
