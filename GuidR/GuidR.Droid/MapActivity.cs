@@ -39,7 +39,7 @@ namespace GuidR.Droid
             if (attraction is Animal) {
                 TextView feedingTime = view.FindViewById<TextView>(Resource.Id.Map_Info_Window_Feeding_Time);
 
-                if ((attraction as Animal).HasFeedingTime) {
+                if ((attraction as Animal).HasFeedingTime && (attraction as Animal).IsInSeason) {
                     if ((attraction as Animal).NextFeeding.IsPassed)
                         feedingTime.Text = "Ingen fodring i dag";
                     else

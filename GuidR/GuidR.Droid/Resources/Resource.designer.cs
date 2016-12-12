@@ -674,19 +674,16 @@ namespace GuidR.Droid
 			public const int Toilet_ved_Krokodillerne = 2130837642;
 			
 			// aapt resource value: 0x7f02008b
-			public const int your_location = 2130837643;
+			public const int Zebra = 2130837643;
 			
 			// aapt resource value: 0x7f02008c
-			public const int Zebra = 2130837644;
+			public const int Zebra_Pin = 2130837644;
 			
 			// aapt resource value: 0x7f02008d
-			public const int Zebra_Pin = 2130837645;
+			public const int ZebraHeader = 2130837645;
 			
 			// aapt resource value: 0x7f02008e
-			public const int ZebraHeader = 2130837646;
-			
-			// aapt resource value: 0x7f02008f
-			public const int ZoofariScenen = 2130837647;
+			public const int ZoofariScenen = 2130837646;
 			
 			static Drawable()
 			{

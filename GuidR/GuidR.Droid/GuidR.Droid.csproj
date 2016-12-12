@@ -309,12 +309,6 @@
     <AndroidResource Include="Resources\drawable-hdpi\SeaLionHeader.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <XamarinComponentReference Include="DeviceInfoPlugin">
-      <Visible>False</Visible>
-      <Version>1.0.0.2</Version>
-    </XamarinComponentReference>
-  </ItemGroup>
-  <ItemGroup>
     <AndroidResource Include="Resources\layout\Map.xml" />
   </ItemGroup>
   <ItemGroup>
@@ -498,9 +492,13 @@
     <AndroidResource Include="Resources\drawable-hdpi\Alarm.png" />
     <AndroidResource Include="Resources\drawable-hdpi\Alarm_inactive.png" />
     <AndroidResource Include="Resources\layout\FeedingAlarmMenu.xml" />
-    <AndroidResource Include="Resources\drawable-hdpi\your_location.png" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <XamarinComponentReference Include="DeviceInfoPlugin">
+      <Visible>False</Visible>
+      <Version>1.0.0.2</Version>
+    </XamarinComponentReference>
+  </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Novell\Novell.MonoDroid.CSharp.targets" />
   <Import Project="..\..\packages\Xamarin.GooglePlayServices.Basement.29.0.0.2\build\Xamarin.GooglePlayServices.Basement.targets" Condition="Exists('..\..\packages\Xamarin.GooglePlayServices.Basement.29.0.0.2\build\Xamarin.GooglePlayServices.Basement.targets')" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

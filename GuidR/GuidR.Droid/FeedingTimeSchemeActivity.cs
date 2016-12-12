@@ -8,7 +8,7 @@ using DeviceInfo.Plugin;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-
+using System.Threading;
 
 namespace GuidR.Droid {
     [Activity(Label = "Aalborg Zoo", Theme = "@style/NoTitle.splash")]
@@ -24,7 +24,8 @@ namespace GuidR.Droid {
             base.OnCreate(bundle);
 
             SetContentView(Resource.Layout.FeedingTimeScheme);
-
+            HorizontalScrollView animalScroller;
+            HorizontalScrollView timelineScroller;
             StartService(new Intent(this, typeof(FeedingTimeNotification)));
 
             Android.Util.DisplayMetrics metrics = Resources.DisplayMetrics;
@@ -36,30 +37,61 @@ namespace GuidR.Droid {
                 StartActivity(typeof(MainActivity));
             };
             
-            if(CrossDeviceInfo.Current.Version.CompareTo("6.0") >= 0) {
                 setTimeline();
-                HorizontalScrollView animalScroller = FindViewById<HorizontalScrollView>(Resource.Id.animalScroller);
-                HorizontalScrollView timelineScroller = FindViewById<HorizontalScrollView>(Resource.Id.timelineScrollView);
-                //HERFRA
-
-                animalScroller.ScrollChange += delegate {
-                    timelineScroller.ScrollTo(animalScroller.ScrollX, animalScroller.ScrollY);
-                };
-
-                timelineScroller.ScrollChange += delegate {
-                    animalScroller.ScrollTo(timelineScroller.ScrollX, timelineScroller.ScrollY);
-                };
-            }
-            else {
-                HorizontalScrollView timelineScroller = FindViewById<HorizontalScrollView>(Resource.Id.timelineScrollView);
-                timelineScroller.RemoveAllViews();
-            }
+                animalScroller = FindViewById<HorizontalScrollView>(Resource.Id.animalScroller);
+                timelineScroller = FindViewById<HorizontalScrollView>(Resource.Id.timelineScrollView);
 
             SetFeedingtimeBlocks();
 
-           
-            
+
+            scrollViewSyncer(animalScroller, timelineScroller);
+
         }
+
+
+        public void scrollViewSyncer(HorizontalScrollView scrollView, HorizontalScrollView scrollview2)
+        {
+
+            bool initialRun = true;
+            int currentTime = (DateTime.Now.Hour - 1) * 5 * 60 + DateTime.Now.Minute * 5;
+            int scrolledAt = 0;
+            int TimerWait = 30;
+            Timer _timer;
+
+
+
+
+            Thread t = new Thread(() =>
+            {
+
+                _timer = new Timer(o =>
+                {
+                    if (scrollView.ScrollX < currentTime && initialRun == true) {
+                        RunOnUiThread(() =>
+                       {
+                           scrollView.ScrollTo(scrolledAt+=12, 0);
+                           scrollview2.ScrollTo(scrolledAt+=12, 0);
+                       });
+                    } else
+                    {
+                        initialRun = false;
+                        scrollview2.ScrollTo(scrollView.ScrollX, 0);
+                    }
+
+                },
+                      null,
+                      0,
+                      TimerWait);
+            });
+            t.Start();
+        }
+
+
+
+
+
+
+
 
         void setTimeline() {
 
