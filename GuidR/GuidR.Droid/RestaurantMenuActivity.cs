@@ -24,27 +24,28 @@ namespace GuidR.Droid
             Button restaurant1_irl = FindViewById<Button>(Resource.Id.restaurantButton1);
             Button restaurant2_irl = FindViewById<Button>(Resource.Id.restaurantButton2);
             Button restaurant3_irl = FindViewById<Button>(Resource.Id.restaurantButton3);
+            Button restaurant4_irl = FindViewById<Button>(Resource.Id.restaurantButton4);
+
 
 
             restaurant1_irl.Click += delegate
             {
-                LoadRestaurant(AttractionDataBase.Skovbakken);
-                MapActivity.Attraction = Facility;
-                StartActivity(typeof(MapActivity));
+                LoadFacilityPage(AttractionDataBase.Skovbakken);
             };
 
             restaurant2_irl.Click += delegate
             {
-                LoadRestaurant(AttractionDataBase.CasaFamilia);
-                MapActivity.Attraction = Facility;
-                StartActivity(typeof(MapActivity));
+                LoadFacilityPage(AttractionDataBase.CasaFamilia);
             };
 
             restaurant3_irl.Click += delegate
             {
-                LoadRestaurant(AttractionDataBase.SelfGrill);
-                MapActivity.Attraction = Facility;
-                StartActivity(typeof(MapActivity));
+                LoadFacilityPage(AttractionDataBase.SelfGrill);
+            };
+
+            restaurant4_irl.Click += delegate
+            {
+                LoadFacilityPage(AttractionDataBase.PlaygroundKiosk);
             };
 
 
@@ -53,9 +54,11 @@ namespace GuidR.Droid
                 StartActivity(typeof(MainActivity));
             };
         }
-            public void LoadRestaurant(Facility facility)
-            {
-                RestaurantMenuActivity.Facility = facility;
-            }
+        void LoadFacilityPage(Facility facility)
+        {
+            //FindViewById<ImageView>(Resource.Id.HeaderImage) = 
+            IndependentFacilityActivity.Facility = facility;
+            StartActivity(typeof(IndependentFacilityActivity));
+        }
     }
 }

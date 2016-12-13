@@ -37,7 +37,7 @@ namespace GuidR
         public static Facility SelfGrill { get; set; }
         public static Facility Bornezoo { get; set; }
         public static Facility zoofariScene { get; set; }
-        public static Facility Playground { get; set; }
+        public static Facility Playground1_irl { get; set; }
 
         public static void InitializeAttraction()
         {
@@ -349,7 +349,7 @@ namespace GuidR
             Time playgroundOpen = new Time(8);
             Time PlaygroundClosed = new Time(16);
 
-            Playground = new Facility("Legepladsen", PlaygroundDescription, PlaygroundCoordinates, playgroundOpen, PlaygroundClosed, Playground);
+            Playground1_irl = new Facility("Legepladsen", PlaygroundDescription, PlaygroundCoordinates, playgroundOpen, PlaygroundClosed, Playground1_irl);
 
             Coordinates selfGrillCoordinates = new Coordinates(57.03643918, 9.89743574);
             string selfGrillDescription = "(REPLACE) Pak madkurven og besøg familieområdet i Aalborg Zoo, hvor du har mulighed for at grille din" +

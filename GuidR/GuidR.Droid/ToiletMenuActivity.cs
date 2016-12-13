@@ -29,38 +29,27 @@ namespace GuidR.Droid
 
             toilet1_irl.Click += delegate
             {
-                LoadToilet(AttractionDataBase.Toilet1);   
-                MapActivity.Attraction = Facility;
-                StartActivity(typeof(MapActivity));
-                
+                LoadFacilityPage(AttractionDataBase.Toilet1);
             };
 
             toilet2_irl.Click += delegate
             {
-                LoadToilet(AttractionDataBase.Toilet2);
-                MapActivity.Attraction = Facility;
-                StartActivity(typeof(MapActivity));
+                LoadFacilityPage(AttractionDataBase.Toilet2);
             };
 
             toilet3_irl.Click += delegate
             {
-                LoadToilet(AttractionDataBase.Toilet3);
-                MapActivity.Attraction = Facility;
-                StartActivity(typeof(MapActivity));
+                LoadFacilityPage(AttractionDataBase.Toilet3);
             };
 
             toilet4_irl.Click += delegate
             {
-                LoadToilet(AttractionDataBase.Toilet4);
-                MapActivity.Attraction = Facility;
-                StartActivity(typeof(MapActivity));
+                LoadFacilityPage(AttractionDataBase.Toilet4);
             };
 
             toilet5_irl.Click += delegate
             {
-                LoadToilet(AttractionDataBase.Toilet5);
-                MapActivity.Attraction = Facility;
-                StartActivity(typeof(MapActivity));
+                LoadFacilityPage(AttractionDataBase.Toilet5);
             };
 
 
@@ -70,9 +59,11 @@ namespace GuidR.Droid
             };
 
         }
-            public void LoadToilet(Facility facility)
-            {
-                ToiletMenuActivity.Facility = facility;
-            }
+        void LoadFacilityPage(Facility facility)
+        {
+            //FindViewById<ImageView>(Resource.Id.HeaderImage) = 
+            IndependentFacilityActivity.Facility = facility;
+            StartActivity(typeof(IndependentFacilityActivity));
+        }
     }
 }

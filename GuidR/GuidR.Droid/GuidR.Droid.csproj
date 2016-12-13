@@ -13,7 +13,7 @@
     <AndroidResgenFile>Resources\Resource.designer.cs</AndroidResgenFile>
     <AndroidApplication>True</AndroidApplication>
     <AndroidUseLatestPlatformSdk>True</AndroidUseLatestPlatformSdk>
-    <TargetFrameworkVersion>v7.0</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v6.0</TargetFrameworkVersion>
     <AssemblyName>GuidR.Droid</AssemblyName>
     <AndroidManifest>Properties\AndroidManifest.xml</AndroidManifest>
     <NuGetPackageImportStamp>
@@ -79,12 +79,12 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AndroidDependency.cs" />
     <Compile Include="AnimalButton.cs" />
     <Compile Include="FacilitiesMenuActivity.cs" />
     <Compile Include="FeedingTimeNotification.cs" />
     <Compile Include="IndependentAnimalActivity.cs" />
     <Compile Include="AnimalMenuActivity.cs" />
+    <Compile Include="IndependentFacilityActivity.cs" />
     <Compile Include="InformationActivity.cs" />
     <Compile Include="MapActivity.cs" />
     <Compile Include="NewsActivity.cs" />
@@ -396,9 +396,6 @@
     <AndroidResource Include="Resources\drawable-hdpi\Toilet3_irl.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable-hdpi\Toilet4_irl.png" />
-  </ItemGroup>
-  <ItemGroup>
     <AndroidResource Include="Resources\drawable-hdpi\Toilet5_irl.png" />
   </ItemGroup>
   <ItemGroup>
@@ -461,9 +458,6 @@
     <AndroidResource Include="Resources\drawable-hdpi\Smoke_Area2.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable-hdpi\Toilet_ved_Krokodillerne.png" />
-  </ItemGroup>
-  <ItemGroup>
     <AndroidResource Include="Resources\drawable-hdpi\Toilet1_ved_chimpanserne.png" />
   </ItemGroup>
   <ItemGroup>
@@ -492,11 +486,34 @@
     <AndroidResource Include="Resources\drawable-hdpi\Alarm.png" />
     <AndroidResource Include="Resources\drawable-hdpi\Alarm_inactive.png" />
     <AndroidResource Include="Resources\layout\FeedingAlarmMenu.xml" />
+    <AndroidResource Include="Resources\layout\FacilityPage.xml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\drawable-hdpi\ZoofariScenenHeader.jpg" />
+    <AndroidResource Include="Resources\drawable-hdpi\bornezooHeader.jpg" />
+    <AndroidResource Include="Resources\drawable-hdpi\CasafamiliaHeader.jpg" />
+    <AndroidResource Include="Resources\drawable-hdpi\grill_selvHeader.jpg" />
+    <AndroidResource Include="Resources\drawable-hdpi\PlaygroundHeader.jpg" />
+    <AndroidResource Include="Resources\drawable-hdpi\PlaygroundKioskHeader.jpg" />
+    <AndroidResource Include="Resources\drawable-hdpi\SkovBakkenHeader.jpg" />
+    <AndroidResource Include="Resources\drawable-hdpi\Smoke_Area1Header.jpg" />
+    <AndroidResource Include="Resources\drawable-hdpi\Smoke_Area2Header.jpg" />
+    <AndroidResource Include="Resources\drawable-hdpi\Toilet1_ved_krokodillerneHeader.jpg" />
+    <AndroidResource Include="Resources\drawable-hdpi\Toilet1Header.jpg" />
+    <AndroidResource Include="Resources\drawable-hdpi\Toilet_ved_Krokodillerne.png" />
   </ItemGroup>
   <ItemGroup>
     <XamarinComponentReference Include="DeviceInfoPlugin">
       <Visible>False</Visible>
       <Version>1.0.0.2</Version>
+    </XamarinComponentReference>
+    <XamarinComponentReference Include="googleplayservices-maps">
+      <Visible>False</Visible>
+      <Version>29.0.0.2</Version>
+    </XamarinComponentReference>
+    <XamarinComponentReference Include="xamandroidsupportdesign">
+      <Visible>False</Visible>
+      <Version>24.2.1.0</Version>
     </XamarinComponentReference>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Novell\Novell.MonoDroid.CSharp.targets" />

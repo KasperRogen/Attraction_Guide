@@ -28,23 +28,17 @@ namespace GuidR.Droid
 
             playground1_irl.Click += delegate
             {
-                LoadPlayGround(AttractionDataBase.Playground);
-                MapActivity.Attraction = Facility;
-                StartActivity(typeof(MapActivity));
+                LoadFacilityPage(AttractionDataBase.Playground1_irl);
             };
 
             playground2_irl.Click += delegate
             {
-                LoadPlayGround(AttractionDataBase.Bornezoo);
-                MapActivity.Attraction = Facility;
-                StartActivity(typeof(MapActivity));
+                LoadFacilityPage(AttractionDataBase.Bornezoo);
             };
 
             playground3_irl.Click += delegate
             {
-                LoadPlayGround(AttractionDataBase.zoofariScene);
-                MapActivity.Attraction = Facility;
-                StartActivity(typeof(MapActivity));
+                LoadFacilityPage(AttractionDataBase.zoofariScene);
             };
 
             ImageView banner = FindViewById<ImageView>(Resource.Id.homeBanner);
@@ -53,9 +47,11 @@ namespace GuidR.Droid
             };
 
         }
-        public void LoadPlayGround(Facility facility)
+        void LoadFacilityPage(Facility facility)
         {
-            PlaygroundMenuActivity.Facility = facility;
+            //FindViewById<ImageView>(Resource.Id.HeaderImage) = 
+            IndependentFacilityActivity.Facility = facility;
+            StartActivity(typeof(IndependentFacilityActivity));
         }
     }
 }

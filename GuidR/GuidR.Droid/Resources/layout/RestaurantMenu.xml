@@ -79,6 +79,13 @@
             android:layout_height="wrap_content"
             android:drawableTop="@drawable/grill_selv"
             android:background="@null" />
+        <Button
+            android:id="@+id/restaurantButton4"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:drawableTop="@drawable/PlaygroundKiosk"
+            android:background="@null" />
       </LinearLayout>
 
 

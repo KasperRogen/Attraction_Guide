@@ -6,6 +6,7 @@ namespace GuidR
 {
     public class Facility : Attraction
     {
+
         public Facility (string name, string description, Coordinates location, object image)
             : this(name, description, location, null, null, image)
         {

@@ -37,20 +37,20 @@ namespace GuidR.Droid
             AttractionDataBase.Zebra.Image = Resource.Drawable.ZebraHeader;
 
             AttractionDataBase.Toilet1.Image = Resource.Drawable.Toilet1_irl;
-            AttractionDataBase.Toilet2.Image = Resource.Drawable.Toilet1_ved_chimpanserne;
+            AttractionDataBase.Toilet2.Image = Resource.Drawable.Toilet1Header;
             AttractionDataBase.Toilet3.Image = Resource.Drawable.Toilet3_irl;
-            AttractionDataBase.Toilet4.Image = Resource.Drawable.Toilet4_irl;
+            AttractionDataBase.Toilet4.Image = Resource.Drawable.Toilet1_ved_krokodillerneHeader;
             AttractionDataBase.Toilet5.Image = Resource.Drawable.Toilet5_irl;
 
-            AttractionDataBase.CasaFamilia.Image = Resource.Drawable.Casafamilia;
-            AttractionDataBase.Skovbakken.Image = Resource.Drawable.Skovbakken;
-            AttractionDataBase.SelfGrill.Image = Resource.Drawable.grill_selv;
-            AttractionDataBase.PlaygroundKiosk.Image = Resource.Drawable.PlaygroundKiosk;
-            AttractionDataBase.Playground.Image = Resource.Drawable.Playground;
-            AttractionDataBase.SmokeArea1.Image = Resource.Drawable.Smoke_Area1;
-            AttractionDataBase.SmokeArea2.Image = Resource.Drawable.Smoke_Area2;
-            AttractionDataBase.Bornezoo.Image = Resource.Drawable.bornezoo;
-            AttractionDataBase.zoofariScene.Image = Resource.Drawable.ZoofariScenen;
+            AttractionDataBase.CasaFamilia.Image = Resource.Drawable.CasafamiliaHeader;
+            AttractionDataBase.Skovbakken.Image = Resource.Drawable.SkovBakkenHeader;
+            AttractionDataBase.SelfGrill.Image = Resource.Drawable.grill_selvHeader;
+            AttractionDataBase.PlaygroundKiosk.Image = Resource.Drawable.PlaygroundKioskHeader;
+            AttractionDataBase.Playground1_irl.Image = Resource.Drawable.PlaygroundHeader;
+            AttractionDataBase.SmokeArea1.Image = Resource.Drawable.Smoke_Area1Header;
+            AttractionDataBase.SmokeArea2.Image = Resource.Drawable.Smoke_Area2Header;
+            AttractionDataBase.Bornezoo.Image = Resource.Drawable.bornezooHeader;
+            AttractionDataBase.zoofariScene.Image = Resource.Drawable.ZoofariScenenHeader;
 
             InitializePins();
         }
@@ -84,7 +84,7 @@ namespace GuidR.Droid
             AttractionDataBase.Skovbakken.Pin = Resource.Drawable.Restaurant_Pin;
             AttractionDataBase.SelfGrill.Pin = Resource.Drawable.Restaurant_Pin;
             AttractionDataBase.PlaygroundKiosk.Pin = Resource.Drawable.Restaurant_Pin;
-            AttractionDataBase.Playground.Pin = Resource.Drawable.Playground_Pin;
+            AttractionDataBase.Playground1_irl.Pin = Resource.Drawable.Playground_Pin;
             AttractionDataBase.SmokeArea1.Pin = Resource.Drawable.Smoke_area_pin;
             AttractionDataBase.SmokeArea2.Pin = Resource.Drawable.Smoke_area_pin;
             AttractionDataBase.Bornezoo.Pin = Resource.Drawable.Playground_Pin;

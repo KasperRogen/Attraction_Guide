@@ -26,16 +26,12 @@ namespace GuidR.Droid
 
             smokeArea1_irl.Click += delegate
             {
-                LoadSmoke(AttractionDataBase.SmokeArea1);
-                MapActivity.Attraction = Facility;
-                StartActivity(typeof(MapActivity));
+                LoadFacilityPage(AttractionDataBase.SmokeArea1);
             };
 
             smokeArea2_irl.Click += delegate
             {
-                LoadSmoke(AttractionDataBase.SmokeArea2);
-                MapActivity.Attraction = Facility;
-                StartActivity(typeof(MapActivity));
+                LoadFacilityPage(AttractionDataBase.SmokeArea2);
             };
 
 
@@ -45,9 +41,11 @@ namespace GuidR.Droid
             };
 
         }
-        public void LoadSmoke(Facility facility)
+        void LoadFacilityPage(Facility facility)
         {
-            SmokeAreaMenuActivity.Facility = facility;
+            //FindViewById<ImageView>(Resource.Id.HeaderImage) = 
+            IndependentFacilityActivity.Facility = facility;
+            StartActivity(typeof(IndependentFacilityActivity));
         }
     }
 }
