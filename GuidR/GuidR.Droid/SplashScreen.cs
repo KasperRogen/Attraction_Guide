@@ -10,8 +10,7 @@ namespace GuidR.Droid
         {
             base.OnCreate(bundle);
 
-            if (AttractionDataBase.splashScreenHasRun == false)
-                AttractionDataBase.InitializeAttraction();
+            AttractionDataBase.InitializeAttraction();
 
             InitializeAndroidDependencies();
 
@@ -21,8 +20,6 @@ namespace GuidR.Droid
         // Initializes Android specific Drawables
         void InitializeAndroidDependencies ()
         {
-            AttractionDataBase.Platform = new AndroidDependency();
-
             AttractionDataBase.Baboon.Image = Resource.Drawable.BaboonHeader;
             AttractionDataBase.Bear.Image = Resource.Drawable.BrownBearHeader;
             AttractionDataBase.SeaLion.Image = Resource.Drawable.SeaLionHeader;
@@ -92,16 +89,6 @@ namespace GuidR.Droid
             AttractionDataBase.SmokeArea2.Pin = Resource.Drawable.Smoke_area_pin;
             AttractionDataBase.Bornezoo.Pin = Resource.Drawable.Playground_Pin;
             AttractionDataBase.zoofariScene.Pin = Resource.Drawable.Playground_Pin;
-            AttractionDataBase.splashScreenHasRun = true;
         }
-
-
-      /*  void InitializeCalendar() {
-            foreach (Attraction a in AttractionDataBase.Attractions) {
-                if (a is Animal && (a as Animal).HasFeedingTime)
-                    foreach (Time t in (a as Animal).FeedingTimes)
-                        Calendar.AddEvent(new Event(a.Name, t, "description"));
-                    }
-        }
-    */}
+    }
 }

@@ -1,4 +1,5 @@
-﻿using Android.App;
+﻿using System;
+using Android.App;
 using Android.OS;
 using Android.Widget;
 
@@ -13,10 +14,7 @@ namespace GuidR.Droid {
             base.OnCreate(bundle);
 
             SetContentView(Resource.Layout.AnimalPage);
-            // Android:
-            AttractionDataBase.Platform.SetImage(FindViewById<ImageView>(Resource.Id.HeaderImage), Animal.Image);
-            // iOS:
-            //AttractionDataBase.Platform.SetImage(UIImageView, "Image path");
+            FindViewById<ImageView>(Resource.Id.HeaderImage).SetImageResource(Convert.ToInt32(Animal.Image));
 
             FindViewById<TextView>(Resource.Id.Name).Text = Animal.Name;
             FindViewById<TextView>(Resource.Id.LatinName).Text = Animal.LatinName;

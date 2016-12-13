@@ -17,15 +17,19 @@ namespace GuidR {
         public DateTime EndDate { get; set; }
         public int ShowLength { get; set; }
 
-        public int CompareTo(object obj) {
+        public int CompareTo (object obj)
+        {
             if (obj == null)
                 return 1;
 
-            FeedingTime FT = (obj as FeedingTime);
-            if (FT != null)
+            if (obj is FeedingTime)
+            {
+                FeedingTime FT = (obj as FeedingTime);
+
                 return this.TimeOfDay.CompareTo(FT.TimeOfDay);
+            }
             else
-                throw new ArgumentException("Object is not a feedingtime!");
+                throw new InvalidCastException("Object is not of type FeedingTime");
         }
     }
 

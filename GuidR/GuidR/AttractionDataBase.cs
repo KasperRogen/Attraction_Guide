@@ -6,9 +6,6 @@ namespace GuidR
     public static class AttractionDataBase
     {
         public static List<Animal> animalsToWatch = new List<Animal>();
-        public static bool splashScreenHasRun = false;
-        public static PlatformDependency Platform { get; set; }
-
         public static List<Attraction> Attractions = new List<Attraction>();
 
         public static Animal Baboon { get; set; }
@@ -50,7 +47,7 @@ namespace GuidR
 
         private static void InitializeAnimals()
         {
-
+            Attractions.Clear();
 
             FeedingTime bearFeeding = new FeedingTime(new DateTime(2016, 1, 1), new DateTime(2016, 12, DateTime.DaysInMonth(2016, 12)), new Time(13, 45), 30, new int[] { 2, 3, 6, 7 });
             FeedingTime seaLionFeeding = new FeedingTime(new DateTime(2016, 5, 1), new DateTime(2016, 10, DateTime.DaysInMonth(2016, 10)), new Time(11, 30), 45, new int[] { 2, 3, 6, 7 });
