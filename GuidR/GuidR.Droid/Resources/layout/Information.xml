@@ -206,14 +206,34 @@
       style="@style/button_text" />
   </RelativeLayout>
   
-
+  
+  <RelativeLayout
+  android:layout_width="match_parent"
+  android:layout_height="wrap_content">
+  <View
+    android:id="@+id/buttonStrut3"
+    android:layout_width="0dp"
+    android:layout_height="0dp"
+    android:layout_centerHorizontal="true" />
+  <Button
+    android:background="@drawable/InfoButton"
+    android:id="@+id/feedingsButton"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_alignRight="@id/buttonStrut3"
+    android:layout_alignParentLeft="true"
+    android:text="Se fodringstiderne!\n  "
+    style="@style/button_text" />
   <Button
     android:background="@drawable/InfoButton"
     android:id="@+id/zoomapButton"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    android:layout_alignLeft="@id/buttonStrut3"
+    android:layout_alignParentRight="true"
     android:text="Se Aalborg Zoo's eget\nkort over parken"
     style="@style/button_text" />
+  </RelativeLayout>
 
 
   <RelativeLayout
