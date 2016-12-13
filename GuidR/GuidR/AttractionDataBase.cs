@@ -285,7 +285,7 @@ namespace GuidR
         private static void InitializeFacilities()
         {
             Coordinates toiletCoordinates1 = new Coordinates(57.03847141, 9.90024678);
-            string toiletDescription = "Et sted at lade vandet fra kartoflerne";
+            string toiletDescription = "Toiletter til fri benyttelse";
 
             Toilet1 = new Facility("Toilet - ved indgangen", toiletDescription, toiletCoordinates1, Toilet1);
 
@@ -304,10 +304,10 @@ namespace GuidR
             Coordinates smokeAreaCoordinates1 = new Coordinates(57.03763956, 9.89869313);
             string smokeAreaDescription = "Et sted at ryge";
 
-            SmokeArea1 = new Facility("Rygeområde - ved bavianerne", smokeAreaDescription, smokeAreaCoordinates1, SmokeArea1);
+            SmokeArea1 = new Facility("Rygeområde - ved legepladsen", smokeAreaDescription, smokeAreaCoordinates1, SmokeArea1);
 
             Coordinates smokeAreaCoordinates2 = new Coordinates(57.03649414, 9.89805727);
-            SmokeArea2 = new Facility("Rygeområde - ved legepladsen", smokeAreaDescription, smokeAreaCoordinates2, SmokeArea2);
+            SmokeArea2 = new Facility("Rygeområde - ved bavianerne", smokeAreaDescription, smokeAreaCoordinates2, SmokeArea2);
 
             Coordinates skovbakkenCoordinates = new Coordinates(57.03708343, 9.89808152);
             string skovbakkenDescription = "(REPLACE) Skovbakken er Aalborg Zoos spisested, placeret ved Faunavej på bakken op mod skoven. Her har vi udsigt over byen og Aalborg Zoo.";

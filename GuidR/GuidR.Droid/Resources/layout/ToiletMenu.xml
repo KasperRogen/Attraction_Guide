@@ -49,7 +49,7 @@
             android:layout_width="0dp"
             android:layout_weight="1"
             android:layout_height="wrap_content"
-            android:drawableTop="@drawable/Toilet1_irl" 
+            android:drawableTop="@drawable/Toilet1_ved_indgangen" 
             android:background="@null" />
         <Button
             android:id="@+id/toilet2_irl"
@@ -57,7 +57,7 @@
             android:layout_weight="1"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:drawableTop="@drawable/Toilet1_ved_chimpanserne"
+            android:drawableTop="@drawable/Toilet2_ved_chimpanserne"
             android:background="@null" />
       </LinearLayout>
 
@@ -78,7 +78,7 @@
             android:layout_width="0dp"
             android:layout_weight="1"
             android:layout_height="wrap_content"
-            android:drawableTop="@drawable/Toilet3_irl"
+            android:drawableTop="@drawable/Toilet3_ved_casafamilia"
             android:background="@null" />
         <Button
             android:id="@+id/toilet4_irl"
@@ -86,7 +86,7 @@
             android:layout_weight="1"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:drawableTop="@drawable/Toilet_ved_krokodillerne"
+            android:drawableTop="@drawable/Toilet4_ved_pingvinerne"
             android:background="@null" />
       </LinearLayout>
       
@@ -107,7 +107,7 @@
             android:layout_width="0dp"
             android:layout_weight="1"
             android:layout_height="wrap_content"
-            android:drawableTop="@drawable/Toilet5_irl"
+            android:drawableTop="@drawable/Toilet5_ved_elefanterne"
             android:background="@null" />
       </LinearLayout>
       

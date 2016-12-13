@@ -36,11 +36,11 @@ namespace GuidR.Droid
             AttractionDataBase.Tiger.Image = Resource.Drawable.TigerHeader;
             AttractionDataBase.Zebra.Image = Resource.Drawable.ZebraHeader;
 
-            AttractionDataBase.Toilet1.Image = Resource.Drawable.Toilet1_irl;
-            AttractionDataBase.Toilet2.Image = Resource.Drawable.Toilet1Header;
-            AttractionDataBase.Toilet3.Image = Resource.Drawable.Toilet3_irl;
-            AttractionDataBase.Toilet4.Image = Resource.Drawable.Toilet1_ved_krokodillerneHeader;
-            AttractionDataBase.Toilet5.Image = Resource.Drawable.Toilet5_irl;
+            AttractionDataBase.Toilet1.Image = Resource.Drawable.Toilet1Header;
+            AttractionDataBase.Toilet2.Image = Resource.Drawable.Toilet2Header;
+            AttractionDataBase.Toilet3.Image = Resource.Drawable.Toilet3Header;
+            AttractionDataBase.Toilet4.Image = Resource.Drawable.Toilet4Header;
+            AttractionDataBase.Toilet5.Image = Resource.Drawable.Toilet5Header;
 
             AttractionDataBase.CasaFamilia.Image = Resource.Drawable.CasafamiliaHeader;
             AttractionDataBase.Skovbakken.Image = Resource.Drawable.SkovBakkenHeader;

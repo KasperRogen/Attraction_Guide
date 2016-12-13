@@ -35,7 +35,7 @@
             android:adjustViewBounds="true"
             android:layout_width="match_parent"
             android:layout_height="200dp"
-            android:src="@drawable/Toilet1_irl"
+            android:src="@drawable/Toilet1_ved_indgangen"
             android:id="@+id/HeaderImage" />
 
         <TextView

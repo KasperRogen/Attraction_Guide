@@ -40,12 +40,12 @@
     <ConsolePause>false</ConsolePause>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="DeviceInfo.Plugin, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\Xam.Plugin.DeviceInfo.1.0.0.2\lib\MonoAndroid10\DeviceInfo.Plugin.dll</HintPath>
+    <Reference Include="Plugin.DeviceInfo, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Xam.Plugin.DeviceInfo.2.0.2\lib\MonoAndroid10\Plugin.DeviceInfo.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="DeviceInfo.Plugin.Abstractions, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\Xam.Plugin.DeviceInfo.1.0.0.2\lib\MonoAndroid10\DeviceInfo.Plugin.Abstractions.dll</HintPath>
+    <Reference Include="Plugin.DeviceInfo.Abstractions, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Xam.Plugin.DeviceInfo.2.0.2\lib\MonoAndroid10\Plugin.DeviceInfo.Abstractions.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="System" />
@@ -393,15 +393,6 @@
     </AndroidResource>
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable-hdpi\Toilet3_irl.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\drawable-hdpi\Toilet5_irl.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\drawable-hdpi\Toilet1_irl.png" />
-  </ItemGroup>
-  <ItemGroup>
     <AndroidResource Include="Resources\drawable-hdpi\Restaurant1_irl.png" />
   </ItemGroup>
   <ItemGroup>
@@ -458,9 +449,6 @@
     <AndroidResource Include="Resources\drawable-hdpi\Smoke_Area2.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable-hdpi\Toilet1_ved_chimpanserne.png" />
-  </ItemGroup>
-  <ItemGroup>
     <AndroidResource Include="Resources\drawable-hdpi\Playground_Pin.png" />
   </ItemGroup>
   <ItemGroup>
@@ -482,7 +470,6 @@
     <AndroidResource Include="Resources\drawable-hdpi\InfoButton.xml" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="DeviceInfoReadme.txt" />
     <AndroidResource Include="Resources\drawable-hdpi\Alarm.png" />
     <AndroidResource Include="Resources\drawable-hdpi\Alarm_inactive.png" />
     <AndroidResource Include="Resources\layout\FeedingAlarmMenu.xml" />
@@ -498,9 +485,6 @@
     <AndroidResource Include="Resources\drawable-hdpi\SkovBakkenHeader.jpg" />
     <AndroidResource Include="Resources\drawable-hdpi\Smoke_Area1Header.jpg" />
     <AndroidResource Include="Resources\drawable-hdpi\Smoke_Area2Header.jpg" />
-    <AndroidResource Include="Resources\drawable-hdpi\Toilet1_ved_krokodillerneHeader.jpg" />
-    <AndroidResource Include="Resources\drawable-hdpi\Toilet1Header.jpg" />
-    <AndroidResource Include="Resources\drawable-hdpi\Toilet_ved_Krokodillerne.png" />
   </ItemGroup>
   <ItemGroup>
     <XamarinComponentReference Include="DeviceInfoPlugin">
@@ -515,6 +499,36 @@
       <Visible>False</Visible>
       <Version>24.2.1.0</Version>
     </XamarinComponentReference>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable-hdpi\Toilet1_ved_indgangen.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable-hdpi\Toilet3_ved_casafamilia.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable-hdpi\Toilet4_ved_pingvinerne.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable-hdpi\Toilet5_ved_elefanterne.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable-hdpi\Toilet2_ved_chimpanserne.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable-hdpi\Toilet1Header.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable-hdpi\Toilet2Header.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable-hdpi\Toilet3Header.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable-hdpi\Toilet4Header.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable-hdpi\Toilet5Header.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Novell\Novell.MonoDroid.CSharp.targets" />
   <Import Project="..\..\packages\Xamarin.GooglePlayServices.Basement.29.0.0.2\build\Xamarin.GooglePlayServices.Basement.targets" Condition="Exists('..\..\packages\Xamarin.GooglePlayServices.Basement.29.0.0.2\build\Xamarin.GooglePlayServices.Basement.targets')" />
