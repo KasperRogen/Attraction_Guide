@@ -1,7 +1,14 @@
 using Android.App;
+using Android.Content.Res;
+using Android.Graphics;
+using Android.Media;
 using Android.OS;
+using Android.Views;
 using Android.Widget;
+using Java.IO;
+using System.IO;
 using System.Collections.Generic;
+using static Android.Resource;
 
 namespace GuidR.Droid {
     [Activity(Label = "Aalborg Zoo", Theme = "@style/NoTitle.splash")]
@@ -11,10 +18,31 @@ namespace GuidR.Droid {
             SetContentView(Resource.Layout.AnimalMenu);
 
             List<AnimalButton> animalButtons = new List<AnimalButton>();
+            RelativeLayout baseLayout = FindViewById<RelativeLayout>(Resource.Id.animalMenuBase);
 
-            Button baboonButton = FindViewById<Button>(Resource.Id.baboonButton);
-            baboonButton.Click += delegate { LoadAnimalPage(AttractionDataBase.Baboon); };
-            Button brownbearButton = FindViewById<Button>(Resource.Id.brownbearButton);
+            LinearLayout buttonLayout = (LinearLayout)LayoutInflater.Inflate(Resource.Layout.ButtonLayout, baseLayout, false);
+            baseLayout.AddView(buttonLayout);
+
+            AssetManager assets = this.Assets;
+            //foreach (Animal animal in AttractionDataBase.Attractions) {
+            Animal animal = (Animal)AttractionDataBase.Attractions[0];
+
+                ImageView button = (ImageView)LayoutInflater.Inflate(Resource.Layout.roundButton, baseLayout, false);
+
+                System.IO.Stream ims = assets.Open("img/"+animal.Name+"Button.png");
+                // load image as Drawable
+                Bitmap bitmap = BitmapFactory.DecodeStream(ims);
+                ims.Close();
+            button.SetImageBitmap(bitmap);
+            button.Click += delegate { LoadAnimalPage("Baboon"); };
+            buttonLayout.AddView(button);
+            //    break;
+
+
+
+            //}
+
+            /*Button brownbearButton = FindViewById<Button>(Resource.Id.brownbearButton);
             brownbearButton.Click += delegate { LoadAnimalPage(AttractionDataBase.Bear); };
             Button sealionButton = FindViewById<Button>(Resource.Id.sealionButton);
             sealionButton.Click += delegate { LoadAnimalPage(AttractionDataBase.SeaLion); };
@@ -42,16 +70,16 @@ namespace GuidR.Droid {
             tigerButton.Click += delegate { LoadAnimalPage(AttractionDataBase.Tiger); };
             Button zebraButton = FindViewById<Button>(Resource.Id.zebraButton);
             zebraButton.Click += delegate { LoadAnimalPage(AttractionDataBase.Zebra); };
-
+            */
             ImageView banner = FindViewById<ImageView>(Resource.Id.homeBanner);
             banner.Click += delegate {
                 StartActivity(typeof(MainActivity));
             };
         }
 
-        void LoadAnimalPage (Animal animal) {
+        void LoadAnimalPage (string animal) {
             //FindViewById<ImageView>(Resource.Id.HeaderImage) = 
-            IndependentAnimalActivity.Animal = animal;
+            IndependentAnimalActivity.animalName = animal;
             StartActivity(typeof(IndependentAnimalActivity));
         }
     }

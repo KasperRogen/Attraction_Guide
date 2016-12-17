@@ -3,6 +3,7 @@ using Android.App;
 using Android.Gms.Maps;
 using Android.OS;
 using Android.Widget;
+using Android.Content;
 
 namespace GuidR.Droid
 {
@@ -36,14 +37,19 @@ namespace GuidR.Droid
 			// Set our view from the "main" layout resource
 			SetContentView (Resource.Layout.Main);
 
-
+            if (StopService(new Intent(this, typeof(FeedingTimeNotification))) == true) {
+                FindViewById<ImageView>(Resource.Id.checkinbutton).SetImageResource(Resource.Drawable.checkout_button_small);
+                StartService(new Intent(this, typeof(FeedingTimeNotification)));
+            } else {
+                FindViewById<ImageView>(Resource.Id.checkinbutton).SetImageResource(Resource.Drawable.Checkin_button_small);
+            }
 
             Button button = FindViewById<Button>(Resource.Id.animalButton);
             Button facilityButton = FindViewById<Button>(Resource.Id.facilityButton);
             Button mapButton = FindViewById<Button>(Resource.Id.mapButton);
             Button newsButton = FindViewById<Button>(Resource.Id.newsbutton);
             Button infoButton = FindViewById<Button>(Resource.Id.infoButton);
-            Button CheckInButton = FindViewById<Button>(Resource.Id.checkinbutton);
+            ImageView CheckInButton = FindViewById<ImageView>(Resource.Id.checkinbutton);
 
             infoButton.Click += delegate
             {
@@ -71,10 +77,19 @@ namespace GuidR.Droid
             };
 
             CheckInButton.Click += delegate {
-                StartActivity(typeof(FeedingTimeSchemeActivity));
+
+                if (StopService(new Intent(this, typeof(FeedingTimeNotification))) == true) { 
+                    FindViewById<ImageView>(Resource.Id.checkinbutton).SetImageResource(Resource.Drawable.Checkin_button_small);
+                }
+                else { 
+                    StartService(new Intent(this, typeof(FeedingTimeNotification)));
+                    FindViewById<ImageView>(Resource.Id.checkinbutton).SetImageResource(Resource.Drawable.checkout_button_small);
+                }
             };
 
         }
+
+
 
     }
 }

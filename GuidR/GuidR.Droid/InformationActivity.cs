@@ -28,6 +28,7 @@ namespace GuidR.Droid
             Button webpageButton = FindViewById<Button>(Resource.Id.webpageButton);
             Button ticketsButton = FindViewById<Button>(Resource.Id.ticketsButton);
             Button zoomapButton = FindViewById<Button>(Resource.Id.zoomapButton);
+            Button feedingsButton = FindViewById<Button>(Resource.Id.feedingsButton);
 
 
             openingHoursButton.Click += delegate
@@ -49,6 +50,10 @@ namespace GuidR.Droid
                 var uri = Android.Net.Uri.Parse("http://shop.aalborgzoo.dk/da/category/5/Entr%C3%A9");
                 var intent = new Intent(Intent.ActionView, uri);
                 StartActivity(intent);
+            };
+
+            feedingsButton.Click += delegate {
+                StartActivity(typeof(FeedingTimeSchemeActivity));
             };
 
             zoomapButton.Click += delegate

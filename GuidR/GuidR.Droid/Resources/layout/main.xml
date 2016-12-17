@@ -109,12 +109,12 @@
                     android:layout_height="145dp"
                     android:drawableTop="@drawable/news_button_small"
                     android:background="@null" />
-                <Button
+                <ImageView
                     android:id="@+id/checkinbutton"
                     android:layout_width="0dp"
                     android:layout_weight="1"
                     android:layout_height="match_parent"
-                    android:drawableTop="@drawable/checkin_button_small"
+                    android:src="@drawable/checkin_button_small"
                     android:background="@null" />
             </LinearLayout>
 

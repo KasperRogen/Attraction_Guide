@@ -2,9 +2,10 @@
 using Android.Content;
 using Android.Graphics;
 using Android.OS;
+using Android.Text;
+using Android.Text.Style;
 using Android.Views;
 using Android.Widget;
-using DeviceInfo.Plugin;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -16,7 +17,7 @@ namespace GuidR.Droid {
     public class FeedingTimeSchemeActivity : Activity {
 
         int feedingtimeLineHeight;
-
+        Animal selectedAnimal;
 
 
         protected override void OnCreate(Bundle bundle) {
@@ -26,7 +27,6 @@ namespace GuidR.Droid {
             SetContentView(Resource.Layout.FeedingTimeScheme);
             HorizontalScrollView animalScroller;
             HorizontalScrollView timelineScroller;
-            StartService(new Intent(this, typeof(FeedingTimeNotification)));
 
             Android.Util.DisplayMetrics metrics = Resources.DisplayMetrics;
             feedingtimeLineHeight = (int)(metrics.HeightPixels / 8.5);
@@ -147,7 +147,6 @@ namespace GuidR.Droid {
 
             timeLine.AddView(blockLine);
             HorizontalScrollView animalScroller = FindViewById<HorizontalScrollView>(Resource.Id.animalScroller);
-            animalScroller.LayoutParameters.Width = timeLine.Width;
         }
 
 
@@ -185,7 +184,7 @@ namespace GuidR.Droid {
 
 
                 LinearLayout horizontalAnimalLayout = (LinearLayout)LayoutInflater.Inflate(Resource.Layout.LinearLayout, Scheme, false);
-                LinearLayout.LayoutParams LL = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MatchParent, feedingtimeLineHeight);
+                LinearLayout.LayoutParams LL = new LinearLayout.LayoutParams(24*60*5, feedingtimeLineHeight);
                 horizontalAnimalLayout.Orientation = Orientation.Horizontal;
               //  horizontalAnimalLayout.SetBackgroundColor(colours[index]);
 
@@ -198,9 +197,42 @@ namespace GuidR.Droid {
                 if ((animalText as ViewGroup).GetChildAt(0) is ImageView) { 
                     ((animalText as ViewGroup).GetChildAt(0) as ImageView).SetImageResource((int)a.Image);
                     ((animalText as ViewGroup).GetChildAt(0) as ImageView).Click += delegate {
+                        selectedAnimal = a;
                         PopupMenu menu = new PopupMenu(this, ((animalText as ViewGroup).GetChildAt(0) as ImageView));
                         menu.MenuInflater.Inflate(Resource.Layout.FeedingAlarmMenu, menu.Menu);
                         menu.Show();
+
+
+                        IMenuItem item = menu.Menu.FindItem(Resource.Id.MenuReminderButton);
+
+
+
+                        menu.MenuItemClick += delegate {
+                            Console.WriteLine(selectedAnimal.Name + AttractionDataBase.animalsToWatch.Contains(selectedAnimal));
+                            foreach(Animal an in AttractionDataBase.animalsToWatch)
+                                Console.WriteLine(an.Name);
+                            if (AttractionDataBase.animalsToWatch.Contains(selectedAnimal)) { 
+                                AttractionDataBase.animalsToWatch.Remove(selectedAnimal);
+                            }
+                            else { 
+                                AttractionDataBase.animalsToWatch.Add(selectedAnimal);
+                                Console.WriteLine("ADDING");
+                            }
+                        };
+
+
+
+                        if (AttractionDataBase.animalsToWatch.Contains(selectedAnimal)) { 
+                            item.SetTitle("Remove reminder?");
+                        }
+                        else { 
+                            item.SetTitle("Set reminder?");
+                        }
+                        SpannableString spanString = new SpannableString(item.TitleFormatted);
+                        int end = spanString.Length();
+                        spanString.SetSpan(new RelativeSizeSpan(0.8f), 0, end, SpanTypes.ExclusiveExclusive);
+                        item.SetTitle(spanString);
+
                     };
                 }
                 if ((animalText as ViewGroup).GetChildAt(1) is LinearLayout)
@@ -217,13 +249,7 @@ namespace GuidR.Droid {
 
                 int feedingtimeCounter = 0;
                 foreach (FeedingTime FT in a.FeedingTimes) {
-                    //set the destination
-
-                    
-
-
-
-                    
+                    //set the destination          
 
                     View animalBlock = LayoutInflater.Inflate(Resource.Layout.AnimalFeedingBlock, (LinearLayout)Scheme.GetChildAt(index), false);
 

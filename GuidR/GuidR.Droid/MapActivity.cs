@@ -103,7 +103,7 @@ namespace GuidR.Droid
         void InitializeLocationManager() {
             locationManager = Application.Context.GetSystemService("location") as LocationManager;
         Criteria criteriaForLocationService = new Criteria {
-                Accuracy = Accuracy.Fine,
+                Accuracy = Accuracy.Coarse,
                 PowerRequirement = Power.NoRequirement
             };
             locationProvider = locationManager.GetBestProvider(criteriaForLocationService, true);

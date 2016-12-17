@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<Menu xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/lib/Guidr.droid">
-      <item android:id="@+id/item1"
-            android:title="Menu 1"/>
-      
-</Menu>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/lib/Guidr.droid"
+    android:id="@+id/FeedingAlarmMenuBlock">
+  <item android:id="@+id/MenuReminderButton"
+    android:title=""/>
+</menu>

@@ -7,14 +7,18 @@ namespace GuidR.Droid {
     [Activity(Label = "Aalborg Zoo", Theme = "@style/NoTitle.splash")]
     public class IndependentAnimalActivity : Activity {
 
-        public static Animal Animal { get; set; }
+        public static string animalName { get; set; }
+        Animal Animal;
 
         protected override void OnCreate(Bundle bundle)
         {
             base.OnCreate(bundle);
 
+            Animal = (AttractionDataBase.Attractions.Find(x => x.Name == animalName) as Animal);
+            Console.WriteLine(AttractionDataBase.Attractions.Find(x => x.Name == "Baboon").Location);
+
             SetContentView(Resource.Layout.AnimalPage);
-            FindViewById<ImageView>(Resource.Id.HeaderImage).SetImageResource(Convert.ToInt32(Animal.Image));
+            //FindViewById<ImageView>(Resource.Id.HeaderImage).SetImageResource(Convert.ToInt32(Animal.Image));
 
             FindViewById<TextView>(Resource.Id.Name).Text = Animal.Name;
             FindViewById<TextView>(Resource.Id.LatinName).Text = Animal.LatinName;
