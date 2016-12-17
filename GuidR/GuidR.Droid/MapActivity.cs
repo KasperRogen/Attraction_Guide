@@ -35,7 +35,14 @@ namespace GuidR.Droid
             View view = LayoutInflater.Inflate(Resource.Layout.Map_Info_Window, null, false);
             view.FindViewById<TextView>(Resource.Id.Map_Info_Window_Name).Text = marker.Title;
             Attraction attraction = AttractionDataBase.Attractions.Find( x=> x.Name == marker.Title);
-            view.FindViewById<ImageView>(Resource.Id.Map_Info_Window_Image).SetImageResource((int)attraction.Image);
+
+            System.IO.Stream ims = Assets.Open("img/AnimalHeaders/" + attraction.Name + "Header.png");
+            // load image as Drawable
+            Bitmap bitmap = BitmapFactory.DecodeStream(ims);
+            ims.Close();
+
+
+            view.FindViewById<ImageView>(Resource.Id.Map_Info_Window_Image).SetImageBitmap(bitmap);
             if (attraction is Animal) {
                 TextView feedingTime = view.FindViewById<TextView>(Resource.Id.Map_Info_Window_Feeding_Time);
 
@@ -58,29 +65,51 @@ namespace GuidR.Droid
         public void OnMapReady(GoogleMap googleMap)
         {
             mMap = googleMap;
-
+            Console.WriteLine("MAP READY");
             if (Attraction != null)
                 mMap.MoveCamera(CameraUpdateFactory.NewLatLngZoom(new LatLng(Attraction.Location.Longitude, Attraction.Location.Latitude), 19));
             else
-                mMap.MoveCamera(CameraUpdateFactory.NewLatLngZoom(new LatLng(AttractionDataBase.Penguin.Location.Longitude,
-                    AttractionDataBase.Penguin.Location.Latitude), 16.5F));
+                mMap.MoveCamera(CameraUpdateFactory.NewLatLngZoom(new LatLng(57.036512,
+                    9.897881), 16.5F));
 
-            foreach (Attraction attraction in AttractionDataBase.Attractions)
-            {
-                try
-                {
-                    mMap.AddMarker(new MarkerOptions().SetPosition(new LatLng(attraction.Location.Longitude, 
-                        attraction.Location.Latitude)).SetTitle(attraction.Name)
-                            .SetIcon(BitmapDescriptorFactory.FromResource(attraction.Pin)));
-                }
-                catch
-                {
-                    throw new Exception("Caught an exception at: " + attraction.Name);
-                }
-
-            }
+            SetMarkers(16);
 
             mMap.SetInfoWindowAdapter(this);
+
+            mMap.CameraChange += delegate (object sender, GoogleMap.CameraChangeEventArgs e)
+            {
+                SetMarkers(e.Position.Zoom);
+            };
+
+        }
+
+
+
+        void SetMarkers(float zoomLevel)
+        {
+            mMap.Clear();
+            foreach (Attraction attraction in AttractionDataBase.Attractions)
+            {
+                System.IO.Stream ims = Assets.Open("img/AnimalButtons/" + attraction.Name + "Button.png");
+                // load image as Drawable
+                Bitmap bitmap = BitmapFactory.DecodeStream(ims);
+                ims.Close();
+
+                int scaling = ((int)zoomLevel - 12);
+                scaling = (int)Math.Pow(scaling, 3);
+
+                Console.WriteLine(zoomLevel + " : " + scaling);
+
+                Bitmap scaledBitmap = Bitmap.CreateScaledBitmap(bitmap, scaling, scaling, true);
+
+
+                //Console.WriteLine("Making marker for: " + attraction.Name);
+                mMap.AddMarker(new MarkerOptions()
+                    .SetPosition(new LatLng(attraction.Location.Longitude, attraction.Location.Latitude))
+                    .SetTitle(attraction.Name)
+                    .SetIcon(BitmapDescriptorFactory.FromBitmap(scaledBitmap)));
+
+            }
         }
 
 

@@ -194,8 +194,16 @@ namespace GuidR.Droid {
 
                 LinearLayout.LayoutParams animalTextLL = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.FillParent, feedingtimeLineHeight);
                 animalText.LayoutParameters = animalTextLL;
-                if ((animalText as ViewGroup).GetChildAt(0) is ImageView) { 
-                    ((animalText as ViewGroup).GetChildAt(0) as ImageView).SetImageResource((int)a.Image);
+                if ((animalText as ViewGroup).GetChildAt(0) is ImageView) {
+
+                    System.IO.Stream ims = Assets.Open("img/AnimalHeaders/" + a.Name + "Header.png");
+                    // load image as Drawable
+                    Bitmap bitmap = BitmapFactory.DecodeStream(ims);
+                    ims.Close();
+
+
+
+                    ((animalText as ViewGroup).GetChildAt(0) as ImageView).SetImageBitmap(bitmap);
                     ((animalText as ViewGroup).GetChildAt(0) as ImageView).Click += delegate {
                         selectedAnimal = a;
                         PopupMenu menu = new PopupMenu(this, ((animalText as ViewGroup).GetChildAt(0) as ImageView));

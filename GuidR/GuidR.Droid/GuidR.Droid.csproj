@@ -82,7 +82,6 @@
     <Compile Include="AnimalButton.cs" />
     <Compile Include="FacilitiesMenuActivity.cs" />
     <Compile Include="FeedingTimeNotification.cs" />
-    <Compile Include="FileReader.cs" />
     <Compile Include="IndependentAnimalActivity.cs" />
     <Compile Include="AnimalMenuActivity.cs" />
     <Compile Include="IndependentFacilityActivity.cs" />
@@ -543,13 +542,60 @@
     </AndroidResource>
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\img\BaboonButton.png" />
-  </ItemGroup>
-  <ItemGroup>
     <AndroidAsset Include="Assets\BaboonButton.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\layout\ButtonLayout.xml" />
+    <AndroidResource Include="Resources\layout\ButtonLayout.xml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\img\AnimalButtons\BaboonButton.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\img\AnimalButtons\BearButton.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\img\AnimalButtons\HippoButton.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\img\AnimalButtons\LionButton.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\img\AnimalButtons\SealionButton.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\img\AnimalPins\BaboonPin.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\img\AnimalPins\BearPin.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\img\AnimalPins\HippoPin.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\img\AnimalPins\LionPin.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\img\AnimalPins\SealionPin.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\BaboonPin.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\img\AnimalHeaders\BaboonHeader.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\img\AnimalHeaders\BearHeader.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\img\AnimalHeaders\HippoHeader.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\img\AnimalHeaders\LionHeader.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\img\AnimalHeaders\SealionHeader.png" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Novell\Novell.MonoDroid.CSharp.targets" />
   <Import Project="..\..\packages\Xamarin.GooglePlayServices.Basement.29.0.0.2\build\Xamarin.GooglePlayServices.Basement.targets" Condition="Exists('..\..\packages\Xamarin.GooglePlayServices.Basement.29.0.0.2\build\Xamarin.GooglePlayServices.Basement.targets')" />

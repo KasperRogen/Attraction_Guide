@@ -16,31 +16,55 @@ namespace GuidR.Droid {
         protected override void OnCreate(Bundle bundle) {
             base.OnCreate(bundle);
             SetContentView(Resource.Layout.AnimalMenu);
+            int animalIndex = 0;
+
+            Android.Util.DisplayMetrics metrics = Resources.DisplayMetrics;
+            int buttonsize = (int)(metrics.WidthPixels / 2.5);
+            int verticalSpaceBetweenButtons = (int)(metrics.HeightPixels / 20);
 
             List<AnimalButton> animalButtons = new List<AnimalButton>();
-            RelativeLayout baseLayout = FindViewById<RelativeLayout>(Resource.Id.animalMenuBase);
+            LinearLayout baseLayout = FindViewById<LinearLayout>(Resource.Id.animalMenuBase);
 
             LinearLayout buttonLayout = (LinearLayout)LayoutInflater.Inflate(Resource.Layout.ButtonLayout, baseLayout, false);
             baseLayout.AddView(buttonLayout);
 
+            LinearLayout verticalSpacer = (LinearLayout)LayoutInflater.Inflate(Resource.Layout.LinearLayout, baseLayout, false);
+            verticalSpacer.LayoutParameters.Height = verticalSpaceBetweenButtons;
+            baseLayout.AddView(verticalSpacer);
+
             AssetManager assets = this.Assets;
-            //foreach (Animal animal in AttractionDataBase.Attractions) {
-            Animal animal = (Animal)AttractionDataBase.Attractions[0];
+            foreach (Animal animal in AttractionDataBase.Attractions) {
+
+                System.Console.WriteLine(animal.Name);
+
+                if (animalIndex > 1)
+                {
+                    animalIndex = 0;
+                    buttonLayout = (LinearLayout)LayoutInflater.Inflate(Resource.Layout.ButtonLayout, baseLayout, false);
+                    baseLayout.AddView(buttonLayout);
+                    verticalSpacer = (LinearLayout)LayoutInflater.Inflate(Resource.Layout.LinearLayout, baseLayout, false);
+                    verticalSpacer.LayoutParameters.Height = verticalSpaceBetweenButtons;
+                    baseLayout.AddView(verticalSpacer);
+                }
+
+                //Animal animal = (Animal)AttractionDataBase.Attractions[0];
 
                 ImageView button = (ImageView)LayoutInflater.Inflate(Resource.Layout.roundButton, baseLayout, false);
 
-                System.IO.Stream ims = assets.Open("img/"+animal.Name+"Button.png");
+                System.IO.Stream ims = assets.Open("img/AnimalButtons/" + animal.Name+"Button.png");
                 // load image as Drawable
                 Bitmap bitmap = BitmapFactory.DecodeStream(ims);
                 ims.Close();
-            button.SetImageBitmap(bitmap);
-            button.Click += delegate { LoadAnimalPage("Baboon"); };
-            buttonLayout.AddView(button);
-            //    break;
+                button.SetImageBitmap(bitmap);
+                button.SetMinimumWidth(buttonsize);
+                button.SetMinimumHeight(buttonsize);
+                button.Click += delegate { LoadAnimalPage(animal.Name); };
+                buttonLayout.AddView(button);
+                //    break;
 
+                animalIndex++;
 
-
-            //}
+            }
 
             /*Button brownbearButton = FindViewById<Button>(Resource.Id.brownbearButton);
             brownbearButton.Click += delegate { LoadAnimalPage(AttractionDataBase.Bear); };

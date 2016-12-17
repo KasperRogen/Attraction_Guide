@@ -1,5 +1,6 @@
 ﻿using Android.App;
 using Android.Content.Res;
+using Android.Locations;
 using Android.OS;
 using System;
 using System.Collections.Generic;
@@ -18,7 +19,7 @@ namespace GuidR.Droid
         protected override void OnCreate(Bundle bundle)
         {
             base.OnCreate(bundle);
-
+            Console.WriteLine("SPLASHSCREEN STARTED");
             ReadFile();
             SplitAndConvert();
 
@@ -69,7 +70,8 @@ namespace GuidR.Droid
 
 
 
-        public void SplitAndConvert() {
+        public void SplitAndConvert()
+        {
 
             Console.WriteLine("*ØØØØØØØØØØØØØØØØØØØØØØØØØØØØØØØØØØØØØ: " + Lines.Count);
 
@@ -83,23 +85,39 @@ namespace GuidR.Droid
             const int showLengthIndex = 7;
             const int feedingDateIndex = 8;
 
-            foreach (string line in Lines) {
+            foreach (string line in Lines)
+            {
+                bool hasFeedingTime = false;
                 Console.WriteLine("DOOING IITT *****************************************");
                 string[] newLine = line.Split(';');
                 string[] coord = newLine[locationIndex].Split(',');
-                string[] ftimes = newLine[feedingTimeIndex].Split(',');
                 List<Time> feedingtimesHM = new List<Time>();
                 List<FeedingTime> feedingTimes = new List<FeedingTime>();
 
 
-                foreach (string feed in ftimes) {
-                    string[] hm = feed.Split('.');
-                    foreach(string a in hm)
-                        Console.WriteLine("HM: " + a);
-                    feedingtimesHM.Add(new Time(int.Parse(hm[0]), int.Parse(hm[1])));
+                Console.WriteLine("New animal begin:");
+                Console.WriteLine(newLine[0]);
+                Console.WriteLine(newLine[1]);
+                Console.WriteLine(newLine[2]);
+                Console.WriteLine(newLine[3]);
+                Console.WriteLine("Animal end\n\n\n\n\n\n\n");
+
+                if (newLine[feedingTimeIndex] != "")
+                {
+                    string[] ftimes = newLine[feedingTimeIndex].Split(',');
+                    foreach (string feed in ftimes)
+                    {
+                        Console.WriteLine(newLine[nameIndex] + " has a feedingtime: " + feed);
+                        string[] hm = feed.Split('.');
+                        foreach (string a in hm)
+                            Console.WriteLine("HM for " + newLine[nameIndex] + ": " + a);
+                        feedingtimesHM.Add(new Time(int.Parse(hm[0]), int.Parse(hm[1])));
+                        hasFeedingTime = true;
+                    }
                 }
 
-                foreach (Time t in feedingtimesHM) {
+                foreach (Time t in feedingtimesHM)
+                {
                     string[] startDates = newLine[startDateIndex].Split(',');
                     string[] endDates = newLine[endDateIndex].Split(',');
                     string[] feedingDates = newLine[feedingDateIndex].Split(',');
@@ -117,30 +135,75 @@ namespace GuidR.Droid
                         ));
                 }
 
-                AttractionDataBase.Attractions.Add(new Animal(
-                    newLine[nameIndex],
-                    newLine[descriptionIndex],
-                    new Coordinates(double.Parse(coord[0]), double.Parse(coord[1])),
-                    newLine[latinNameIndex],
-                    feedingTimes.ToArray()
-                    ));
+                //Elephant = new Animal("Elefant", elephantDescription, elephantCoordinates, "Loxodonta Africana", elephantFeeding);
+                if (hasFeedingTime)
+                {
+                    AttractionDataBase.Attractions.Add(new Animal(
+                        newLine[nameIndex],
+                        newLine[descriptionIndex],
+                        ParseCoordinates(newLine[locationIndex]),
+                        newLine[latinNameIndex],
+                        feedingTimes.ToArray()
+                        ));
+                }
 
 
+                //Hippo = new Animal("Dværgflodhest", hippoDescription, hippoCoordinates, "Hexaprotodon Liberiensis");
+                else
+                {
+                    AttractionDataBase.Attractions.Add(new Animal(
+                        newLine[nameIndex],
+                        newLine[descriptionIndex],
+                        new Coordinates(double.Parse(coord[0]), double.Parse(coord[1])),
+                        newLine[latinNameIndex]
+                        ));
+                }
 
-                animalList.Add(new Animal(
-    newLine[nameIndex],
-    newLine[descriptionIndex],
-    new Coordinates(double.Parse(coord[0]), double.Parse(coord[1])),
-    newLine[latinNameIndex],
-    feedingTimes.ToArray()
-    ));
 
-            }
-            foreach (Animal animal in animalList) {
-                Console.WriteLine("ØØØØØØØØØØØØØØØØØØØØØØØØØ " + animal.Name);
+                /*animalList.Add(new Animal(
+                newLine[nameIndex],
+                newLine[descriptionIndex],
+                new Coordinates(double.Parse(coord[0]), double.Parse(coord[1])),
+                newLine[latinNameIndex],
+                feedingTimes.ToArray()
+                ));
+
+                }
+                foreach (Animal animal in animalList) {
+                    Console.WriteLine("ØØØØØØØØØØØØØØØØØØØØØØØØØ " + animal.Name);
+                }*/
             }
         }
 
+
+
+
+
+
+
+   /*     Time ParseTime(string timeString)
+        {
+            Time time;
+
+            return time;
+        }
+        */
+
+
+
+        Coordinates ParseCoordinates(string coordString)
+        {
+            string[] coordsAsStrings = coordString.Split(',');
+            Double[] coordsAsDoubles = new Double[2];
+
+            coordsAsDoubles[0] = double.Parse(coordsAsStrings[0]);
+            coordsAsDoubles[1] = double.Parse(coordsAsStrings[1]);
+
+            Coordinates coords = new Coordinates(coordsAsDoubles[0], coordsAsDoubles[1]);
+
+
+            return coords;
+        }
 
 
         // Initializes Android specific Drawables

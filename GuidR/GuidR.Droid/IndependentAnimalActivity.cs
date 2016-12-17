@@ -2,6 +2,7 @@
 using Android.App;
 using Android.OS;
 using Android.Widget;
+using Android.Graphics;
 
 namespace GuidR.Droid {
     [Activity(Label = "Aalborg Zoo", Theme = "@style/NoTitle.splash")]
@@ -18,7 +19,15 @@ namespace GuidR.Droid {
             Console.WriteLine(AttractionDataBase.Attractions.Find(x => x.Name == "Baboon").Location);
 
             SetContentView(Resource.Layout.AnimalPage);
-            //FindViewById<ImageView>(Resource.Id.HeaderImage).SetImageResource(Convert.ToInt32(Animal.Image));
+
+
+            System.IO.Stream ims = Assets.Open("img/AnimalHeaders/" + Animal.Name + "Header.png");
+            // load image as Drawable
+            Bitmap bitmap = BitmapFactory.DecodeStream(ims);
+            ims.Close();
+
+
+            FindViewById<ImageView>(Resource.Id.HeaderImage).SetImageBitmap(bitmap);
 
             FindViewById<TextView>(Resource.Id.Name).Text = Animal.Name;
             FindViewById<TextView>(Resource.Id.LatinName).Text = Animal.LatinName;
