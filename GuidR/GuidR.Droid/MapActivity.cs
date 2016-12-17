@@ -31,7 +31,10 @@ namespace GuidR.Droid
             return null;
         }
 
+        bool infoWindowOpen = true;
+
         public View GetInfoWindow(Marker marker) {
+            infoWindowOpen = true;
             View view = LayoutInflater.Inflate(Resource.Layout.Map_Info_Window, null, false);
             view.FindViewById<TextView>(Resource.Id.Map_Info_Window_Name).Text = marker.Title;
             Attraction attraction = AttractionDataBase.Attractions.Find( x=> x.Name == marker.Title);
@@ -75,9 +78,14 @@ namespace GuidR.Droid
             SetMarkers(16);
 
             mMap.SetInfoWindowAdapter(this);
+            mMap.InfoWindowClose += delegate
+            {
+                infoWindowOpen = false;
+            };
 
             mMap.CameraChange += delegate (object sender, GoogleMap.CameraChangeEventArgs e)
             {
+                if(infoWindowOpen == false)
                 SetMarkers(e.Position.Zoom);
             };
 
