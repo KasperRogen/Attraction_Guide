@@ -578,154 +578,151 @@ namespace GuidR.Droid
 			public const int placeholderButtonMedium = 2130837610;
 			
 			// aapt resource value: 0x7f02006b
-			public const int Playground = 2130837611;
+			public const int Playground1_irl = 2130837611;
 			
 			// aapt resource value: 0x7f02006c
-			public const int Playground1_irl = 2130837612;
+			public const int Playground_Menu = 2130837612;
 			
 			// aapt resource value: 0x7f02006d
-			public const int Playground_Menu = 2130837613;
+			public const int Playground_Pin = 2130837613;
 			
 			// aapt resource value: 0x7f02006e
-			public const int Playground_Pin = 2130837614;
+			public const int PlaygroundHeader = 2130837614;
 			
 			// aapt resource value: 0x7f02006f
-			public const int PlaygroundHeader = 2130837615;
+			public const int PlaygroundKiosk = 2130837615;
 			
 			// aapt resource value: 0x7f020070
-			public const int PlaygroundKiosk = 2130837616;
+			public const int PlaygroundKioskHeader = 2130837616;
 			
 			// aapt resource value: 0x7f020071
-			public const int PlaygroundKioskHeader = 2130837617;
+			public const int Polar_bear = 2130837617;
 			
 			// aapt resource value: 0x7f020072
-			public const int Polar_bear = 2130837618;
+			public const int Polar_bear_Pin = 2130837618;
 			
 			// aapt resource value: 0x7f020073
-			public const int Polar_bear_Pin = 2130837619;
+			public const int PolarBearHeader = 2130837619;
 			
 			// aapt resource value: 0x7f020074
-			public const int PolarBearHeader = 2130837620;
+			public const int Pygmy_Hippo = 2130837620;
 			
 			// aapt resource value: 0x7f020075
-			public const int Pygmy_Hippo = 2130837621;
+			public const int Pygmy_Hippo_Pin = 2130837621;
 			
 			// aapt resource value: 0x7f020076
-			public const int Pygmy_Hippo_Pin = 2130837622;
+			public const int Restaurant = 2130837622;
 			
 			// aapt resource value: 0x7f020077
-			public const int Restaurant = 2130837623;
+			public const int Restaurant1_irl = 2130837623;
 			
 			// aapt resource value: 0x7f020078
-			public const int Restaurant1_irl = 2130837624;
+			public const int Restaurant_Pin = 2130837624;
 			
 			// aapt resource value: 0x7f020079
-			public const int Restaurant_Pin = 2130837625;
+			public const int SeaLionHeader = 2130837625;
 			
 			// aapt resource value: 0x7f02007a
-			public const int SeaLionHeader = 2130837626;
+			public const int Skovbakken = 2130837626;
 			
 			// aapt resource value: 0x7f02007b
-			public const int Skovbakken = 2130837627;
+			public const int SkovBakkenHeader = 2130837627;
 			
 			// aapt resource value: 0x7f02007c
-			public const int SkovBakkenHeader = 2130837628;
+			public const int Smoke_area = 2130837628;
 			
 			// aapt resource value: 0x7f02007d
-			public const int Smoke_area = 2130837629;
+			public const int Smoke_Area1 = 2130837629;
 			
 			// aapt resource value: 0x7f02007e
-			public const int Smoke_Area1 = 2130837630;
+			public const int Smoke_Area1Header = 2130837630;
 			
 			// aapt resource value: 0x7f02007f
-			public const int Smoke_Area1Header = 2130837631;
+			public const int Smoke_Area2 = 2130837631;
 			
 			// aapt resource value: 0x7f020080
-			public const int Smoke_Area2 = 2130837632;
+			public const int Smoke_Area2Header = 2130837632;
 			
 			// aapt resource value: 0x7f020081
-			public const int Smoke_Area2Header = 2130837633;
+			public const int Smoke_area_pin = 2130837633;
 			
 			// aapt resource value: 0x7f020082
-			public const int Smoke_area_pin = 2130837634;
+			public const int splashScreen = 2130837634;
 			
 			// aapt resource value: 0x7f020083
-			public const int splashScreen = 2130837635;
+			public const int SplashScreenBackground = 2130837635;
 			
 			// aapt resource value: 0x7f020084
-			public const int SplashScreenBackground = 2130837636;
+			public const int SplashScreenImage = 2130837636;
 			
 			// aapt resource value: 0x7f020085
-			public const int SplashScreenImage = 2130837637;
+			public const int SquareButton = 2130837637;
 			
 			// aapt resource value: 0x7f020086
-			public const int SquareButton = 2130837638;
+			public const int TamarinHeader = 2130837638;
 			
 			// aapt resource value: 0x7f020087
-			public const int TamarinHeader = 2130837639;
+			public const int test = 2130837639;
 			
 			// aapt resource value: 0x7f020088
-			public const int test = 2130837640;
+			public const int Tiger = 2130837640;
 			
 			// aapt resource value: 0x7f020089
-			public const int Tiger = 2130837641;
+			public const int Tiger_Pin = 2130837641;
 			
 			// aapt resource value: 0x7f02008a
-			public const int Tiger_Pin = 2130837642;
+			public const int TigerHeader = 2130837642;
 			
 			// aapt resource value: 0x7f02008b
-			public const int TigerHeader = 2130837643;
+			public const int Toilet = 2130837643;
 			
 			// aapt resource value: 0x7f02008c
-			public const int Toilet = 2130837644;
+			public const int Toilet1_ved_indgangen = 2130837644;
 			
 			// aapt resource value: 0x7f02008d
-			public const int Toilet1_ved_indgangen = 2130837645;
+			public const int Toilet1Header = 2130837645;
 			
 			// aapt resource value: 0x7f02008e
-			public const int Toilet1Header = 2130837646;
+			public const int Toilet2_ved_chimpanserne = 2130837646;
 			
 			// aapt resource value: 0x7f02008f
-			public const int Toilet2_ved_chimpanserne = 2130837647;
+			public const int Toilet2Header = 2130837647;
 			
 			// aapt resource value: 0x7f020090
-			public const int Toilet2Header = 2130837648;
+			public const int Toilet3_ved_casafamilia = 2130837648;
 			
 			// aapt resource value: 0x7f020091
-			public const int Toilet3_ved_casafamilia = 2130837649;
+			public const int Toilet3Header = 2130837649;
 			
 			// aapt resource value: 0x7f020092
-			public const int Toilet3Header = 2130837650;
+			public const int Toilet4_ved_pingvinerne = 2130837650;
 			
 			// aapt resource value: 0x7f020093
-			public const int Toilet4_ved_pingvinerne = 2130837651;
+			public const int Toilet4Header = 2130837651;
 			
 			// aapt resource value: 0x7f020094
-			public const int Toilet4Header = 2130837652;
+			public const int Toilet5_ved_elefanterne = 2130837652;
 			
 			// aapt resource value: 0x7f020095
-			public const int Toilet5_ved_elefanterne = 2130837653;
+			public const int Toilet5Header = 2130837653;
 			
 			// aapt resource value: 0x7f020096
-			public const int Toilet5Header = 2130837654;
+			public const int Toilet_pin = 2130837654;
 			
 			// aapt resource value: 0x7f020097
-			public const int Toilet_pin = 2130837655;
+			public const int Zebra = 2130837655;
 			
 			// aapt resource value: 0x7f020098
-			public const int Zebra = 2130837656;
+			public const int Zebra_Pin = 2130837656;
 			
 			// aapt resource value: 0x7f020099
-			public const int Zebra_Pin = 2130837657;
+			public const int ZebraHeader = 2130837657;
 			
 			// aapt resource value: 0x7f02009a
-			public const int ZebraHeader = 2130837658;
+			public const int ZoofariScenen = 2130837658;
 			
 			// aapt resource value: 0x7f02009b
-			public const int ZoofariScenen = 2130837659;
-			
-			// aapt resource value: 0x7f02009c
-			public const int ZoofariScenenHeader = 2130837660;
+			public const int ZoofariScenenHeader = 2130837659;
 			
 			static Drawable()
 			{
@@ -794,8 +791,8 @@ namespace GuidR.Droid
 			// aapt resource value: 0x7f090025
 			public const int Parking = 2131296293;
 			
-			// aapt resource value: 0x7f090058
-			public const int SampleVideoView = 2131296344;
+			// aapt resource value: 0x7f09004c
+			public const int SampleVideoView = 2131296332;
 			
 			// aapt resource value: 0x7f090005
 			public const int adjust_height = 2131296261;
@@ -824,17 +821,11 @@ namespace GuidR.Droid
 			// aapt resource value: 0x7f09000a
 			public const int auto = 2131296266;
 			
-			// aapt resource value: 0x7f09004f
-			public const int baboonButton = 2131296335;
+			// aapt resource value: 0x7f09004b
+			public const int baboonButton = 2131296331;
 			
 			// aapt resource value: 0x7f090018
 			public const int buttonPanel1 = 2131296280;
-			
-			// aapt resource value: 0x7f09004d
-			public const int buttonPanel2 = 2131296333;
-			
-			// aapt resource value: 0x7f090056
-			public const int buttonPanel3 = 2131296342;
 			
 			// aapt resource value: 0x7f090031
 			public const int buttonStrut = 2131296305;
@@ -929,23 +920,8 @@ namespace GuidR.Droid
 			// aapt resource value: 0x7f090028
 			public const int openingHoursButton = 2131296296;
 			
-			// aapt resource value: 0x7f09004b
-			public const int playGround1_irl = 2131296331;
-			
-			// aapt resource value: 0x7f09004c
-			public const int playGround2_irl = 2131296332;
-			
-			// aapt resource value: 0x7f09004e
-			public const int playGround3_irl = 2131296334;
-			
 			// aapt resource value: 0x7f090003
 			public const int satellite = 2131296259;
-			
-			// aapt resource value: 0x7f090050
-			public const int smokeAreaButton1_irl = 2131296336;
-			
-			// aapt resource value: 0x7f090051
-			public const int smokeAreaButton2_irl = 2131296337;
 			
 			// aapt resource value: 0x7f090008
 			public const int standard = 2131296264;
@@ -973,21 +949,6 @@ namespace GuidR.Droid
 			
 			// aapt resource value: 0x7f09001e
 			public const int timelineScrollView = 2131296286;
-			
-			// aapt resource value: 0x7f090052
-			public const int toilet1_irl = 2131296338;
-			
-			// aapt resource value: 0x7f090053
-			public const int toilet2_irl = 2131296339;
-			
-			// aapt resource value: 0x7f090054
-			public const int toilet3_irl = 2131296340;
-			
-			// aapt resource value: 0x7f090055
-			public const int toilet4_irl = 2131296341;
-			
-			// aapt resource value: 0x7f090057
-			public const int toilet5_irl = 2131296343;
 			
 			// aapt resource value: 0x7f090032
 			public const int webpageButton = 2131296306;
@@ -1088,25 +1049,16 @@ namespace GuidR.Droid
 			public const int NewsItem = 2130903056;
 			
 			// aapt resource value: 0x7f030011
-			public const int PlaygroundMenu = 2130903057;
+			public const int roundButton = 2130903057;
 			
 			// aapt resource value: 0x7f030012
-			public const int roundButton = 2130903058;
+			public const int SelectedFacilityMenu = 2130903058;
 			
 			// aapt resource value: 0x7f030013
-			public const int SelectedFacilityMenu = 2130903059;
+			public const int Text = 2130903059;
 			
 			// aapt resource value: 0x7f030014
-			public const int SmokeAreaMenu = 2130903060;
-			
-			// aapt resource value: 0x7f030015
-			public const int Text = 2130903061;
-			
-			// aapt resource value: 0x7f030016
-			public const int ToiletMenu = 2130903062;
-			
-			// aapt resource value: 0x7f030017
-			public const int VideoStream = 2130903063;
+			public const int VideoStream = 2130903060;
 			
 			static Layout()
 			{

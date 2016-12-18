@@ -80,15 +80,12 @@
     <Compile Include="InformationActivity.cs" />
     <Compile Include="MapActivity.cs" />
     <Compile Include="NewsActivity.cs" />
-    <Compile Include="PlaygroundMenuActivity.cs" />
     <Compile Include="FeedingTimeSchemeActivity.cs" />
     <Compile Include="SelectedFacilityMenuActivity.cs" />
-    <Compile Include="SmokeAreaMenuActivity.cs" />
     <Compile Include="SplashScreen.cs" />
     <Compile Include="MainActivity.cs" />
     <Compile Include="Resources\Resource.designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="ToiletMenuActivity.cs" />
     <Compile Include="VideoStreamActivity.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -364,9 +361,6 @@
     <AndroidResource Include="Resources\drawable-hdpi\Smoke_area.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable-hdpi\Playground.png" />
-  </ItemGroup>
-  <ItemGroup>
     <AndroidResource Include="Resources\drawable-hdpi\Toilet_pin.png" />
   </ItemGroup>
   <ItemGroup>
@@ -379,11 +373,6 @@
     <AndroidResource Include="Resources\layout\VideoStream.xml" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\layout\ToiletMenu.xml">
-      <SubType>Designer</SubType>
-    </AndroidResource>
-  </ItemGroup>
-  <ItemGroup>
     <AndroidResource Include="Resources\layout\SelectedFacilityMenu.xml">
       <SubType>Designer</SubType>
     </AndroidResource>
@@ -392,13 +381,7 @@
     <AndroidResource Include="Resources\drawable-hdpi\Restaurant1_irl.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\layout\PlaygroundMenu.xml" />
-  </ItemGroup>
-  <ItemGroup>
     <AndroidResource Include="Resources\drawable-hdpi\Playground1_irl.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\layout\SmokeAreaMenu.xml" />
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\layout\Map_Info_Window.xml" />
@@ -609,13 +592,19 @@
     <AndroidAsset Include="Assets\img\FacilityButtons\PingvinerneButton.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\img\FacilityButtons\LegepladsenButton.png" />
-  </ItemGroup>
-  <ItemGroup>
     <AndroidAsset Include="Assets\img\FacilityButtons\BavianerneButton.png" />
   </ItemGroup>
   <ItemGroup>
     <AndroidAsset Include="Assets\img\MissingImage.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\img\FacilityButtons\Rygeomraaede Ved LegepladsenButton.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\img\FacilityButtons\LegepladsenButton.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\img\FacilityHeaders\LegepladsenHeader.png" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Novell\Novell.MonoDroid.CSharp.targets" />
   <Import Project="..\..\packages\Xamarin.GooglePlayServices.Basement.29.0.0.2\build\Xamarin.GooglePlayServices.Basement.targets" Condition="Exists('..\..\packages\Xamarin.GooglePlayServices.Basement.29.0.0.2\build\Xamarin.GooglePlayServices.Basement.targets')" />
