@@ -40,14 +40,6 @@
     <ConsolePause>false</ConsolePause>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Plugin.DeviceInfo, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\Xam.Plugin.DeviceInfo.2.0.2\lib\MonoAndroid10\Plugin.DeviceInfo.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="Plugin.DeviceInfo.Abstractions, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\Xam.Plugin.DeviceInfo.2.0.2\lib\MonoAndroid10\Plugin.DeviceInfo.Abstractions.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Xml" />
     <Reference Include="System.Core" />
@@ -90,7 +82,7 @@
     <Compile Include="NewsActivity.cs" />
     <Compile Include="PlaygroundMenuActivity.cs" />
     <Compile Include="FeedingTimeSchemeActivity.cs" />
-    <Compile Include="RestaurantMenuActivity.cs" />
+    <Compile Include="SelectedFacilityMenuActivity.cs" />
     <Compile Include="SmokeAreaMenuActivity.cs" />
     <Compile Include="SplashScreen.cs" />
     <Compile Include="MainActivity.cs" />
@@ -101,7 +93,8 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
-    <AndroidAsset Include="Assets\test.csv" />
+    <AndroidAsset Include="Assets\AnimalDatabase.csv" />
+    <AndroidAsset Include="Assets\FacilityDatabase.csv" />
     <None Include="packages.config" />
     <None Include="Resources\AboutResources.txt" />
     <None Include="Properties\AndroidManifest.xml">
@@ -391,7 +384,7 @@
     </AndroidResource>
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\layout\RestaurantMenu.xml">
+    <AndroidResource Include="Resources\layout\SelectedFacilityMenu.xml">
       <SubType>Designer</SubType>
     </AndroidResource>
   </ItemGroup>
@@ -596,6 +589,45 @@
   </ItemGroup>
   <ItemGroup>
     <AndroidAsset Include="Assets\img\AnimalHeaders\SealionHeader.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\img\FacilityHeaders\SkovbakkenHeader.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\img\FacilityTypeButtons\PlaygroundButton.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\img\FacilityTypeButtons\RestaurantButton.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\img\FacilityTypeButtons\SmokeAreaButton.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\img\FacilityTypeButtons\ToiletButton.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\img\FacilityButtons\SkovbakkenButton.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\img\FacilityButtons\Casa FamiliaButton.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\img\FacilityButtons\ChimpanserButton.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\img\FacilityButtons\ElefanterneButton.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\img\FacilityButtons\IndgangenButton.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\img\FacilityButtons\PingvinerneButton.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\img\FacilityButtons\LegepladsenButton.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\img\FacilityButtons\BavianerneButton.png" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Novell\Novell.MonoDroid.CSharp.targets" />
   <Import Project="..\..\packages\Xamarin.GooglePlayServices.Basement.29.0.0.2\build\Xamarin.GooglePlayServices.Basement.targets" Condition="Exists('..\..\packages\Xamarin.GooglePlayServices.Basement.29.0.0.2\build\Xamarin.GooglePlayServices.Basement.targets')" />

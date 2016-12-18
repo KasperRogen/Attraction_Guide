@@ -1,29 +1,37 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
 using Android.App;
-using Android.Content.Res;
-using Android.Graphics;
-using Android.Media;
+using Android.Content;
 using Android.OS;
+using Android.Runtime;
 using Android.Views;
 using Android.Widget;
-using Java.IO;
-using System.IO;
-using System.Collections.Generic;
-using static Android.Resource;
+using Android.Graphics;
 
-namespace GuidR.Droid {
+namespace GuidR.Droid
+{
     [Activity(Label = "Aalborg Zoo", Theme = "@style/NoTitle.splash")]
-    public class AnimalMenuActivity : Activity {
-        protected override void OnCreate(Bundle bundle) {
+    class SelectedFacilityMenuActivity : Activity
+    {
+
+        public static Facility.facilityType FacilityType { get; set; }
+
+        protected override void OnCreate(Bundle bundle)
+        {
             base.OnCreate(bundle);
-            SetContentView(Resource.Layout.AnimalMenu);
-            int animalIndex = 0;
+            SetContentView(Resource.Layout.SelectedFacilityMenu);
+
+
+            int facilityIndex = 0;
 
             Android.Util.DisplayMetrics metrics = Resources.DisplayMetrics;
             int buttonsize = (int)(metrics.WidthPixels / 2.5);
             int verticalSpaceBetweenButtons = (int)(metrics.HeightPixels / 20);
 
-            List<AnimalButton> animalButtons = new List<AnimalButton>();
-            LinearLayout baseLayout = FindViewById<LinearLayout>(Resource.Id.animalMenuBase);
+            LinearLayout baseLayout = FindViewById<LinearLayout>(Resource.Id.facilityMenuBase);
 
             LinearLayout buttonLayout = (LinearLayout)LayoutInflater.Inflate(Resource.Layout.ButtonLayout, baseLayout, false);
             baseLayout.AddView(buttonLayout);
@@ -32,14 +40,20 @@ namespace GuidR.Droid {
             verticalSpacer.LayoutParameters.Height = verticalSpaceBetweenButtons;
             baseLayout.AddView(verticalSpacer);
 
-            AssetManager assets = this.Assets;
-            foreach (Attraction animal in AttractionDataBase.Attractions) {
-                if(animal is Animal) { 
-                System.Console.WriteLine(animal.Name);
 
-                if (animalIndex > 1)
+            foreach (Attraction facility in AttractionDataBase.Attractions)
+            {
+                if(facility is Facility)
+                    Console.WriteLine(facility.Name + " : " + (facility as Facility).type);
+
+                if(facility is Facility && (facility as Facility).type == FacilityType) { 
+                Console.WriteLine(facility.Name);
+                Console.WriteLine(facility.Name + " . " + (facility as Facility).type);
+
+
+                    if (facilityIndex > 1)
                 {
-                    animalIndex = 0;
+                    facilityIndex = 0;
                     buttonLayout = (LinearLayout)LayoutInflater.Inflate(Resource.Layout.ButtonLayout, baseLayout, false);
                     baseLayout.AddView(buttonLayout);
                     verticalSpacer = (LinearLayout)LayoutInflater.Inflate(Resource.Layout.LinearLayout, baseLayout, false);
@@ -51,32 +65,35 @@ namespace GuidR.Droid {
 
                 ImageView button = (ImageView)LayoutInflater.Inflate(Resource.Layout.roundButton, baseLayout, false);
 
-                System.IO.Stream ims = assets.Open("img/AnimalButtons/" + animal.Name+"Button.png");
+                System.IO.Stream ims = Assets.Open("img/FacilityButtons/" + facility.Name + "Button.png");
                 // load image as Drawable
                 Bitmap bitmap = BitmapFactory.DecodeStream(ims);
                 ims.Close();
                 button.SetImageBitmap(bitmap);
                 button.SetMinimumWidth(buttonsize);
                 button.SetMinimumHeight(buttonsize);
-                button.Click += delegate { LoadAnimalPage(animal.Name); };
+                button.Click += delegate { LoadFacilityPage(facility.Name); };
                 buttonLayout.AddView(button);
                 //    break;
 
-                animalIndex++;
+                facilityIndex++;
 
             }
+            }
+
 
             ImageView banner = FindViewById<ImageView>(Resource.Id.homeBanner);
             banner.Click += delegate {
                 StartActivity(typeof(MainActivity));
             };
-            }
         }
 
-        void LoadAnimalPage (string animal) {
+
+        void LoadFacilityPage(string facility)
+        {
             //FindViewById<ImageView>(Resource.Id.HeaderImage) = 
-            IndependentAnimalActivity.animalName = animal;
-            StartActivity(typeof(IndependentAnimalActivity));
+            IndependentFacilityActivity.Facility = facility;
+            StartActivity(typeof(IndependentFacilityActivity));
         }
     }
 }

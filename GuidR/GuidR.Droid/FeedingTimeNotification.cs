@@ -10,6 +10,7 @@ using Android.Runtime;
 using Android.Views;
 using Android.Widget;
 using System.Threading;
+using Android.Graphics;
 
 namespace GuidR.Droid {
     [Service]
@@ -40,11 +41,15 @@ namespace GuidR.Droid {
                                 if (now.Hour == timeToCheck.TimeOfDay.AddMinutes(-5).Hour && 
                                    now.Minute == timeToCheck.TimeOfDay.AddMinutes(-5).Minute) {
 
+                                System.IO.Stream ims = Assets.Open("img/AnimalHeaders/" + a.Name + "Header.png");
+                                // load image as Drawable
+                                Bitmap bitmap = BitmapFactory.DecodeStream(ims);
+                                ims.Close();
 
-                                    Notification.Builder builder = new Notification.Builder(this)
+                                Notification.Builder builder = new Notification.Builder(this)
                                     .SetContentTitle("Fodring hos " + a.Name)
                                     .SetContentText("om " + lookAheadTime + " minutter.")
-                                    .SetSmallIcon((int)a.Image);
+                                    .SetSmallIcon(Resource.Drawable.logo);
                                     builder.SetDefaults(NotificationDefaults.Sound | NotificationDefaults.Vibrate);
 
                                     Notification notification = builder.Build();

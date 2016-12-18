@@ -35,10 +35,6 @@ namespace GuidR
 
         public override Coordinates Location { get; set; }
 
-        public override object Image { get; set; }
-
-        public override int Pin { get; set; }
-
         public string LatinName { get; set; }
 
         public bool HasFeedingTime { get { return FeedingTimes.Count > 0; } }

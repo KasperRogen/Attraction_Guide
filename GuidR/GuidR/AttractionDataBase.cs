@@ -41,8 +41,8 @@ namespace GuidR
 
         public static void InitializeAttraction()
         {
-            InitializeAnimals();
-            InitializeFacilities();
+            //InitializeAnimals();
+            //InitializeFacilities();
         }
 
         private static void InitializeAnimals()
@@ -282,7 +282,7 @@ namespace GuidR
             Tiger = new Animal("Tiger", tigerDescription, tigerCoordinates, "Panthea Sigris Sumatrae", tigerFeeding);
         }
 
-        private static void InitializeFacilities()
+       /* private static void InitializeFacilities()
         {
             Coordinates toiletCoordinates1 = new Coordinates(57.03847141, 9.90024678);
             string toiletDescription = "Toiletter til fri benyttelse";
@@ -358,7 +358,7 @@ namespace GuidR
             Time selfGrillClose = new Time(16);
 
             SelfGrill = new Facility("Grill-selv", selfGrillDescription, selfGrillCoordinates, selfGrillOpen, selfGrillClose, SelfGrill);
-        }
+        }*/
     }
 }
 

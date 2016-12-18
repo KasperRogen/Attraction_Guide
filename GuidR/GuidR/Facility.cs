@@ -7,34 +7,36 @@ namespace GuidR
     public class Facility : Attraction
     {
 
-        public Facility (string name, string description, Coordinates location, object image)
-            : this(name, description, location, null, null, image)
+        public enum facilityType
+        {
+            Restaurant,
+            Toilet,
+            SmokeArea,
+            Playground
+        }
+
+        public Facility (facilityType type, string name, string description, Coordinates location)
+            : this(type, name, description, location, null, null)
         {
             AttractionDataBase.Attractions.Add(this);
         }
 
-        public Facility (string name, string description, Coordinates location, Time open, Time close, object image)
+        public Facility (facilityType type, string name, string description, Coordinates location, Time open, Time close)
         {
             this.Name = name;
             this.Description = description;
             this.Location = location;
             this.Open = open;
             this.Close = close;
-            this.Image = image;
-
-            AttractionDataBase.Attractions.Add(this);
-
+            this.type = type;
         }
 
+        public facilityType type { get; set; }
         public override string Name { get; set; }
 
         public override string Description { get; set; }
 
         public override Coordinates Location { get; set; }
-
-        public override object Image { get; set; }
-
-        public override int Pin { get; set; }
 
         // The opening hours of the facility
         public Time Open { get; set; }

@@ -19,25 +19,27 @@ namespace GuidR.Droid
         protected override void OnCreate(Bundle bundle)
         {
             base.OnCreate(bundle);
-            Console.WriteLine("SPLASHSCREEN STARTED");
-            ReadFile();
-            SplitAndConvert();
+            ReadFile("AnimalDatabase");
+            SplitAndConvertAnimals();
 
+            ReadFile("FacilityDatabase");
+            SplitAndConvertFacilities();
            // AttractionDataBase.InitializeAttraction();
 
            // InitializeAndroidDependencies();
+
+            foreach(Attraction a in AttractionDataBase.Attractions)
+                if(a is Facility)
+                    Console.WriteLine((a as Facility).Name + " : " + (a as Facility).type);
 
             StartActivity(typeof(MainActivity));
         }
 
 
-        public void ReadFile() {
-
-            
-            AssetManager assets = this.Assets;
-
+        public void ReadFile(string fileName) {
+            Lines.Clear();
             List<string> lines = new List<string>();
-            using (StreamReader sr = new StreamReader(assets.Open("test.csv"), System.Text.Encoding.GetEncoding("iso-8859-1"), true)) {
+            using (StreamReader sr = new StreamReader(Assets.Open(fileName + ".csv"), System.Text.Encoding.GetEncoding("iso-8859-1"), true)) {
                 while (!sr.EndOfStream) {
                     string line = sr.ReadLine();
 
@@ -64,13 +66,12 @@ namespace GuidR.Droid
 
             Lines.RemoveAt(0);
 
-
             Console.WriteLine("*amount of lines in lines: " + lines.Count);
         }
 
 
 
-        public void SplitAndConvert()
+        public void SplitAndConvertAnimals()
         {
 
             Console.WriteLine("*ØØØØØØØØØØØØØØØØØØØØØØØØØØØØØØØØØØØØØ: " + Lines.Count);
@@ -158,37 +159,67 @@ namespace GuidR.Droid
                         newLine[latinNameIndex]
                         ));
                 }
-
-
-                /*animalList.Add(new Animal(
-                newLine[nameIndex],
-                newLine[descriptionIndex],
-                new Coordinates(double.Parse(coord[0]), double.Parse(coord[1])),
-                newLine[latinNameIndex],
-                feedingTimes.ToArray()
-                ));
-
-                }
-                foreach (Animal animal in animalList) {
-                    Console.WriteLine("ØØØØØØØØØØØØØØØØØØØØØØØØØ " + animal.Name);
-                }*/
             }
         }
 
 
 
-
-
-
-
-   /*     Time ParseTime(string timeString)
+        void SplitAndConvertFacilities()
         {
-            Time time;
+            const int typeIndex = 0;
+            const int nameIndex = 1;
+            const int descriptionIndex = 2;
+            const int locationIndex = 3;
+            const int openIndex = 4;
+            const int closeIndex = 5;
+            Time opens = new Time(00, 00);
+            Time closes = new Time (23,59);
+            bool alwaysOpen = true;
 
-            return time;
+            foreach (string line in Lines)
+            {
+                Console.WriteLine(line);
+                alwaysOpen = true;
+                string[] newLine = line.Split(';');
+                string[] coord = newLine[locationIndex].Split(',');
+
+                if (newLine[openIndex] != "")
+                {
+                    string[] opensAsStrings = newLine[openIndex].Split('.');
+                    opens = new Time(int.Parse(opensAsStrings[0]), int.Parse(opensAsStrings[1]));
+
+                    string[] closesAsStrings = newLine[closeIndex].Split('.');
+                    Console.WriteLine(" at attraction : " + newLine[nameIndex]);
+                    Console.WriteLine(closesAsStrings[0] + closesAsStrings[1]);
+                    closes = new Time(int.Parse(closesAsStrings[0]), int.Parse(closesAsStrings[1]));
+
+                    alwaysOpen = false;
+                }
+
+
+                if (alwaysOpen == false)
+                {
+
+                    AttractionDataBase.Attractions.Add(new Facility(
+                        (Facility.facilityType)Enum.Parse(typeof(Facility.facilityType), newLine[typeIndex], true),
+                        newLine[nameIndex],
+                        newLine[descriptionIndex],
+                        ParseCoordinates(newLine[locationIndex]),
+                        opens,
+                        closes
+                        ));
+                }
+                else
+                {
+                    AttractionDataBase.Attractions.Add(new Facility(
+                        (Facility.facilityType)Enum.Parse(typeof(Facility.facilityType), newLine[typeIndex], true),
+                        newLine[nameIndex],
+                        newLine[descriptionIndex],
+                        ParseCoordinates(newLine[locationIndex])));
+                }
+            }
+
         }
-        */
-
 
 
         Coordinates ParseCoordinates(string coordString)
@@ -207,24 +238,9 @@ namespace GuidR.Droid
 
 
         // Initializes Android specific Drawables
-        void InitializeAndroidDependencies ()
+       /* void InitializeAndroidDependencies ()
         {
-            AttractionDataBase.Baboon.Image = Resource.Drawable.BaboonHeader;
-            AttractionDataBase.Bear.Image = Resource.Drawable.BrownBearHeader;
-            AttractionDataBase.SeaLion.Image = Resource.Drawable.SeaLionHeader;
-            AttractionDataBase.Hippo.Image = Resource.Drawable.HippoHeader;
-            AttractionDataBase.Elephant.Image = Resource.Drawable.ElephantHeader;
-            AttractionDataBase.Giraffe.Image = Resource.Drawable.GiraffeHeader;
-            AttractionDataBase.PolarBear.Image = Resource.Drawable.PolarBearHeader;
-            AttractionDataBase.Kaiman.Image = Resource.Drawable.KaimanHeader;
-            AttractionDataBase.Tamarin.Image = Resource.Drawable.TamarinHeader;
-            AttractionDataBase.Lemur.Image = Resource.Drawable.LemurHeader;
-            AttractionDataBase.Lion.Image = Resource.Drawable.LionHeader;
-            AttractionDataBase.Penguin.Image = Resource.Drawable.PenguinHeader;
-            AttractionDataBase.Meercat.Image = Resource.Drawable.MeercatHeader;
-            AttractionDataBase.Tiger.Image = Resource.Drawable.TigerHeader;
-            AttractionDataBase.Zebra.Image = Resource.Drawable.ZebraHeader;
-
+          
             AttractionDataBase.Toilet1.Image = Resource.Drawable.Toilet1Header;
             AttractionDataBase.Toilet2.Image = Resource.Drawable.Toilet2Header;
             AttractionDataBase.Toilet3.Image = Resource.Drawable.Toilet3Header;
@@ -247,22 +263,7 @@ namespace GuidR.Droid
 
         void InitializePins ()
         {
-            AttractionDataBase.Baboon.Pin = Resource.Drawable.Baboon_Pin;
-            AttractionDataBase.Bear.Pin = Resource.Drawable.Brown_bear_Pin;
-            AttractionDataBase.SeaLion.Pin = Resource.Drawable.Californian_Sea_Lion_pin;
-            AttractionDataBase.Hippo.Pin = Resource.Drawable.Pygmy_Hippo_Pin;
-            AttractionDataBase.Elephant.Pin = Resource.Drawable.Elephant_Pin;
-            AttractionDataBase.Giraffe.Pin = Resource.Drawable.Giraffe_Pin;
-            AttractionDataBase.PolarBear.Pin = Resource.Drawable.Polar_bear_Pin;
-            AttractionDataBase.Kaiman.Pin = Resource.Drawable.Black_kaiman_Pin;
-            AttractionDataBase.Tamarin.Pin = Resource.Drawable.Emperor_tamarin_Pin;
-            AttractionDataBase.Lemur.Pin = Resource.Drawable.Lemur_pin;
-            AttractionDataBase.Lion.Pin = Resource.Drawable.Lion_Pin;
-            AttractionDataBase.Penguin.Pin = Resource.Drawable.Penguin_Pin;
-            AttractionDataBase.Meercat.Pin = Resource.Drawable.Meercat_Pin;
-            AttractionDataBase.Tiger.Pin = Resource.Drawable.Tiger_Pin;
-            AttractionDataBase.Zebra.Pin = Resource.Drawable.Zebra_Pin;
-
+           
             AttractionDataBase.Toilet1.Pin = Resource.Drawable.Toilet_pin;
             AttractionDataBase.Toilet2.Pin = Resource.Drawable.Toilet_pin;
             AttractionDataBase.Toilet3.Pin = Resource.Drawable.Toilet_pin;
@@ -278,6 +279,6 @@ namespace GuidR.Droid
             AttractionDataBase.SmokeArea2.Pin = Resource.Drawable.Smoke_area_pin;
             AttractionDataBase.Bornezoo.Pin = Resource.Drawable.Playground_Pin;
             AttractionDataBase.zoofariScene.Pin = Resource.Drawable.Playground_Pin;
-        }
+        }*/
     }
 }

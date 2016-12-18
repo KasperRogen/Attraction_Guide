@@ -8,6 +8,7 @@ using Android.Content;
 using Android.OS;
 using Android.Runtime;
 using Android.Widget;
+using Android.Graphics;
 
 namespace GuidR.Droid
 {
@@ -19,38 +20,71 @@ namespace GuidR.Droid
             base.OnCreate(bundle);
             SetContentView(Resource.Layout.FacilitiesMenu);
 
-            Button toiletButton = FindViewById<Button>(Resource.Id.toiletButton);
-            Button restaurantButton = FindViewById<Button>(Resource.Id.restaurantButton);
-            Button smokeButton = FindViewById<Button>(Resource.Id.smokeButton);
-            Button playgroundButton = FindViewById<Button>(Resource.Id.playgroudButton);
+            int typeIndex = 0;
 
-            toiletButton.Click += delegate
-            {
-                StartActivity(typeof(ToiletMenuActivity));
-            };
+            Android.Util.DisplayMetrics metrics = Resources.DisplayMetrics;
+            int buttonsize = (int)(metrics.WidthPixels / 2.5);
+            int verticalSpaceBetweenButtons = (int)(metrics.HeightPixels / 20);
 
-            restaurantButton.Click += delegate
-            {
-                StartActivity(typeof(RestaurantMenuActivity));
-            };
+            List<AnimalButton> animalButtons = new List<AnimalButton>();
+            LinearLayout baseLayout = FindViewById<LinearLayout>(Resource.Id.facilityMenuBase);
 
-            smokeButton.Click += delegate
-            {
-                StartActivity(typeof(SmokeAreaMenuActivity));
-            };
+            LinearLayout buttonLayout = (LinearLayout)LayoutInflater.Inflate(Resource.Layout.ButtonLayout, baseLayout, false);
+            baseLayout.AddView(buttonLayout);
 
-            playgroundButton.Click += delegate
+            LinearLayout verticalSpacer = (LinearLayout)LayoutInflater.Inflate(Resource.Layout.LinearLayout, baseLayout, false);
+            verticalSpacer.LayoutParameters.Height = verticalSpaceBetweenButtons;
+            baseLayout.AddView(verticalSpacer);
+
+
+            var types = Enum.GetValues(typeof(Facility.facilityType));
+            foreach (Facility.facilityType type in types)
             {
-                StartActivity(typeof(PlaygroundMenuActivity));
-            };
+                    if (typeIndex > 1)
+                    {
+                        typeIndex = 0;
+                        buttonLayout = (LinearLayout)LayoutInflater.Inflate(Resource.Layout.ButtonLayout, baseLayout, false);
+                        baseLayout.AddView(buttonLayout);
+                        verticalSpacer = (LinearLayout)LayoutInflater.Inflate(Resource.Layout.LinearLayout, baseLayout, false);
+                        verticalSpacer.LayoutParameters.Height = verticalSpaceBetweenButtons;
+                        baseLayout.AddView(verticalSpacer);
+                    }
+
+                    //Animal animal = (Animal)AttractionDataBase.Attractions[0];
+
+                    ImageView button = (ImageView)LayoutInflater.Inflate(Resource.Layout.roundButton, baseLayout, false);
+
+                    System.IO.Stream ims = Assets.Open("img/FacilityTypeButtons/" + type.ToString() + "Button.png");
+                    // load image as Drawable
+                    Bitmap bitmap = BitmapFactory.DecodeStream(ims);
+                    ims.Close();
+                    button.SetImageBitmap(bitmap);
+                    button.SetMinimumWidth(buttonsize);
+                    button.SetMinimumHeight(buttonsize);
+                    button.Click += delegate { LoadFacilitymenu(type); };
+                    buttonLayout.AddView(button);
+                    //    break;
+
+                    typeIndex++;
+
+
+                }
+
 
             ImageView banner = FindViewById<ImageView>(Resource.Id.homeBanner);
-            banner.Click += delegate 
+            banner.Click += delegate
             {
                 StartActivity(typeof(MainActivity));
             };
-            
+
         }
-        
+
+
+        void LoadFacilitymenu(Facility.facilityType type)
+        {
+            SelectedFacilityMenuActivity.FacilityType = type;
+            StartActivity(typeof(SelectedFacilityMenuActivity));
+        }
+
     }
 }

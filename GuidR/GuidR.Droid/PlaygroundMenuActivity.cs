@@ -25,7 +25,7 @@ namespace GuidR.Droid
             Button playground2_irl = FindViewById<Button>(Resource.Id.playGround2_irl);
             Button playground3_irl = FindViewById<Button>(Resource.Id.playGround3_irl);
 
-
+            /*
             playground1_irl.Click += delegate
             {
                 LoadFacilityPage(AttractionDataBase.Playground1_irl);
@@ -45,9 +45,10 @@ namespace GuidR.Droid
             banner.Click += delegate {
                 StartActivity(typeof(MainActivity));
             };
+            */
 
         }
-        void LoadFacilityPage(Facility facility)
+        void LoadFacilityPage(string facility)
         {
             //FindViewById<ImageView>(Resource.Id.HeaderImage) = 
             IndependentFacilityActivity.Facility = facility;

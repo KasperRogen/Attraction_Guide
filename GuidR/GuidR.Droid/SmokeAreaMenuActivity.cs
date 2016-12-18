@@ -23,7 +23,7 @@ namespace GuidR.Droid
 
             Button smokeArea1_irl = FindViewById<Button>(Resource.Id.smokeAreaButton1_irl);
             Button smokeArea2_irl = FindViewById<Button>(Resource.Id.smokeAreaButton2_irl);
-
+            /*
             smokeArea1_irl.Click += delegate
             {
                 LoadFacilityPage(AttractionDataBase.SmokeArea1);
@@ -33,7 +33,7 @@ namespace GuidR.Droid
             {
                 LoadFacilityPage(AttractionDataBase.SmokeArea2);
             };
-
+            */
 
             ImageView banner = FindViewById<ImageView>(Resource.Id.homeBanner);
             banner.Click += delegate {
@@ -41,7 +41,7 @@ namespace GuidR.Droid
             };
 
         }
-        void LoadFacilityPage(Facility facility)
+        void LoadFacilityPage(string facility)
         {
             //FindViewById<ImageView>(Resource.Id.HeaderImage) = 
             IndependentFacilityActivity.Facility = facility;

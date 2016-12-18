@@ -9,6 +9,7 @@ using Android.OS;
 using Android.Runtime;
 using Android.Views;
 using Android.Widget;
+using Android.Graphics;
 
 namespace GuidR.Droid
 {
@@ -16,20 +17,27 @@ namespace GuidR.Droid
 
     class IndependentFacilityActivity : Activity
     {
-        public static Facility Facility { get; set; }
+        public static string Facility { get; set; }
         protected override void OnCreate(Bundle bundle)
         {
             base.OnCreate(bundle);
             SetContentView(Resource.Layout.FacilityPage);
 
-            FindViewById<ImageView>(Resource.Id.HeaderImage).SetImageResource((int)Facility.Image);
+            Facility facility = (Facility)AttractionDataBase.Attractions.Find(x => x.Name == Facility);
 
-            FindViewById<TextView>(Resource.Id.Name).Text = Facility.Name;
-            FindViewById<TextView>(Resource.Id.AboutFacility).Text = Facility.Description;
+            System.IO.Stream ims = Assets.Open("img/FacilityHeaders/" + facility.Name + "Header.png");
+            // load image as Drawable
+            Bitmap bitmap = BitmapFactory.DecodeStream(ims);
+            ims.Close();
+
+            FindViewById<ImageView>(Resource.Id.HeaderImage).SetImageBitmap(bitmap);
+
+            FindViewById<TextView>(Resource.Id.Name).Text = facility.Name;
+            FindViewById<TextView>(Resource.Id.AboutFacility).Text = facility.Description;
 
             FindViewById<Button>(Resource.Id.mapButton).Click += delegate 
             {
-                MapActivity.Attraction = Facility;
+                MapActivity.Attraction = facility;
                 StartActivity(typeof(MapActivity));
             };
 

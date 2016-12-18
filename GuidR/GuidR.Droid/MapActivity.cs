@@ -31,7 +31,7 @@ namespace GuidR.Droid
             return null;
         }
 
-        bool infoWindowOpen = true;
+        bool infoWindowOpen = false;
 
         public View GetInfoWindow(Marker marker) {
             infoWindowOpen = true;

@@ -12,9 +12,5 @@ namespace GuidR
 
         // The location of this attraction
         public abstract Coordinates Location { get; set; }
-
-        public abstract object Image { get; set; }
-
-        public abstract int Pin { get; set; }
     }
 }

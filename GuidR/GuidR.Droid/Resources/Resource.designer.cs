@@ -743,26 +743,26 @@ namespace GuidR.Droid
 			// aapt resource value: 0x7f090013
 			public const int AboutAnimal = 2131296275;
 			
-			// aapt resource value: 0x7f09001e
-			public const int AboutFacility = 2131296286;
+			// aapt resource value: 0x7f09001a
+			public const int AboutFacility = 2131296282;
 			
 			// aapt resource value: 0x7f090017
 			public const int AlarmButton = 2131296279;
 			
-			// aapt resource value: 0x7f090020
-			public const int FeedingAlarmMenuBlock = 2131296288;
+			// aapt resource value: 0x7f09001c
+			public const int FeedingAlarmMenuBlock = 2131296284;
 			
 			// aapt resource value: 0x7f090014
 			public const int FeedingTimePanel = 2131296276;
 			
-			// aapt resource value: 0x7f090027
-			public const int FeedingTimeSchemeLayout = 2131296295;
+			// aapt resource value: 0x7f090023
+			public const int FeedingTimeSchemeLayout = 2131296291;
 			
-			// aapt resource value: 0x7f090024
-			public const int FeedingTimeSchemeRoot = 2131296292;
+			// aapt resource value: 0x7f090020
+			public const int FeedingTimeSchemeRoot = 2131296288;
 			
-			// aapt resource value: 0x7f090025
-			public const int FeedingTimeSchemeText = 2131296293;
+			// aapt resource value: 0x7f090021
+			public const int FeedingTimeSchemeText = 2131296289;
 			
 			// aapt resource value: 0x7f090015
 			public const int Feedingtime = 2131296277;
@@ -773,29 +773,29 @@ namespace GuidR.Droid
 			// aapt resource value: 0x7f090012
 			public const int LatinName = 2131296274;
 			
-			// aapt resource value: 0x7f090048
-			public const int Map_Info_Window_Feeding_Time = 2131296328;
+			// aapt resource value: 0x7f090044
+			public const int Map_Info_Window_Feeding_Time = 2131296324;
 			
-			// aapt resource value: 0x7f090046
-			public const int Map_Info_Window_Image = 2131296326;
+			// aapt resource value: 0x7f090042
+			public const int Map_Info_Window_Image = 2131296322;
 			
-			// aapt resource value: 0x7f090047
-			public const int Map_Info_Window_Name = 2131296327;
+			// aapt resource value: 0x7f090043
+			public const int Map_Info_Window_Name = 2131296323;
 			
-			// aapt resource value: 0x7f090021
-			public const int MenuReminderButton = 2131296289;
+			// aapt resource value: 0x7f09001d
+			public const int MenuReminderButton = 2131296285;
 			
 			// aapt resource value: 0x7f090011
 			public const int Name = 2131296273;
 			
-			// aapt resource value: 0x7f09001f
-			public const int OpenHoursPanel = 2131296287;
+			// aapt resource value: 0x7f09001b
+			public const int OpenHoursPanel = 2131296283;
 			
-			// aapt resource value: 0x7f090029
-			public const int Parking = 2131296297;
+			// aapt resource value: 0x7f090025
+			public const int Parking = 2131296293;
 			
-			// aapt resource value: 0x7f09005f
-			public const int SampleVideoView = 2131296351;
+			// aapt resource value: 0x7f090058
+			public const int SampleVideoView = 2131296344;
 			
 			// aapt resource value: 0x7f090005
 			public const int adjust_height = 2131296261;
@@ -803,14 +803,14 @@ namespace GuidR.Droid
 			// aapt resource value: 0x7f090006
 			public const int adjust_width = 2131296262;
 			
-			// aapt resource value: 0x7f09002a
-			public const int adresseHeader = 2131296298;
+			// aapt resource value: 0x7f090026
+			public const int adresseHeader = 2131296294;
 			
-			// aapt resource value: 0x7f09002b
-			public const int adresseTekst = 2131296299;
+			// aapt resource value: 0x7f090027
+			public const int adresseTekst = 2131296295;
 			
-			// aapt resource value: 0x7f09003e
-			public const int animalButton = 2131296318;
+			// aapt resource value: 0x7f09003a
+			public const int animalButton = 2131296314;
 			
 			// aapt resource value: 0x7f09000d
 			public const int animalFeedingBlock = 2131296269;
@@ -818,80 +818,83 @@ namespace GuidR.Droid
 			// aapt resource value: 0x7f09000f
 			public const int animalMenuBase = 2131296271;
 			
-			// aapt resource value: 0x7f090026
-			public const int animalScroller = 2131296294;
+			// aapt resource value: 0x7f090022
+			public const int animalScroller = 2131296290;
 			
 			// aapt resource value: 0x7f09000a
 			public const int auto = 2131296266;
 			
-			// aapt resource value: 0x7f090056
-			public const int baboonButton = 2131296342;
+			// aapt resource value: 0x7f09004f
+			public const int baboonButton = 2131296335;
 			
 			// aapt resource value: 0x7f090018
 			public const int buttonPanel1 = 2131296280;
 			
-			// aapt resource value: 0x7f09001b
-			public const int buttonPanel2 = 2131296283;
-			
-			// aapt resource value: 0x7f09005d
-			public const int buttonPanel3 = 2131296349;
-			
-			// aapt resource value: 0x7f090035
-			public const int buttonStrut = 2131296309;
-			
-			// aapt resource value: 0x7f090038
-			public const int buttonStrut3 = 2131296312;
-			
-			// aapt resource value: 0x7f090040
-			public const int buttonpanel2 = 2131296320;
-			
-			// aapt resource value: 0x7f090042
-			public const int buttonpanel3 = 2131296322;
-			
-			// aapt resource value: 0x7f09004a
-			public const int card = 2131296330;
-			
-			// aapt resource value: 0x7f090049
-			public const int cardContainer = 2131296329;
-			
-			// aapt resource value: 0x7f09004c
-			public const int cardHeader = 2131296332;
-			
 			// aapt resource value: 0x7f09004d
-			public const int cardImage = 2131296333;
+			public const int buttonPanel2 = 2131296333;
 			
-			// aapt resource value: 0x7f09004e
-			public const int cardText = 2131296334;
+			// aapt resource value: 0x7f090056
+			public const int buttonPanel3 = 2131296342;
 			
-			// aapt resource value: 0x7f09004b
-			public const int cardView = 2131296331;
+			// aapt resource value: 0x7f090031
+			public const int buttonStrut = 2131296305;
 			
-			// aapt resource value: 0x7f090044
-			public const int checkinbutton = 2131296324;
-			
-			// aapt resource value: 0x7f09003d
-			public const int contactEmail = 2131296317;
+			// aapt resource value: 0x7f090034
+			public const int buttonStrut3 = 2131296308;
 			
 			// aapt resource value: 0x7f09003c
-			public const int contactPhone = 2131296316;
+			public const int buttonpanel2 = 2131296316;
+			
+			// aapt resource value: 0x7f09003e
+			public const int buttonpanel3 = 2131296318;
+			
+			// aapt resource value: 0x7f090046
+			public const int card = 2131296326;
+			
+			// aapt resource value: 0x7f090045
+			public const int cardContainer = 2131296325;
+			
+			// aapt resource value: 0x7f090048
+			public const int cardHeader = 2131296328;
+			
+			// aapt resource value: 0x7f090049
+			public const int cardImage = 2131296329;
+			
+			// aapt resource value: 0x7f09004a
+			public const int cardText = 2131296330;
+			
+			// aapt resource value: 0x7f090047
+			public const int cardView = 2131296327;
+			
+			// aapt resource value: 0x7f090040
+			public const int checkinbutton = 2131296320;
+			
+			// aapt resource value: 0x7f090039
+			public const int contactEmail = 2131296313;
+			
+			// aapt resource value: 0x7f090038
+			public const int contactPhone = 2131296312;
 			
 			// aapt resource value: 0x7f09000b
 			public const int dark = 2131296267;
 			
-			// aapt resource value: 0x7f09002d
-			public const int entranceHeader = 2131296301;
+			// aapt resource value: 0x7f090029
+			public const int entranceHeader = 2131296297;
 			
-			// aapt resource value: 0x7f090030
-			public const int entrancePrice = 2131296304;
+			// aapt resource value: 0x7f09002c
+			public const int entrancePrice = 2131296300;
 			
-			// aapt resource value: 0x7f09002f
-			public const int entranceType = 2131296303;
+			// aapt resource value: 0x7f09002b
+			public const int entranceType = 2131296299;
 			
-			// aapt resource value: 0x7f09003f
-			public const int facilityButton = 2131296319;
+			// aapt resource value: 0x7f09003b
+			public const int facilityButton = 2131296315;
 			
-			// aapt resource value: 0x7f090039
-			public const int feedingsButton = 2131296313;
+			// aapt resource value: 0x7f090019
+			public const int facilityMenuBase = 2131296281;
+			
+			// aapt resource value: 0x7f090035
+			public const int feedingsButton = 2131296309;
 			
 			// aapt resource value: 0x7f09000e
 			public const int homeBanner = 2131296270;
@@ -902,20 +905,20 @@ namespace GuidR.Droid
 			// aapt resource value: 0x7f090007
 			public const int icon_only = 2131296263;
 			
-			// aapt resource value: 0x7f090041
-			public const int infoButton = 2131296321;
+			// aapt resource value: 0x7f09003d
+			public const int infoButton = 2131296317;
 			
 			// aapt resource value: 0x7f09000c
 			public const int light = 2131296268;
 			
-			// aapt resource value: 0x7f090045
-			public const int map = 2131296325;
+			// aapt resource value: 0x7f090041
+			public const int map = 2131296321;
 			
 			// aapt resource value: 0x7f090016
 			public const int mapButton = 2131296278;
 			
-			// aapt resource value: 0x7f090043
-			public const int newsbutton = 2131296323;
+			// aapt resource value: 0x7f09003f
+			public const int newsbutton = 2131296319;
 			
 			// aapt resource value: 0x7f090001
 			public const int none = 2131296257;
@@ -923,110 +926,86 @@ namespace GuidR.Droid
 			// aapt resource value: 0x7f090002
 			public const int normal = 2131296258;
 			
-			// aapt resource value: 0x7f09002c
-			public const int openingHoursButton = 2131296300;
+			// aapt resource value: 0x7f090028
+			public const int openingHoursButton = 2131296296;
 			
-			// aapt resource value: 0x7f09004f
-			public const int playGround1_irl = 2131296335;
+			// aapt resource value: 0x7f09004b
+			public const int playGround1_irl = 2131296331;
 			
-			// aapt resource value: 0x7f090050
-			public const int playGround2_irl = 2131296336;
+			// aapt resource value: 0x7f09004c
+			public const int playGround2_irl = 2131296332;
 			
-			// aapt resource value: 0x7f090051
-			public const int playGround3_irl = 2131296337;
-			
-			// aapt resource value: 0x7f09001d
-			public const int playgroudButton = 2131296285;
-			
-			// aapt resource value: 0x7f09001a
-			public const int restaurantButton = 2131296282;
-			
-			// aapt resource value: 0x7f090052
-			public const int restaurantButton1 = 2131296338;
-			
-			// aapt resource value: 0x7f090053
-			public const int restaurantButton2 = 2131296339;
-			
-			// aapt resource value: 0x7f090054
-			public const int restaurantButton3 = 2131296340;
-			
-			// aapt resource value: 0x7f090055
-			public const int restaurantButton4 = 2131296341;
+			// aapt resource value: 0x7f09004e
+			public const int playGround3_irl = 2131296334;
 			
 			// aapt resource value: 0x7f090003
 			public const int satellite = 2131296259;
 			
-			// aapt resource value: 0x7f090057
-			public const int smokeAreaButton1_irl = 2131296343;
+			// aapt resource value: 0x7f090050
+			public const int smokeAreaButton1_irl = 2131296336;
 			
-			// aapt resource value: 0x7f090058
-			public const int smokeAreaButton2_irl = 2131296344;
-			
-			// aapt resource value: 0x7f09001c
-			public const int smokeButton = 2131296284;
+			// aapt resource value: 0x7f090051
+			public const int smokeAreaButton2_irl = 2131296337;
 			
 			// aapt resource value: 0x7f090008
 			public const int standard = 2131296264;
 			
-			// aapt resource value: 0x7f090028
-			public const int strut = 2131296296;
+			// aapt resource value: 0x7f090024
+			public const int strut = 2131296292;
+			
+			// aapt resource value: 0x7f09002a
+			public const int strut2 = 2131296298;
 			
 			// aapt resource value: 0x7f09002e
-			public const int strut2 = 2131296302;
+			public const int strut3 = 2131296302;
 			
-			// aapt resource value: 0x7f090032
-			public const int strut3 = 2131296306;
-			
-			// aapt resource value: 0x7f09003b
-			public const int strutContact = 2131296315;
+			// aapt resource value: 0x7f090037
+			public const int strutContact = 2131296311;
 			
 			// aapt resource value: 0x7f090004
 			public const int terrain = 2131296260;
 			
-			// aapt resource value: 0x7f090037
-			public const int ticketsButton = 2131296311;
+			// aapt resource value: 0x7f090033
+			public const int ticketsButton = 2131296307;
 			
-			// aapt resource value: 0x7f090023
-			public const int timeLine = 2131296291;
+			// aapt resource value: 0x7f09001f
+			public const int timeLine = 2131296287;
 			
-			// aapt resource value: 0x7f090022
-			public const int timelineScrollView = 2131296290;
+			// aapt resource value: 0x7f09001e
+			public const int timelineScrollView = 2131296286;
 			
-			// aapt resource value: 0x7f090059
-			public const int toilet1_irl = 2131296345;
+			// aapt resource value: 0x7f090052
+			public const int toilet1_irl = 2131296338;
 			
-			// aapt resource value: 0x7f09005a
-			public const int toilet2_irl = 2131296346;
+			// aapt resource value: 0x7f090053
+			public const int toilet2_irl = 2131296339;
 			
-			// aapt resource value: 0x7f09005b
-			public const int toilet3_irl = 2131296347;
+			// aapt resource value: 0x7f090054
+			public const int toilet3_irl = 2131296340;
 			
-			// aapt resource value: 0x7f09005c
-			public const int toilet4_irl = 2131296348;
+			// aapt resource value: 0x7f090055
+			public const int toilet4_irl = 2131296341;
 			
-			// aapt resource value: 0x7f09005e
-			public const int toilet5_irl = 2131296350;
+			// aapt resource value: 0x7f090057
+			public const int toilet5_irl = 2131296343;
 			
-			// aapt resource value: 0x7f090019
-			public const int toiletButton = 2131296281;
-			
-			// aapt resource value: 0x7f090036
-			public const int webpageButton = 2131296310;
+			// aapt resource value: 0x7f090032
+			public const int webpageButton = 2131296306;
 			
 			// aapt resource value: 0x7f090009
 			public const int wide = 2131296265;
 			
-			// aapt resource value: 0x7f090031
-			public const int yearlyHeader = 2131296305;
+			// aapt resource value: 0x7f09002d
+			public const int yearlyHeader = 2131296301;
 			
-			// aapt resource value: 0x7f090034
-			public const int yearlyPrice = 2131296308;
+			// aapt resource value: 0x7f090030
+			public const int yearlyPrice = 2131296304;
 			
-			// aapt resource value: 0x7f090033
-			public const int yearlyType = 2131296307;
+			// aapt resource value: 0x7f09002f
+			public const int yearlyType = 2131296303;
 			
-			// aapt resource value: 0x7f09003a
-			public const int zoomapButton = 2131296314;
+			// aapt resource value: 0x7f090036
+			public const int zoomapButton = 2131296310;
 			
 			static Id()
 			{
@@ -1112,10 +1091,10 @@ namespace GuidR.Droid
 			public const int PlaygroundMenu = 2130903057;
 			
 			// aapt resource value: 0x7f030012
-			public const int RestaurantMenu = 2130903058;
+			public const int roundButton = 2130903058;
 			
 			// aapt resource value: 0x7f030013
-			public const int roundButton = 2130903059;
+			public const int SelectedFacilityMenu = 2130903059;
 			
 			// aapt resource value: 0x7f030014
 			public const int SmokeAreaMenu = 2130903060;

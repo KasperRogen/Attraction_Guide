@@ -21,6 +21,7 @@ namespace GuidR.Droid
             base.OnCreate(bundle);
             SetContentView(Resource.Layout.ToiletMenu);
 
+            /*
             Button toilet1_irl = FindViewById<Button>(Resource.Id.toilet1_irl);
             Button toilet2_irl = FindViewById<Button>(Resource.Id.toilet2_irl);
             Button toilet3_irl = FindViewById<Button>(Resource.Id.toilet3_irl);
@@ -51,7 +52,7 @@ namespace GuidR.Droid
             {
                 LoadFacilityPage(AttractionDataBase.Toilet5);
             };
-
+            */
 
             ImageView banner = FindViewById<ImageView>(Resource.Id.homeBanner);
             banner.Click += delegate {
@@ -59,7 +60,7 @@ namespace GuidR.Droid
             };
 
         }
-        void LoadFacilityPage(Facility facility)
+        void LoadFacilityPage(string facility)
         {
             //FindViewById<ImageView>(Resource.Id.HeaderImage) = 
             IndependentFacilityActivity.Facility = facility;
