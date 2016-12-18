@@ -55,7 +55,6 @@
                 android:gravity="center"/>
 
             <TextView
-                android:text="Feeding Time"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:id="@+id/Map_Info_Window_Feeding_Time"

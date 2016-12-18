@@ -18,7 +18,6 @@ namespace GuidR
         public Facility (facilityType type, string name, string description, Coordinates location)
             : this(type, name, description, location, null, null)
         {
-            AttractionDataBase.Attractions.Add(this);
         }
 
         public Facility (facilityType type, string name, string description, Coordinates location, Time open, Time close)

@@ -24,9 +24,6 @@ namespace GuidR.Droid
 
             ReadFile("FacilityDatabase");
             SplitAndConvertFacilities();
-           // AttractionDataBase.InitializeAttraction();
-
-           // InitializeAndroidDependencies();
 
             foreach(Attraction a in AttractionDataBase.Attractions)
                 if(a is Facility)
@@ -65,8 +62,6 @@ namespace GuidR.Droid
 
 
             Lines.RemoveAt(0);
-
-            Console.WriteLine("*amount of lines in lines: " + lines.Count);
         }
 
 
@@ -89,29 +84,18 @@ namespace GuidR.Droid
             foreach (string line in Lines)
             {
                 bool hasFeedingTime = false;
-                Console.WriteLine("DOOING IITT *****************************************");
                 string[] newLine = line.Split(';');
                 string[] coord = newLine[locationIndex].Split(',');
                 List<Time> feedingtimesHM = new List<Time>();
                 List<FeedingTime> feedingTimes = new List<FeedingTime>();
-
-
-                Console.WriteLine("New animal begin:");
-                Console.WriteLine(newLine[0]);
-                Console.WriteLine(newLine[1]);
-                Console.WriteLine(newLine[2]);
-                Console.WriteLine(newLine[3]);
-                Console.WriteLine("Animal end\n\n\n\n\n\n\n");
 
                 if (newLine[feedingTimeIndex] != "")
                 {
                     string[] ftimes = newLine[feedingTimeIndex].Split(',');
                     foreach (string feed in ftimes)
                     {
-                        Console.WriteLine(newLine[nameIndex] + " has a feedingtime: " + feed);
                         string[] hm = feed.Split('.');
                         foreach (string a in hm)
-                            Console.WriteLine("HM for " + newLine[nameIndex] + ": " + a);
                         feedingtimesHM.Add(new Time(int.Parse(hm[0]), int.Parse(hm[1])));
                         hasFeedingTime = true;
                     }
@@ -178,7 +162,6 @@ namespace GuidR.Droid
 
             foreach (string line in Lines)
             {
-                Console.WriteLine(line);
                 alwaysOpen = true;
                 string[] newLine = line.Split(';');
                 string[] coord = newLine[locationIndex].Split(',');
@@ -189,8 +172,6 @@ namespace GuidR.Droid
                     opens = new Time(int.Parse(opensAsStrings[0]), int.Parse(opensAsStrings[1]));
 
                     string[] closesAsStrings = newLine[closeIndex].Split('.');
-                    Console.WriteLine(" at attraction : " + newLine[nameIndex]);
-                    Console.WriteLine(closesAsStrings[0] + closesAsStrings[1]);
                     closes = new Time(int.Parse(closesAsStrings[0]), int.Parse(closesAsStrings[1]));
 
                     alwaysOpen = false;
@@ -199,7 +180,7 @@ namespace GuidR.Droid
 
                 if (alwaysOpen == false)
                 {
-
+                    Console.WriteLine(alwaysOpen + newLine[nameIndex]);
                     AttractionDataBase.Attractions.Add(new Facility(
                         (Facility.facilityType)Enum.Parse(typeof(Facility.facilityType), newLine[typeIndex], true),
                         newLine[nameIndex],
@@ -211,6 +192,7 @@ namespace GuidR.Droid
                 }
                 else
                 {
+                    Console.WriteLine(alwaysOpen + newLine[nameIndex]);
                     AttractionDataBase.Attractions.Add(new Facility(
                         (Facility.facilityType)Enum.Parse(typeof(Facility.facilityType), newLine[typeIndex], true),
                         newLine[nameIndex],
@@ -236,49 +218,5 @@ namespace GuidR.Droid
             return coords;
         }
 
-
-        // Initializes Android specific Drawables
-       /* void InitializeAndroidDependencies ()
-        {
-          
-            AttractionDataBase.Toilet1.Image = Resource.Drawable.Toilet1Header;
-            AttractionDataBase.Toilet2.Image = Resource.Drawable.Toilet2Header;
-            AttractionDataBase.Toilet3.Image = Resource.Drawable.Toilet3Header;
-            AttractionDataBase.Toilet4.Image = Resource.Drawable.Toilet4Header;
-            AttractionDataBase.Toilet5.Image = Resource.Drawable.Toilet5Header;
-
-            AttractionDataBase.CasaFamilia.Image = Resource.Drawable.CasafamiliaHeader;
-            AttractionDataBase.Skovbakken.Image = Resource.Drawable.SkovBakkenHeader;
-            AttractionDataBase.SelfGrill.Image = Resource.Drawable.grill_selvHeader;
-            AttractionDataBase.PlaygroundKiosk.Image = Resource.Drawable.PlaygroundKioskHeader;
-            AttractionDataBase.Playground1_irl.Image = Resource.Drawable.PlaygroundHeader;
-            AttractionDataBase.SmokeArea1.Image = Resource.Drawable.Smoke_Area1Header;
-            AttractionDataBase.SmokeArea2.Image = Resource.Drawable.Smoke_Area2Header;
-            AttractionDataBase.Bornezoo.Image = Resource.Drawable.bornezooHeader;
-            AttractionDataBase.zoofariScene.Image = Resource.Drawable.ZoofariScenenHeader;
-
-            InitializePins();
-        }
-
-
-        void InitializePins ()
-        {
-           
-            AttractionDataBase.Toilet1.Pin = Resource.Drawable.Toilet_pin;
-            AttractionDataBase.Toilet2.Pin = Resource.Drawable.Toilet_pin;
-            AttractionDataBase.Toilet3.Pin = Resource.Drawable.Toilet_pin;
-            AttractionDataBase.Toilet4.Pin = Resource.Drawable.Toilet_pin;
-            AttractionDataBase.Toilet5.Pin = Resource.Drawable.Toilet_pin;
-
-            AttractionDataBase.CasaFamilia.Pin = Resource.Drawable.Restaurant_Pin;
-            AttractionDataBase.Skovbakken.Pin = Resource.Drawable.Restaurant_Pin;
-            AttractionDataBase.SelfGrill.Pin = Resource.Drawable.Restaurant_Pin;
-            AttractionDataBase.PlaygroundKiosk.Pin = Resource.Drawable.Restaurant_Pin;
-            AttractionDataBase.Playground1_irl.Pin = Resource.Drawable.Playground_Pin;
-            AttractionDataBase.SmokeArea1.Pin = Resource.Drawable.Smoke_area_pin;
-            AttractionDataBase.SmokeArea2.Pin = Resource.Drawable.Smoke_area_pin;
-            AttractionDataBase.Bornezoo.Pin = Resource.Drawable.Playground_Pin;
-            AttractionDataBase.zoofariScene.Pin = Resource.Drawable.Playground_Pin;
-        }*/
     }
 }

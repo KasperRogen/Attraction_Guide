@@ -1,9 +1,9 @@
-Type;Name;Description;Location;Opens;Closeses
+Type;Name;Description;Location;Opens;closes
 Toilet;Indgangen;Toiletter til fri benyttelse;57.03847141, 9.90024678;;
 Toilet;Chimpanser;Toiletter til fri benyttelse;57.03760766, 9.89764463;;
 Toilet;Casa Familia;Toiletter til fri benyttelse;57.037176, 9.898884;;
 Toilet;Pingvinerne;Toiletter til fri benyttelse;57.03624819, 9.89875707;;
 Toilet;Elefanterne;Toiletter til fri benyttelse;57.035668, 9.896225;;
+Restaurant;Skovbakken;Skovbakken er Aalborg Zoos spisested, placeret ved Faunavej på bakken op mod skoven. Her har vi udsigt over byen og Aalborg Zoo.;57.03708343, 9.89808152;08.00;16.00
 SmokeArea;Legepladsen;Et sted at ryge;57.03763956, 9.89869313;;
 SmokeArea;Bavianerne;Et sted at ryge;57.03649414, 9.89805727;;
-Restaurant;Skovbakken;Skovbakken er Aalborg Zoos spisested, placeret ved Faunavej på bakken op mod skoven. Her har vi udsigt over byen og Aalborg Zoo.;57.03708343, 9.89808152;08.00;16.00

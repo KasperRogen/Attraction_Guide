@@ -39,7 +39,11 @@ namespace GuidR.Droid
             view.FindViewById<TextView>(Resource.Id.Map_Info_Window_Name).Text = marker.Title;
             Attraction attraction = AttractionDataBase.Attractions.Find( x=> x.Name == marker.Title);
 
-            System.IO.Stream ims = Assets.Open("img/AnimalHeaders/" + attraction.Name + "Header.png");
+            System.IO.Stream ims = Assets.Open("img/" + "MissingImage.png");
+            if (attraction is Animal)
+                ims = Assets.Open("img/AnimalButtons/" + attraction.Name + "Button.png");
+            else if (attraction is Attraction)
+                ims = Assets.Open("img/FacilityButtons/" + attraction.Name + "Button.png");
             // load image as Drawable
             Bitmap bitmap = BitmapFactory.DecodeStream(ims);
             ims.Close();
@@ -92,13 +96,18 @@ namespace GuidR.Droid
         }
 
 
-
         void SetMarkers(float zoomLevel)
         {
             mMap.Clear();
             foreach (Attraction attraction in AttractionDataBase.Attractions)
             {
-                System.IO.Stream ims = Assets.Open("img/AnimalButtons/" + attraction.Name + "Button.png");
+                System.IO.Stream ims = Assets.Open("img/" + "MissingImage.png");
+                if (attraction is Animal)
+                ims = Assets.Open("img/AnimalButtons/" + attraction.Name + "Button.png");
+                else if (attraction is Attraction)
+                ims = Assets.Open("img/FacilityButtons/" + attraction.Name + "Button.png");
+
+
                 // load image as Drawable
                 Bitmap bitmap = BitmapFactory.DecodeStream(ims);
                 ims.Close();
@@ -109,7 +118,7 @@ namespace GuidR.Droid
                 Console.WriteLine(zoomLevel + " : " + scaling);
 
                 Bitmap scaledBitmap = Bitmap.CreateScaledBitmap(bitmap, scaling, scaling, true);
-
+                bitmap.Recycle();
 
                 //Console.WriteLine("Making marker for: " + attraction.Name);
                 mMap.AddMarker(new MarkerOptions()
