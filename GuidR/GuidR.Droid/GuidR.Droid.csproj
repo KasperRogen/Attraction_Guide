@@ -518,9 +518,6 @@
     </AndroidResource>
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\BaboonButton.png" />
-  </ItemGroup>
-  <ItemGroup>
     <AndroidResource Include="Resources\layout\ButtonLayout.xml">
       <SubType>Designer</SubType>
     </AndroidResource>
@@ -539,9 +536,6 @@
   </ItemGroup>
   <ItemGroup>
     <AndroidAsset Include="Assets\img\AnimalButtons\SealionButton.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidAsset Include="Assets\BaboonPin.png" />
   </ItemGroup>
   <ItemGroup>
     <AndroidAsset Include="Assets\img\AnimalHeaders\BaboonHeader.png" />
@@ -574,37 +568,44 @@
     <AndroidAsset Include="Assets\img\FacilityTypeButtons\ToiletButton.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\img\FacilityButtons\SkovbakkenButton.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidAsset Include="Assets\img\FacilityButtons\Casa FamiliaButton.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidAsset Include="Assets\img\FacilityButtons\ChimpanserButton.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidAsset Include="Assets\img\FacilityButtons\ElefanterneButton.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidAsset Include="Assets\img\FacilityButtons\IndgangenButton.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidAsset Include="Assets\img\FacilityButtons\PingvinerneButton.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidAsset Include="Assets\img\FacilityButtons\BavianerneButton.png" />
-  </ItemGroup>
-  <ItemGroup>
     <AndroidAsset Include="Assets\img\MissingImage.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\img\FacilityButtons\Rygeomraaede Ved LegepladsenButton.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidAsset Include="Assets\img\FacilityButtons\LegepladsenButton.png" />
-  </ItemGroup>
-  <ItemGroup>
     <AndroidAsset Include="Assets\img\FacilityHeaders\LegepladsenHeader.png" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <AndroidAsset Include="Assets\img\FacilityButtons\Playground\LegepladsenButton.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\img\FacilityButtons\Restaurant\SkovbakkenButton.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\img\FacilityButtons\SmokeArea\Rygeomraaede Ved LegepladsenButton.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\img\FacilityButtons\SmokeArea\BavianerneButton.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\IndgangenButton.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\PingvinerneButton.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\img\FacilityButtons\Toilet\IndgangenButton.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\img\FacilityButtons\Toilet\PingvinerneButton.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\img\FacilityButtons\Toilet\Casa FamiliaButton.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\img\FacilityButtons\Toilet\ChimpanserButton.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\img\FacilityButtons\Toilet\ElefanterneButton.png" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Novell\Novell.MonoDroid.CSharp.targets" />
   <Import Project="..\..\packages\Xamarin.GooglePlayServices.Basement.29.0.0.2\build\Xamarin.GooglePlayServices.Basement.targets" Condition="Exists('..\..\packages\Xamarin.GooglePlayServices.Basement.29.0.0.2\build\Xamarin.GooglePlayServices.Basement.targets')" />

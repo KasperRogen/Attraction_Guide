@@ -15,7 +15,7 @@ using Android.Content.PM;
 namespace GuidR.Droid
 {
     [Activity(Label = "Aalborg Zoo", Theme = "@style/NoTitle.splash", ScreenOrientation = ScreenOrientation.Portrait)]
-    public class MapActivity : Activity, IOnMapReadyCallback, Android.Gms.Maps.GoogleMap.IInfoWindowAdapter, ILocationListener {
+    public class MapActivity : Activity, IOnMapReadyCallback, GoogleMap.IInfoWindowAdapter, ILocationListener {
         private GoogleMap mMap;
         LocationManager locationManager;
         Location myLocation;
@@ -98,9 +98,19 @@ namespace GuidR.Droid
 
         void SetMarkers(float zoomLevel)
         {
+            double minLatitude = mMap.Projection.VisibleRegion.NearLeft.Latitude;
+            double maxLatitude = mMap.Projection.VisibleRegion.FarLeft.Latitude;
+            double minLongtitude = mMap.Projection.VisibleRegion.NearLeft.Longitude;
+            double maxLongtitude = mMap.Projection.VisibleRegion.NearRight.Longitude;
+
             mMap.Clear();
+            Console.WriteLine(mMap.Projection.VisibleRegion);
             foreach (Attraction attraction in AttractionDataBase.Attractions)
             {
+                if (attraction.Location.Longitude > minLatitude &&
+                    attraction.Location.Longitude < maxLatitude &&
+                    attraction.Location.Latitude > minLongtitude &&
+                    attraction.Location.Latitude < maxLongtitude) { 
                 System.IO.Stream ims = Assets.Open("img/" + "MissingImage.png");
                 if (attraction is Animal)
                 ims = Assets.Open("img/AnimalButtons/" + attraction.Name + "Button.png");
@@ -112,8 +122,11 @@ namespace GuidR.Droid
                 Bitmap bitmap = BitmapFactory.DecodeStream(ims);
                 ims.Close();
 
-                int scaling = ((int)zoomLevel - 12);
-                scaling = (int)Math.Pow(scaling, 3);
+                    Android.Util.DisplayMetrics metrics = Resources.DisplayMetrics;
+                    
+                    int scaling = ((int)zoomLevel - 12) * (int)metrics.DensityDpi/60;
+                    scaling = (int)Math.Pow(scaling, 2);
+                    scaling /= 8;
 
                 Console.WriteLine(zoomLevel + " : " + scaling);
 
@@ -125,7 +138,7 @@ namespace GuidR.Droid
                     .SetPosition(new LatLng(attraction.Location.Longitude, attraction.Location.Latitude))
                     .SetTitle(attraction.Name)
                     .SetIcon(BitmapDescriptorFactory.FromBitmap(scaledBitmap)));
-
+                }
             }
         }
 
@@ -193,18 +206,9 @@ namespace GuidR.Droid
                 Console.WriteLine("Unable to determine your location. Try again in a short while.");
             }
             else {
-                Console.WriteLine("Ø****************************************************************");
-                Console.WriteLine("Ø****************************************************************");
-                Console.WriteLine("Ø****************************************************************");
-                Console.WriteLine("Ø****************************************************************");
-                Console.WriteLine("Ø****************************************************************");
-                Console.WriteLine("Ø****************************************************************");
-                Console.WriteLine("Ø****************************************************************");
-                Console.WriteLine("Ø****************************************************************");
                 Console.WriteLine(string.Format("{0:f6},{1:f6}", currentLocation.Latitude, currentLocation.Longitude));
                 myLocation = location;
-                Console.WriteLine("Ø****************************************************************: " + myLocation);
-
+  
                 if (positionMarker != null)
                     positionMarker.Remove();
                 var circleOptions = new CircleOptions();
@@ -214,8 +218,6 @@ namespace GuidR.Droid
                 circleOptions.InvokeStrokeColor(0X66FF0000);
                 circleOptions.InvokeStrokeWidth(0);
                positionMarker = mMap.AddCircle(circleOptions);
-                //.SetTitle("")
-                //.SetIcon(BitmapDescriptorFactory.FromResource(Resource.Drawable.your_location)));
 
             }
         }
