@@ -1,22 +1,15 @@
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 
 using Android.App;
-using Android.Content;
 using Android.OS;
-using Android.Runtime;
 using Android.Widget;
 using Android.Graphics;
 
-namespace GuidR.Droid
-{
+namespace GuidR.Droid {
     [Activity(Label = "Aalborg Zoo", Theme = "@style/NoTitle.splash")]
-    class FacilitiesMenuActivity : Activity
-    {
-        protected override void OnCreate(Bundle bundle)
-        {
+    class FacilitiesMenuActivity : Activity {
+        protected override void OnCreate(Bundle bundle) {
             base.OnCreate(bundle);
             SetContentView(Resource.Layout.FacilitiesMenu);
 
@@ -36,7 +29,6 @@ namespace GuidR.Droid
             verticalSpacer.LayoutParameters.Height = verticalSpaceBetweenButtons;
             baseLayout.AddView(verticalSpacer);
 
-
             var types = Enum.GetValues(typeof(Facility.attractionType));
             foreach (Facility.attractionType type in types)
             {
@@ -53,8 +45,6 @@ namespace GuidR.Droid
                         baseLayout.AddView(verticalSpacer);
                     }
 
-                    //Animal animal = (Animal)AttractionDataBase.Attractions[0];
-
                     ImageView button = (ImageView)LayoutInflater.Inflate(Resource.Layout.roundButton, baseLayout, false);
 
                     System.IO.Stream ims = Assets.Open("img/FacilityTypeButtons/" + type.ToString() + "Button.png");
@@ -69,19 +59,14 @@ namespace GuidR.Droid
                     //    break;
 
                     typeIndex++;
-
-
                 }
-
 
             ImageView banner = FindViewById<ImageView>(Resource.Id.homeBanner);
             banner.Click += delegate
             {
                 StartActivity(typeof(MainActivity));
             };
-
         }
-
 
         void LoadFacilitymenu(Facility.attractionType type)
         {

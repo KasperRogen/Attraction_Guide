@@ -1,38 +1,12 @@
-﻿using System;
-using Android.App;
-using Android.Gms.Maps;
+﻿using Android.App;
 using Android.OS;
 using Android.Widget;
 using Android.Content;
 
-namespace GuidR.Droid
-{
+namespace GuidR.Droid {
 	[Activity (Label = "GuidR.Droid", Theme = "@style/NoTitle.splash")]
-	public class MainActivity : Activity
-	{
-
-        protected override void OnCreate (Bundle bundle)
-		{
-            /* Properties:
-              Animals:
-              - Name
-              - LatinName
-              - Description
-              - Location
-              - NextFeeding
-              - FeedingTimes
-
-              Facilities:
-              - Name
-              - Description
-              - Location
-              - Open
-              - Close
-              - IsOpened
-              - OpensIn
-              - ClosesIn
-            */
-
+	public class MainActivity : Activity {
+        protected override void OnCreate (Bundle bundle) {
             base.OnCreate (bundle);
 			// Set our view from the "main" layout resource
 			SetContentView (Resource.Layout.Main);
@@ -77,7 +51,6 @@ namespace GuidR.Droid
             };
 
             CheckInButton.Click += delegate {
-
                 if (StopService(new Intent(this, typeof(FeedingTimeNotification))) == true) { 
                     FindViewById<ImageView>(Resource.Id.checkinbutton).SetImageResource(Resource.Drawable.Checkin_button_small);
                 }
@@ -86,11 +59,7 @@ namespace GuidR.Droid
                     FindViewById<ImageView>(Resource.Id.checkinbutton).SetImageResource(Resource.Drawable.checkout_button_small);
                 }
             };
-
         }
-
-
-
     }
 }
 

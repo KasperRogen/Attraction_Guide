@@ -1,35 +1,22 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using Android.App;
 using Android.Content;
 using Android.OS;
-using Android.Runtime;
-using Android.Views;
 using Android.Widget;
 
-namespace GuidR.Droid
-{
+namespace GuidR.Droid {
     [Activity(Label = "Aalborg Zoo", Theme = "@style/NoTitle.splash")]
-    class InformationActivity : Activity
-    {
+    class InformationActivity : Activity {
 
-        protected override void OnCreate(Bundle bundle)
-        {
-
+        protected override void OnCreate(Bundle bundle) {
             base.OnCreate(bundle);
 
             SetContentView(Resource.Layout.Information);
-
-
 
             Button openingHoursButton = FindViewById<Button>(Resource.Id.openingHoursButton);
             Button webpageButton = FindViewById<Button>(Resource.Id.webpageButton);
             Button ticketsButton = FindViewById<Button>(Resource.Id.ticketsButton);
             Button zoomapButton = FindViewById<Button>(Resource.Id.zoomapButton);
             Button feedingsButton = FindViewById<Button>(Resource.Id.feedingsButton);
-
 
             openingHoursButton.Click += delegate
             {

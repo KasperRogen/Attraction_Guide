@@ -11,19 +11,16 @@ namespace GuidR.Droid {
         public static string animalName { get; set; }
         Animal Animal;
 
-        protected override void OnCreate(Bundle bundle)
-        {
+        protected override void OnCreate(Bundle bundle) {
             base.OnCreate(bundle);
 
             Animal = (AttractionDataBase.Attractions.Find(x => x.Name == animalName) as Animal);
             SetContentView(Resource.Layout.AnimalPage);
 
-
             System.IO.Stream ims = Assets.Open("img/AnimalHeaders/" + (Animal as Animal).ImageName + "Header.png");
             // load image as Drawable
             Bitmap bitmap = BitmapFactory.DecodeStream(ims);
             ims.Close();
-
 
             FindViewById<ImageView>(Resource.Id.HeaderImage).SetImageBitmap(bitmap);
 
@@ -52,7 +49,6 @@ namespace GuidR.Droid {
                         AttractionDataBase.animalsToWatch.Remove(Animal);
                     }
                 };
-
             }
 
             TextView feedingTime = FindViewById<TextView>(Resource.Id.Feedingtime);

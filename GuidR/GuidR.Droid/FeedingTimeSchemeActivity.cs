@@ -1,5 +1,4 @@
 ﻿using Android.App;
-using Android.Content;
 using Android.Graphics;
 using Android.OS;
 using Android.Text;
@@ -13,15 +12,12 @@ using System.Threading;
 
 namespace GuidR.Droid {
     [Activity(Label = "Aalborg Zoo", Theme = "@style/NoTitle.splash")]
-
     public class FeedingTimeSchemeActivity : Activity {
 
         int feedingtimeLineHeight;
         Animal selectedAnimal;
 
-
         protected override void OnCreate(Bundle bundle) {
-
             base.OnCreate(bundle);
 
             SetContentView(Resource.Layout.FeedingTimeScheme);
@@ -31,71 +27,49 @@ namespace GuidR.Droid {
             Android.Util.DisplayMetrics metrics = Resources.DisplayMetrics;
             feedingtimeLineHeight = (int)(metrics.HeightPixels / 8.5);
 
-
             ImageView banner = FindViewById<ImageView>(Resource.Id.homeBanner);
             banner.Click += delegate {
                 StartActivity(typeof(MainActivity));
             };
-            
-                setTimeline();
+
+                SetTimeline();
                 animalScroller = FindViewById<HorizontalScrollView>(Resource.Id.animalScroller);
                 timelineScroller = FindViewById<HorizontalScrollView>(Resource.Id.timelineScrollView);
 
             SetFeedingtimeBlocks();
 
-
-            scrollViewSyncer(animalScroller, timelineScroller);
-
+            ScrollViewSyncer(animalScroller, timelineScroller);
         }
 
 
-        public void scrollViewSyncer(HorizontalScrollView scrollView, HorizontalScrollView scrollview2)
-        {
-
+        public void ScrollViewSyncer (HorizontalScrollView scrollView, HorizontalScrollView scrollview2) {
             bool initialRun = true;
             int currentTime = (DateTime.Now.Hour - 1) * 5 * 60 + DateTime.Now.Minute * 5;
             int scrolledAt = 0;
             int TimerWait = 30;
             Timer _timer;
 
-
-
-
-            Thread t = new Thread(() =>
-            {
-
-                _timer = new Timer(o =>
-                {
+            Thread t = new Thread(() => {
+                _timer = new Timer(o => {
                     if (scrollView.ScrollX < currentTime && initialRun == true) {
                         RunOnUiThread(() =>
                        {
                            scrollView.ScrollTo(scrolledAt+=12, 0);
                            scrollview2.ScrollTo(scrolledAt+=12, 0);
                        });
-                    } else
-                    {
+                    }
+                    else {
                         initialRun = false;
                         scrollview2.ScrollTo(scrollView.ScrollX, 0);
                     }
 
                 },
-                      null,
-                      0,
-                      TimerWait);
+                null, 0, TimerWait);
             });
             t.Start();
         }
 
-
-
-
-
-
-
-
-        void setTimeline() {
-
-
+        void SetTimeline() {
             LinearLayout timeLine = FindViewById<LinearLayout>(Resource.Id.timeLine);
             timeLine.SetGravity(GravityFlags.CenterVertical);
 
@@ -142,7 +116,6 @@ namespace GuidR.Droid {
                 timelineElement.SetWidth(30 * 5);
                 timelineElement.Gravity = GravityFlags.Center;
                 timelineLayout.AddView(timelineElement);
-
             }
 
             timeLine.AddView(blockLine);
@@ -152,8 +125,6 @@ namespace GuidR.Droid {
 
         void SetFeedingtimeBlocks() {
             List<Animal> TempAnimalList = new List<Animal>();
-
-
 
             Animal animal;
             for (int i = AttractionDataBase.Attractions.Count - 1; i > 0; i--) {
@@ -165,7 +136,6 @@ namespace GuidR.Droid {
                 }
             }
 
-
             TempAnimalList = TempAnimalList.OrderBy(x => x.NextFeeding).ToList();
 
             LinearLayout Scheme = FindViewById<LinearLayout>(Resource.Id.FeedingTimeSchemeLayout);
@@ -173,15 +143,11 @@ namespace GuidR.Droid {
             LinearLayout Root = FindViewById<LinearLayout>(Resource.Id.FeedingTimeSchemeRoot);
             Random rng = new Random();
             int index = 0;
-            foreach (Animal a in TempAnimalList) {
 
+            foreach (Animal a in TempAnimalList) {
                 View animalText = LayoutInflater.Inflate(Resource.Layout.AnimalFeedingText, Text, false);
 
-
                 Color[] colours = new Color[] { Color.Red, Color.Green, Color.Blue, Color.Yellow, Color.Red, Color.Green, Color.Blue, Color.Yellow , Color.Red, Color.Green, Color.Blue, Color.Yellow , Color.Red, Color.Green, Color.Blue, Color.Yellow };
-
-
-
 
                 LinearLayout horizontalAnimalLayout = (LinearLayout)LayoutInflater.Inflate(Resource.Layout.LinearLayout, Scheme, false);
                 LinearLayout.LayoutParams LL = new LinearLayout.LayoutParams(24*60*5, feedingtimeLineHeight);
@@ -201,8 +167,6 @@ namespace GuidR.Droid {
                     Bitmap bitmap = BitmapFactory.DecodeStream(ims);
                     ims.Close();
 
-
-
                     ((animalText as ViewGroup).GetChildAt(0) as ImageView).SetImageBitmap(bitmap);
                     ((animalText as ViewGroup).GetChildAt(0) as ImageView).Click += delegate {
                         selectedAnimal = a;
@@ -210,10 +174,7 @@ namespace GuidR.Droid {
                         menu.MenuInflater.Inflate(Resource.Layout.FeedingAlarmMenu, menu.Menu);
                         menu.Show();
 
-
                         IMenuItem item = menu.Menu.FindItem(Resource.Id.MenuReminderButton);
-
-
 
                         menu.MenuItemClick += delegate {
                             Console.WriteLine(selectedAnimal.Name + AttractionDataBase.animalsToWatch.Contains(selectedAnimal));
@@ -227,8 +188,6 @@ namespace GuidR.Droid {
                                 Console.WriteLine("ADDING");
                             }
                         };
-
-
 
                         if (AttractionDataBase.animalsToWatch.Contains(selectedAnimal)) { 
                             item.SetTitle("Remove reminder?");
@@ -274,16 +233,11 @@ namespace GuidR.Droid {
                         timeBeforeCurrentFeedingtime += a.FeedingTimes[i].TimeOfDay.Hour * 60 * 5 + a.FeedingTimes[i].TimeOfDay.Minute * 5 + a.FeedingTimes[i].ShowLength * 5 + 25;
                     }
 
-
-
                      animalBlockParams.LeftMargin = (int)(FT.TimeOfDay.Hour * 60 + FT.TimeOfDay.Minute)
                         * 5 + 25 - timeBeforeCurrentFeedingtime ;
 
                     (animalBlock as LinearLayout).SetBackgroundColor(Color.ParseColor("#e6e8ed"));
                     (animalBlock as LinearLayout).LayoutParameters.Height = feedingtimeLineHeight;
-
-
-
 
                     ((animalBlock as ViewGroup).GetChildAt(0) as TextView).Text = (FT.TimeOfDay.Hour.ToString("00") + ":" + FT.TimeOfDay.Minute.ToString("00"));
 
@@ -291,14 +245,11 @@ namespace GuidR.Droid {
                     feedingtimeCounter++;
                 }
 
-                //if(index < 3) { 
                 View blockLine = LayoutInflater.Inflate(Resource.Layout.line, Scheme, false);
                 horizontalLine = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MatchParent, 2);
                 blockLine.LayoutParameters = horizontalLine;
                 blockLine.SetBackgroundColor(Color.ParseColor("#000000"));
                 Scheme.AddView(blockLine);
-                //}
-
 
                 index+=2;
                 Text.AddView(textLine);
