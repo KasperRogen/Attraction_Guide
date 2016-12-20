@@ -129,7 +129,7 @@ namespace GuidR.Droid
 
                                 Android.Util.DisplayMetrics metrics = Resources.DisplayMetrics;
 
-                            int scaling = ((int)zoomLevel - 12);
+                            int scaling = ((int)zoomLevel - 11);
                             scaling = (int)Math.Pow(scaling, 3);
                             scaling /= 2;
 
@@ -273,7 +273,7 @@ namespace GuidR.Droid
                 circleOptions.InvokeFillColor(0X66FF0000);
                 circleOptions.InvokeStrokeColor(0X66FF0000);
                 circleOptions.InvokeStrokeWidth(0);
-               positionMarker = mMap.AddCircle(circleOptions);
+                //positionMarker = mMap.AddCircle(circleOptions);
 
             }
         }
