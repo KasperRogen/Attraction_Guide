@@ -35,7 +35,7 @@ namespace GuidR.Droid {
                 FindViewById<ImageView>(Resource.Id.AlarmButton).SetImageResource(Resource.Drawable.Alarm);
             }
 
-            if(Animal.HasFeedingTime == false || Animal.IsInSeason == false) {
+            if(Animal.HasFeedingTime == false || Animal.IsInSeason == false || Animal.NextFeeding.IsPassed) {
                 FindViewById<ImageView>(Resource.Id.AlarmButton).SetImageResource(0);
             } else {
 
