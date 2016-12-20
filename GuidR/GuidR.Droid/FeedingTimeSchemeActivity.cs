@@ -190,7 +190,7 @@ namespace GuidR.Droid {
                         };
 
                         if (AttractionDataBase.animalsToWatch.Contains(selectedAnimal)) { 
-                            item.SetTitle("Remove reminder?");
+                            item.SetTitle("Fjern påmindese?");
                         }
                         else { 
                             item.SetTitle("Sæt påmindelse?");
