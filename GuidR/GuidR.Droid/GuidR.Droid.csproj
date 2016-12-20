@@ -13,7 +13,7 @@
     <AndroidResgenFile>Resources\Resource.designer.cs</AndroidResgenFile>
     <AndroidApplication>True</AndroidApplication>
     <AndroidUseLatestPlatformSdk>True</AndroidUseLatestPlatformSdk>
-    <TargetFrameworkVersion>v6.0</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v7.0</TargetFrameworkVersion>
     <AssemblyName>GuidR.Droid</AssemblyName>
     <AndroidManifest>Properties\AndroidManifest.xml</AndroidManifest>
     <NuGetPackageImportStamp>
@@ -739,6 +739,21 @@
   </ItemGroup>
   <ItemGroup>
     <AndroidAsset Include="Assets\img\FacilityHeaders\PingvinerneHeader.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\img\MapButtons\SmokeAreaInactiveButton.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\img\MapButtons\ToiletInactiveButton.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\img\MapButtons\AnimalInactiveButton.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\img\MapButtons\PlaygroundInactiveButton.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\img\MapButtons\RestaurantInactiveButton.png" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Novell\Novell.MonoDroid.CSharp.targets" />
   <Import Project="..\..\packages\Xamarin.GooglePlayServices.Basement.29.0.0.2\build\Xamarin.GooglePlayServices.Basement.targets" Condition="Exists('..\..\packages\Xamarin.GooglePlayServices.Basement.29.0.0.2\build\Xamarin.GooglePlayServices.Basement.targets')" />

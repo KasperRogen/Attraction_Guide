@@ -135,6 +135,7 @@ namespace GuidR.Droid
                 if (hasFeedingTime)
                 {
                     AttractionDataBase.Attractions.Add(new Animal(
+                        Attraction.attractionType.Animal,
                         newLine[nameIndex],
                         newLine[descriptionIndex],
                         ParseCoordinates(newLine[locationIndex]),
@@ -148,6 +149,7 @@ namespace GuidR.Droid
                 else
                 {
                     AttractionDataBase.Attractions.Add(new Animal(
+                        Attraction.attractionType.Animal,
                         newLine[nameIndex],
                         newLine[descriptionIndex],
                         new Coordinates(double.Parse(coord[0]), double.Parse(coord[1])),
@@ -196,7 +198,7 @@ namespace GuidR.Droid
                 {
                     Console.WriteLine(alwaysOpen + newLine[nameIndex]);
                     AttractionDataBase.Attractions.Add(new Facility(
-                        (Facility.facilityType)Enum.Parse(typeof(Facility.facilityType), newLine[typeIndex], true),
+                        (Facility.attractionType)Enum.Parse(typeof(Facility.attractionType), newLine[typeIndex], true),
                         newLine[nameIndex],
                         newLine[descriptionIndex],
                         ParseCoordinates(newLine[locationIndex]),
@@ -208,7 +210,7 @@ namespace GuidR.Droid
                 {
                     Console.WriteLine(alwaysOpen + newLine[nameIndex]);
                     AttractionDataBase.Attractions.Add(new Facility(
-                        (Facility.facilityType)Enum.Parse(typeof(Facility.facilityType), newLine[typeIndex], true),
+                        (Facility.attractionType)Enum.Parse(typeof(Facility.attractionType), newLine[typeIndex], true),
                         newLine[nameIndex],
                         newLine[descriptionIndex],
                         ParseCoordinates(newLine[locationIndex])));

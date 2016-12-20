@@ -17,7 +17,7 @@ namespace GuidR.Droid
     class SelectedFacilityMenuActivity : Activity
     {
 
-        public static Facility.facilityType FacilityType { get; set; }
+        public static Facility.attractionType FacilityType { get; set; }
 
         protected override void OnCreate(Bundle bundle)
         {
@@ -44,11 +44,11 @@ namespace GuidR.Droid
             foreach (Attraction facility in AttractionDataBase.Attractions)
             {
                 if(facility is Facility)
-                    Console.WriteLine(facility.Name + " : " + (facility as Facility).type);
+                    Console.WriteLine(facility.Name + " : " + (facility as Facility).attractiontype);
 
-                if(facility is Facility && (facility as Facility).type == FacilityType) { 
+                if(facility is Facility && (facility as Facility).attractiontype == FacilityType) { 
                 Console.WriteLine(facility.Name);
-                Console.WriteLine(facility.Name + " . " + (facility as Facility).type);
+                Console.WriteLine(facility.Name + " . " + (facility as Facility).attractiontype);
 
 
                     if (facilityIndex > 1)
@@ -65,7 +65,7 @@ namespace GuidR.Droid
 
                 ImageView button = (ImageView)LayoutInflater.Inflate(Resource.Layout.roundButton, baseLayout, false);
 
-                System.IO.Stream ims = Assets.Open("img/FacilityButtons/" + (facility as Facility).type.ToString() + "/" + facility.Name + "Button.png");
+                System.IO.Stream ims = Assets.Open("img/FacilityButtons/" + (facility as Facility).attractiontype.ToString() + "/" + facility.Name + "Button.png");
                 // load image as Drawable
                 Bitmap bitmap = BitmapFactory.DecodeStream(ims);
                 ims.Close();

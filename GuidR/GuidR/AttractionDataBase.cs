@@ -49,7 +49,7 @@ namespace GuidR
         private static void InitializeAnimals()
         {
             Attractions.Clear();
-
+/*
             FeedingTime bearFeeding = new FeedingTime(new DateTime(2016, 1, 1), new DateTime(2016, 12, DateTime.DaysInMonth(2016, 12)), new Time(13, 45), 30, new int[] { 2, 3, 6, 7 });
             FeedingTime seaLionFeeding = new FeedingTime(new DateTime(2016, 5, 1), new DateTime(2016, 10, DateTime.DaysInMonth(2016, 10)), new Time(11, 30), 45, new int[] { 2, 3, 6, 7 });
             FeedingTime seaLionFeeding2 = new FeedingTime(new DateTime(2016, 5, 1), new DateTime(2016, 10, DateTime.DaysInMonth(2016, 10)), new Time(14, 30), 45, new int[] { 2, 3, 6, 7 });
@@ -280,7 +280,7 @@ namespace GuidR
                                       "Sumatra-tigeren er den mindste levende tiger-art, hvor hannerne i gennemsnit er 2,34 meter lange og vejer 136 kg. " +
                                       "Hunnerne er lidt mindre, med en længde på 1,98 meter og en vægt på 91 kg. " +
                                       "I naturen lever tigre oftest ikke mere end 8 til 10 år, hvor de i fangenskab kan blive helt op til 26 år gamle.";
-            Tiger = new Animal("Tiger", tigerDescription, tigerCoordinates, "Panthea Sigris Sumatrae", tigerFeeding);
+            Tiger = new Animal("Tiger", tigerDescription, tigerCoordinates, "Panthea Sigris Sumatrae", tigerFeeding);*/
         }
 
        /* private static void InitializeFacilities()

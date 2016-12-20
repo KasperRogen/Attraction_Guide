@@ -4,6 +4,17 @@ namespace GuidR
 {
     public abstract class Attraction
     {
+
+            public enum attractionType
+        {
+            Animal,
+            Restaurant,
+            Toilet,
+            SmokeArea,
+            Playground
+        }
+
+        public abstract attractionType attractiontype { get; set; }
         // The name for this attraction
         public abstract string Name { get; set; }
 

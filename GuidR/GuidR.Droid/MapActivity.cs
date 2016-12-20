@@ -15,19 +15,16 @@ using Android.Content.PM;
 namespace GuidR.Droid
 {
     [Activity(Label = "Aalborg Zoo", Theme = "@style/NoTitle.splash", ScreenOrientation = ScreenOrientation.Portrait)]
+
+
     public class MapActivity : Activity, IOnMapReadyCallback, GoogleMap.IInfoWindowAdapter, ILocationListener {
         private GoogleMap mMap;
         LocationManager locationManager;
         Location myLocation;
         string locationProvider;
 
-        struct attractionBool {
-            public Facility.facilityType type;
-            public bool enabled;
-        }
-
         List<attractionBool>attractionsEnabled;
-
+        List<imageViewButton> mapButtons;
         Circle positionMarker;
 
         public static Attraction Attraction { get; set; }
@@ -118,33 +115,35 @@ namespace GuidR.Droid
                     attraction.Location.Longitude < maxLatitude &&
                     attraction.Location.Latitude > minLongtitude &&
                     attraction.Location.Latitude < maxLongtitude) { 
-                System.IO.Stream ims = Assets.Open("img/" + "MissingImage.png");
-                if (attraction is Animal)
-                ims = Assets.Open("img/" + "AnimalButtons/" + attraction.Name + "Button.png");
-                else if (attraction is Attraction)
-                ims = Assets.Open("img/FacilityButtons/" + (attraction as Facility).type + "/" + attraction.Name + "Button.png");
+                        if(attractionsEnabled.Find(x=> x.type == attraction.attractiontype).enabled == true) { 
+                            System.IO.Stream ims = Assets.Open("img/" + "MissingImage.png");
+                            if (attraction is Animal)
+                            ims = Assets.Open("img/" + "AnimalButtons/" + attraction.Name + "Button.png");
+                            else if (attraction is Attraction)
+                            ims = Assets.Open("img/FacilityButtons/" + (attraction as Facility).attractiontype + "/" + attraction.Name + "Button.png");
 
 
-                // load image as Drawable
-                Bitmap bitmap = BitmapFactory.DecodeStream(ims);
-                ims.Close();
+                            // load image as Drawable
+                            Bitmap bitmap = BitmapFactory.DecodeStream(ims);
+                            ims.Close();
 
-                    Android.Util.DisplayMetrics metrics = Resources.DisplayMetrics;
+                                Android.Util.DisplayMetrics metrics = Resources.DisplayMetrics;
                     
-                    int scaling = ((int)zoomLevel - 12) * (int)metrics.DensityDpi/60;
-                    scaling = (int)Math.Pow(scaling, 2);
-                    scaling /= 8;
+                                int scaling = ((int)zoomLevel - 12) * (int)metrics.DensityDpi/60;
+                                scaling = (int)Math.Pow(scaling, 2);
+                                scaling /= 8;
 
-                Console.WriteLine(zoomLevel + " : " + scaling);
+                            Console.WriteLine(zoomLevel + " : " + scaling);
 
-                Bitmap scaledBitmap = Bitmap.CreateScaledBitmap(bitmap, scaling, scaling, true);
-                bitmap.Recycle();
+                            Bitmap scaledBitmap = Bitmap.CreateScaledBitmap(bitmap, scaling, scaling, true);
+                            bitmap.Recycle();
 
-                //Console.WriteLine("Making marker for: " + attraction.Name);
-                mMap.AddMarker(new MarkerOptions()
-                    .SetPosition(new LatLng(attraction.Location.Longitude, attraction.Location.Latitude))
-                    .SetTitle(attraction.Name)
-                    .SetIcon(BitmapDescriptorFactory.FromBitmap(scaledBitmap)));
+                            //Console.WriteLine("Making marker for: " + attraction.Name);
+                            mMap.AddMarker(new MarkerOptions()
+                                .SetPosition(new LatLng(attraction.Location.Longitude, attraction.Location.Latitude))
+                                .SetTitle(attraction.Name)
+                                .SetIcon(BitmapDescriptorFactory.FromBitmap(scaledBitmap)));
+                    }
                 }
             }
         }
@@ -166,10 +165,11 @@ namespace GuidR.Droid
             SetUpMap();
 
             attractionsEnabled = new List<attractionBool>();
+            mapButtons = new List<imageViewButton>();
 
-            foreach (Facility.facilityType type in Enum.GetValues(typeof(Facility.facilityType))) {
+            foreach (Facility.attractionType type in Enum.GetValues(typeof(Facility.attractionType))) {
                 LinearLayout buttonLayout = FindViewById<LinearLayout>(Resource.Id.mapButtons);
-                buttonLayout.WeightSum = Enum.GetValues(typeof(Facility.facilityType)).Length+1;
+                buttonLayout.WeightSum = Enum.GetValues(typeof(Facility.attractionType)).Length;
 
                 LinearLayout button = (LinearLayout)LayoutInflater.Inflate(Resource.Layout.ImageView, null);
                 LinearLayout.LayoutParams LayoutParams = new LinearLayout.LayoutParams(0, LinearLayout.LayoutParams.WrapContent);
@@ -182,14 +182,40 @@ namespace GuidR.Droid
                 ims.Close();
 
                 (button.GetChildAt(0) as ImageView).SetImageBitmap(bitmap);
-
+                button.Click += delegate
+                {
+                    attractionsEnabled.Find(x => x.type == type).enabled =
+                    !attractionsEnabled.Find(x => x.type == type).enabled;
+                    SetMarkers(mMap.CameraPosition.Zoom);
+                    updateMapButtons();
+                };
 
                 attractionBool aB = new attractionBool();
                 aB.type = type;
                 aB.enabled = true;
                 attractionsEnabled.Add(aB);
                 buttonLayout.AddView(button);
+                mapButtons.Add(new imageViewButton((ImageView)button.GetChildAt(0), type));
             }
+        }
+
+        void updateMapButtons()
+        {
+            foreach(imageViewButton button in mapButtons)
+                if(attractionsEnabled.Find(x=> x.type == button.attractionType).enabled) {
+                    System.IO.Stream ims = Assets.Open("img/MapButtons/" + button.attractionType.ToString() + "Button.png");
+                    Bitmap bitmap = BitmapFactory.DecodeStream(ims);
+                    ims.Close();
+                    button.imageView.SetImageBitmap(bitmap);
+                }
+                else
+                {
+                    System.IO.Stream ims = Assets.Open("img/MapButtons/" + button.attractionType.ToString() + "InactiveButton.png");
+                    Bitmap bitmap = BitmapFactory.DecodeStream(ims);
+                    ims.Close();
+                    button.imageView.SetImageBitmap(bitmap);
+                }
+
         }
 
         void InitializeLocationManager() {
@@ -256,7 +282,22 @@ namespace GuidR.Droid
 
     }
 
-    
+    class attractionBool
+    {
+        public Attraction.attractionType type;
+        public bool enabled;
+    }
+
+    class imageViewButton
+    {
+        public imageViewButton(ImageView img, Attraction.attractionType type)
+        {
+            imageView = img;
+            attractionType = type;
+        }
+        public ImageView imageView { get; set; }
+        public Attraction.attractionType attractionType { get; set; }
+    }
 
 }
 

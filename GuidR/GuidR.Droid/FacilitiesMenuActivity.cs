@@ -37,9 +37,12 @@ namespace GuidR.Droid
             baseLayout.AddView(verticalSpacer);
 
 
-            var types = Enum.GetValues(typeof(Facility.facilityType));
-            foreach (Facility.facilityType type in types)
+            var types = Enum.GetValues(typeof(Facility.attractionType));
+            foreach (Facility.attractionType type in types)
             {
+                if (type == Attraction.attractionType.Animal)
+                    continue;
+
                     if (typeIndex > 1)
                     {
                         typeIndex = 0;
@@ -80,7 +83,7 @@ namespace GuidR.Droid
         }
 
 
-        void LoadFacilitymenu(Facility.facilityType type)
+        void LoadFacilitymenu(Facility.attractionType type)
         {
             SelectedFacilityMenuActivity.FacilityType = type;
             StartActivity(typeof(SelectedFacilityMenuActivity));

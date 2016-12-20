@@ -7,30 +7,20 @@ namespace GuidR
     public class Facility : Attraction
     {
 
-        public enum facilityType
-        {
-            Restaurant,
-            Toilet,
-            SmokeArea,
-            Playground
-        }
-
-        public Facility (facilityType type, string name, string description, Coordinates location)
+        public Facility (attractionType type, string name, string description, Coordinates location)
             : this(type, name, description, location, null, null)
         {
         }
 
-        public Facility (facilityType type, string name, string description, Coordinates location, Time open, Time close)
+        public Facility (attractionType type, string name, string description, Coordinates location, Time open, Time close)
         {
             this.Name = name;
             this.Description = description;
             this.Location = location;
             this.Open = open;
             this.Close = close;
-            this.type = type;
+            this.attractiontype = type;
         }
-
-        public facilityType type { get; set; }
         public override string Name { get; set; }
 
         public override string Description { get; set; }
@@ -81,5 +71,7 @@ namespace GuidR
                     throw new Exception("This facility is already closed. Check IsOpened prior to calling");
             }
         }
+
+        public override attractionType attractiontype { get; set; }
     }
 }
