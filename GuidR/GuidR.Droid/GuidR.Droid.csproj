@@ -13,7 +13,7 @@
     <AndroidResgenFile>Resources\Resource.designer.cs</AndroidResgenFile>
     <AndroidApplication>True</AndroidApplication>
     <AndroidUseLatestPlatformSdk>True</AndroidUseLatestPlatformSdk>
-    <TargetFrameworkVersion>v7.0</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v6.0</TargetFrameworkVersion>
     <AssemblyName>GuidR.Droid</AssemblyName>
     <AndroidManifest>Properties\AndroidManifest.xml</AndroidManifest>
     <NuGetPackageImportStamp>
@@ -585,9 +585,6 @@
     <AndroidAsset Include="Assets\img\FacilityButtons\SmokeArea\Rygeomraaede Ved LegepladsenButton.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\img\FacilityButtons\SmokeArea\BavianerneButton.png" />
-  </ItemGroup>
-  <ItemGroup>
     <AndroidAsset Include="Assets\img\FacilityButtons\Toilet\IndgangenButton.png" />
   </ItemGroup>
   <ItemGroup>
@@ -598,9 +595,6 @@
   </ItemGroup>
   <ItemGroup>
     <AndroidAsset Include="Assets\img\FacilityButtons\Toilet\ChimpanserButton.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidAsset Include="Assets\img\FacilityButtons\Toilet\ElefanterneButton.png" />
   </ItemGroup>
   <ItemGroup>
     <AndroidAsset Include="Assets\img\MapButtons\SmokeAreaButton.png" />
@@ -616,6 +610,135 @@
   </ItemGroup>
   <ItemGroup>
     <AndroidAsset Include="Assets\img\MapButtons\RestaurantButton.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\img\AnimalButtons\ZebraButton.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\img\AnimalButtons\ElephantButton.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\img\AnimalButtons\GiraffeButton.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\img\AnimalButtons\LemurButton.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\img\AnimalButtons\MeercatButton.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\img\AnimalButtons\PenguinButton.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\img\AnimalButtons\PolarBearButton.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\img\AnimalButtons\TigerButton.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\img\AnimalButtons\KaimanButton.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\img\AnimalButtons\TamarinButton.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\img\AnimalHeaders\ZebraHeader.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\img\AnimalHeaders\ElephantHeader.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\img\AnimalHeaders\GiraffeHeader.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\img\AnimalHeaders\KaimanHeader.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\img\AnimalHeaders\LemurHeader.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\img\AnimalHeaders\MeercatHeader.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\img\AnimalHeaders\PenguinHeader.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\img\AnimalHeaders\TamarinHeader.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\img\AnimalHeaders\TigerHeader.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\img\AnimalHeaders\PolarBearHeader.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\img\FacilityButtons\Playground\zoofariSceneButton.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\img\FacilityButtons\Playground\BornezooButton.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\img\FacilityButtons\Restaurant\CasaFamiliaButton.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\img\FacilityButtons\Restaurant\PlaygroundKioskButton.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\img\FacilityButtons\Restaurant\SelfGrillButton.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\img\FacilityButtons\SmokeArea\Rygeomraaede Ved BavianerneButton.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\img\FacilityButtons\Toilet\AbehusButton.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\img\FacilityHeaders\PlaygroundKioskHeader.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\img\FacilityHeaders\Rygeomraaede Ved BavianerneHeader.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\img\FacilityHeaders\Rygeomraaede Ved BavianerneHeader.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\img\FacilityHeaders\Rygeomraaede Ved LegepladsenHeader.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\img\FacilityHeaders\SelfGrillHeader.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\img\FacilityHeaders\Smoke_Area1Header.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\img\FacilityHeaders\SmokeOmraade Ved LegepladsenHeader.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\img\FacilityHeaders\zoofariSceneHeader.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\img\FacilityHeaders\AbehusHeader.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\img\FacilityHeaders\BavianerneHeader.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\img\FacilityHeaders\BornezooHeader.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\img\FacilityHeaders\Casa FamiliaHeader.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\img\FacilityHeaders\CasaFamiliaHeader.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\img\FacilityHeaders\ChimpanserHeader.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\img\FacilityHeaders\IndgangenHeader.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\img\FacilityHeaders\PingvinerneHeader.png" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Novell\Novell.MonoDroid.CSharp.targets" />
   <Import Project="..\..\packages\Xamarin.GooglePlayServices.Basement.29.0.0.2\build\Xamarin.GooglePlayServices.Basement.targets" Condition="Exists('..\..\packages\Xamarin.GooglePlayServices.Basement.29.0.0.2\build\Xamarin.GooglePlayServices.Basement.targets')" />
