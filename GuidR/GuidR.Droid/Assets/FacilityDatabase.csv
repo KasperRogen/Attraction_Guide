@@ -1,15 +1,15 @@
-Type;Name;Description;Location;Opens;closes
-Toilet;Indgangen;Toiletter til fri benyttelse;57.03847141, 9.90024678;;
-Toilet;Chimpanser;Toiletter til fri benyttelse;57.03760766, 9.89764463;;
-Toilet;Casa Familia;Toiletter til fri benyttelse;57.037176, 9.898884;;
-Toilet;Pingvinerne;Toiletter til fri benyttelse;57.03624819, 9.89875707;;
-Toilet;Abehus;Toiletter til fri benyttelse;57.035668, 9.896225;;
-Restaurant;Skovbakken;Skovbakken er Aalborg Zoos spisested, placeret ved Faunavej på bakken op mod skoven. Her har vi udsigt over byen og Aalborg Zoo.;57.03708343, 9.89808152;08.00;16.00
-Restaurant;CasaFamilia;Casa Familia er Zoos sydamerikanske spisested, hvor du kan få serveret dagens grill over trækul;57.03709788, 9.89863601;08.00;16.00
-Restaurant;PlaygroundKiosk;I Legepladskiosken kan du få serveret fransk hotdog, burgers, pommes frites, pølser, sandwich, is, kaffe og drikkevarer;57.0361873, 9.89785433;08.00;16.00
-Restaurant;SelfGrill;Pak madkurven og besøg familieområdet i Aalborg Zoo, hvor du har mulighed for at grille din egen medbragte mad i en af vores to store grillhytter (Det er ikke muligt at købe mad til grill selv i Aalborg Zoo) Grillen slukkes ca. en time før havens lukketid. Grillerne kan benyttes indtil 23. oktober;57.03643918, 9.89743574;08.00;16.00
-SmokeArea;Rygeomraaede Ved Legepladsen;Et sted at ryge;57.03763956, 9.89869313;;
-SmokeArea;Rygeomraaede Ved Bavianerne;Et sted at ryge;57.03649414, 9.89805727;;
-Playground;Legepladsen;Stor legeplads frit tilgængelig for alle børn.;57.03650936, 9.89789225;;
-Playground;Bornezoo;zoo hvor ungerne kan røre ved geder;57.03667693, 9.89858478;;
-Playground;zoofariScene;scene til events og ligende;57.03687671, 9.89742143;;
+Type;imageName;Name;Description;Location;Opens;closes
+Toilet;Indgangen;Toilet ved indgangen;Toiletter til fri benyttelse;57.03847141, 9.90024678;;
+Toilet;Chimpanser;Toilet ved chimpanserne;Toiletter til fri benyttelse;57.03760766, 9.89764463;;
+Toilet;Casa Familia;Toilet ved Casa Familia;Toiletter til fri benyttelse;57.037176, 9.898884;;
+Toilet;Pingvinerne;Toilet ved pingvinerne;Toiletter til fri benyttelse;57.03624819, 9.89875707;;
+Toilet;Abehus;Toilet ved abehuset;Toiletter til fri benyttelse;57.035668, 9.896225;;
+Restaurant;Skovbakken;Restaurant Skovbakken;Skovbakken er Aalborg Zoos spisested, placeret ved Faunavej på bakken op mod skoven. Her har vi udsigt over byen og Aalborg Zoo.;57.03708343, 9.89808152;08.00;16.00
+Restaurant;CasaFamilia;Restaurant Casa Familia;Casa Familia er Zoos sydamerikanske spisested, hvor du kan få serveret dagens grill over trækul;57.03709788, 9.89863601;08.00;16.00
+Restaurant;PlaygroundKiosk;Legeplads Kiosken;I Legepladskiosken kan du få serveret fransk hotdog, burgers, pommes frites, pølser, sandwich, is, kaffe og drikkevarer;57.0361873, 9.89785433;08.00;16.00
+Restaurant;SelfGrill;Grillselv;Pak madkurven og besøg familieområdet i Aalborg Zoo, hvor du har mulighed for at grille din egen medbragte mad i en af vores to store grillhytter (Det er ikke muligt at købe mad til grill selv i Aalborg Zoo) Grillen slukkes ca. en time før havens lukketid. Grillerne kan benyttes indtil 23. oktober;57.03643918, 9.89743574;08.00;16.00
+SmokeArea;Rygeomraaede Ved Legepladsen;Rygeområde ved legepladsen;Et sted at ryge;57.03763956, 9.89869313;;
+SmokeArea;Rygeomraaede Ved Bavianerne;Rygeområde Ved Bavianerne;Et sted at ryge;57.03649414, 9.89805727;;
+Playground;Legepladsen;Legepladsen;Stor legeplads frit tilgængelig for alle børn.;57.03650936, 9.89789225;;
+Playground;Bornezoo;Børnezoo;zoo hvor ungerne kan røre ved geder;57.03667693, 9.89858478;;
+Playground;zoofariScene;zoofariScene;scene til events og ligende;57.03687671, 9.89742143;;

@@ -7,13 +7,14 @@ namespace GuidR
     public class Facility : Attraction
     {
 
-        public Facility (attractionType type, string name, string description, Coordinates location)
-            : this(type, name, description, location, null, null)
+        public Facility (attractionType type, string imageName, string name, string description, Coordinates location)
+            : this(type, imageName, name, description, location, null, null)
         {
         }
 
-        public Facility (attractionType type, string name, string description, Coordinates location, Time open, Time close)
+        public Facility (attractionType type, string imageName, string name, string description, Coordinates location, Time open, Time close)
         {
+            this.ImageName = imageName;
             this.Name = name;
             this.Description = description;
             this.Location = location;
@@ -21,6 +22,9 @@ namespace GuidR
             this.Close = close;
             this.attractiontype = type;
         }
+
+        public override string ImageName { get; set; }
+         
         public override string Name { get; set; }
 
         public override string Description { get; set; }

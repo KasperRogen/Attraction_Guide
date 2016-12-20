@@ -15,6 +15,7 @@ namespace GuidR
         }
 
         public abstract attractionType attractiontype { get; set; }
+        public abstract string ImageName { get; set; }
         // The name for this attraction
         public abstract string Name { get; set; }
 

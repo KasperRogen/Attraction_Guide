@@ -25,7 +25,7 @@ namespace GuidR.Droid
 
             Facility facility = (Facility)AttractionDataBase.Attractions.Find(x => x.Name == Facility);
 
-            System.IO.Stream ims = Assets.Open("img/FacilityHeaders/" + facility.Name + "Header.png");
+            System.IO.Stream ims = Assets.Open("img/FacilityHeaders/" + facility.ImageName + "Header.png");
             // load image as Drawable
             Bitmap bitmap = BitmapFactory.DecodeStream(ims);
             ims.Close();

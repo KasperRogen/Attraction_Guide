@@ -16,12 +16,10 @@ namespace GuidR.Droid {
             base.OnCreate(bundle);
 
             Animal = (AttractionDataBase.Attractions.Find(x => x.Name == animalName) as Animal);
-            Console.WriteLine(AttractionDataBase.Attractions.Find(x => x.Name == "Baboon").Location);
-
             SetContentView(Resource.Layout.AnimalPage);
 
 
-            System.IO.Stream ims = Assets.Open("img/AnimalHeaders/" + Animal.Name + "Header.png");
+            System.IO.Stream ims = Assets.Open("img/AnimalHeaders/" + (Animal as Animal).ImageName + "Header.png");
             // load image as Drawable
             Bitmap bitmap = BitmapFactory.DecodeStream(ims);
             ims.Close();

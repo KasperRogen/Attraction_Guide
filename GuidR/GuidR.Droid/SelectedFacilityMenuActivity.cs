@@ -65,7 +65,7 @@ namespace GuidR.Droid
 
                 ImageView button = (ImageView)LayoutInflater.Inflate(Resource.Layout.roundButton, baseLayout, false);
 
-                System.IO.Stream ims = Assets.Open("img/FacilityButtons/" + (facility as Facility).attractiontype.ToString() + "/" + facility.Name + "Button.png");
+                System.IO.Stream ims = Assets.Open("img/FacilityButtons/" + (facility as Facility).attractiontype.ToString() + "/" + facility.ImageName + "Button.png");
                 // load image as Drawable
                 Bitmap bitmap = BitmapFactory.DecodeStream(ims);
                 ims.Close();

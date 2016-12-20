@@ -72,16 +72,16 @@ namespace GuidR.Droid
 
         public void SplitAndConvertAnimals()
         {
-
-            const int nameIndex = 0;
-            const int descriptionIndex = 1;
-            const int latinNameIndex = 2;
-            const int locationIndex = 3;
-            const int feedingTimeIndex = 4;
-            const int startDateIndex = 5;
-            const int endDateIndex = 6;
-            const int showLengthIndex = 7;
-            const int feedingDateIndex = 8;
+            const int imageNameIndex = 0;
+            const int nameIndex = 1;
+            const int descriptionIndex = 2;
+            const int latinNameIndex = 3;
+            const int locationIndex = 4;
+            const int feedingTimeIndex = 5;
+            const int startDateIndex = 6;
+            const int endDateIndex = 7;
+            const int showLengthIndex = 8;
+            const int feedingDateIndex = 9;
 
             foreach (string line in Lines)
             {
@@ -135,6 +135,7 @@ namespace GuidR.Droid
                 if (hasFeedingTime)
                 {
                     AttractionDataBase.Attractions.Add(new Animal(
+                        newLine[imageNameIndex],
                         Attraction.attractionType.Animal,
                         newLine[nameIndex],
                         newLine[descriptionIndex],
@@ -149,6 +150,7 @@ namespace GuidR.Droid
                 else
                 {
                     AttractionDataBase.Attractions.Add(new Animal(
+                        newLine[imageNameIndex],
                         Attraction.attractionType.Animal,
                         newLine[nameIndex],
                         newLine[descriptionIndex],
@@ -164,11 +166,12 @@ namespace GuidR.Droid
         void SplitAndConvertFacilities()
         {
             const int typeIndex = 0;
-            const int nameIndex = 1;
-            const int descriptionIndex = 2;
-            const int locationIndex = 3;
-            const int openIndex = 4;
-            const int closeIndex = 5;
+            const int imageNameIndex = 1;
+            const int nameIndex = 2;
+            const int descriptionIndex = 3;
+            const int locationIndex = 4;
+            const int openIndex = 5;
+            const int closeIndex = 6;
             Time opens = new Time(00, 00);
             Time closes = new Time (23,59);
             bool alwaysOpen = true;
@@ -199,6 +202,7 @@ namespace GuidR.Droid
                     Console.WriteLine(alwaysOpen + newLine[nameIndex]);
                     AttractionDataBase.Attractions.Add(new Facility(
                         (Facility.attractionType)Enum.Parse(typeof(Facility.attractionType), newLine[typeIndex], true),
+                        newLine[imageNameIndex],
                         newLine[nameIndex],
                         newLine[descriptionIndex],
                         ParseCoordinates(newLine[locationIndex]),
@@ -211,6 +215,7 @@ namespace GuidR.Droid
                     Console.WriteLine(alwaysOpen + newLine[nameIndex]);
                     AttractionDataBase.Attractions.Add(new Facility(
                         (Facility.attractionType)Enum.Parse(typeof(Facility.attractionType), newLine[typeIndex], true),
+                        newLine[imageNameIndex],
                         newLine[nameIndex],
                         newLine[descriptionIndex],
                         ParseCoordinates(newLine[locationIndex])));

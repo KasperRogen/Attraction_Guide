@@ -196,7 +196,7 @@ namespace GuidR.Droid {
                 animalText.LayoutParameters = animalTextLL;
                 if ((animalText as ViewGroup).GetChildAt(0) is ImageView) {
 
-                    System.IO.Stream ims = Assets.Open("img/AnimalHeaders/" + a.Name + "Header.png");
+                    System.IO.Stream ims = Assets.Open("img/AnimalHeaders/" + (a as Animal).ImageName + "Header.png");
                     // load image as Drawable
                     Bitmap bitmap = BitmapFactory.DecodeStream(ims);
                     ims.Close();
@@ -234,7 +234,7 @@ namespace GuidR.Droid {
                             item.SetTitle("Remove reminder?");
                         }
                         else { 
-                            item.SetTitle("Set reminder?");
+                            item.SetTitle("Sæt påmindelse?");
                         }
                         SpannableString spanString = new SpannableString(item.TitleFormatted);
                         int end = spanString.Length();

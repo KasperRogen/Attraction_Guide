@@ -45,9 +45,9 @@ namespace GuidR.Droid
 
             System.IO.Stream ims = Assets.Open("img/" + "MissingImage.png");
             if (attraction is Animal)
-                ims = Assets.Open("img/AnimalButtons/" + attraction.Name + "Button.png");
+                ims = Assets.Open("img/AnimalButtons/" + attraction.ImageName + "Button.png");
             else if (attraction is Attraction)
-                ims = Assets.Open("img/FacilityButtons/" + attraction.Name + "Button.png");
+                ims = Assets.Open("img/FacilityButtons/" + attraction.attractiontype.ToString() + "/" + attraction.ImageName + "Button.png");
             // load image as Drawable
             Bitmap bitmap = BitmapFactory.DecodeStream(ims);
             ims.Close();
@@ -118,9 +118,9 @@ namespace GuidR.Droid
                         if(attractionsEnabled.Find(x=> x.type == attraction.attractiontype).enabled == true) { 
                             System.IO.Stream ims = Assets.Open("img/" + "MissingImage.png");
                             if (attraction is Animal)
-                            ims = Assets.Open("img/" + "AnimalButtons/" + attraction.Name + "Button.png");
+                            ims = Assets.Open("img/" + "AnimalButtons/" + (attraction as Animal).ImageName + "Button.png");
                             else if (attraction is Attraction)
-                            ims = Assets.Open("img/FacilityButtons/" + (attraction as Facility).attractiontype + "/" + attraction.Name + "Button.png");
+                            ims = Assets.Open("img/FacilityButtons/" + (attraction as Facility).attractiontype + "/" + attraction.ImageName + "Button.png");
 
 
                             // load image as Drawable
@@ -128,12 +128,10 @@ namespace GuidR.Droid
                             ims.Close();
 
                                 Android.Util.DisplayMetrics metrics = Resources.DisplayMetrics;
-                    
-                                int scaling = ((int)zoomLevel - 12) * (int)metrics.DensityDpi/60;
-                                scaling = (int)Math.Pow(scaling, 2);
-                                scaling /= 8;
 
-                            Console.WriteLine(zoomLevel + " : " + scaling);
+                            int scaling = ((int)zoomLevel - 12);
+                            scaling = (int)Math.Pow(scaling, 3);
+                            scaling /= 2;
 
                             Bitmap scaledBitmap = Bitmap.CreateScaledBitmap(bitmap, scaling, scaling, true);
                             bitmap.Recycle();

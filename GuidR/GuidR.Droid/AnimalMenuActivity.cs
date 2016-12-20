@@ -51,7 +51,7 @@ namespace GuidR.Droid {
 
                 button = (ImageView)LayoutInflater.Inflate(Resource.Layout.roundButton, baseLayout, false);
 
-                System.IO.Stream ims = assets.Open("img/AnimalButtons/" + animal.Name+"Button.png");
+                System.IO.Stream ims = assets.Open("img/AnimalButtons/" + (animal as Animal).ImageName + "Button.png");
                 // load image as Drawable
                 Bitmap bitmap = BitmapFactory.DecodeStream(ims);
                 ims.Close();
