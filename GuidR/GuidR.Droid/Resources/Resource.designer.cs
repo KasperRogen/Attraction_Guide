@@ -770,14 +770,14 @@ namespace GuidR.Droid
 			// aapt resource value: 0x7f090012
 			public const int LatinName = 2131296274;
 			
-			// aapt resource value: 0x7f090044
-			public const int Map_Info_Window_Feeding_Time = 2131296324;
-			
-			// aapt resource value: 0x7f090042
-			public const int Map_Info_Window_Image = 2131296322;
+			// aapt resource value: 0x7f090045
+			public const int Map_Info_Window_Feeding_Time = 2131296325;
 			
 			// aapt resource value: 0x7f090043
-			public const int Map_Info_Window_Name = 2131296323;
+			public const int Map_Info_Window_Image = 2131296323;
+			
+			// aapt resource value: 0x7f090044
+			public const int Map_Info_Window_Name = 2131296324;
 			
 			// aapt resource value: 0x7f09001d
 			public const int MenuReminderButton = 2131296285;
@@ -791,8 +791,8 @@ namespace GuidR.Droid
 			// aapt resource value: 0x7f090025
 			public const int Parking = 2131296293;
 			
-			// aapt resource value: 0x7f09004c
-			public const int SampleVideoView = 2131296332;
+			// aapt resource value: 0x7f09004d
+			public const int SampleVideoView = 2131296333;
 			
 			// aapt resource value: 0x7f090005
 			public const int adjust_height = 2131296261;
@@ -821,8 +821,8 @@ namespace GuidR.Droid
 			// aapt resource value: 0x7f09000a
 			public const int auto = 2131296266;
 			
-			// aapt resource value: 0x7f09004b
-			public const int baboonButton = 2131296331;
+			// aapt resource value: 0x7f09004c
+			public const int baboonButton = 2131296332;
 			
 			// aapt resource value: 0x7f090018
 			public const int buttonPanel1 = 2131296280;
@@ -839,23 +839,23 @@ namespace GuidR.Droid
 			// aapt resource value: 0x7f09003e
 			public const int buttonpanel3 = 2131296318;
 			
+			// aapt resource value: 0x7f090047
+			public const int card = 2131296327;
+			
 			// aapt resource value: 0x7f090046
-			public const int card = 2131296326;
-			
-			// aapt resource value: 0x7f090045
-			public const int cardContainer = 2131296325;
-			
-			// aapt resource value: 0x7f090048
-			public const int cardHeader = 2131296328;
+			public const int cardContainer = 2131296326;
 			
 			// aapt resource value: 0x7f090049
-			public const int cardImage = 2131296329;
+			public const int cardHeader = 2131296329;
 			
 			// aapt resource value: 0x7f09004a
-			public const int cardText = 2131296330;
+			public const int cardImage = 2131296330;
 			
-			// aapt resource value: 0x7f090047
-			public const int cardView = 2131296327;
+			// aapt resource value: 0x7f09004b
+			public const int cardText = 2131296331;
+			
+			// aapt resource value: 0x7f090048
+			public const int cardView = 2131296328;
 			
 			// aapt resource value: 0x7f090040
 			public const int checkinbutton = 2131296320;
@@ -907,6 +907,9 @@ namespace GuidR.Droid
 			
 			// aapt resource value: 0x7f090016
 			public const int mapButton = 2131296278;
+			
+			// aapt resource value: 0x7f090042
+			public const int mapButtons = 2131296322;
 			
 			// aapt resource value: 0x7f09003f
 			public const int newsbutton = 2131296319;
@@ -1025,40 +1028,43 @@ namespace GuidR.Droid
 			public const int FeedingTimeScheme = 2130903048;
 			
 			// aapt resource value: 0x7f030009
-			public const int Information = 2130903049;
+			public const int ImageView = 2130903049;
 			
 			// aapt resource value: 0x7f03000a
-			public const int line = 2130903050;
+			public const int Information = 2130903050;
 			
 			// aapt resource value: 0x7f03000b
-			public const int LinearLayout = 2130903051;
+			public const int line = 2130903051;
 			
 			// aapt resource value: 0x7f03000c
-			public const int Main = 2130903052;
+			public const int LinearLayout = 2130903052;
 			
 			// aapt resource value: 0x7f03000d
-			public const int Map = 2130903053;
+			public const int Main = 2130903053;
 			
 			// aapt resource value: 0x7f03000e
-			public const int Map_Info_Window = 2130903054;
+			public const int Map = 2130903054;
 			
 			// aapt resource value: 0x7f03000f
-			public const int News = 2130903055;
+			public const int Map_Info_Window = 2130903055;
 			
 			// aapt resource value: 0x7f030010
-			public const int NewsItem = 2130903056;
+			public const int News = 2130903056;
 			
 			// aapt resource value: 0x7f030011
-			public const int roundButton = 2130903057;
+			public const int NewsItem = 2130903057;
 			
 			// aapt resource value: 0x7f030012
-			public const int SelectedFacilityMenu = 2130903058;
+			public const int roundButton = 2130903058;
 			
 			// aapt resource value: 0x7f030013
-			public const int Text = 2130903059;
+			public const int SelectedFacilityMenu = 2130903059;
 			
 			// aapt resource value: 0x7f030014
-			public const int VideoStream = 2130903060;
+			public const int Text = 2130903060;
+			
+			// aapt resource value: 0x7f030015
+			public const int VideoStream = 2130903061;
 			
 			static Layout()
 			{

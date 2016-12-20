@@ -7,6 +7,7 @@ namespace GuidR
     {
         public static List<Animal> animalsToWatch = new List<Animal>();
         public static List<Attraction> Attractions = new List<Attraction>();
+        public static bool splashScreenHasRun;
 
         public static Animal Baboon { get; set; }
         public static Animal Bear { get; set; }

@@ -19,15 +19,17 @@ namespace GuidR.Droid
         protected override void OnCreate(Bundle bundle)
         {
             base.OnCreate(bundle);
+
+            if(AttractionDataBase.splashScreenHasRun == false) { 
+            //Read the animaldatabase file and create animals for the attractiondatabase based on this.
             ReadFile("AnimalDatabase");
             SplitAndConvertAnimals();
 
+            //Read the facilitydatabase file and create Facilities for the attractiondatabase based on this.
             ReadFile("FacilityDatabase");
             SplitAndConvertFacilities();
-
-            foreach(Attraction a in AttractionDataBase.Attractions)
-                if(a is Facility)
-                    Console.WriteLine((a as Facility).Name + " : " + (a as Facility).type);
+                AttractionDataBase.splashScreenHasRun = true;
+            }
 
             StartActivity(typeof(MainActivity));
         }
@@ -40,6 +42,8 @@ namespace GuidR.Droid
                 while (!sr.EndOfStream) {
                     string line = sr.ReadLine();
 
+                    //add all the lines to the list of lines
+
                     lines.Add(line);
                 }
             }
@@ -47,9 +51,9 @@ namespace GuidR.Droid
 
             try {
                 foreach (string line in lines) {
+                    //If the line isn't empty, add it to the final list of lines.
                     if (line != null) {
                         Lines.Add(line);
-                        Console.WriteLine("In readfile(). Foreach line in lines: " + line);
                     }
                     else
                         break;
@@ -60,7 +64,7 @@ namespace GuidR.Droid
             }
 
 
-
+            //Remove the line containing the identifiers in the database file
             Lines.RemoveAt(0);
         }
 
@@ -68,8 +72,6 @@ namespace GuidR.Droid
 
         public void SplitAndConvertAnimals()
         {
-
-            Console.WriteLine("*ØØØØØØØØØØØØØØØØØØØØØØØØØØØØØØØØØØØØØ: " + Lines.Count);
 
             const int nameIndex = 0;
             const int descriptionIndex = 1;
@@ -84,16 +86,22 @@ namespace GuidR.Droid
             foreach (string line in Lines)
             {
                 bool hasFeedingTime = false;
+
+                //Newline is the line that we are currently looking at, containing an animal or facility.
                 string[] newLine = line.Split(';');
                 string[] coord = newLine[locationIndex].Split(',');
+
                 List<Time> feedingtimesHM = new List<Time>();
                 List<FeedingTime> feedingTimes = new List<FeedingTime>();
 
+                //If the feedingtime index of the line is empty, there is no feedingtime.
                 if (newLine[feedingTimeIndex] != "")
                 {
+                    //get the feedingtimes for the animal
                     string[] ftimes = newLine[feedingTimeIndex].Split(',');
                     foreach (string feed in ftimes)
                     {
+                        //split each feedingtime into hours and minutes
                         string[] hm = feed.Split('.');
                         foreach (string a in hm)
                         feedingtimesHM.Add(new Time(int.Parse(hm[0]), int.Parse(hm[1])));
@@ -103,6 +111,7 @@ namespace GuidR.Droid
 
                 foreach (Time t in feedingtimesHM)
                 {
+                    //get the rest of the information for the feedingtime
                     string[] startDates = newLine[startDateIndex].Split(',');
                     string[] endDates = newLine[endDateIndex].Split(',');
                     string[] feedingDates = newLine[feedingDateIndex].Split(',');
@@ -119,6 +128,8 @@ namespace GuidR.Droid
                         feedingDatesAsInt.ToArray()
                         ));
                 }
+
+                //add the animal to the database
 
                 //Elephant = new Animal("Elefant", elephantDescription, elephantCoordinates, "Loxodonta Africana", elephantFeeding);
                 if (hasFeedingTime)
@@ -160,12 +171,14 @@ namespace GuidR.Droid
             Time closes = new Time (23,59);
             bool alwaysOpen = true;
 
+
             foreach (string line in Lines)
             {
                 alwaysOpen = true;
                 string[] newLine = line.Split(';');
                 string[] coord = newLine[locationIndex].Split(',');
 
+                //IF the openindex of the database is empty, there is no opening time, and the facility is always open
                 if (newLine[openIndex] != "")
                 {
                     string[] opensAsStrings = newLine[openIndex].Split('.');
@@ -177,6 +190,7 @@ namespace GuidR.Droid
                     alwaysOpen = false;
                 }
 
+                //add the facility to the attractiondatabase
 
                 if (alwaysOpen == false)
                 {

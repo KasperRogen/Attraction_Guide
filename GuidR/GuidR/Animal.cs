@@ -23,7 +23,6 @@ namespace GuidR
                     _feedingTimes.Add(t);
             }
 
-           // AttractionDataBase.Attractions.Add(this);
         }
 
         public Animal (string name, string description, Coordinates location, string latinName) 

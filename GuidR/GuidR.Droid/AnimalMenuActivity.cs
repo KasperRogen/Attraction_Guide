@@ -18,25 +18,27 @@ namespace GuidR.Droid {
             SetContentView(Resource.Layout.AnimalMenu);
             int animalIndex = 0;
 
+            //Get information about the screen
             Android.Util.DisplayMetrics metrics = Resources.DisplayMetrics;
             int buttonsize = (int)(metrics.WidthPixels / 2.5);
             int verticalSpaceBetweenButtons = (int)(metrics.HeightPixels / 20);
 
-            List<AnimalButton> animalButtons = new List<AnimalButton>();
             LinearLayout baseLayout = FindViewById<LinearLayout>(Resource.Id.animalMenuBase);
 
+            //Create the buttonlayout
             LinearLayout buttonLayout = (LinearLayout)LayoutInflater.Inflate(Resource.Layout.ButtonLayout, baseLayout, false);
             baseLayout.AddView(buttonLayout);
 
+            //Create the spacer between the buttons
             LinearLayout verticalSpacer = (LinearLayout)LayoutInflater.Inflate(Resource.Layout.LinearLayout, baseLayout, false);
             verticalSpacer.LayoutParameters.Height = verticalSpaceBetweenButtons;
             baseLayout.AddView(verticalSpacer);
-
+            ImageView button;
             AssetManager assets = this.Assets;
             foreach (Attraction animal in AttractionDataBase.Attractions) {
                 if(animal is Animal) { 
-                System.Console.WriteLine(animal.Name);
 
+                    //If this is gonna be the third button on the line, create a new line and set the index to 0.
                 if (animalIndex > 1)
                 {
                     animalIndex = 0;
@@ -47,9 +49,7 @@ namespace GuidR.Droid {
                     baseLayout.AddView(verticalSpacer);
                 }
 
-                //Animal animal = (Animal)AttractionDataBase.Attractions[0];
-
-                ImageView button = (ImageView)LayoutInflater.Inflate(Resource.Layout.roundButton, baseLayout, false);
+                button = (ImageView)LayoutInflater.Inflate(Resource.Layout.roundButton, baseLayout, false);
 
                 System.IO.Stream ims = assets.Open("img/AnimalButtons/" + animal.Name+"Button.png");
                 // load image as Drawable
@@ -60,17 +60,16 @@ namespace GuidR.Droid {
                 button.SetMinimumHeight(buttonsize);
                 button.Click += delegate { LoadAnimalPage(animal.Name); };
                 buttonLayout.AddView(button);
-                //    break;
-
                 animalIndex++;
 
             }
 
             ImageView banner = FindViewById<ImageView>(Resource.Id.homeBanner);
             banner.Click += delegate {
-                StartActivity(typeof(MainActivity));
-            };
+                    StartActivity(typeof(MainActivity));
+                };
             }
+            
         }
 
         void LoadAnimalPage (string animal) {

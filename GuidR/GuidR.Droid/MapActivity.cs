@@ -21,6 +21,13 @@ namespace GuidR.Droid
         Location myLocation;
         string locationProvider;
 
+        struct attractionBool {
+            public Facility.facilityType type;
+            public bool enabled;
+        }
+
+        List<attractionBool>attractionsEnabled;
+
         Circle positionMarker;
 
         public static Attraction Attraction { get; set; }
@@ -113,9 +120,9 @@ namespace GuidR.Droid
                     attraction.Location.Latitude < maxLongtitude) { 
                 System.IO.Stream ims = Assets.Open("img/" + "MissingImage.png");
                 if (attraction is Animal)
-                ims = Assets.Open("img/AnimalButtons/" + attraction.Name + "Button.png");
+                ims = Assets.Open("img/" + "AnimalButtons/" + attraction.Name + "Button.png");
                 else if (attraction is Attraction)
-                ims = Assets.Open("img/FacilityButtons/" + attraction.Name + "Button.png");
+                ims = Assets.Open("img/FacilityButtons/" + (attraction as Facility).type + "/" + attraction.Name + "Button.png");
 
 
                 // load image as Drawable
@@ -157,6 +164,32 @@ namespace GuidR.Droid
             InitializeLocationManager();
             locationManager.RequestLocationUpdates(locationProvider, 2000, 0, this);
             SetUpMap();
+
+            attractionsEnabled = new List<attractionBool>();
+
+            foreach (Facility.facilityType type in Enum.GetValues(typeof(Facility.facilityType))) {
+                LinearLayout buttonLayout = FindViewById<LinearLayout>(Resource.Id.mapButtons);
+                buttonLayout.WeightSum = Enum.GetValues(typeof(Facility.facilityType)).Length+1;
+
+                LinearLayout button = (LinearLayout)LayoutInflater.Inflate(Resource.Layout.ImageView, null);
+                LinearLayout.LayoutParams LayoutParams = new LinearLayout.LayoutParams(0, LinearLayout.LayoutParams.WrapContent);
+                LayoutParams.Weight = 1;
+                button.LayoutParameters = LayoutParams;
+
+
+                System.IO.Stream ims = Assets.Open("img/MapButtons/" + type.ToString() + "Button.png");
+                Bitmap bitmap = BitmapFactory.DecodeStream(ims);
+                ims.Close();
+
+                (button.GetChildAt(0) as ImageView).SetImageBitmap(bitmap);
+
+
+                attractionBool aB = new attractionBool();
+                aB.type = type;
+                aB.enabled = true;
+                attractionsEnabled.Add(aB);
+                buttonLayout.AddView(button);
+            }
         }
 
         void InitializeLocationManager() {
@@ -166,7 +199,6 @@ namespace GuidR.Droid
                 PowerRequirement = Power.NoRequirement
             };
             locationProvider = locationManager.GetBestProvider(criteriaForLocationService, true);
-            //this.RunOnUiThread(() => locationManager.RequestLocationUpdates(locationProvider, 1000, 1, this));
         }
 
         private void SetUpMap ()

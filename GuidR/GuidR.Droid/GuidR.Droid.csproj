@@ -86,7 +86,6 @@
     <Compile Include="MainActivity.cs" />
     <Compile Include="Resources\Resource.designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="VideoStreamActivity.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
@@ -573,7 +572,9 @@
   <ItemGroup>
     <AndroidAsset Include="Assets\img\FacilityHeaders\LegepladsenHeader.png" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\ImageView.xml" />
+  </ItemGroup>
   <ItemGroup>
     <AndroidAsset Include="Assets\img\FacilityButtons\Playground\LegepladsenButton.png" />
   </ItemGroup>
@@ -585,12 +586,6 @@
   </ItemGroup>
   <ItemGroup>
     <AndroidAsset Include="Assets\img\FacilityButtons\SmokeArea\BavianerneButton.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidAsset Include="Assets\IndgangenButton.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidAsset Include="Assets\PingvinerneButton.png" />
   </ItemGroup>
   <ItemGroup>
     <AndroidAsset Include="Assets\img\FacilityButtons\Toilet\IndgangenButton.png" />
@@ -606,6 +601,21 @@
   </ItemGroup>
   <ItemGroup>
     <AndroidAsset Include="Assets\img\FacilityButtons\Toilet\ElefanterneButton.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\img\MapButtons\SmokeAreaButton.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\img\MapButtons\ToiletButton.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\img\MapButtons\AnimalButton.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\img\MapButtons\PlaygroundButton.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\img\MapButtons\RestaurantButton.png" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Novell\Novell.MonoDroid.CSharp.targets" />
   <Import Project="..\..\packages\Xamarin.GooglePlayServices.Basement.29.0.0.2\build\Xamarin.GooglePlayServices.Basement.targets" Condition="Exists('..\..\packages\Xamarin.GooglePlayServices.Basement.29.0.0.2\build\Xamarin.GooglePlayServices.Basement.targets')" />
